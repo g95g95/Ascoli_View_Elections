@@ -1,0 +1,182 @@
+{
+  "elezione": "Comunali 2009",
+  "turno": "Primo Turno",
+  "data": "6-7 Giugno 2009",
+  "comune": "Ascoli Piceno",
+  "tipo": "Consiglio Comunale - Voti di Lista",
+  "liste": [
+    {"nome": "Il Popolo della Liberta'", "totale": 9601, "coalizione": "Centrodestra"},
+    {"nome": "Partito Democratico", "totale": 5633, "coalizione": "Centrosinistra"},
+    {"nome": "Unione Democratica di Centro", "totale": 2856, "coalizione": "Centro"},
+    {"nome": "La Primavera di Ascoli - Con Antonio Canzian", "totale": 2814, "coalizione": "Centrosinistra"},
+    {"nome": "Guido Castelli Sindaco", "totale": 2808, "coalizione": "Centrodestra"},
+    {"nome": "Ascoli con Gibellieri Sindaco", "totale": 1641, "coalizione": "Civica"},
+    {"nome": "Alveare per Regnicoli", "totale": 1529, "coalizione": "Civica"},
+    {"nome": "Lavoro e Legalita'", "totale": 1177, "coalizione": "Centrosinistra"},
+    {"nome": "Italia dei Valori", "totale": 833, "coalizione": "Centrosinistra"},
+    {"nome": "Rifondazione Comunista - Comunisti Italia", "totale": 713, "coalizione": "Sinistra"},
+    {"nome": "Sinistra Democratica", "totale": 522, "coalizione": "Sinistra"},
+    {"nome": "Lega Nord", "totale": 303, "coalizione": "Centrodestra"},
+    {"nome": "La Destra", "totale": 303, "coalizione": "Destra"},
+    {"nome": "Udeur", "totale": 236, "coalizione": "Centro"},
+    {"nome": "Movimento Tutela Salute", "totale": 135, "coalizione": "Civica"}
+  ],
+  "sezioni": {
+    "1": {
+      "voti": {"Il Popolo della Liberta'": 123, "Partito Democratico": 64, "Unione Democratica di Centro": 20, "La Primavera di Ascoli - Con Antonio Canzian": 33, "Guido Castelli Sindaco": 40, "Ascoli con Gibellieri Sindaco": 14, "Alveare per Regnicoli": 15, "Lavoro e Legalita'": 11, "Italia dei Valori": 8, "Rifondazione Comunista - Comunisti Italia": 15, "Sinistra Democratica": 9, "Lega Nord": 3, "La Destra": 6, "Udeur": 2, "Movimento Tutela Salute": 3}
+    },
+    "2": {
+      "voti": {"Il Popolo della Liberta'": 218, "Partito Democratico": 99, "Unione Democratica di Centro": 56, "La Primavera di Ascoli - Con Antonio Canzian": 70, "Guido Castelli Sindaco": 46, "Ascoli con Gibellieri Sindaco": 44, "Alveare per Regnicoli": 27, "Lavoro e Legalita'": 23, "Italia dei Valori": 17, "Rifondazione Comunista - Comunisti Italia": 30, "Sinistra Democratica": 13, "Lega Nord": 7, "La Destra": 14, "Udeur": 13, "Movimento Tutela Salute": 0}
+    },
+    "3": {
+      "voti": {"Il Popolo della Liberta'": 240, "Partito Democratico": 114, "Unione Democratica di Centro": 65, "La Primavera di Ascoli - Con Antonio Canzian": 43, "Guido Castelli Sindaco": 59, "Ascoli con Gibellieri Sindaco": 39, "Alveare per Regnicoli": 28, "Lavoro e Legalita'": 23, "Italia dei Valori": 10, "Rifondazione Comunista - Comunisti Italia": 3, "Sinistra Democratica": 8, "Lega Nord": 10, "La Destra": 4, "Udeur": 8, "Movimento Tutela Salute": 2}
+    },
+    "4": {
+      "voti": {"Il Popolo della Liberta'": 187, "Partito Democratico": 84, "Unione Democratica di Centro": 47, "La Primavera di Ascoli - Con Antonio Canzian": 43, "Guido Castelli Sindaco": 40, "Ascoli con Gibellieri Sindaco": 32, "Alveare per Regnicoli": 28, "Lavoro e Legalita'": 16, "Italia dei Valori": 14, "Rifondazione Comunista - Comunisti Italia": 13, "Sinistra Democratica": 7, "Lega Nord": 5, "La Destra": 2, "Udeur": 6, "Movimento Tutela Salute": 4}
+    },
+    "5": {
+      "voti": {"Il Popolo della Liberta'": 172, "Partito Democratico": 86, "Unione Democratica di Centro": 29, "La Primavera di Ascoli - Con Antonio Canzian": 44, "Guido Castelli Sindaco": 49, "Ascoli con Gibellieri Sindaco": 26, "Alveare per Regnicoli": 38, "Lavoro e Legalita'": 15, "Italia dei Valori": 18, "Rifondazione Comunista - Comunisti Italia": 17, "Sinistra Democratica": 21, "Lega Nord": 4, "La Destra": 3, "Udeur": 4, "Movimento Tutela Salute": 7}
+    },
+    "6": {
+      "voti": {"Il Popolo della Liberta'": 114, "Partito Democratico": 71, "Unione Democratica di Centro": 30, "La Primavera di Ascoli - Con Antonio Canzian": 48, "Guido Castelli Sindaco": 42, "Ascoli con Gibellieri Sindaco": 34, "Alveare per Regnicoli": 21, "Lavoro e Legalita'": 5, "Italia dei Valori": 17, "Rifondazione Comunista - Comunisti Italia": 11, "Sinistra Democratica": 10, "Lega Nord": 9, "La Destra": 6, "Udeur": 2, "Movimento Tutela Salute": 1}
+    },
+    "7": {
+      "voti": {"Il Popolo della Liberta'": 222, "Partito Democratico": 71, "Unione Democratica di Centro": 52, "La Primavera di Ascoli - Con Antonio Canzian": 44, "Guido Castelli Sindaco": 43, "Ascoli con Gibellieri Sindaco": 36, "Alveare per Regnicoli": 29, "Lavoro e Legalita'": 19, "Italia dei Valori": 13, "Rifondazione Comunista - Comunisti Italia": 7, "Sinistra Democratica": 17, "Lega Nord": 9, "La Destra": 2, "Udeur": 6, "Movimento Tutela Salute": 0}
+    },
+    "8": {
+      "voti": {"Il Popolo della Liberta'": 165, "Partito Democratico": 137, "Unione Democratica di Centro": 67, "La Primavera di Ascoli - Con Antonio Canzian": 73, "Guido Castelli Sindaco": 49, "Ascoli con Gibellieri Sindaco": 52, "Alveare per Regnicoli": 25, "Lavoro e Legalita'": 17, "Italia dei Valori": 12, "Rifondazione Comunista - Comunisti Italia": 18, "Sinistra Democratica": 9, "Lega Nord": 2, "La Destra": 9, "Udeur": 0, "Movimento Tutela Salute": 3}
+    },
+    "9": {
+      "voti": {"Il Popolo della Liberta'": 172, "Partito Democratico": 147, "Unione Democratica di Centro": 38, "La Primavera di Ascoli - Con Antonio Canzian": 55, "Guido Castelli Sindaco": 53, "Ascoli con Gibellieri Sindaco": 41, "Alveare per Regnicoli": 36, "Lavoro e Legalita'": 30, "Italia dei Valori": 13, "Rifondazione Comunista - Comunisti Italia": 17, "Sinistra Democratica": 11, "Lega Nord": 4, "La Destra": 3, "Udeur": 4, "Movimento Tutela Salute": 2}
+    },
+    "10": {
+      "voti": {"Il Popolo della Liberta'": 154, "Partito Democratico": 122, "Unione Democratica di Centro": 46, "La Primavera di Ascoli - Con Antonio Canzian": 72, "Guido Castelli Sindaco": 49, "Ascoli con Gibellieri Sindaco": 34, "Alveare per Regnicoli": 29, "Lavoro e Legalita'": 12, "Italia dei Valori": 25, "Rifondazione Comunista - Comunisti Italia": 16, "Sinistra Democratica": 15, "Lega Nord": 7, "La Destra": 4, "Udeur": 7, "Movimento Tutela Salute": 0}
+    },
+    "11": {
+      "voti": {"Il Popolo della Liberta'": 207, "Partito Democratico": 127, "Unione Democratica di Centro": 37, "La Primavera di Ascoli - Con Antonio Canzian": 74, "Guido Castelli Sindaco": 54, "Ascoli con Gibellieri Sindaco": 36, "Alveare per Regnicoli": 27, "Lavoro e Legalita'": 13, "Italia dei Valori": 38, "Rifondazione Comunista - Comunisti Italia": 11, "Sinistra Democratica": 10, "Lega Nord": 10, "La Destra": 5, "Udeur": 6, "Movimento Tutela Salute": 1}
+    },
+    "12": {
+      "voti": {"Il Popolo della Liberta'": 220, "Partito Democratico": 115, "Unione Democratica di Centro": 57, "La Primavera di Ascoli - Con Antonio Canzian": 116, "Guido Castelli Sindaco": 69, "Ascoli con Gibellieri Sindaco": 30, "Alveare per Regnicoli": 21, "Lavoro e Legalita'": 12, "Italia dei Valori": 18, "Rifondazione Comunista - Comunisti Italia": 15, "Sinistra Democratica": 21, "Lega Nord": 10, "La Destra": 8, "Udeur": 2, "Movimento Tutela Salute": 3}
+    },
+    "13": {
+      "voti": {"Il Popolo della Liberta'": 196, "Partito Democratico": 125, "Unione Democratica di Centro": 49, "La Primavera di Ascoli - Con Antonio Canzian": 55, "Guido Castelli Sindaco": 51, "Ascoli con Gibellieri Sindaco": 35, "Alveare per Regnicoli": 20, "Lavoro e Legalita'": 24, "Italia dei Valori": 16, "Rifondazione Comunista - Comunisti Italia": 22, "Sinistra Democratica": 2, "Lega Nord": 5, "La Destra": 3, "Udeur": 8, "Movimento Tutela Salute": 0}
+    },
+    "14": {
+      "voti": {"Il Popolo della Liberta'": 228, "Partito Democratico": 100, "Unione Democratica di Centro": 60, "La Primavera di Ascoli - Con Antonio Canzian": 50, "Guido Castelli Sindaco": 68, "Ascoli con Gibellieri Sindaco": 43, "Alveare per Regnicoli": 27, "Lavoro e Legalita'": 15, "Italia dei Valori": 19, "Rifondazione Comunista - Comunisti Italia": 15, "Sinistra Democratica": 9, "Lega Nord": 9, "La Destra": 5, "Udeur": 1, "Movimento Tutela Salute": 0}
+    },
+    "15": {
+      "voti": {"Il Popolo della Liberta'": 176, "Partito Democratico": 170, "Unione Democratica di Centro": 48, "La Primavera di Ascoli - Con Antonio Canzian": 94, "Guido Castelli Sindaco": 48, "Ascoli con Gibellieri Sindaco": 52, "Alveare per Regnicoli": 33, "Lavoro e Legalita'": 11, "Italia dei Valori": 18, "Rifondazione Comunista - Comunisti Italia": 7, "Sinistra Democratica": 24, "Lega Nord": 11, "La Destra": 11, "Udeur": 9, "Movimento Tutela Salute": 1}
+    },
+    "16": {
+      "voti": {"Il Popolo della Liberta'": 179, "Partito Democratico": 91, "Unione Democratica di Centro": 47, "La Primavera di Ascoli - Con Antonio Canzian": 71, "Guido Castelli Sindaco": 38, "Ascoli con Gibellieri Sindaco": 41, "Alveare per Regnicoli": 25, "Lavoro e Legalita'": 19, "Italia dei Valori": 15, "Rifondazione Comunista - Comunisti Italia": 9, "Sinistra Democratica": 13, "Lega Nord": 9, "La Destra": 8, "Udeur": 5, "Movimento Tutela Salute": 5}
+    },
+    "17": {
+      "voti": {"Il Popolo della Liberta'": 236, "Partito Democratico": 166, "Unione Democratica di Centro": 39, "La Primavera di Ascoli - Con Antonio Canzian": 67, "Guido Castelli Sindaco": 43, "Ascoli con Gibellieri Sindaco": 46, "Alveare per Regnicoli": 44, "Lavoro e Legalita'": 17, "Italia dei Valori": 21, "Rifondazione Comunista - Comunisti Italia": 14, "Sinistra Democratica": 8, "Lega Nord": 12, "La Destra": 4, "Udeur": 6, "Movimento Tutela Salute": 4}
+    },
+    "18": {
+      "voti": {"Il Popolo della Liberta'": 220, "Partito Democratico": 143, "Unione Democratica di Centro": 61, "La Primavera di Ascoli - Con Antonio Canzian": 81, "Guido Castelli Sindaco": 41, "Ascoli con Gibellieri Sindaco": 18, "Alveare per Regnicoli": 17, "Lavoro e Legalita'": 27, "Italia dei Valori": 13, "Rifondazione Comunista - Comunisti Italia": 26, "Sinistra Democratica": 11, "Lega Nord": 1, "La Destra": 5, "Udeur": 3, "Movimento Tutela Salute": 26}
+    },
+    "19": {
+      "voti": {"Il Popolo della Liberta'": 296, "Partito Democratico": 132, "Unione Democratica di Centro": 97, "La Primavera di Ascoli - Con Antonio Canzian": 56, "Guido Castelli Sindaco": 77, "Ascoli con Gibellieri Sindaco": 23, "Alveare per Regnicoli": 20, "Lavoro e Legalita'": 9, "Italia dei Valori": 16, "Rifondazione Comunista - Comunisti Italia": 12, "Sinistra Democratica": 23, "Lega Nord": 9, "La Destra": 9, "Udeur": 3, "Movimento Tutela Salute": 4}
+    },
+    "20": {
+      "voti": {"Il Popolo della Liberta'": 187, "Partito Democratico": 112, "Unione Democratica di Centro": 68, "La Primavera di Ascoli - Con Antonio Canzian": 67, "Guido Castelli Sindaco": 52, "Ascoli con Gibellieri Sindaco": 40, "Alveare per Regnicoli": 29, "Lavoro e Legalita'": 23, "Italia dei Valori": 13, "Rifondazione Comunista - Comunisti Italia": 21, "Sinistra Democratica": 15, "Lega Nord": 11, "La Destra": 9, "Udeur": 6, "Movimento Tutela Salute": 0}
+    },
+    "21": {
+      "voti": {"Il Popolo della Liberta'": 218, "Partito Democratico": 97, "Unione Democratica di Centro": 46, "La Primavera di Ascoli - Con Antonio Canzian": 47, "Guido Castelli Sindaco": 47, "Ascoli con Gibellieri Sindaco": 35, "Alveare per Regnicoli": 40, "Lavoro e Legalita'": 26, "Italia dei Valori": 17, "Rifondazione Comunista - Comunisti Italia": 14, "Sinistra Democratica": 9, "Lega Nord": 3, "La Destra": 3, "Udeur": 5, "Movimento Tutela Salute": 4}
+    },
+    "22": {
+      "voti": {"Il Popolo della Liberta'": 155, "Partito Democratico": 87, "Unione Democratica di Centro": 52, "La Primavera di Ascoli - Con Antonio Canzian": 47, "Guido Castelli Sindaco": 63, "Ascoli con Gibellieri Sindaco": 55, "Alveare per Regnicoli": 42, "Lavoro e Legalita'": 28, "Italia dei Valori": 5, "Rifondazione Comunista - Comunisti Italia": 13, "Sinistra Democratica": 6, "Lega Nord": 7, "La Destra": 19, "Udeur": 9, "Movimento Tutela Salute": 3}
+    },
+    "23": {
+      "voti": {"Il Popolo della Liberta'": 115, "Partito Democratico": 67, "Unione Democratica di Centro": 28, "La Primavera di Ascoli - Con Antonio Canzian": 42, "Guido Castelli Sindaco": 51, "Ascoli con Gibellieri Sindaco": 26, "Alveare per Regnicoli": 35, "Lavoro e Legalita'": 21, "Italia dei Valori": 10, "Rifondazione Comunista - Comunisti Italia": 6, "Sinistra Democratica": 3, "Lega Nord": 4, "La Destra": 7, "Udeur": 10, "Movimento Tutela Salute": 0}
+    },
+    "24": {
+      "voti": {"Il Popolo della Liberta'": 162, "Partito Democratico": 83, "Unione Democratica di Centro": 50, "La Primavera di Ascoli - Con Antonio Canzian": 55, "Guido Castelli Sindaco": 47, "Ascoli con Gibellieri Sindaco": 43, "Alveare per Regnicoli": 25, "Lavoro e Legalita'": 15, "Italia dei Valori": 23, "Rifondazione Comunista - Comunisti Italia": 14, "Sinistra Democratica": 13, "Lega Nord": 10, "La Destra": 17, "Udeur": 8, "Movimento Tutela Salute": 5}
+    },
+    "25": {
+      "voti": {"Il Popolo della Liberta'": 181, "Partito Democratico": 67, "Unione Democratica di Centro": 59, "La Primavera di Ascoli - Con Antonio Canzian": 46, "Guido Castelli Sindaco": 66, "Ascoli con Gibellieri Sindaco": 40, "Alveare per Regnicoli": 56, "Lavoro e Legalita'": 20, "Italia dei Valori": 9, "Rifondazione Comunista - Comunisti Italia": 5, "Sinistra Democratica": 4, "Lega Nord": 2, "La Destra": 5, "Udeur": 7, "Movimento Tutela Salute": 4}
+    },
+    "26": {
+      "voti": {"Il Popolo della Liberta'": 151, "Partito Democratico": 127, "Unione Democratica di Centro": 49, "La Primavera di Ascoli - Con Antonio Canzian": 48, "Guido Castelli Sindaco": 53, "Ascoli con Gibellieri Sindaco": 26, "Alveare per Regnicoli": 77, "Lavoro e Legalita'": 18, "Italia dei Valori": 13, "Rifondazione Comunista - Comunisti Italia": 24, "Sinistra Democratica": 14, "Lega Nord": 2, "La Destra": 3, "Udeur": 1, "Movimento Tutela Salute": 1}
+    },
+    "27": {
+      "voti": {"Il Popolo della Liberta'": 216, "Partito Democratico": 121, "Unione Democratica di Centro": 62, "La Primavera di Ascoli - Con Antonio Canzian": 48, "Guido Castelli Sindaco": 57, "Ascoli con Gibellieri Sindaco": 32, "Alveare per Regnicoli": 44, "Lavoro e Legalita'": 30, "Italia dei Valori": 19, "Rifondazione Comunista - Comunisti Italia": 17, "Sinistra Democratica": 14, "Lega Nord": 3, "La Destra": 10, "Udeur": 3, "Movimento Tutela Salute": 6}
+    },
+    "28": {
+      "voti": {"Il Popolo della Liberta'": 216, "Partito Democratico": 98, "Unione Democratica di Centro": 42, "La Primavera di Ascoli - Con Antonio Canzian": 60, "Guido Castelli Sindaco": 63, "Ascoli con Gibellieri Sindaco": 29, "Alveare per Regnicoli": 23, "Lavoro e Legalita'": 20, "Italia dei Valori": 34, "Rifondazione Comunista - Comunisti Italia": 11, "Sinistra Democratica": 0, "Lega Nord": 11, "La Destra": 5, "Udeur": 2, "Movimento Tutela Salute": 2}
+    },
+    "29": {
+      "voti": {"Il Popolo della Liberta'": 184, "Partito Democratico": 107, "Unione Democratica di Centro": 37, "La Primavera di Ascoli - Con Antonio Canzian": 61, "Guido Castelli Sindaco": 49, "Ascoli con Gibellieri Sindaco": 40, "Alveare per Regnicoli": 45, "Lavoro e Legalita'": 20, "Italia dei Valori": 21, "Rifondazione Comunista - Comunisti Italia": 14, "Sinistra Democratica": 12, "Lega Nord": 4, "La Destra": 4, "Udeur": 2, "Movimento Tutela Salute": 1}
+    },
+    "30": {
+      "voti": {"Il Popolo della Liberta'": 182, "Partito Democratico": 97, "Unione Democratica di Centro": 69, "La Primavera di Ascoli - Con Antonio Canzian": 67, "Guido Castelli Sindaco": 47, "Ascoli con Gibellieri Sindaco": 39, "Alveare per Regnicoli": 30, "Lavoro e Legalita'": 16, "Italia dei Valori": 15, "Rifondazione Comunista - Comunisti Italia": 8, "Sinistra Democratica": 8, "Lega Nord": 3, "La Destra": 8, "Udeur": 2, "Movimento Tutela Salute": 5}
+    },
+    "31": {
+      "voti": {"Il Popolo della Liberta'": 236, "Partito Democratico": 102, "Unione Democratica di Centro": 93, "La Primavera di Ascoli - Con Antonio Canzian": 64, "Guido Castelli Sindaco": 64, "Ascoli con Gibellieri Sindaco": 27, "Alveare per Regnicoli": 19, "Lavoro e Legalita'": 27, "Italia dei Valori": 15, "Rifondazione Comunista - Comunisti Italia": 13, "Sinistra Democratica": 6, "Lega Nord": 7, "La Destra": 7, "Udeur": 5, "Movimento Tutela Salute": 2}
+    },
+    "32": {
+      "voti": {"Il Popolo della Liberta'": 158, "Partito Democratico": 161, "Unione Democratica di Centro": 45, "La Primavera di Ascoli - Con Antonio Canzian": 75, "Guido Castelli Sindaco": 46, "Ascoli con Gibellieri Sindaco": 31, "Alveare per Regnicoli": 24, "Lavoro e Legalita'": 39, "Italia dei Valori": 18, "Rifondazione Comunista - Comunisti Italia": 12, "Sinistra Democratica": 24, "Lega Nord": 4, "La Destra": 7, "Udeur": 7, "Movimento Tutela Salute": 1}
+    },
+    "33": {
+      "voti": {"Il Popolo della Liberta'": 183, "Partito Democratico": 176, "Unione Democratica di Centro": 91, "La Primavera di Ascoli - Con Antonio Canzian": 57, "Guido Castelli Sindaco": 114, "Ascoli con Gibellieri Sindaco": 51, "Alveare per Regnicoli": 46, "Lavoro e Legalita'": 32, "Italia dei Valori": 24, "Rifondazione Comunista - Comunisti Italia": 29, "Sinistra Democratica": 8, "Lega Nord": 5, "La Destra": 7, "Udeur": 2, "Movimento Tutela Salute": 3}
+    },
+    "34": {
+      "voti": {"Il Popolo della Liberta'": 158, "Partito Democratico": 140, "Unione Democratica di Centro": 66, "La Primavera di Ascoli - Con Antonio Canzian": 67, "Guido Castelli Sindaco": 45, "Ascoli con Gibellieri Sindaco": 34, "Alveare per Regnicoli": 24, "Lavoro e Legalita'": 38, "Italia dei Valori": 8, "Rifondazione Comunista - Comunisti Italia": 7, "Sinistra Democratica": 9, "Lega Nord": 5, "La Destra": 4, "Udeur": 5, "Movimento Tutela Salute": 1}
+    },
+    "35": {
+      "voti": {"Il Popolo della Liberta'": 139, "Partito Democratico": 112, "Unione Democratica di Centro": 59, "La Primavera di Ascoli - Con Antonio Canzian": 49, "Guido Castelli Sindaco": 54, "Ascoli con Gibellieri Sindaco": 23, "Alveare per Regnicoli": 36, "Lavoro e Legalita'": 24, "Italia dei Valori": 14, "Rifondazione Comunista - Comunisti Italia": 25, "Sinistra Democratica": 13, "Lega Nord": 5, "La Destra": 4, "Udeur": 3, "Movimento Tutela Salute": 1}
+    },
+    "36": {
+      "voti": {"Il Popolo della Liberta'": 218, "Partito Democratico": 112, "Unione Democratica di Centro": 40, "La Primavera di Ascoli - Con Antonio Canzian": 78, "Guido Castelli Sindaco": 58, "Ascoli con Gibellieri Sindaco": 26, "Alveare per Regnicoli": 32, "Lavoro e Legalita'": 32, "Italia dei Valori": 18, "Rifondazione Comunista - Comunisti Italia": 7, "Sinistra Democratica": 0, "Lega Nord": 1, "La Destra": 0, "Udeur": 8, "Movimento Tutela Salute": 2}
+    },
+    "37": {
+      "voti": {"Il Popolo della Liberta'": 144, "Partito Democratico": 159, "Unione Democratica di Centro": 54, "La Primavera di Ascoli - Con Antonio Canzian": 47, "Guido Castelli Sindaco": 54, "Ascoli con Gibellieri Sindaco": 18, "Alveare per Regnicoli": 37, "Lavoro e Legalita'": 37, "Italia dei Valori": 19, "Rifondazione Comunista - Comunisti Italia": 8, "Sinistra Democratica": 15, "Lega Nord": 4, "La Destra": 14, "Udeur": 3, "Movimento Tutela Salute": 1}
+    },
+    "38": {
+      "voti": {"Il Popolo della Liberta'": 135, "Partito Democratico": 155, "Unione Democratica di Centro": 43, "La Primavera di Ascoli - Con Antonio Canzian": 74, "Guido Castelli Sindaco": 34, "Ascoli con Gibellieri Sindaco": 25, "Alveare per Regnicoli": 49, "Lavoro e Legalita'": 18, "Italia dei Valori": 20, "Rifondazione Comunista - Comunisti Italia": 14, "Sinistra Democratica": 24, "Lega Nord": 3, "La Destra": 3, "Udeur": 6, "Movimento Tutela Salute": 1}
+    },
+    "39": {
+      "voti": {"Il Popolo della Liberta'": 256, "Partito Democratico": 102, "Unione Democratica di Centro": 89, "La Primavera di Ascoli - Con Antonio Canzian": 42, "Guido Castelli Sindaco": 78, "Ascoli con Gibellieri Sindaco": 36, "Alveare per Regnicoli": 43, "Lavoro e Legalita'": 37, "Italia dei Valori": 18, "Rifondazione Comunista - Comunisti Italia": 15, "Sinistra Democratica": 14, "Lega Nord": 7, "La Destra": 5, "Udeur": 5, "Movimento Tutela Salute": 1}
+    },
+    "40": {
+      "voti": {"Il Popolo della Liberta'": 7, "Partito Democratico": 2, "Unione Democratica di Centro": 5, "La Primavera di Ascoli - Con Antonio Canzian": 4, "Guido Castelli Sindaco": 3, "Ascoli con Gibellieri Sindaco": 2, "Alveare per Regnicoli": 1, "Lavoro e Legalita'": 2, "Italia dei Valori": 1, "Rifondazione Comunista - Comunisti Italia": 0, "Sinistra Democratica": 0, "Lega Nord": 0, "La Destra": 0, "Udeur": 0, "Movimento Tutela Salute": 0}
+    },
+    "41": {
+      "voti": {"Il Popolo della Liberta'": 145, "Partito Democratico": 48, "Unione Democratica di Centro": 46, "La Primavera di Ascoli - Con Antonio Canzian": 34, "Guido Castelli Sindaco": 33, "Ascoli con Gibellieri Sindaco": 12, "Alveare per Regnicoli": 20, "Lavoro e Legalita'": 19, "Italia dei Valori": 9, "Rifondazione Comunista - Comunisti Italia": 15, "Sinistra Democratica": 2, "Lega Nord": 4, "La Destra": 4, "Udeur": 1, "Movimento Tutela Salute": 7}
+    },
+    "42": {
+      "voti": {"Il Popolo della Liberta'": 223, "Partito Democratico": 128, "Unione Democratica di Centro": 78, "La Primavera di Ascoli - Con Antonio Canzian": 45, "Guido Castelli Sindaco": 41, "Ascoli con Gibellieri Sindaco": 19, "Alveare per Regnicoli": 59, "Lavoro e Legalita'": 49, "Italia dei Valori": 11, "Rifondazione Comunista - Comunisti Italia": 16, "Sinistra Democratica": 8, "Lega Nord": 6, "La Destra": 6, "Udeur": 4, "Movimento Tutela Salute": 3}
+    },
+    "43": {
+      "voti": {"Il Popolo della Liberta'": 237, "Partito Democratico": 124, "Unione Democratica di Centro": 94, "La Primavera di Ascoli - Con Antonio Canzian": 35, "Guido Castelli Sindaco": 53, "Ascoli con Gibellieri Sindaco": 35, "Alveare per Regnicoli": 17, "Lavoro e Legalita'": 29, "Italia dei Valori": 11, "Rifondazione Comunista - Comunisti Italia": 12, "Sinistra Democratica": 6, "Lega Nord": 1, "La Destra": 5, "Udeur": 7, "Movimento Tutela Salute": 1}
+    },
+    "44": {
+      "voti": {"Il Popolo della Liberta'": 194, "Partito Democratico": 126, "Unione Democratica di Centro": 95, "La Primavera di Ascoli - Con Antonio Canzian": 32, "Guido Castelli Sindaco": 32, "Ascoli con Gibellieri Sindaco": 23, "Alveare per Regnicoli": 17, "Lavoro e Legalita'": 20, "Italia dei Valori": 20, "Rifondazione Comunista - Comunisti Italia": 8, "Sinistra Democratica": 2, "Lega Nord": 8, "La Destra": 3, "Udeur": 5, "Movimento Tutela Salute": 1}
+    },
+    "45": {
+      "voti": {"Il Popolo della Liberta'": 180, "Partito Democratico": 132, "Unione Democratica di Centro": 54, "La Primavera di Ascoli - Con Antonio Canzian": 26, "Guido Castelli Sindaco": 111, "Ascoli con Gibellieri Sindaco": 16, "Alveare per Regnicoli": 11, "Lavoro e Legalita'": 47, "Italia dei Valori": 9, "Rifondazione Comunista - Comunisti Italia": 4, "Sinistra Democratica": 2, "Lega Nord": 3, "La Destra": 5, "Udeur": 3, "Movimento Tutela Salute": 0}
+    },
+    "46": {
+      "voti": {"Il Popolo della Liberta'": 190, "Partito Democratico": 119, "Unione Democratica di Centro": 69, "La Primavera di Ascoli - Con Antonio Canzian": 99, "Guido Castelli Sindaco": 64, "Ascoli con Gibellieri Sindaco": 32, "Alveare per Regnicoli": 18, "Lavoro e Legalita'": 21, "Italia dei Valori": 15, "Rifondazione Comunista - Comunisti Italia": 11, "Sinistra Democratica": 21, "Lega Nord": 7, "La Destra": 7, "Udeur": 2, "Movimento Tutela Salute": 1}
+    },
+    "47": {
+      "voti": {"Il Popolo della Liberta'": 243, "Partito Democratico": 72, "Unione Democratica di Centro": 99, "La Primavera di Ascoli - Con Antonio Canzian": 34, "Guido Castelli Sindaco": 90, "Ascoli con Gibellieri Sindaco": 43, "Alveare per Regnicoli": 22, "Lavoro e Legalita'": 25, "Italia dei Valori": 11, "Rifondazione Comunista - Comunisti Italia": 28, "Sinistra Democratica": 5, "Lega Nord": 5, "La Destra": 8, "Udeur": 3, "Movimento Tutela Salute": 2}
+    },
+    "48": {
+      "voti": {"Il Popolo della Liberta'": 217, "Partito Democratico": 113, "Unione Democratica di Centro": 49, "La Primavera di Ascoli - Con Antonio Canzian": 32, "Guido Castelli Sindaco": 117, "Ascoli con Gibellieri Sindaco": 28, "Alveare per Regnicoli": 14, "Lavoro e Legalita'": 18, "Italia dei Valori": 9, "Rifondazione Comunista - Comunisti Italia": 7, "Sinistra Democratica": 4, "Lega Nord": 12, "La Destra": 1, "Udeur": 4, "Movimento Tutela Salute": 0}
+    },
+    "49": {
+      "voti": {"Il Popolo della Liberta'": 111, "Partito Democratico": 50, "Unione Democratica di Centro": 57, "La Primavera di Ascoli - Con Antonio Canzian": 28, "Guido Castelli Sindaco": 39, "Ascoli con Gibellieri Sindaco": 14, "Alveare per Regnicoli": 12, "Lavoro e Legalita'": 41, "Italia dei Valori": 9, "Rifondazione Comunista - Comunisti Italia": 12, "Sinistra Democratica": 8, "Lega Nord": 3, "La Destra": 1, "Udeur": 2, "Movimento Tutela Salute": 0}
+    },
+    "50": {
+      "voti": {"Il Popolo della Liberta'": 164, "Partito Democratico": 76, "Unione Democratica di Centro": 28, "La Primavera di Ascoli - Con Antonio Canzian": 23, "Guido Castelli Sindaco": 45, "Ascoli con Gibellieri Sindaco": 24, "Alveare per Regnicoli": 29, "Lavoro e Legalita'": 17, "Italia dei Valori": 24, "Rifondazione Comunista - Comunisti Italia": 8, "Sinistra Democratica": 4, "Lega Nord": 7, "La Destra": 7, "Udeur": 6, "Movimento Tutela Salute": 3}
+    },
+    "51": {
+      "voti": {"Il Popolo della Liberta'": 207, "Partito Democratico": 96, "Unione Democratica di Centro": 64, "La Primavera di Ascoli - Con Antonio Canzian": 56, "Guido Castelli Sindaco": 58, "Ascoli con Gibellieri Sindaco": 29, "Alveare per Regnicoli": 29, "Lavoro e Legalita'": 36, "Italia dei Valori": 42, "Rifondazione Comunista - Comunisti Italia": 11, "Sinistra Democratica": 6, "Lega Nord": 9, "La Destra": 12, "Udeur": 5, "Movimento Tutela Salute": 1}
+    },
+    "52": {
+      "voti": {"Il Popolo della Liberta'": 164, "Partito Democratico": 101, "Unione Democratica di Centro": 31, "La Primavera di Ascoli - Con Antonio Canzian": 36, "Guido Castelli Sindaco": 21, "Ascoli con Gibellieri Sindaco": 12, "Alveare per Regnicoli": 14, "Lavoro e Legalita'": 14, "Italia dei Valori": 8, "Rifondazione Comunista - Comunisti Italia": 26, "Sinistra Democratica": 2, "Lega Nord": 4, "La Destra": 1, "Udeur": 0, "Movimento Tutela Salute": 2}
+    }
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "elezione": "Comunali 2009",
+  "turno": "Primo Turno",
+  "data": "6-7 Giugno 2009",
+  "comune": "Ascoli Piceno",
+  "tipo": "Sindaco",
+  "candidati": [
+    {"nome": "Guido Castelli", "totale": 14259},
+    {"nome": "Antonio Canzian", "totale": 11347},
+    {"nome": "Amedeo Ciccanti", "totale": 2722},
+    {"nome": "Marco Regnicoli", "totale": 1915},
+    {"nome": "Walter Gibellieri", "totale": 1753},
+    {"nome": "Emidio Catalucci", "totale": 533},
+    {"nome": "Stefano Cannelli", "totale": 293},
+    {"nome": "Giuseppina Maurizi", "totale": 137}
+  ],
+  "affluenza": {
+    "aventi_diritto_donne": 22502,
+    "aventi_diritto_uomini": 20700,
+    "votanti_donne": 17337,
+    "votanti_uomini": 16658,
+    "schede_bianche": 384,
+    "schede_nulle": 646
+  },
+  "sezioni": {
+    "1": {
+      "affluenza": {"aventi_diritto_donne": 424, "aventi_diritto_uomini": 397, "votanti_donne": 210, "votanti_uomini": 204, "schede_bianche": 3, "schede_nulle": 16},
+      "voti": {"Guido Castelli": 184, "Antonio Canzian": 133, "Amedeo Ciccanti": 26, "Marco Regnicoli": 20, "Walter Gibellieri": 16, "Emidio Catalucci": 9, "Stefano Cannelli": 4, "Giuseppina Maurizi": 3}
+    },
+    "2": {
+      "affluenza": {"aventi_diritto_donne": 484, "aventi_diritto_uomini": 414, "votanti_donne": 387, "votanti_uomini": 341, "schede_bianche": 5, "schede_nulle": 16},
+      "voti": {"Guido Castelli": 278, "Antonio Canzian": 263, "Amedeo Ciccanti": 54, "Marco Regnicoli": 37, "Walter Gibellieri": 53, "Emidio Catalucci": 11, "Stefano Cannelli": 11, "Giuseppina Maurizi": 0}
+    },
+    "3": {
+      "affluenza": {"aventi_diritto_donne": 463, "aventi_diritto_uomini": 387, "votanti_donne": 379, "votanti_uomini": 327, "schede_bianche": 3, "schede_nulle": 15},
+      "voti": {"Guido Castelli": 329, "Antonio Canzian": 210, "Amedeo Ciccanti": 51, "Marco Regnicoli": 32, "Walter Gibellieri": 44, "Emidio Catalucci": 10, "Stefano Cannelli": 9, "Giuseppina Maurizi": 3}
+    },
+    "4": {
+      "affluenza": {"aventi_diritto_donne": 491, "aventi_diritto_uomini": 425, "votanti_donne": 307, "votanti_uomini": 263, "schede_bianche": 2, "schede_nulle": 8},
+      "voti": {"Guido Castelli": 254, "Antonio Canzian": 170, "Amedeo Ciccanti": 47, "Marco Regnicoli": 32, "Walter Gibellieri": 39, "Emidio Catalucci": 10, "Stefano Cannelli": 4, "Giuseppina Maurizi": 4}
+    },
+    "5": {
+      "affluenza": {"aventi_diritto_donne": 488, "aventi_diritto_uomini": 414, "votanti_donne": 308, "votanti_uomini": 265, "schede_bianche": 9, "schede_nulle": 5},
+      "voti": {"Guido Castelli": 236, "Antonio Canzian": 192, "Amedeo Ciccanti": 24, "Marco Regnicoli": 45, "Walter Gibellieri": 35, "Emidio Catalucci": 16, "Stefano Cannelli": 3, "Giuseppina Maurizi": 8}
+    },
+    "6": {
+      "affluenza": {"aventi_diritto_donne": 433, "aventi_diritto_uomini": 426, "votanti_donne": 251, "votanti_uomini": 235, "schede_bianche": 7, "schede_nulle": 9},
+      "voti": {"Guido Castelli": 176, "Antonio Canzian": 164, "Amedeo Ciccanti": 37, "Marco Regnicoli": 31, "Walter Gibellieri": 39, "Emidio Catalucci": 16, "Stefano Cannelli": 6, "Giuseppina Maurizi": 1}
+    },
+    "7": {
+      "affluenza": {"aventi_diritto_donne": 479, "aventi_diritto_uomini": 439, "votanti_donne": 322, "votanti_uomini": 288, "schede_bianche": 9, "schede_nulle": 7},
+      "voti": {"Guido Castelli": 273, "Antonio Canzian": 163, "Amedeo Ciccanti": 52, "Marco Regnicoli": 34, "Walter Gibellieri": 51, "Emidio Catalucci": 18, "Stefano Cannelli": 3, "Giuseppina Maurizi": 0}
+    },
+    "8": {
+      "affluenza": {"aventi_diritto_donne": 444, "aventi_diritto_uomini": 386, "votanti_donne": 370, "votanti_uomini": 328, "schede_bianche": 7, "schede_nulle": 15},
+      "voti": {"Guido Castelli": 224, "Antonio Canzian": 273, "Amedeo Ciccanti": 70, "Marco Regnicoli": 30, "Walter Gibellieri": 57, "Emidio Catalucci": 9, "Stefano Cannelli": 9, "Giuseppina Maurizi": 4}
+    },
+    "9": {
+      "affluenza": {"aventi_diritto_donne": 421, "aventi_diritto_uomini": 377, "votanti_donne": 341, "votanti_uomini": 331, "schede_bianche": 3, "schede_nulle": 14},
+      "voti": {"Guido Castelli": 255, "Antonio Canzian": 260, "Amedeo Ciccanti": 41, "Marco Regnicoli": 51, "Walter Gibellieri": 37, "Emidio Catalucci": 6, "Stefano Cannelli": 4, "Giuseppina Maurizi": 1}
+    },
+    "10": {
+      "affluenza": {"aventi_diritto_donne": 419, "aventi_diritto_uomini": 379, "votanti_donne": 319, "votanti_uomini": 316, "schede_bianche": 11, "schede_nulle": 17},
+      "voti": {"Guido Castelli": 213, "Antonio Canzian": 267, "Amedeo Ciccanti": 43, "Marco Regnicoli": 39, "Walter Gibellieri": 29, "Emidio Catalucci": 13, "Stefano Cannelli": 3, "Giuseppina Maurizi": 0}
+    },
+    "11": {
+      "affluenza": {"aventi_diritto_donne": 465, "aventi_diritto_uomini": 431, "votanti_donne": 376, "votanti_uomini": 357, "schede_bianche": 12, "schede_nulle": 39},
+      "voti": {"Guido Castelli": 283, "Antonio Canzian": 269, "Amedeo Ciccanti": 35, "Marco Regnicoli": 46, "Walter Gibellieri": 33, "Emidio Catalucci": 9, "Stefano Cannelli": 4, "Giuseppina Maurizi": 3}
+    },
+    "12": {
+      "affluenza": {"aventi_diritto_donne": 502, "aventi_diritto_uomini": 426, "votanti_donne": 405, "votanti_uomini": 360, "schede_bianche": 9, "schede_nulle": 7},
+      "voti": {"Guido Castelli": 339, "Antonio Canzian": 276, "Amedeo Ciccanti": 54, "Marco Regnicoli": 18, "Walter Gibellieri": 30, "Emidio Catalucci": 21, "Stefano Cannelli": 8, "Giuseppina Maurizi": 3}
+    },
+    "13": {
+      "affluenza": {"aventi_diritto_donne": 467, "aventi_diritto_uomini": 421, "votanti_donne": 324, "votanti_uomini": 333, "schede_bianche": 2, "schede_nulle": 18},
+      "voti": {"Guido Castelli": 288, "Antonio Canzian": 233, "Amedeo Ciccanti": 42, "Marco Regnicoli": 23, "Walter Gibellieri": 40, "Emidio Catalucci": 7, "Stefano Cannelli": 4, "Giuseppina Maurizi": 0}
+    },
+    "14": {
+      "affluenza": {"aventi_diritto_donne": 445, "aventi_diritto_uomini": 441, "votanti_donne": 346, "votanti_uomini": 349, "schede_bianche": 8, "schede_nulle": 16},
+      "voti": {"Guido Castelli": 301, "Antonio Canzian": 232, "Amedeo Ciccanti": 59, "Marco Regnicoli": 22, "Walter Gibellieri": 45, "Emidio Catalucci": 7, "Stefano Cannelli": 5, "Giuseppina Maurizi": 0}
+    },
+    "15": {
+      "affluenza": {"aventi_diritto_donne": 511, "aventi_diritto_uomini": 413, "votanti_donne": 409, "votanti_uomini": 351, "schede_bianche": 8, "schede_nulle": 14},
+      "voti": {"Guido Castelli": 249, "Antonio Canzian": 330, "Amedeo Ciccanti": 45, "Marco Regnicoli": 44, "Walter Gibellieri": 40, "Emidio Catalucci": 23, "Stefano Cannelli": 6, "Giuseppina Maurizi": 1}
+    },
+    "16": {
+      "affluenza": {"aventi_diritto_donne": 465, "aventi_diritto_uomini": 380, "votanti_donne": 364, "votanti_uomini": 314, "schede_bianche": 3, "schede_nulle": 36},
+      "voti": {"Guido Castelli": 276, "Antonio Canzian": 229, "Amedeo Ciccanti": 43, "Marco Regnicoli": 29, "Walter Gibellieri": 40, "Emidio Catalucci": 12, "Stefano Cannelli": 7, "Giuseppina Maurizi": 3}
+    },
+    "17": {
+      "affluenza": {"aventi_diritto_donne": 484, "aventi_diritto_uomini": 455, "votanti_donne": 403, "votanti_uomini": 380, "schede_bianche": 14, "schede_nulle": 2},
+      "voti": {"Guido Castelli": 298, "Antonio Canzian": 324, "Amedeo Ciccanti": 34, "Marco Regnicoli": 43, "Walter Gibellieri": 53, "Emidio Catalucci": 5, "Stefano Cannelli": 4, "Giuseppina Maurizi": 6}
+    },
+    "18": {
+      "affluenza": {"aventi_diritto_donne": 517, "aventi_diritto_uomini": 454, "votanti_donne": 386, "votanti_uomini": 380, "schede_bianche": 14, "schede_nulle": 19},
+      "voti": {"Guido Castelli": 295, "Antonio Canzian": 299, "Amedeo Ciccanti": 56, "Marco Regnicoli": 21, "Walter Gibellieri": 17, "Emidio Catalucci": 11, "Stefano Cannelli": 4, "Giuseppina Maurizi": 6}
+    },
+    "19": {
+      "affluenza": {"aventi_diritto_donne": 538, "aventi_diritto_uomini": 501, "votanti_donne": 433, "votanti_uomini": 420, "schede_bianche": 16, "schede_nulle": 16},
+      "voti": {"Guido Castelli": 396, "Antonio Canzian": 263, "Amedeo Ciccanti": 87, "Marco Regnicoli": 24, "Walter Gibellieri": 22, "Emidio Catalucci": 20, "Stefano Cannelli": 6, "Giuseppina Maurizi": 30}
+    },
+    "20": {
+      "affluenza": {"aventi_diritto_donne": 483, "aventi_diritto_uomini": 428, "votanti_donne": 380, "votanti_uomini": 352, "schede_bianche": 8, "schede_nulle": 15},
+      "voti": {"Guido Castelli": 286, "Antonio Canzian": 256, "Amedeo Ciccanti": 62, "Marco Regnicoli": 34, "Walter Gibellieri": 40, "Emidio Catalucci": 15, "Stefano Cannelli": 10, "Giuseppina Maurizi": 3}
+    },
+    "21": {
+      "affluenza": {"aventi_diritto_donne": 412, "aventi_diritto_uomini": 362, "votanti_donne": 333, "votanti_uomini": 310, "schede_bianche": 5, "schede_nulle": 10},
+      "voti": {"Guido Castelli": 286, "Antonio Canzian": 200, "Amedeo Ciccanti": 42, "Marco Regnicoli": 47, "Walter Gibellieri": 39, "Emidio Catalucci": 8, "Stefano Cannelli": 2, "Giuseppina Maurizi": 0}
+    },
+    "22": {
+      "affluenza": {"aventi_diritto_donne": 402, "aventi_diritto_uomini": 374, "votanti_donne": 325, "votanti_uomini": 310, "schede_bianche": 6, "schede_nulle": 17},
+      "voti": {"Guido Castelli": 259, "Antonio Canzian": 172, "Amedeo Ciccanti": 52, "Marco Regnicoli": 48, "Walter Gibellieri": 58, "Emidio Catalucci": 4, "Stefano Cannelli": 18, "Giuseppina Maurizi": 4}
+    },
+    "23": {
+      "affluenza": {"aventi_diritto_donne": 452, "aventi_diritto_uomini": 372, "votanti_donne": 333, "votanti_uomini": 311, "schede_bianche": 8, "schede_nulle": 7},
+      "voti": {"Guido Castelli": 262, "Antonio Canzian": 222, "Amedeo Ciccanti": 41, "Marco Regnicoli": 55, "Walter Gibellieri": 37, "Emidio Catalucci": 4, "Stefano Cannelli": 8, "Giuseppina Maurizi": 1}
+    },
+    "24": {
+      "affluenza": {"aventi_diritto_donne": 400, "aventi_diritto_uomini": 332, "votanti_donne": 326, "votanti_uomini": 286, "schede_bianche": 4, "schede_nulle": 6},
+      "voti": {"Guido Castelli": 237, "Antonio Canzian": 205, "Amedeo Ciccanti": 42, "Marco Regnicoli": 39, "Walter Gibellieri": 50, "Emidio Catalucci": 4, "Stefano Cannelli": 16, "Giuseppina Maurizi": 0}
+    },
+    "25": {
+      "affluenza": {"aventi_diritto_donne": 407, "aventi_diritto_uomini": 356, "votanti_donne": 319, "votanti_uomini": 288, "schede_bianche": 4, "schede_nulle": 4},
+      "voti": {"Guido Castelli": 286, "Antonio Canzian": 155, "Amedeo Ciccanti": 50, "Marco Regnicoli": 58, "Walter Gibellieri": 39, "Emidio Catalucci": 9, "Stefano Cannelli": 5, "Giuseppina Maurizi": 4}
+    },
+    "26": {
+      "affluenza": {"aventi_diritto_donne": 439, "aventi_diritto_uomini": 353, "votanti_donne": 357, "votanti_uomini": 315, "schede_bianche": 10, "schede_nulle": 12},
+      "voti": {"Guido Castelli": 236, "Antonio Canzian": 218, "Amedeo Ciccanti": 49, "Marco Regnicoli": 106, "Walter Gibellieri": 21, "Emidio Catalucci": 16, "Stefano Cannelli": 3, "Giuseppina Maurizi": 1}
+    },
+    "27": {
+      "affluenza": {"aventi_diritto_donne": 509, "aventi_diritto_uomini": 448, "votanti_donne": 372, "votanti_uomini": 375, "schede_bianche": 10, "schede_nulle": 19},
+      "voti": {"Guido Castelli": 321, "Antonio Canzian": 203, "Amedeo Ciccanti": 59, "Marco Regnicoli": 60, "Walter Gibellieri": 39, "Emidio Catalucci": 20, "Stefano Cannelli": 10, "Giuseppina Maurizi": 6}
+    },
+    "28": {
+      "affluenza": {"aventi_diritto_donne": 447, "aventi_diritto_uomini": 414, "votanti_donne": 359, "votanti_uomini": 332, "schede_bianche": 8, "schede_nulle": 9},
+      "voti": {"Guido Castelli": 302, "Antonio Canzian": 224, "Amedeo Ciccanti": 45, "Marco Regnicoli": 43, "Walter Gibellieri": 49, "Emidio Catalucci": 5, "Stefano Cannelli": 3, "Giuseppina Maurizi": 3}
+    },
+    "29": {
+      "affluenza": {"aventi_diritto_donne": 428, "aventi_diritto_uomini": 386, "votanti_donne": 320, "votanti_uomini": 318, "schede_bianche": 1, "schede_nulle": 6},
+      "voti": {"Guido Castelli": 256, "Antonio Canzian": 227, "Amedeo Ciccanti": 27, "Marco Regnicoli": 69, "Walter Gibellieri": 35, "Emidio Catalucci": 12, "Stefano Cannelli": 5, "Giuseppina Maurizi": 0}
+    },
+    "30": {
+      "affluenza": {"aventi_diritto_donne": 435, "aventi_diritto_uomini": 389, "votanti_donne": 334, "votanti_uomini": 309, "schede_bianche": 7, "schede_nulle": 16},
+      "voti": {"Guido Castelli": 253, "Antonio Canzian": 197, "Amedeo Ciccanti": 69, "Marco Regnicoli": 40, "Walter Gibellieri": 39, "Emidio Catalucci": 10, "Stefano Cannelli": 7, "Giuseppina Maurizi": 5}
+    },
+    "31": {
+      "affluenza": {"aventi_diritto_donne": 446, "aventi_diritto_uomini": 457, "votanti_donne": 373, "votanti_uomini": 394, "schede_bianche": 7, "schede_nulle": 23},
+      "voti": {"Guido Castelli": 344, "Antonio Canzian": 229, "Amedeo Ciccanti": 93, "Marco Regnicoli": 27, "Walter Gibellieri": 30, "Emidio Catalucci": 5, "Stefano Cannelli": 6, "Giuseppina Maurizi": 3}
+    },
+    "32": {
+      "affluenza": {"aventi_diritto_donne": 500, "aventi_diritto_uomini": 455, "votanti_donne": 366, "votanti_uomini": 350, "schede_bianche": 8, "schede_nulle": 25},
+      "voti": {"Guido Castelli": 266, "Antonio Canzian": 275, "Amedeo Ciccanti": 49, "Marco Regnicoli": 32, "Walter Gibellieri": 32, "Emidio Catalucci": 18, "Stefano Cannelli": 10, "Giuseppina Maurizi": 1}
+    },
+    "33": {
+      "affluenza": {"aventi_diritto_donne": 514, "aventi_diritto_uomini": 544, "votanti_donne": 425, "votanti_uomini": 470, "schede_bianche": 8, "schede_nulle": 13},
+      "voti": {"Guido Castelli": 331, "Antonio Canzian": 313, "Amedeo Ciccanti": 92, "Marco Regnicoli": 60, "Walter Gibellieri": 50, "Emidio Catalucci": 21, "Stefano Cannelli": 7, "Giuseppina Maurizi": 0}
+    },
+    "34": {
+      "affluenza": {"aventi_diritto_donne": 398, "aventi_diritto_uomini": 379, "votanti_donne": 341, "votanti_uomini": 334, "schede_bianche": 8, "schede_nulle": 7},
+      "voti": {"Guido Castelli": 251, "Antonio Canzian": 270, "Amedeo Ciccanti": 61, "Marco Regnicoli": 29, "Walter Gibellieri": 35, "Emidio Catalucci": 9, "Stefano Cannelli": 4, "Giuseppina Maurizi": 1}
+    },
+    "35": {
+      "affluenza": {"aventi_diritto_donne": 431, "aventi_diritto_uomini": 379, "votanti_donne": 341, "votanti_uomini": 318, "schede_bianche": 10, "schede_nulle": 9},
+      "voti": {"Guido Castelli": 241, "Antonio Canzian": 238, "Amedeo Ciccanti": 65, "Marco Regnicoli": 50, "Walter Gibellieri": 25, "Emidio Catalucci": 15, "Stefano Cannelli": 4, "Giuseppina Maurizi": 2}
+    },
+    "36": {
+      "affluenza": {"aventi_diritto_donne": 450, "aventi_diritto_uomini": 423, "votanti_donne": 383, "votanti_uomini": 368, "schede_bianche": 5, "schede_nulle": 11},
+      "voti": {"Guido Castelli": 346, "Antonio Canzian": 240, "Amedeo Ciccanti": 53, "Marco Regnicoli": 48, "Walter Gibellieri": 32, "Emidio Catalucci": 10, "Stefano Cannelli": 4, "Giuseppina Maurizi": 4}
+    },
+    "37": {
+      "affluenza": {"aventi_diritto_donne": 410, "aventi_diritto_uomini": 417, "votanti_donne": 318, "votanti_uomini": 346, "schede_bianche": 7, "schede_nulle": 21},
+      "voti": {"Guido Castelli": 253, "Antonio Canzian": 253, "Amedeo Ciccanti": 46, "Marco Regnicoli": 38, "Walter Gibellieri": 19, "Emidio Catalucci": 12, "Stefano Cannelli": 2, "Giuseppina Maurizi": 3}
+    },
+    "38": {
+      "affluenza": {"aventi_diritto_donne": 416, "aventi_diritto_uomini": 364, "votanti_donne": 345, "votanti_uomini": 297, "schede_bianche": 7, "schede_nulle": 6},
+      "voti": {"Guido Castelli": 198, "Antonio Canzian": 291, "Amedeo Ciccanti": 41, "Marco Regnicoli": 53, "Walter Gibellieri": 22, "Emidio Catalucci": 21, "Stefano Cannelli": 2, "Giuseppina Maurizi": 1}
+    },
+    "39": {
+      "affluenza": {"aventi_diritto_donne": 457, "aventi_diritto_uomini": 459, "votanti_donne": 390, "votanti_uomini": 398, "schede_bianche": 5, "schede_nulle": 7},
+      "voti": {"Guido Castelli": 389, "Antonio Canzian": 212, "Amedeo Ciccanti": 70, "Marco Regnicoli": 49, "Walter Gibellieri": 41, "Emidio Catalucci": 10, "Stefano Cannelli": 3, "Giuseppina Maurizi": 2}
+    },
+    "40": {
+      "affluenza": {"aventi_diritto_donne": 0, "aventi_diritto_uomini": 1, "votanti_donne": 14, "votanti_uomini": 18, "schede_bianche": 1, "schede_nulle": 2},
+      "voti": {"Guido Castelli": 13, "Antonio Canzian": 8, "Amedeo Ciccanti": 5, "Marco Regnicoli": 1, "Walter Gibellieri": 2, "Emidio Catalucci": 0, "Stefano Cannelli": 0, "Giuseppina Maurizi": 0}
+    },
+    "41": {
+      "affluenza": {"aventi_diritto_donne": 431, "aventi_diritto_uomini": 449, "votanti_donne": 216, "votanti_uomini": 219, "schede_bianche": 8, "schede_nulle": 10},
+      "voti": {"Guido Castelli": 218, "Antonio Canzian": 118, "Amedeo Ciccanti": 36, "Marco Regnicoli": 20, "Walter Gibellieri": 13, "Emidio Catalucci": 2, "Stefano Cannelli": 5, "Giuseppina Maurizi": 5}
+    },
+    "42": {
+      "affluenza": {"aventi_diritto_donne": 476, "aventi_diritto_uomini": 444, "votanti_donne": 378, "votanti_uomini": 362, "schede_bianche": 13, "schede_nulle": 9},
+      "voti": {"Guido Castelli": 317, "Antonio Canzian": 221, "Amedeo Ciccanti": 68, "Marco Regnicoli": 68, "Walter Gibellieri": 27, "Emidio Catalucci": 7, "Stefano Cannelli": 7, "Giuseppina Maurizi": 3}
+    },
+    "43": {
+      "affluenza": {"aventi_diritto_donne": 431, "aventi_diritto_uomini": 432, "votanti_donne": 325, "votanti_uomini": 372, "schede_bianche": 13, "schede_nulle": 11},
+      "voti": {"Guido Castelli": 340, "Antonio Canzian": 183, "Amedeo Ciccanti": 84, "Marco Regnicoli": 21, "Walter Gibellieri": 34, "Emidio Catalucci": 5, "Stefano Cannelli": 5, "Giuseppina Maurizi": 1}
+    },
+    "44": {
+      "affluenza": {"aventi_diritto_donne": 363, "aventi_diritto_uomini": 368, "votanti_donne": 303, "votanti_uomini": 317, "schede_bianche": 10, "schede_nulle": 8},
+      "voti": {"Guido Castelli": 271, "Antonio Canzian": 179, "Amedeo Ciccanti": 89, "Marco Regnicoli": 22, "Walter Gibellieri": 23, "Emidio Catalucci": 2, "Stefano Cannelli": 3, "Giuseppina Maurizi": 1}
+    },
+    "45": {
+      "affluenza": {"aventi_diritto_donne": 428, "aventi_diritto_uomini": 397, "votanti_donne": 314, "votanti_uomini": 319, "schede_bianche": 8, "schede_nulle": 9},
+      "voti": {"Guido Castelli": 344, "Antonio Canzian": 191, "Amedeo Ciccanti": 56, "Marco Regnicoli": 16, "Walter Gibellieri": 16, "Emidio Catalucci": 2, "Stefano Cannelli": 3, "Giuseppina Maurizi": 0}
+    },
+    "46": {
+      "affluenza": {"aventi_diritto_donne": 435, "aventi_diritto_uomini": 461, "votanti_donne": 345, "votanti_uomini": 376, "schede_bianche": 9, "schede_nulle": 11},
+      "voti": {"Guido Castelli": 290, "Antonio Canzian": 275, "Amedeo Ciccanti": 61, "Marco Regnicoli": 20, "Walter Gibellieri": 29, "Emidio Catalucci": 20, "Stefano Cannelli": 4, "Giuseppina Maurizi": 2}
+    },
+    "47": {
+      "affluenza": {"aventi_diritto_donne": 470, "aventi_diritto_uomini": 472, "votanti_donne": 363, "votanti_uomini": 383, "schede_bianche": 5, "schede_nulle": 10},
+      "voti": {"Guido Castelli": 371, "Antonio Canzian": 167, "Amedeo Ciccanti": 99, "Marco Regnicoli": 32, "Walter Gibellieri": 44, "Emidio Catalucci": 6, "Stefano Cannelli": 8, "Giuseppina Maurizi": 1}
+    },
+    "48": {
+      "affluenza": {"aventi_diritto_donne": 407, "aventi_diritto_uomini": 378, "votanti_donne": 349, "votanti_uomini": 332, "schede_bianche": 8, "schede_nulle": 9},
+      "voti": {"Guido Castelli": 381, "Antonio Canzian": 172, "Amedeo Ciccanti": 45, "Marco Regnicoli": 18, "Walter Gibellieri": 30, "Emidio Catalucci": 4, "Stefano Cannelli": 7, "Giuseppina Maurizi": 2}
+    },
+    "49": {
+      "affluenza": {"aventi_diritto_donne": 270, "aventi_diritto_uomini": 259, "votanti_donne": 217, "votanti_uomini": 205, "schede_bianche": 5, "schede_nulle": 10},
+      "voti": {"Guido Castelli": 201, "Antonio Canzian": 124, "Amedeo Ciccanti": 29, "Marco Regnicoli": 15, "Walter Gibellieri": 11, "Emidio Catalucci": 7, "Stefano Cannelli": 1, "Giuseppina Maurizi": 0}
+    },
+    "50": {
+      "affluenza": {"aventi_diritto_donne": 293, "aventi_diritto_uomini": 289, "votanti_donne": 242, "votanti_uomini": 252, "schede_bianche": 10, "schede_nulle": 7},
+      "voti": {"Guido Castelli": 246, "Antonio Canzian": 139, "Amedeo Ciccanti": 58, "Marco Regnicoli": 30, "Walter Gibellieri": 27, "Emidio Catalucci": 8, "Stefano Cannelli": 0, "Giuseppina Maurizi": 3}
+    },
+    "51": {
+      "affluenza": {"aventi_diritto_donne": 431, "aventi_diritto_uomini": 425, "votanti_donne": 349, "votanti_uomini": 356, "schede_bianche": 4, "schede_nulle": 12},
+      "voti": {"Guido Castelli": 313, "Antonio Canzian": 233, "Amedeo Ciccanti": 31, "Marco Regnicoli": 31, "Walter Gibellieri": 34, "Emidio Catalucci": 6, "Stefano Cannelli": 7, "Giuseppina Maurizi": 1}
+    },
+    "52": {
+      "affluenza": {"aventi_diritto_donne": 291, "aventi_diritto_uomini": 268, "votanti_donne": 242, "votanti_uomini": 224, "schede_bianche": 5, "schede_nulle": 6},
+      "voti": {"Guido Castelli": 204, "Antonio Canzian": 187, "Amedeo Ciccanti": 31, "Marco Regnicoli": 15, "Walter Gibellieri": 11, "Emidio Catalucci": 3, "Stefano Cannelli": 2, "Giuseppina Maurizi": 2}
+    }
+  }
+}

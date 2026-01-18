@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #1e40af;
+  --primary-light: #3b82f6;
+  --secondary: #059669;
+  --accent: #f59e0b;
+  --danger: #dc2626;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.sezione {
+  fill: #e5e7eb;
+  stroke: #374151;
+  stroke-width: 1;
+  cursor: pointer;
+  transition: fill 0.2s, stroke-width 0.2s;
+}
+
+.sezione:hover {
+  fill: #fbbf24;
+  stroke-width: 2;
+}
+
+.sezione.selected {
+  fill: #3b82f6;
+  stroke: #1e40af;
+  stroke-width: 2;
+}
+
+.sezione.highlighted {
+  fill: #10b981;
+}

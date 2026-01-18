@@ -1,0 +1,326 @@
+{
+  "elezione": "Regionali",
+  "data": "2010-03-28",
+  "comune": "Ascoli Piceno",
+  "tipo": "elettori_per_sezione",
+  "descrizione": "Numero di elettori per sezione (uomini, donne e totale)",
+  "sezioni": [
+    {
+      "numero": 1,
+      "uomini": 496,
+      "donne": 490,
+      "totale": 986
+    },
+    {
+      "numero": 2,
+      "uomini": 428,
+      "donne": 487,
+      "totale": 915
+    },
+    {
+      "numero": 3,
+      "uomini": 384,
+      "donne": 449,
+      "totale": 833
+    },
+    {
+      "numero": 4,
+      "uomini": 476,
+      "donne": 536,
+      "totale": 1012
+    },
+    {
+      "numero": 5,
+      "uomini": 493,
+      "donne": 554,
+      "totale": 1047
+    },
+    {
+      "numero": 6,
+      "uomini": 477,
+      "donne": 492,
+      "totale": 969
+    },
+    {
+      "numero": 7,
+      "uomini": 478,
+      "donne": 503,
+      "totale": 981
+    },
+    {
+      "numero": 8,
+      "uomini": 389,
+      "donne": 447,
+      "totale": 836
+    },
+    {
+      "numero": 9,
+      "uomini": 379,
+      "donne": 414,
+      "totale": 793
+    },
+    {
+      "numero": 10,
+      "uomini": 375,
+      "donne": 419,
+      "totale": 794
+    },
+    {
+      "numero": 11,
+      "uomini": 428,
+      "donne": 460,
+      "totale": 888
+    },
+    {
+      "numero": 12,
+      "uomini": 430,
+      "donne": 509,
+      "totale": 939
+    },
+    {
+      "numero": 13,
+      "uomini": 410,
+      "donne": 469,
+      "totale": 879
+    },
+    {
+      "numero": 14,
+      "uomini": 434,
+      "donne": 451,
+      "totale": 885
+    },
+    {
+      "numero": 15,
+      "uomini": 420,
+      "donne": 505,
+      "totale": 925
+    },
+    {
+      "numero": 16,
+      "uomini": 381,
+      "donne": 471,
+      "totale": 852
+    },
+    {
+      "numero": 17,
+      "uomini": 451,
+      "donne": 481,
+      "totale": 932
+    },
+    {
+      "numero": 18,
+      "uomini": 451,
+      "donne": 517,
+      "totale": 968
+    },
+    {
+      "numero": 19,
+      "uomini": 514,
+      "donne": 555,
+      "totale": 1069
+    },
+    {
+      "numero": 20,
+      "uomini": 428,
+      "donne": 485,
+      "totale": 913
+    },
+    {
+      "numero": 21,
+      "uomini": 376,
+      "donne": 409,
+      "totale": 785
+    },
+    {
+      "numero": 22,
+      "uomini": 368,
+      "donne": 404,
+      "totale": 772
+    },
+    {
+      "numero": 23,
+      "uomini": 372,
+      "donne": 462,
+      "totale": 834
+    },
+    {
+      "numero": 24,
+      "uomini": 324,
+      "donne": 393,
+      "totale": 717
+    },
+    {
+      "numero": 25,
+      "uomini": 361,
+      "donne": 403,
+      "totale": 764
+    },
+    {
+      "numero": 26,
+      "uomini": 358,
+      "donne": 440,
+      "totale": 798
+    },
+    {
+      "numero": 27,
+      "uomini": 442,
+      "donne": 520,
+      "totale": 962
+    },
+    {
+      "numero": 28,
+      "uomini": 415,
+      "donne": 446,
+      "totale": 861
+    },
+    {
+      "numero": 29,
+      "uomini": 381,
+      "donne": 426,
+      "totale": 807
+    },
+    {
+      "numero": 30,
+      "uomini": 391,
+      "donne": 435,
+      "totale": 826
+    },
+    {
+      "numero": 31,
+      "uomini": 461,
+      "donne": 451,
+      "totale": 912
+    },
+    {
+      "numero": 32,
+      "uomini": 451,
+      "donne": 497,
+      "totale": 948
+    },
+    {
+      "numero": 33,
+      "uomini": 474,
+      "donne": 444,
+      "totale": 918
+    },
+    {
+      "numero": 34,
+      "uomini": 445,
+      "donne": 470,
+      "totale": 915
+    },
+    {
+      "numero": 35,
+      "uomini": 373,
+      "donne": 427,
+      "totale": 800
+    },
+    {
+      "numero": 36,
+      "uomini": 425,
+      "donne": 444,
+      "totale": 869
+    },
+    {
+      "numero": 37,
+      "uomini": 415,
+      "donne": 404,
+      "totale": 819
+    },
+    {
+      "numero": 38,
+      "uomini": 362,
+      "donne": 419,
+      "totale": 781
+    },
+    {
+      "numero": 39,
+      "uomini": 457,
+      "donne": 454,
+      "totale": 911
+    },
+    {
+      "numero": 40,
+      "uomini": 1,
+      "donne": 0,
+      "totale": 1
+    },
+    {
+      "numero": 41,
+      "uomini": 538,
+      "donne": 495,
+      "totale": 1033
+    },
+    {
+      "numero": 42,
+      "uomini": 447,
+      "donne": 480,
+      "totale": 927
+    },
+    {
+      "numero": 43,
+      "uomini": 430,
+      "donne": 432,
+      "totale": 862
+    },
+    {
+      "numero": 44,
+      "uomini": 367,
+      "donne": 359,
+      "totale": 726
+    },
+    {
+      "numero": 45,
+      "uomini": 402,
+      "donne": 427,
+      "totale": 829
+    },
+    {
+      "numero": 46,
+      "uomini": 461,
+      "donne": 440,
+      "totale": 901
+    },
+    {
+      "numero": 47,
+      "uomini": 477,
+      "donne": 489,
+      "totale": 966
+    },
+    {
+      "numero": 48,
+      "uomini": 389,
+      "donne": 416,
+      "totale": 805
+    },
+    {
+      "numero": 49,
+      "uomini": 261,
+      "donne": 277,
+      "totale": 538
+    },
+    {
+      "numero": 50,
+      "uomini": 298,
+      "donne": 296,
+      "totale": 594
+    },
+    {
+      "numero": 51,
+      "uomini": 431,
+      "donne": 427,
+      "totale": 858
+    },
+    {
+      "numero": 52,
+      "uomini": 268,
+      "donne": 291,
+      "totale": 559
+    }
+  ],
+  "totale_comune": {
+    "uomini": 21143,
+    "donne": 22871,
+    "totale": 44014
+  }
+}

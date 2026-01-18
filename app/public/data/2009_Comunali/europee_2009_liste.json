@@ -1,0 +1,240 @@
+{
+  "elezione": "Europee 2009",
+  "turno": "Unico",
+  "data": "6-7 Giugno 2009",
+  "comune": "Ascoli Piceno",
+  "tipo": "Parlamento Europeo - Voti di Lista",
+  "liste": [
+    {"nome": "Il Popolo della Liberta'", "totale": 13041, "coalizione": "Centrodestra"},
+    {"nome": "Partito Democratico", "totale": 8027, "coalizione": "Centrosinistra"},
+    {"nome": "Di Pietro - Italia dei Valori", "totale": 2991, "coalizione": "Centrosinistra"},
+    {"nome": "Casini - Unione di Centro", "totale": 2375, "coalizione": "Centro"},
+    {"nome": "Rifondazione Comunista - Comunisti Italiani", "totale": 1221, "coalizione": "Sinistra"},
+    {"nome": "Emma Bonino - Marco Pannella", "totale": 923, "coalizione": "Centro"},
+    {"nome": "Lega Nord", "totale": 843, "coalizione": "Centrodestra"},
+    {"nome": "Sinistra e Liberta'", "totale": 791, "coalizione": "Sinistra"},
+    {"nome": "Destra Sociale", "totale": 360, "coalizione": "Destra"},
+    {"nome": "L'Autonomia - Pensionati", "totale": 299, "coalizione": "Centro"},
+    {"nome": "Partito Comunista dei Lavoratori", "totale": 251, "coalizione": "Sinistra"},
+    {"nome": "Forza Nuova", "totale": 226, "coalizione": "Destra"},
+    {"nome": "LD con Melchiorre", "totale": 30, "coalizione": "Centro"}
+  ],
+  "affluenza": {
+    "aventi_diritto_donne": 22502,
+    "aventi_diritto_uomini": 21188,
+    "votanti_donne": 17156,
+    "votanti_uomini": 17046,
+    "schede_bianche": 1504,
+    "schede_nulle": 1086
+  },
+  "sezioni": {
+    "1": {
+      "affluenza": {"aventi_diritto_donne": 424, "aventi_diritto_uomini": 397, "votanti_donne": 209, "votanti_uomini": 203, "schede_bianche": 12, "schede_nulle": 16},
+      "voti": {"Sinistra e Liberta'": 21, "Rifondazione Comunista - Comunisti Italiani": 16, "Partito Democratico": 89, "Partito Comunista dei Lavoratori": 5, "Lega Nord": 7, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 2, "Il Popolo della Liberta'": 170, "Forza Nuova": 2, "Emma Bonino - Marco Pannella": 22, "Di Pietro - Italia dei Valori": 29, "Destra Sociale": 7, "Casini - Unione di Centro": 29}
+    },
+    "2": {
+      "affluenza": {"aventi_diritto_donne": 484, "aventi_diritto_uomini": 414, "votanti_donne": 386, "votanti_uomini": 341, "schede_bianche": 19, "schede_nulle": 37},
+      "voti": {"Sinistra e Liberta'": 15, "Rifondazione Comunista - Comunisti Italiani": 47, "Partito Democratico": 150, "Partito Comunista dei Lavoratori": 8, "Lega Nord": 17, "LD con Melchiorre": 1, "L'Autonomia - Pensionati": 9, "Il Popolo della Liberta'": 257, "Forza Nuova": 5, "Emma Bonino - Marco Pannella": 33, "Di Pietro - Italia dei Valori": 48, "Destra Sociale": 14, "Casini - Unione di Centro": 65}
+    },
+    "3": {
+      "affluenza": {"aventi_diritto_donne": 463, "aventi_diritto_uomini": 387, "votanti_donne": 372, "votanti_uomini": 323, "schede_bianche": 21, "schede_nulle": 20},
+      "voti": {"Sinistra e Liberta'": 17, "Rifondazione Comunista - Comunisti Italiani": 18, "Partito Democratico": 154, "Partito Comunista dei Lavoratori": 2, "Lega Nord": 28, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 5, "Il Popolo della Liberta'": 306, "Forza Nuova": 10, "Emma Bonino - Marco Pannella": 28, "Di Pietro - Italia dei Valori": 51, "Destra Sociale": 5, "Casini - Unione di Centro": 37}
+    },
+    "4": {
+      "affluenza": {"aventi_diritto_donne": 491, "aventi_diritto_uomini": 425, "votanti_donne": 306, "votanti_uomini": 263, "schede_bianche": 13, "schede_nulle": 19},
+      "voti": {"Sinistra e Liberta'": 9, "Rifondazione Comunista - Comunisti Italiani": 13, "Partito Democratico": 136, "Partito Comunista dei Lavoratori": 6, "Lega Nord": 20, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 7, "Il Popolo della Liberta'": 236, "Forza Nuova": 6, "Emma Bonino - Marco Pannella": 23, "Di Pietro - Italia dei Valori": 51, "Destra Sociale": 3, "Casini - Unione di Centro": 29}
+    },
+    "5": {
+      "affluenza": {"aventi_diritto_donne": 488, "aventi_diritto_uomini": 414, "votanti_donne": 305, "votanti_uomini": 265, "schede_bianche": 20, "schede_nulle": 13},
+      "voti": {"Sinistra e Liberta'": 13, "Rifondazione Comunista - Comunisti Italiani": 16, "Partito Democratico": 147, "Partito Comunista dei Lavoratori": 3, "Lega Nord": 14, "LD con Melchiorre": 1, "L'Autonomia - Pensionati": 7, "Il Popolo della Liberta'": 221, "Forza Nuova": 4, "Emma Bonino - Marco Pannella": 26, "Di Pietro - Italia dei Valori": 45, "Destra Sociale": 6, "Casini - Unione di Centro": 34}
+    },
+    "6": {
+      "affluenza": {"aventi_diritto_donne": 433, "aventi_diritto_uomini": 426, "votanti_donne": 247, "votanti_uomini": 234, "schede_bianche": 17, "schede_nulle": 16},
+      "voti": {"Sinistra e Liberta'": 16, "Rifondazione Comunista - Comunisti Italiani": 21, "Partito Democratico": 108, "Partito Comunista dei Lavoratori": 5, "Lega Nord": 22, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 11, "Il Popolo della Liberta'": 168, "Forza Nuova": 10, "Emma Bonino - Marco Pannella": 15, "Di Pietro - Italia dei Valori": 30, "Destra Sociale": 4, "Casini - Unione di Centro": 40}
+    },
+    "7": {
+      "affluenza": {"aventi_diritto_donne": 479, "aventi_diritto_uomini": 439, "votanti_donne": 322, "votanti_uomini": 287, "schede_bianche": 36, "schede_nulle": 16},
+      "voti": {"Sinistra e Liberta'": 24, "Rifondazione Comunista - Comunisti Italiani": 13, "Partito Democratico": 128, "Partito Comunista dei Lavoratori": 2, "Lega Nord": 11, "LD con Melchiorre": 1, "L'Autonomia - Pensionati": 7, "Il Popolo della Liberta'": 256, "Forza Nuova": 4, "Emma Bonino - Marco Pannella": 24, "Di Pietro - Italia dei Valori": 42, "Destra Sociale": 8, "Casini - Unione di Centro": 44}
+    },
+    "8": {
+      "affluenza": {"aventi_diritto_donne": 444, "aventi_diritto_uomini": 386, "votanti_donne": 369, "votanti_uomini": 325, "schede_bianche": 35, "schede_nulle": 19},
+      "voti": {"Sinistra e Liberta'": 21, "Rifondazione Comunista - Comunisti Italiani": 40, "Partito Democratico": 160, "Partito Comunista dei Lavoratori": 4, "Lega Nord": 8, "LD con Melchiorre": 3, "L'Autonomia - Pensionati": 4, "Il Popolo della Liberta'": 246, "Forza Nuova": 3, "Emma Bonino - Marco Pannella": 21, "Di Pietro - Italia dei Valori": 72, "Destra Sociale": 15, "Casini - Unione di Centro": 46}
+    },
+    "9": {
+      "affluenza": {"aventi_diritto_donne": 421, "aventi_diritto_uomini": 377, "votanti_donne": 340, "votanti_uomini": 330, "schede_bianche": 38, "schede_nulle": 33},
+      "voti": {"Sinistra e Liberta'": 13, "Rifondazione Comunista - Comunisti Italiani": 38, "Partito Democratico": 175, "Partito Comunista dei Lavoratori": 8, "Lega Nord": 13, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 21, "Il Popolo della Liberta'": 199, "Forza Nuova": 0, "Emma Bonino - Marco Pannella": 24, "Di Pietro - Italia dei Valori": 73, "Destra Sociale": 6, "Casini - Unione di Centro": 46}
+    },
+    "10": {
+      "affluenza": {"aventi_diritto_donne": 419, "aventi_diritto_uomini": 379, "votanti_donne": 319, "votanti_uomini": 316, "schede_bianche": 31, "schede_nulle": 20},
+      "voti": {"Sinistra e Liberta'": 11, "Rifondazione Comunista - Comunisti Italiani": 24, "Partito Democratico": 200, "Partito Comunista dei Lavoratori": 5, "Lega Nord": 22, "LD con Melchiorre": 1, "L'Autonomia - Pensionati": 0, "Il Popolo della Liberta'": 185, "Forza Nuova": 6, "Emma Bonino - Marco Pannella": 12, "Di Pietro - Italia dei Valori": 68, "Destra Sociale": 4, "Casini - Unione di Centro": 33}
+    },
+    "11": {
+      "affluenza": {"aventi_diritto_donne": 465, "aventi_diritto_uomini": 431, "votanti_donne": 376, "votanti_uomini": 357, "schede_bianche": 36, "schede_nulle": 33},
+      "voti": {"Sinistra e Liberta'": 17, "Rifondazione Comunista - Comunisti Italiani": 27, "Partito Democratico": 162, "Partito Comunista dei Lavoratori": 4, "Lega Nord": 12, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 12, "Il Popolo della Liberta'": 252, "Forza Nuova": 2, "Emma Bonino - Marco Pannella": 21, "Di Pietro - Italia dei Valori": 99, "Destra Sociale": 5, "Casini - Unione di Centro": 53}
+    },
+    "12": {
+      "affluenza": {"aventi_diritto_donne": 502, "aventi_diritto_uomini": 426, "votanti_donne": 404, "votanti_uomini": 360, "schede_bianche": 29, "schede_nulle": 20},
+      "voti": {"Sinistra e Liberta'": 28, "Rifondazione Comunista - Comunisti Italiani": 31, "Partito Democratico": 162, "Partito Comunista dei Lavoratori": 3, "Lega Nord": 20, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 4, "Il Popolo della Liberta'": 308, "Forza Nuova": 7, "Emma Bonino - Marco Pannella": 31, "Di Pietro - Italia dei Valori": 68, "Destra Sociale": 9, "Casini - Unione di Centro": 56}
+    },
+    "13": {
+      "affluenza": {"aventi_diritto_donne": 467, "aventi_diritto_uomini": 421, "votanti_donne": 324, "votanti_uomini": 333, "schede_bianche": 33, "schede_nulle": 26},
+      "voti": {"Sinistra e Liberta'": 17, "Rifondazione Comunista - Comunisti Italiani": 22, "Partito Democratico": 155, "Partito Comunista dei Lavoratori": 8, "Lega Nord": 16, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 11, "Il Popolo della Liberta'": 262, "Forza Nuova": 4, "Emma Bonino - Marco Pannella": 14, "Di Pietro - Italia dei Valori": 58, "Destra Sociale": 6, "Casini - Unione di Centro": 41}
+    },
+    "14": {
+      "affluenza": {"aventi_diritto_donne": 445, "aventi_diritto_uomini": 441, "votanti_donne": 346, "votanti_uomini": 348, "schede_bianche": 37, "schede_nulle": 20},
+      "voti": {"Sinistra e Liberta'": 7, "Rifondazione Comunista - Comunisti Italiani": 23, "Partito Democratico": 162, "Partito Comunista dei Lavoratori": 10, "Lega Nord": 17, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 12, "Il Popolo della Liberta'": 261, "Forza Nuova": 3, "Emma Bonino - Marco Pannella": 25, "Di Pietro - Italia dei Valori": 56, "Destra Sociale": 6, "Casini - Unione di Centro": 62}
+    },
+    "15": {
+      "affluenza": {"aventi_diritto_donne": 511, "aventi_diritto_uomini": 413, "votanti_donne": 406, "votanti_uomini": 346, "schede_bianche": 30, "schede_nulle": 21},
+      "voti": {"Sinistra e Liberta'": 19, "Rifondazione Comunista - Comunisti Italiani": 20, "Partito Democratico": 230, "Partito Comunista dei Lavoratori": 3, "Lega Nord": 19, "LD con Melchiorre": 1, "L'Autonomia - Pensionati": 6, "Il Popolo della Liberta'": 254, "Forza Nuova": 4, "Emma Bonino - Marco Pannella": 27, "Di Pietro - Italia dei Valori": 80, "Destra Sociale": 8, "Casini - Unione di Centro": 36}
+    },
+    "16": {
+      "affluenza": {"aventi_diritto_donne": 465, "aventi_diritto_uomini": 380, "votanti_donne": 364, "votanti_uomini": 314, "schede_bianche": 16, "schede_nulle": 26},
+      "voti": {"Sinistra e Liberta'": 15, "Rifondazione Comunista - Comunisti Italiani": 21, "Partito Democratico": 160, "Partito Comunista dei Lavoratori": 2, "Lega Nord": 24, "LD con Melchiorre": 2, "L'Autonomia - Pensionati": 5, "Il Popolo della Liberta'": 271, "Forza Nuova": 5, "Emma Bonino - Marco Pannella": 20, "Di Pietro - Italia dei Valori": 65, "Destra Sociale": 5, "Casini - Unione di Centro": 39}
+    },
+    "17": {
+      "affluenza": {"aventi_diritto_donne": 484, "aventi_diritto_uomini": 455, "votanti_donne": 403, "votanti_uomini": 380, "schede_bianche": 49, "schede_nulle": 35},
+      "voti": {"Sinistra e Liberta'": 21, "Rifondazione Comunista - Comunisti Italiani": 24, "Partito Democratico": 221, "Partito Comunista dei Lavoratori": 4, "Lega Nord": 24, "LD con Melchiorre": 1, "L'Autonomia - Pensionati": 4, "Il Popolo della Liberta'": 287, "Forza Nuova": 11, "Emma Bonino - Marco Pannella": 17, "Di Pietro - Italia dei Valori": 60, "Destra Sociale": 7, "Casini - Unione di Centro": 42}
+    },
+    "18": {
+      "affluenza": {"aventi_diritto_donne": 517, "aventi_diritto_uomini": 454, "votanti_donne": 386, "votanti_uomini": 380, "schede_bianche": 44, "schede_nulle": 27},
+      "voti": {"Sinistra e Liberta'": 21, "Rifondazione Comunista - Comunisti Italiani": 20, "Partito Democratico": 192, "Partito Comunista dei Lavoratori": 5, "Lega Nord": 24, "LD con Melchiorre": 1, "L'Autonomia - Pensionati": 5, "Il Popolo della Liberta'": 274, "Forza Nuova": 2, "Emma Bonino - Marco Pannella": 24, "Di Pietro - Italia dei Valori": 74, "Destra Sociale": 6, "Casini - Unione di Centro": 52}
+    },
+    "19": {
+      "affluenza": {"aventi_diritto_donne": 538, "aventi_diritto_uomini": 501, "votanti_donne": 431, "votanti_uomini": 420, "schede_bianche": 74, "schede_nulle": 24},
+      "voti": {"Sinistra e Liberta'": 16, "Rifondazione Comunista - Comunisti Italiani": 28, "Partito Democratico": 206, "Partito Comunista dei Lavoratori": 0, "Lega Nord": 29, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 7, "Il Popolo della Liberta'": 338, "Forza Nuova": 4, "Emma Bonino - Marco Pannella": 19, "Di Pietro - Italia dei Valori": 57, "Destra Sociale": 9, "Casini - Unione di Centro": 43}
+    },
+    "20": {
+      "affluenza": {"aventi_diritto_donne": 483, "aventi_diritto_uomini": 428, "votanti_donne": 380, "votanti_uomini": 352, "schede_bianche": 23, "schede_nulle": 18},
+      "voti": {"Sinistra e Liberta'": 22, "Rifondazione Comunista - Comunisti Italiani": 24, "Partito Democratico": 183, "Partito Comunista dei Lavoratori": 4, "Lega Nord": 13, "LD con Melchiorre": 3, "L'Autonomia - Pensionati": 6, "Il Popolo della Liberta'": 253, "Forza Nuova": 6, "Emma Bonino - Marco Pannella": 19, "Di Pietro - Italia dei Valori": 59, "Destra Sociale": 12, "Casini - Unione di Centro": 71}
+    },
+    "21": {
+      "affluenza": {"aventi_diritto_donne": 412, "aventi_diritto_uomini": 362, "votanti_donne": 331, "votanti_uomini": 310, "schede_bianche": 36, "schede_nulle": 13},
+      "voti": {"Sinistra e Liberta'": 21, "Rifondazione Comunista - Comunisti Italiani": 17, "Partito Democratico": 145, "Partito Comunista dei Lavoratori": 6, "Lega Nord": 14, "LD con Melchiorre": 1, "L'Autonomia - Pensionati": 6, "Il Popolo della Liberta'": 269, "Forza Nuova": 3, "Emma Bonino - Marco Pannella": 14, "Di Pietro - Italia dei Valori": 65, "Destra Sociale": 4, "Casini - Unione di Centro": 42}
+    },
+    "22": {
+      "affluenza": {"aventi_diritto_donne": 402, "aventi_diritto_uomini": 374, "votanti_donne": 324, "votanti_uomini": 307, "schede_bianche": 35, "schede_nulle": 32},
+      "voti": {"Sinistra e Liberta'": 15, "Rifondazione Comunista - Comunisti Italiani": 16, "Partito Democratico": 139, "Partito Comunista dei Lavoratori": 1, "Lega Nord": 26, "LD con Melchiorre": 1, "L'Autonomia - Pensionati": 5, "Il Popolo della Liberta'": 259, "Forza Nuova": 10, "Emma Bonino - Marco Pannella": 25, "Di Pietro - Italia dei Valori": 50, "Destra Sociale": 8, "Casini - Unione di Centro": 43}
+    },
+    "23": {
+      "affluenza": {"aventi_diritto_donne": 452, "aventi_diritto_uomini": 372, "votanti_donne": 333, "votanti_uomini": 311, "schede_bianche": 31, "schede_nulle": 34},
+      "voti": {"Sinistra e Liberta'": 6, "Rifondazione Comunista - Comunisti Italiani": 15, "Partito Democratico": 148, "Partito Comunista dei Lavoratori": 5, "Lega Nord": 24, "LD con Melchiorre": 2, "L'Autonomia - Pensionati": 5, "Il Popolo della Liberta'": 218, "Forza Nuova": 6, "Emma Bonino - Marco Pannella": 23, "Di Pietro - Italia dei Valori": 57, "Destra Sociale": 7, "Casini - Unione di Centro": 57}
+    },
+    "24": {
+      "affluenza": {"aventi_diritto_donne": 400, "aventi_diritto_uomini": 332, "votanti_donne": 326, "votanti_uomini": 287, "schede_bianche": 22, "schede_nulle": 16},
+      "voti": {"Sinistra e Liberta'": 20, "Rifondazione Comunista - Comunisti Italiani": 18, "Partito Democratico": 137, "Partito Comunista dei Lavoratori": 10, "Lega Nord": 12, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 5, "Il Popolo della Liberta'": 248, "Forza Nuova": 2, "Emma Bonino - Marco Pannella": 22, "Di Pietro - Italia dei Valori": 39, "Destra Sociale": 11, "Casini - Unione di Centro": 45}
+    },
+    "25": {
+      "affluenza": {"aventi_diritto_donne": 407, "aventi_diritto_uomini": 439, "votanti_donne": 319, "votanti_uomini": 288, "schede_bianche": 22, "schede_nulle": 3},
+      "voti": {"Sinistra e Liberta'": 11, "Rifondazione Comunista - Comunisti Italiani": 12, "Partito Democratico": 117, "Partito Comunista dei Lavoratori": 4, "Lega Nord": 11, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 14, "Il Popolo della Liberta'": 287, "Forza Nuova": 1, "Emma Bonino - Marco Pannella": 21, "Di Pietro - Italia dei Valori": 58, "Destra Sociale": 7, "Casini - Unione di Centro": 51}
+    },
+    "26": {
+      "affluenza": {"aventi_diritto_donne": 291, "aventi_diritto_uomini": 268, "votanti_donne": 241, "votanti_uomini": 226, "schede_bianche": 40, "schede_nulle": 16},
+      "voti": {"Sinistra e Liberta'": 17, "Rifondazione Comunista - Comunisti Italiani": 28, "Partito Democratico": 165, "Partito Comunista dei Lavoratori": 4, "Lega Nord": 13, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 7, "Il Popolo della Liberta'": 245, "Forza Nuova": 3, "Emma Bonino - Marco Pannella": 20, "Di Pietro - Italia dei Valori": 64, "Destra Sociale": 7, "Casini - Unione di Centro": 47}
+    },
+    "27": {
+      "affluenza": {"aventi_diritto_donne": 509, "aventi_diritto_uomini": 448, "votanti_donne": 372, "votanti_uomini": 375, "schede_bianche": 38, "schede_nulle": 28},
+      "voti": {"Sinistra e Liberta'": 16, "Rifondazione Comunista - Comunisti Italiani": 28, "Partito Democratico": 186, "Partito Comunista dei Lavoratori": 7, "Lega Nord": 20, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 6, "Il Popolo della Liberta'": 294, "Forza Nuova": 6, "Emma Bonino - Marco Pannella": 19, "Di Pietro - Italia dei Valori": 65, "Destra Sociale": 6, "Casini - Unione di Centro": 46}
+    },
+    "28": {
+      "affluenza": {"aventi_diritto_donne": 447, "aventi_diritto_uomini": 414, "votanti_donne": 359, "votanti_uomini": 332, "schede_bianche": 25, "schede_nulle": 17},
+      "voti": {"Sinistra e Liberta'": 25, "Rifondazione Comunista - Comunisti Italiani": 12, "Partito Democratico": 171, "Partito Comunista dei Lavoratori": 0, "Lega Nord": 10, "LD con Melchiorre": 1, "L'Autonomia - Pensionati": 3, "Il Popolo della Liberta'": 303, "Forza Nuova": 4, "Emma Bonino - Marco Pannella": 34, "Di Pietro - Italia dei Valori": 50, "Destra Sociale": 7, "Casini - Unione di Centro": 44}
+    },
+    "29": {
+      "affluenza": {"aventi_diritto_donne": 428, "aventi_diritto_uomini": 386, "votanti_donne": 319, "votanti_uomini": 317, "schede_bianche": 29, "schede_nulle": 10},
+      "voti": {"Sinistra e Liberta'": 14, "Rifondazione Comunista - Comunisti Italiani": 25, "Partito Democratico": 179, "Partito Comunista dei Lavoratori": 7, "Lega Nord": 8, "LD con Melchiorre": 1, "L'Autonomia - Pensionati": 3, "Il Popolo della Liberta'": 243, "Forza Nuova": 7, "Emma Bonino - Marco Pannella": 16, "Di Pietro - Italia dei Valori": 61, "Destra Sociale": 3, "Casini - Unione di Centro": 32}
+    },
+    "30": {
+      "affluenza": {"aventi_diritto_donne": 435, "aventi_diritto_uomini": 389, "votanti_donne": 333, "votanti_uomini": 309, "schede_bianche": 33, "schede_nulle": 36},
+      "voti": {"Sinistra e Liberta'": 19, "Rifondazione Comunista - Comunisti Italiani": 21, "Partito Democratico": 137, "Partito Comunista dei Lavoratori": 2, "Lega Nord": 10, "LD con Melchiorre": 1, "L'Autonomia - Pensionati": 4, "Il Popolo della Liberta'": 236, "Forza Nuova": 2, "Emma Bonino - Marco Pannella": 19, "Di Pietro - Italia dei Valori": 67, "Destra Sociale": 7, "Casini - Unione di Centro": 58}
+    },
+    "31": {
+      "affluenza": {"aventi_diritto_donne": 446, "aventi_diritto_uomini": 457, "votanti_donne": 373, "votanti_uomini": 393, "schede_bianche": 26, "schede_nulle": 27},
+      "voti": {"Sinistra e Liberta'": 14, "Rifondazione Comunista - Comunisti Italiani": 24, "Partito Democratico": 154, "Partito Comunista dei Lavoratori": 5, "Lega Nord": 24, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 5, "Il Popolo della Liberta'": 315, "Forza Nuova": 1, "Emma Bonino - Marco Pannella": 17, "Di Pietro - Italia dei Valori": 67, "Destra Sociale": 4, "Casini - Unione di Centro": 80}
+    },
+    "32": {
+      "affluenza": {"aventi_diritto_donne": 500, "aventi_diritto_uomini": 455, "votanti_donne": 366, "votanti_uomini": 350, "schede_bianche": 29, "schede_nulle": 40},
+      "voti": {"Sinistra e Liberta'": 12, "Rifondazione Comunista - Comunisti Italiani": 34, "Partito Democratico": 187, "Partito Comunista dei Lavoratori": 9, "Lega Nord": 15, "LD con Melchiorre": 2, "L'Autonomia - Pensionati": 8, "Il Popolo della Liberta'": 243, "Forza Nuova": 4, "Emma Bonino - Marco Pannella": 10, "Di Pietro - Italia dei Valori": 58, "Destra Sociale": 6, "Casini - Unione di Centro": 40}
+    },
+    "33": {
+      "affluenza": {"aventi_diritto_donne": 514, "aventi_diritto_uomini": 544, "votanti_donne": 425, "votanti_uomini": 470, "schede_bianche": 31, "schede_nulle": 28},
+      "voti": {"Sinistra e Liberta'": 19, "Rifondazione Comunista - Comunisti Italiani": 60, "Partito Democratico": 222, "Partito Comunista dei Lavoratori": 8, "Lega Nord": 15, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 5, "Il Popolo della Liberta'": 330, "Forza Nuova": 4, "Emma Bonino - Marco Pannella": 14, "Di Pietro - Italia dei Valori": 64, "Destra Sociale": 14, "Casini - Unione di Centro": 64}
+    },
+    "34": {
+      "affluenza": {"aventi_diritto_donne": 398, "aventi_diritto_uomini": 379, "votanti_donne": 341, "votanti_uomini": 334, "schede_bianche": 27, "schede_nulle": 21},
+      "voti": {"Sinistra e Liberta'": 20, "Rifondazione Comunista - Comunisti Italiani": 23, "Partito Democratico": 173, "Partito Comunista dei Lavoratori": 5, "Lega Nord": 6, "LD con Melchiorre": 1, "L'Autonomia - Pensionati": 2, "Il Popolo della Liberta'": 234, "Forza Nuova": 2, "Emma Bonino - Marco Pannella": 18, "Di Pietro - Italia dei Valori": 87, "Destra Sociale": 5, "Casini - Unione di Centro": 50}
+    },
+    "35": {
+      "affluenza": {"aventi_diritto_donne": 431, "aventi_diritto_uomini": 379, "votanti_donne": 339, "votanti_uomini": 317, "schede_bianche": 26, "schede_nulle": 20},
+      "voti": {"Sinistra e Liberta'": 14, "Rifondazione Comunista - Comunisti Italiani": 34, "Partito Democratico": 169, "Partito Comunista dei Lavoratori": 3, "Lega Nord": 19, "LD con Melchiorre": 1, "L'Autonomia - Pensionati": 8, "Il Popolo della Liberta'": 234, "Forza Nuova": 2, "Emma Bonino - Marco Pannella": 16, "Di Pietro - Italia dei Valori": 61, "Destra Sociale": 8, "Casini - Unione di Centro": 45}
+    },
+    "36": {
+      "affluenza": {"aventi_diritto_donne": 450, "aventi_diritto_uomini": 423, "votanti_donne": 383, "votanti_uomini": 368, "schede_bianche": 20, "schede_nulle": 16},
+      "voti": {"Sinistra e Liberta'": 14, "Rifondazione Comunista - Comunisti Italiani": 16, "Partito Democratico": 193, "Partito Comunista dei Lavoratori": 4, "Lega Nord": 12, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 3, "Il Popolo della Liberta'": 314, "Forza Nuova": 8, "Emma Bonino - Marco Pannella": 17, "Di Pietro - Italia dei Valori": 81, "Destra Sociale": 8, "Casini - Unione di Centro": 48}
+    },
+    "37": {
+      "affluenza": {"aventi_diritto_donne": 410, "aventi_diritto_uomini": 417, "votanti_donne": 318, "votanti_uomini": 346, "schede_bianche": 40, "schede_nulle": 29},
+      "voti": {"Sinistra e Liberta'": 7, "Rifondazione Comunista - Comunisti Italiani": 20, "Partito Democratico": 192, "Partito Comunista dei Lavoratori": 9, "Lega Nord": 14, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 4, "Il Popolo della Liberta'": 235, "Forza Nuova": 5, "Emma Bonino - Marco Pannella": 6, "Di Pietro - Italia dei Valori": 57, "Destra Sociale": 10, "Casini - Unione di Centro": 35}
+    },
+    "38": {
+      "affluenza": {"aventi_diritto_donne": 416, "aventi_diritto_uomini": 364, "votanti_donne": 344, "votanti_uomini": 297, "schede_bianche": 26, "schede_nulle": 18},
+      "voti": {"Sinistra e Liberta'": 27, "Rifondazione Comunista - Comunisti Italiani": 24, "Partito Democratico": 217, "Partito Comunista dei Lavoratori": 10, "Lega Nord": 14, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 2, "Il Popolo della Liberta'": 168, "Forza Nuova": 3, "Emma Bonino - Marco Pannella": 17, "Di Pietro - Italia dei Valori": 69, "Destra Sociale": 9, "Casini - Unione di Centro": 36}
+    },
+    "39": {
+      "affluenza": {"aventi_diritto_donne": 457, "aventi_diritto_uomini": 459, "votanti_donne": 389, "votanti_uomini": 398, "schede_bianche": 23, "schede_nulle": 17},
+      "voti": {"Sinistra e Liberta'": 13, "Rifondazione Comunista - Comunisti Italiani": 17, "Partito Democratico": 146, "Partito Comunista dei Lavoratori": 3, "Lega Nord": 16, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 11, "Il Popolo della Liberta'": 353, "Forza Nuova": 6, "Emma Bonino - Marco Pannella": 17, "Di Pietro - Italia dei Valori": 95, "Destra Sociale": 8, "Casini - Unione di Centro": 62}
+    },
+    "40": {
+      "affluenza": {"aventi_diritto_donne": 0, "aventi_diritto_uomini": 1, "votanti_donne": 15, "votanti_uomini": 32, "schede_bianche": 6, "schede_nulle": 1},
+      "voti": {"Sinistra e Liberta'": 3, "Rifondazione Comunista - Comunisti Italiani": 0, "Partito Democratico": 13, "Partito Comunista dei Lavoratori": 3, "Lega Nord": 0, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 0, "Il Popolo della Liberta'": 17, "Forza Nuova": 0, "Emma Bonino - Marco Pannella": 0, "Di Pietro - Italia dei Valori": 5, "Destra Sociale": 0, "Casini - Unione di Centro": 3}
+    },
+    "41": {
+      "affluenza": {"aventi_diritto_donne": 431, "aventi_diritto_uomini": 449, "votanti_donne": 216, "votanti_uomini": 219, "schede_bianche": 20, "schede_nulle": 16},
+      "voti": {"Sinistra e Liberta'": 6, "Rifondazione Comunista - Comunisti Italiani": 14, "Partito Democratico": 66, "Partito Comunista dei Lavoratori": 3, "Lega Nord": 19, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 3, "Il Popolo della Liberta'": 187, "Forza Nuova": 1, "Emma Bonino - Marco Pannella": 15, "Di Pietro - Italia dei Valori": 37, "Destra Sociale": 4, "Casini - Unione di Centro": 46}
+    },
+    "42": {
+      "affluenza": {"aventi_diritto_donne": 476, "aventi_diritto_uomini": 444, "votanti_donne": 377, "votanti_uomini": 362, "schede_bianche": 46, "schede_nulle": 16},
+      "voti": {"Sinistra e Liberta'": 12, "Rifondazione Comunista - Comunisti Italiani": 37, "Partito Democratico": 159, "Partito Comunista dei Lavoratori": 6, "Lega Nord": 23, "LD con Melchiorre": 1, "L'Autonomia - Pensionati": 4, "Il Popolo della Liberta'": 281, "Forza Nuova": 5, "Emma Bonino - Marco Pannella": 16, "Di Pietro - Italia dei Valori": 58, "Destra Sociale": 13, "Casini - Unione di Centro": 71}
+    },
+    "43": {
+      "affluenza": {"aventi_diritto_donne": 431, "aventi_diritto_uomini": 432, "votanti_donne": 324, "votanti_uomini": 370, "schede_bianche": 49, "schede_nulle": 16},
+      "voti": {"Sinistra e Liberta'": 8, "Rifondazione Comunista - Comunisti Italiani": 25, "Partito Democratico": 157, "Partito Comunista dei Lavoratori": 4, "Lega Nord": 18, "LD con Melchiorre": 1, "L'Autonomia - Pensionati": 3, "Il Popolo della Liberta'": 289, "Forza Nuova": 13, "Emma Bonino - Marco Pannella": 11, "Di Pietro - Italia dei Valori": 34, "Destra Sociale": 3, "Casini - Unione di Centro": 45}
+    },
+    "44": {
+      "affluenza": {"aventi_diritto_donne": 363, "aventi_diritto_uomini": 397, "votanti_donne": 302, "votanti_uomini": 316, "schede_bianche": 39, "schede_nulle": 19},
+      "voti": {"Sinistra e Liberta'": 8, "Rifondazione Comunista - Comunisti Italiani": 25, "Partito Democratico": 159, "Partito Comunista dei Lavoratori": 4, "Lega Nord": 18, "LD con Melchiorre": 1, "L'Autonomia - Pensionati": 4, "Il Popolo della Liberta'": 248, "Forza Nuova": 3, "Emma Bonino - Marco Pannella": 7, "Di Pietro - Italia dei Valori": 64, "Destra Sociale": 6, "Casini - Unione di Centro": 51}
+    },
+    "45": {
+      "affluenza": {"aventi_diritto_donne": 428, "aventi_diritto_uomini": 461, "votanti_donne": 313, "votanti_uomini": 319, "schede_bianche": 36, "schede_nulle": 28},
+      "voti": {"Sinistra e Liberta'": 7, "Rifondazione Comunista - Comunisti Italiani": 14, "Partito Democratico": 141, "Partito Comunista dei Lavoratori": 6, "Lega Nord": 13, "LD con Melchiorre": 1, "L'Autonomia - Pensionati": 3, "Il Popolo della Liberta'": 251, "Forza Nuova": 4, "Emma Bonino - Marco Pannella": 7, "Di Pietro - Italia dei Valori": 40, "Destra Sociale": 4, "Casini - Unione di Centro": 59}
+    },
+    "46": {
+      "affluenza": {"aventi_diritto_donne": 435, "aventi_diritto_uomini": 472, "votanti_donne": 343, "votanti_uomini": 375, "schede_bianche": 40, "schede_nulle": 29},
+      "voti": {"Sinistra e Liberta'": 11, "Rifondazione Comunista - Comunisti Italiani": 14, "Partito Democratico": 149, "Partito Comunista dei Lavoratori": 5, "Lega Nord": 17, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 7, "Il Popolo della Liberta'": 254, "Forza Nuova": 4, "Emma Bonino - Marco Pannella": 12, "Di Pietro - Italia dei Valori": 65, "Destra Sociale": 8, "Casini - Unione di Centro": 53}
+    },
+    "47": {
+      "affluenza": {"aventi_diritto_donne": 470, "aventi_diritto_uomini": 378, "votanti_donne": 363, "votanti_uomini": 383, "schede_bianche": 38, "schede_nulle": 24},
+      "voti": {"Sinistra e Liberta'": 28, "Rifondazione Comunista - Comunisti Italiani": 20, "Partito Democratico": 179, "Partito Comunista dei Lavoratori": 6, "Lega Nord": 20, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 4, "Il Popolo della Liberta'": 359, "Forza Nuova": 4, "Emma Bonino - Marco Pannella": 22, "Di Pietro - Italia dei Valori": 44, "Destra Sociale": 5, "Casini - Unione di Centro": 66}
+    },
+    "48": {
+      "affluenza": {"aventi_diritto_donne": 407, "aventi_diritto_uomini": 259, "votanti_donne": 349, "votanti_uomini": 334, "schede_bianche": 22, "schede_nulle": 25},
+      "voti": {"Sinistra e Liberta'": 12, "Rifondazione Comunista - Comunisti Italiani": 34, "Partito Democratico": 113, "Partito Comunista dei Lavoratori": 2, "Lega Nord": 14, "LD con Melchiorre": 2, "L'Autonomia - Pensionati": 3, "Il Popolo della Liberta'": 319, "Forza Nuova": 3, "Emma Bonino - Marco Pannella": 20, "Di Pietro - Italia dei Valori": 53, "Destra Sociale": 11, "Casini - Unione di Centro": 35}
+    },
+    "49": {
+      "affluenza": {"aventi_diritto_donne": 270, "aventi_diritto_uomini": 289, "votanti_donne": 217, "votanti_uomini": 205, "schede_bianche": 23, "schede_nulle": 14},
+      "voti": {"Sinistra e Liberta'": 16, "Rifondazione Comunista - Comunisti Italiani": 22, "Partito Democratico": 121, "Partito Comunista dei Lavoratori": 7, "Lega Nord": 23, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 5, "Il Popolo della Liberta'": 184, "Forza Nuova": 2, "Emma Bonino - Marco Pannella": 3, "Di Pietro - Italia dei Valori": 43, "Destra Sociale": 4, "Casini - Unione di Centro": 25}
+    },
+    "50": {
+      "affluenza": {"aventi_diritto_donne": 293, "aventi_diritto_uomini": 425, "votanti_donne": 242, "votanti_uomini": 252, "schede_bianche": 29, "schede_nulle": 14},
+      "voti": {"Sinistra e Liberta'": 10, "Rifondazione Comunista - Comunisti Italiani": 23, "Partito Democratico": 71, "Partito Comunista dei Lavoratori": 3, "Lega Nord": 9, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 1, "Il Popolo della Liberta'": 196, "Forza Nuova": 6, "Emma Bonino - Marco Pannella": 5, "Di Pietro - Italia dei Valori": 47, "Destra Sociale": 6, "Casini - Unione di Centro": 23}
+    },
+    "51": {
+      "affluenza": {"aventi_diritto_donne": 431, "aventi_diritto_uomini": 289, "votanti_donne": 356, "votanti_uomini": 287, "schede_bianche": 22, "schede_nulle": 14},
+      "voti": {"Sinistra e Liberta'": 13, "Rifondazione Comunista - Comunisti Italiani": 34, "Partito Democratico": 97, "Partito Comunista dei Lavoratori": 4, "Lega Nord": 8, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 6, "Il Popolo della Liberta'": 275, "Forza Nuova": 5, "Emma Bonino - Marco Pannella": 5, "Di Pietro - Italia dei Valori": 73, "Destra Sociale": 10, "Casini - Unione di Centro": 44}
+    },
+    "52": {
+      "affluenza": {"aventi_diritto_donne": 268, "aventi_diritto_uomini": 315, "votanti_donne": 357, "votanti_uomini": 315, "schede_bianche": 19, "schede_nulle": 27},
+      "voti": {"Sinistra e Liberta'": 9, "Rifondazione Comunista - Comunisti Italiani": 32, "Partito Democratico": 155, "Partito Comunista dei Lavoratori": 5, "Lega Nord": 11, "LD con Melchiorre": 0, "L'Autonomia - Pensionati": 1, "Il Popolo della Liberta'": 149, "Forza Nuova": 0, "Emma Bonino - Marco Pannella": 10, "Di Pietro - Italia dei Valori": 28, "Destra Sociale": 2, "Casini - Unione di Centro": 31}
+    }
+  }
+}

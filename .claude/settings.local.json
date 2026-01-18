@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.tuttitalia.it)",
+      "WebFetch(domain:www.comune.ap.it)",
+      "WebFetch(domain:elezionistorico.interno.gov.it)",
+      "Skill(ralph-loop:cancel-ralph)",
+      "Skill(ralph-loop:ralph-loop)",
+      "Bash(python3:*)",
+      "Bash(pip3 install:*)",
+      "Bash(pdftotext:*)",
+      "Bash(apt list:*)",
+      "Bash(dpkg -l:*)",
+      "Bash(powershell.exe -Command \"Get-Command *pdf*\")",
+      "Bash(powershell.exe -Command \"cd ''C:\\\\Users\\\\pisel\\\\Desktop\\\\Guloi\\\\Ascoli_View_Elections\\\\data\\\\raw_Data''; python -c \"\"import fitz; doc=fitz.open\\(''Preferenze_mini.pdf''\\); print\\(f''PDF has {len\\(doc\\)} pages''\\)\"\"\")",
+      "Bash(powershell.exe -Command \"cd ''C:\\\\Users\\\\pisel\\\\Desktop\\\\Guloi\\\\Ascoli_View_Elections\\\\data\\\\raw_Data''; python -c \"\"\nimport fitz\ndoc = fitz.open\\(''Preferenze_mini.pdf''\\)\n# Extract page 3 \\(0-indexed, so page 2\\)\npage = doc[2]\ntext = page.get_text\\(\\)\nprint\\(text\\)\n\"\"\")",
+      "Bash(powershell.exe -Command \"cd ''C:\\\\Users\\\\pisel\\\\Desktop\\\\Guloi\\\\Ascoli_View_Elections''; python extract_pdf.py\")",
+      "Bash(powershell.exe -Command \"cd ''C:\\\\Users\\\\pisel\\\\Desktop\\\\Guloi\\\\Ascoli_View_Elections''; python parse_extracted.py\")",
+      "Bash(powershell.exe -Command \"cd ''C:\\\\Users\\\\pisel\\\\Desktop\\\\Guloi\\\\Ascoli_View_Elections''; python -c \"\"\nimport json\nwith open\\(''data/json/2009_Comunali/preferenze_comunali.json'', ''r'', encoding=''utf-8''\\) as f:\n    data = json.load\\(f\\)\n\ntotal = 0\nfor party in data[''liste'']:\n    count = len\\(party[''candidati'']\\)\n    print\\(f''{party[\"\"nome\"\"]}: {count} candidates''\\)\n    total += count\n\nprint\\(f''\\\\nTotal: {total} candidates across {len\\(data[\"\"liste\"\"]\\)} parties''\\)\n\"\"\")",
+      "Bash(powershell.exe -Command \"cd ''C:\\\\Users\\\\pisel\\\\Desktop\\\\Guloi\\\\Ascoli_View_Elections''; python -c \"\"import json; f=open\\(''data/json/2009_Comunali/preferenze_comunali.json'',''r'',encoding=''utf-8''\\); d=json.load\\(f\\); print\\(''Parties:'', len\\(d[''liste'']\\)\\); print\\(''Candidates per party:''\\); [print\\(p[''nome''],'':'', len\\(p[''candidati'']\\)\\) for p in d[''liste'']]; print\\(''Total:'', sum\\(len\\(p[''candidati'']\\) for p in d[''liste'']\\)\\)\"\"\")",
+      "Bash(powershell.exe -Command \"cd ''C:\\\\Users\\\\pisel\\\\Desktop\\\\Guloi\\\\Ascoli_View_Elections''; python -c \"\"import json; f=open\\(''data/json/2009_Comunali/preferenze_comunali.json'',''r'',encoding=''utf-8''\\); d=json.load\\(f\\); print\\(''Parties:'', len\\(d[''liste'']\\)\\); [print\\(p[''nome''],'':'', len\\(p[''candidati'']\\)\\) for p in d[''liste'']]; print\\(''Total:'', sum\\(len\\(p[''candidati'']\\) for p in d[''liste'']\\)\\)\"\"\")",
+      "Bash(powershell.exe -Command \"cd ''C:\\\\Users\\\\pisel\\\\Desktop\\\\Guloi\\\\Ascoli_View_Elections''; python -c \"\"\nimport json\nf=open\\(''data/json/2009_Comunali/preferenze_comunali.json'',''r'',encoding=''utf-8''\\)\nd=json.load\\(f\\)\nerrors=0\nfor p in d[''liste'']:\n    for c in p[''candidati'']:\n        s=sum\\(c[''sezioni''].values\\(\\)\\)\n        if s != c[''totale'']:\n            errors+=1\nprint\\(''Validation errors:'', errors\\)\nprint\\(''Status:'', ''PASS'' if errors==0 else ''FAIL''\\)\n\"\"\")",
+      "Bash(powershell.exe -Command \"cd ''C:\\\\Users\\\\pisel\\\\Desktop\\\\Guloi\\\\Ascoli_View_Elections''; python -c \"\"\nimport json\nimport os\n\nfiles = [\n    ''data/json/2009_Comunali/ballottaggio_sindaco.json'',\n    ''data/json/2009_Comunali/primo_turno_sindaco.json'',\n    ''data/json/2009_Comunali/liste_consiglio.json'',\n    ''data/json/2009_Comunali/preferenze_comunali.json'',\n    ''data/json/2009_Europee/preferenze_europee.json''\n]\n\nfor f in files:\n    if os.path.exists\\(f\\):\n        with open\\(f, ''r'', encoding=''utf-8''\\) as file:\n            d = json.load\\(file\\)\n            print\\(f''{f}:''\\)\n            print\\(f''  Keys: {list\\(d.keys\\(\\)\\)}''\\)\n            if ''candidati'' in d:\n                print\\(f''  Candidati: {len\\(d[\"\"candidati\"\"]\\)}''\\)\n            if ''liste'' in d:\n                print\\(f''  Liste: {len\\(d[\"\"liste\"\"]\\)}''\\)\n            print\\(\\)\n\"\"\")",
+      "Bash(sort:*)",
+      "Bash(npm create:*)",
+      "Bash(npm install:*)",
+      "Bash(npm ls:*)",
+      "Bash(npm run build:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:eligo.comune.ap.it)",
+      "Bash(powershell.exe -Command:*)",
+      "Bash(pkill:*)",
+      "Bash(vercel:*)",
+      "Bash(done)"
+    ]
+  }
+}

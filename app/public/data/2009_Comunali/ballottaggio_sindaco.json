@@ -1,0 +1,229 @@
+{
+  "elezione": "Comunali 2009",
+  "turno": "Ballottaggio",
+  "data": "21-22 Giugno 2009",
+  "comune": "Ascoli Piceno",
+  "tipo": "Sindaco",
+  "candidati": [
+    {"nome": "Guido Castelli", "totale": 14700},
+    {"nome": "Antonio Canzian", "totale": 14273}
+  ],
+  "affluenza": {
+    "aventi_diritto_donne": 22502,
+    "aventi_diritto_uomini": 20700,
+    "votanti_donne": 14963,
+    "votanti_uomini": 14696,
+    "schede_bianche": 322,
+    "schede_nulle": 357
+  },
+  "sezioni": {
+    "1": {
+      "affluenza": {"aventi_diritto_donne": 424, "aventi_diritto_uomini": 397, "votanti_donne": 186, "votanti_uomini": 190, "schede_bianche": 3, "schede_nulle": 4},
+      "voti": {"Guido Castelli": 189, "Antonio Canzian": 180}
+    },
+    "2": {
+      "affluenza": {"aventi_diritto_donne": 484, "aventi_diritto_uomini": 414, "votanti_donne": 343, "votanti_uomini": 300, "schede_bianche": 3, "schede_nulle": 8},
+      "voti": {"Guido Castelli": 297, "Antonio Canzian": 335}
+    },
+    "3": {
+      "affluenza": {"aventi_diritto_donne": 463, "aventi_diritto_uomini": 387, "votanti_donne": 341, "votanti_uomini": 300, "schede_bianche": 3, "schede_nulle": 12},
+      "voti": {"Guido Castelli": 345, "Antonio Canzian": 281}
+    },
+    "4": {
+      "affluenza": {"aventi_diritto_donne": 491, "aventi_diritto_uomini": 425, "votanti_donne": 273, "votanti_uomini": 241, "schede_bianche": 8, "schede_nulle": 13},
+      "voti": {"Guido Castelli": 265, "Antonio Canzian": 228}
+    },
+    "5": {
+      "affluenza": {"aventi_diritto_donne": 488, "aventi_diritto_uomini": 414, "votanti_donne": 272, "votanti_uomini": 235, "schede_bianche": 7, "schede_nulle": 3},
+      "voti": {"Guido Castelli": 236, "Antonio Canzian": 261}
+    },
+    "6": {
+      "affluenza": {"aventi_diritto_donne": 433, "aventi_diritto_uomini": 426, "votanti_donne": 217, "votanti_uomini": 209, "schede_bianche": 3, "schede_nulle": 3},
+      "voti": {"Guido Castelli": 202, "Antonio Canzian": 217}
+    },
+    "7": {
+      "affluenza": {"aventi_diritto_donne": 479, "aventi_diritto_uomini": 439, "votanti_donne": 280, "votanti_uomini": 257, "schede_bianche": 9, "schede_nulle": 4},
+      "voti": {"Guido Castelli": 292, "Antonio Canzian": 232}
+    },
+    "8": {
+      "affluenza": {"aventi_diritto_donne": 444, "aventi_diritto_uomini": 386, "votanti_donne": 314, "votanti_uomini": 288, "schede_bianche": 7, "schede_nulle": 6},
+      "voti": {"Guido Castelli": 247, "Antonio Canzian": 342}
+    },
+    "9": {
+      "affluenza": {"aventi_diritto_donne": 421, "aventi_diritto_uomini": 377, "votanti_donne": 294, "votanti_uomini": 287, "schede_bianche": 6, "schede_nulle": 8},
+      "voti": {"Guido Castelli": 250, "Antonio Canzian": 317}
+    },
+    "10": {
+      "affluenza": {"aventi_diritto_donne": 419, "aventi_diritto_uomini": 379, "votanti_donne": 275, "votanti_uomini": 273, "schede_bianche": 3, "schede_nulle": 7},
+      "voti": {"Guido Castelli": 222, "Antonio Canzian": 316}
+    },
+    "11": {
+      "affluenza": {"aventi_diritto_donne": 465, "aventi_diritto_uomini": 431, "votanti_donne": 324, "votanti_uomini": 316, "schede_bianche": 5, "schede_nulle": 6},
+      "voti": {"Guido Castelli": 295, "Antonio Canzian": 334}
+    },
+    "12": {
+      "affluenza": {"aventi_diritto_donne": 502, "aventi_diritto_uomini": 426, "votanti_donne": 349, "votanti_uomini": 322, "schede_bianche": 7, "schede_nulle": 5},
+      "voti": {"Guido Castelli": 342, "Antonio Canzian": 317}
+    },
+    "13": {
+      "affluenza": {"aventi_diritto_donne": 467, "aventi_diritto_uomini": 421, "votanti_donne": 289, "votanti_uomini": 300, "schede_bianche": 7, "schede_nulle": 8},
+      "voti": {"Guido Castelli": 290, "Antonio Canzian": 284}
+    },
+    "14": {
+      "affluenza": {"aventi_diritto_donne": 445, "aventi_diritto_uomini": 441, "votanti_donne": 303, "votanti_uomini": 320, "schede_bianche": 7, "schede_nulle": 8},
+      "voti": {"Guido Castelli": 296, "Antonio Canzian": 312}
+    },
+    "15": {
+      "affluenza": {"aventi_diritto_donne": 511, "aventi_diritto_uomini": 413, "votanti_donne": 373, "votanti_uomini": 321, "schede_bianche": 13, "schede_nulle": 13},
+      "voti": {"Guido Castelli": 286, "Antonio Canzian": 382}
+    },
+    "16": {
+      "affluenza": {"aventi_diritto_donne": 465, "aventi_diritto_uomini": 380, "votanti_donne": 319, "votanti_uomini": 271, "schede_bianche": 2, "schede_nulle": 9},
+      "voti": {"Guido Castelli": 305, "Antonio Canzian": 274}
+    },
+    "17": {
+      "affluenza": {"aventi_diritto_donne": 484, "aventi_diritto_uomini": 455, "votanti_donne": 359, "votanti_uomini": 344, "schede_bianche": 9, "schede_nulle": 7},
+      "voti": {"Guido Castelli": 305, "Antonio Canzian": 382}
+    },
+    "18": {
+      "affluenza": {"aventi_diritto_donne": 517, "aventi_diritto_uomini": 454, "votanti_donne": 332, "votanti_uomini": 329, "schede_bianche": 7, "schede_nulle": 5},
+      "voti": {"Guido Castelli": 322, "Antonio Canzian": 327}
+    },
+    "19": {
+      "affluenza": {"aventi_diritto_donne": 538, "aventi_diritto_uomini": 501, "votanti_donne": 370, "votanti_uomini": 378, "schede_bianche": 11, "schede_nulle": 20},
+      "voti": {"Guido Castelli": 412, "Antonio Canzian": 305}
+    },
+    "20": {
+      "affluenza": {"aventi_diritto_donne": 483, "aventi_diritto_uomini": 428, "votanti_donne": 336, "votanti_uomini": 322, "schede_bianche": 12, "schede_nulle": 6},
+      "voti": {"Guido Castelli": 325, "Antonio Canzian": 315}
+    },
+    "21": {
+      "affluenza": {"aventi_diritto_donne": 412, "aventi_diritto_uomini": 362, "votanti_donne": 286, "votanti_uomini": 275, "schede_bianche": 4, "schede_nulle": 7},
+      "voti": {"Guido Castelli": 280, "Antonio Canzian": 270}
+    },
+    "22": {
+      "affluenza": {"aventi_diritto_donne": 402, "aventi_diritto_uomini": 374, "votanti_donne": 285, "votanti_uomini": 271, "schede_bianche": 4, "schede_nulle": 7},
+      "voti": {"Guido Castelli": 287, "Antonio Canzian": 258}
+    },
+    "23": {
+      "affluenza": {"aventi_diritto_donne": 452, "aventi_diritto_uomini": 372, "votanti_donne": 296, "votanti_uomini": 272, "schede_bianche": 12, "schede_nulle": 7},
+      "voti": {"Guido Castelli": 288, "Antonio Canzian": 261}
+    },
+    "24": {
+      "affluenza": {"aventi_diritto_donne": 400, "aventi_diritto_uomini": 332, "votanti_donne": 280, "votanti_uomini": 241, "schede_bianche": 4, "schede_nulle": 8},
+      "voti": {"Guido Castelli": 256, "Antonio Canzian": 253}
+    },
+    "25": {
+      "affluenza": {"aventi_diritto_donne": 407, "aventi_diritto_uomini": 356, "votanti_donne": 280, "votanti_uomini": 263, "schede_bianche": 5, "schede_nulle": 5},
+      "voti": {"Guido Castelli": 299, "Antonio Canzian": 234}
+    },
+    "26": {
+      "affluenza": {"aventi_diritto_donne": 439, "aventi_diritto_uomini": 353, "votanti_donne": 305, "votanti_uomini": 277, "schede_bianche": 6, "schede_nulle": 5},
+      "voti": {"Guido Castelli": 260, "Antonio Canzian": 311}
+    },
+    "27": {
+      "affluenza": {"aventi_diritto_donne": 509, "aventi_diritto_uomini": 448, "votanti_donne": 313, "votanti_uomini": 325, "schede_bianche": 4, "schede_nulle": 16},
+      "voti": {"Guido Castelli": 340, "Antonio Canzian": 278}
+    },
+    "28": {
+      "affluenza": {"aventi_diritto_donne": 447, "aventi_diritto_uomini": 414, "votanti_donne": 315, "votanti_uomini": 298, "schede_bianche": 10, "schede_nulle": 6},
+      "voti": {"Guido Castelli": 335, "Antonio Canzian": 262}
+    },
+    "29": {
+      "affluenza": {"aventi_diritto_donne": 428, "aventi_diritto_uomini": 386, "votanti_donne": 271, "votanti_uomini": 277, "schede_bianche": 10, "schede_nulle": 2},
+      "voti": {"Guido Castelli": 244, "Antonio Canzian": 290}
+    },
+    "30": {
+      "affluenza": {"aventi_diritto_donne": 435, "aventi_diritto_uomini": 389, "votanti_donne": 293, "votanti_uomini": 273, "schede_bianche": 7, "schede_nulle": 6},
+      "voti": {"Guido Castelli": 275, "Antonio Canzian": 276}
+    },
+    "31": {
+      "affluenza": {"aventi_diritto_donne": 446, "aventi_diritto_uomini": 457, "votanti_donne": 321, "votanti_uomini": 340, "schede_bianche": 12, "schede_nulle": 7},
+      "voti": {"Guido Castelli": 347, "Antonio Canzian": 295}
+    },
+    "32": {
+      "affluenza": {"aventi_diritto_donne": 500, "aventi_diritto_uomini": 455, "votanti_donne": 303, "votanti_uomini": 292, "schede_bianche": 4, "schede_nulle": 9},
+      "voti": {"Guido Castelli": 282, "Antonio Canzian": 300}
+    },
+    "33": {
+      "affluenza": {"aventi_diritto_donne": 514, "aventi_diritto_uomini": 544, "votanti_donne": 364, "votanti_uomini": 400, "schede_bianche": 13, "schede_nulle": 11},
+      "voti": {"Guido Castelli": 334, "Antonio Canzian": 406}
+    },
+    "34": {
+      "affluenza": {"aventi_diritto_donne": 398, "aventi_diritto_uomini": 379, "votanti_donne": 301, "votanti_uomini": 303, "schede_bianche": 5, "schede_nulle": 9},
+      "voti": {"Guido Castelli": 267, "Antonio Canzian": 323}
+    },
+    "35": {
+      "affluenza": {"aventi_diritto_donne": 431, "aventi_diritto_uomini": 379, "votanti_donne": 293, "votanti_uomini": 277, "schede_bianche": 8, "schede_nulle": 5},
+      "voti": {"Guido Castelli": 263, "Antonio Canzian": 294}
+    },
+    "36": {
+      "affluenza": {"aventi_diritto_donne": 450, "aventi_diritto_uomini": 423, "votanti_donne": 326, "votanti_uomini": 324, "schede_bianche": 1, "schede_nulle": 3},
+      "voti": {"Guido Castelli": 329, "Antonio Canzian": 317}
+    },
+    "37": {
+      "affluenza": {"aventi_diritto_donne": 410, "aventi_diritto_uomini": 417, "votanti_donne": 272, "votanti_uomini": 304, "schede_bianche": 5, "schede_nulle": 12},
+      "voti": {"Guido Castelli": 272, "Antonio Canzian": 287}
+    },
+    "38": {
+      "affluenza": {"aventi_diritto_donne": 416, "aventi_diritto_uomini": 364, "votanti_donne": 292, "votanti_uomini": 271, "schede_bianche": 6, "schede_nulle": 7},
+      "voti": {"Guido Castelli": 202, "Antonio Canzian": 348}
+    },
+    "39": {
+      "affluenza": {"aventi_diritto_donne": 457, "aventi_diritto_uomini": 459, "votanti_donne": 334, "votanti_uomini": 350, "schede_bianche": 2, "schede_nulle": 6},
+      "voti": {"Guido Castelli": 391, "Antonio Canzian": 285}
+    },
+    "40": {
+      "affluenza": {"aventi_diritto_donne": 0, "aventi_diritto_uomini": 1, "votanti_donne": 11, "votanti_uomini": 19, "schede_bianche": 2, "schede_nulle": 1},
+      "voti": {"Guido Castelli": 17, "Antonio Canzian": 10}
+    },
+    "41": {
+      "affluenza": {"aventi_diritto_donne": 431, "aventi_diritto_uomini": 449, "votanti_donne": 179, "votanti_uomini": 187, "schede_bianche": 5, "schede_nulle": 3},
+      "voti": {"Guido Castelli": 210, "Antonio Canzian": 148}
+    },
+    "42": {
+      "affluenza": {"aventi_diritto_donne": 476, "aventi_diritto_uomini": 444, "votanti_donne": 301, "votanti_uomini": 313, "schede_bianche": 6, "schede_nulle": 6},
+      "voti": {"Guido Castelli": 306, "Antonio Canzian": 296}
+    },
+    "43": {
+      "affluenza": {"aventi_diritto_donne": 431, "aventi_diritto_uomini": 432, "votanti_donne": 280, "votanti_uomini": 323, "schede_bianche": 5, "schede_nulle": 7},
+      "voti": {"Guido Castelli": 361, "Antonio Canzian": 228}
+    },
+    "44": {
+      "affluenza": {"aventi_diritto_donne": 363, "aventi_diritto_uomini": 368, "votanti_donne": 252, "votanti_uomini": 284, "schede_bianche": 5, "schede_nulle": 3},
+      "voti": {"Guido Castelli": 287, "Antonio Canzian": 241}
+    },
+    "45": {
+      "affluenza": {"aventi_diritto_donne": 428, "aventi_diritto_uomini": 397, "votanti_donne": 276, "votanti_uomini": 290, "schede_bianche": 3, "schede_nulle": 7},
+      "voti": {"Guido Castelli": 322, "Antonio Canzian": 234}
+    },
+    "46": {
+      "affluenza": {"aventi_diritto_donne": 435, "aventi_diritto_uomini": 461, "votanti_donne": 310, "votanti_uomini": 312, "schede_bianche": 4, "schede_nulle": 9},
+      "voti": {"Guido Castelli": 285, "Antonio Canzian": 320}
+    },
+    "47": {
+      "affluenza": {"aventi_diritto_donne": 470, "aventi_diritto_uomini": 472, "votanti_donne": 308, "votanti_uomini": 292, "schede_bianche": 10, "schede_nulle": 7},
+      "voti": {"Guido Castelli": 355, "Antonio Canzian": 250}
+    },
+    "48": {
+      "affluenza": {"aventi_diritto_donne": 407, "aventi_diritto_uomini": 378, "votanti_donne": 310, "votanti_uomini": 292, "schede_bianche": 9, "schede_nulle": 4},
+      "voti": {"Guido Castelli": 372, "Antonio Canzian": 215}
+    },
+    "49": {
+      "affluenza": {"aventi_diritto_donne": 270, "aventi_diritto_uomini": 259, "votanti_donne": 177, "votanti_uomini": 180, "schede_bianche": 5, "schede_nulle": 3},
+      "voti": {"Guido Castelli": 187, "Antonio Canzian": 162}
+    },
+    "50": {
+      "affluenza": {"aventi_diritto_donne": 293, "aventi_diritto_uomini": 289, "votanti_donne": 214, "votanti_uomini": 224, "schede_bianche": 4, "schede_nulle": 4},
+      "voti": {"Guido Castelli": 252, "Antonio Canzian": 178}
+    },
+    "51": {
+      "affluenza": {"aventi_diritto_donne": 431, "aventi_diritto_uomini": 425, "votanti_donne": 294, "votanti_uomini": 302, "schede_bianche": 4, "schede_nulle": 8},
+      "voti": {"Guido Castelli": 282, "Antonio Canzian": 302}
+    },
+    "52": {
+      "affluenza": {"aventi_diritto_donne": 291, "aventi_diritto_uomini": 268, "votanti_donne": 192, "votanti_uomini": 206, "schede_bianche": 6, "schede_nulle": 2},
+      "voti": {"Guido Castelli": 190, "Antonio Canzian": 200}
+    }
+  }
+}

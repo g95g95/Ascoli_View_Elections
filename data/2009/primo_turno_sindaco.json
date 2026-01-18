@@ -1,0 +1,188 @@
+{
+  "election": {
+    "type": "Comunali",
+    "round": "Primo Turno",
+    "date": "2009-06-07",
+    "comune": "Ascoli Piceno",
+    "office": "Sindaco"
+  },
+  "totals": {
+    "aventi_diritto_donne": 22502,
+    "aventi_diritto_uomini": 20700,
+    "aventi_diritto_totale": 43202,
+    "votanti_donne": 17337,
+    "votanti_uomini": 16658,
+    "votanti_totale": 33995,
+    "schede_bianche": 384,
+    "schede_nulle": 646,
+    "affluenza_percentuale": 78.69
+  },
+  "candidati": [
+    {
+      "nome": "Guido Castelli",
+      "coalizione": "Centrodestra",
+      "voti_totali": 14259,
+      "percentuale": 43.26,
+      "voti_per_sezione": {
+        "1": 184, "2": 278, "3": 329, "4": 254, "5": 236, "6": 176, "7": 273, "8": 224, "9": 255,
+        "10": 213, "11": 283, "12": 339, "13": 288, "14": 301, "15": 249, "16": 276, "17": 298,
+        "18": 295, "19": 396, "20": 286, "21": 286, "22": 259, "23": 262, "24": 237, "25": 286, "26": 236,
+        "27": 321, "28": 302, "29": 256, "30": 253, "31": 344, "32": 266, "33": 331, "34": 251,
+        "35": 241, "36": 346, "37": 253, "38": 198, "39": 389, "40": 13, "41": 218, "42": 317, "43": 340,
+        "44": 271, "45": 344, "46": 290, "47": 371, "48": 381, "49": 201, "50": 246, "51": 313, "52": 204
+      }
+    },
+    {
+      "nome": "Antonio Canzian",
+      "coalizione": "Centrosinistra",
+      "voti_totali": 11347,
+      "percentuale": 34.42,
+      "voti_per_sezione": {
+        "1": 133, "2": 263, "3": 210, "4": 170, "5": 192, "6": 164, "7": 163, "8": 273, "9": 260,
+        "10": 267, "11": 269, "12": 276, "13": 233, "14": 232, "15": 330, "16": 229, "17": 324,
+        "18": 299, "19": 263, "20": 256, "21": 200, "22": 172, "23": 222, "24": 205, "25": 155, "26": 218,
+        "27": 203, "28": 224, "29": 227, "30": 197, "31": 229, "32": 275, "33": 313, "34": 270,
+        "35": 238, "36": 240, "37": 253, "38": 291, "39": 212, "40": 8, "41": 118, "42": 221, "43": 183,
+        "44": 191, "45": 179, "46": 275, "47": 167, "48": 172, "49": 124, "50": 139, "51": 233, "52": 187
+      }
+    },
+    {
+      "nome": "Amedeo Ciccanti",
+      "coalizione": "UDC",
+      "voti_totali": 2722,
+      "percentuale": 8.26,
+      "voti_per_sezione": {
+        "1": 26, "2": 54, "3": 51, "4": 47, "5": 24, "6": 37, "7": 52, "8": 70, "9": 41,
+        "10": 43, "11": 35, "12": 54, "13": 42, "14": 59, "15": 45, "16": 43, "17": 34,
+        "18": 56, "19": 87, "20": 62, "21": 42, "22": 52, "23": 41, "24": 42, "25": 50, "26": 49,
+        "27": 59, "28": 45, "29": 27, "30": 69, "31": 93, "32": 49, "33": 92, "34": 61,
+        "35": 65, "36": 53, "37": 46, "38": 41, "39": 70, "40": 5, "41": 36, "42": 68, "43": 84,
+        "44": 89, "45": 56, "46": 61, "47": 99, "48": 53, "49": 45, "50": 29, "51": 58, "52": 31
+      }
+    },
+    {
+      "nome": "Marco Regnicoli",
+      "coalizione": "Lista Civica",
+      "voti_totali": 1915,
+      "percentuale": 5.81,
+      "voti_per_sezione": {
+        "1": 20, "2": 37, "3": 32, "4": 32, "5": 45, "6": 31, "7": 34, "8": 30, "9": 51,
+        "10": 39, "11": 46, "12": 18, "13": 23, "14": 22, "15": 44, "16": 29, "17": 43,
+        "18": 21, "19": 24, "20": 34, "21": 47, "22": 48, "23": 55, "24": 39, "25": 58, "26": 106,
+        "27": 60, "28": 43, "29": 69, "30": 40, "31": 27, "32": 32, "33": 60, "34": 29,
+        "35": 50, "36": 48, "37": 38, "38": 53, "39": 49, "40": 1, "41": 20, "42": 68, "43": 21,
+        "44": 22, "45": 16, "46": 20, "47": 32, "48": 18, "49": 15, "50": 30, "51": 31, "52": 15
+      }
+    },
+    {
+      "nome": "Walter Gibellieri",
+      "coalizione": "Lista Civica",
+      "voti_totali": 1753,
+      "percentuale": 5.32,
+      "voti_per_sezione": {
+        "1": 16, "2": 53, "3": 44, "4": 39, "5": 35, "6": 39, "7": 51, "8": 57, "9": 37,
+        "10": 29, "11": 33, "12": 30, "13": 40, "14": 45, "15": 40, "16": 40, "17": 53,
+        "18": 17, "19": 22, "20": 40, "21": 39, "22": 58, "23": 37, "24": 50, "25": 39, "26": 21,
+        "27": 39, "28": 49, "29": 35, "30": 39, "31": 30, "32": 32, "33": 50, "34": 35,
+        "35": 25, "36": 32, "37": 19, "38": 22, "39": 41, "40": 2, "41": 13, "42": 27, "43": 34,
+        "44": 23, "45": 16, "46": 29, "47": 44, "48": 30, "49": 11, "50": 27, "51": 34, "52": 11
+      }
+    },
+    {
+      "nome": "Emidio Catalucci",
+      "coalizione": "Lista Civica",
+      "voti_totali": 533,
+      "percentuale": 1.62,
+      "voti_per_sezione": {
+        "1": 9, "2": 11, "3": 10, "4": 10, "5": 16, "6": 16, "7": 18, "8": 9, "9": 6,
+        "10": 13, "11": 9, "12": 21, "13": 7, "14": 7, "15": 23, "16": 12, "17": 5,
+        "18": 11, "19": 20, "20": 15, "21": 8, "22": 4, "23": 4, "24": 9, "25": 4, "26": 16,
+        "27": 20, "28": 5, "29": 12, "30": 10, "31": 5, "32": 18, "33": 21, "34": 9,
+        "35": 15, "36": 10, "37": 12, "38": 21, "39": 10, "40": 0, "41": 2, "42": 7, "43": 5,
+        "44": 2, "45": 2, "46": 20, "47": 6, "48": 4, "49": 7, "50": 8, "51": 6, "52": 3
+      }
+    },
+    {
+      "nome": "Stefano Cannelli",
+      "coalizione": "Lista Civica",
+      "voti_totali": 293,
+      "percentuale": 0.89,
+      "voti_per_sezione": {
+        "1": 4, "2": 11, "3": 9, "4": 4, "5": 3, "6": 6, "7": 3, "8": 9, "9": 4,
+        "10": 3, "11": 4, "12": 8, "13": 4, "14": 5, "15": 6, "16": 7, "17": 4,
+        "18": 4, "19": 4, "20": 6, "21": 10, "22": 2, "23": 18, "24": 8, "25": 16, "26": 3,
+        "27": 10, "28": 3, "29": 5, "30": 7, "31": 6, "32": 10, "33": 7, "34": 4,
+        "35": 4, "36": 2, "37": 12, "38": 2, "39": 3, "40": 0, "41": 5, "42": 7, "43": 5,
+        "44": 3, "45": 3, "46": 4, "47": 8, "48": 7, "49": 1, "50": 0, "51": 7, "52": 2
+      }
+    },
+    {
+      "nome": "Giuseppina Maurizi",
+      "coalizione": "Lista Civica",
+      "voti_totali": 137,
+      "percentuale": 0.42,
+      "voti_per_sezione": {
+        "1": 3, "2": 0, "3": 3, "4": 4, "5": 8, "6": 1, "7": 0, "8": 4, "9": 1,
+        "10": 0, "11": 3, "12": 3, "13": 0, "14": 0, "15": 1, "16": 3, "17": 6,
+        "18": 30, "19": 3, "20": 0, "21": 4, "22": 1, "23": 0, "24": 4, "25": 2, "26": 1,
+        "27": 6, "28": 3, "29": 0, "30": 5, "31": 3, "32": 1, "33": 0, "34": 1,
+        "35": 2, "36": 4, "37": 3, "38": 1, "39": 2, "40": 0, "41": 5, "42": 3, "43": 1,
+        "44": 1, "45": 0, "46": 2, "47": 1, "48": 2, "49": 0, "50": 3, "51": 1, "52": 2
+      }
+    }
+  ],
+  "sezioni": {
+    "1": {"aventi_diritto_donne": 424, "aventi_diritto_uomini": 397, "votanti_donne": 210, "votanti_uomini": 204, "schede_bianche": 3, "schede_nulle": 16},
+    "2": {"aventi_diritto_donne": 484, "aventi_diritto_uomini": 414, "votanti_donne": 387, "votanti_uomini": 341, "schede_bianche": 5, "schede_nulle": 16},
+    "3": {"aventi_diritto_donne": 463, "aventi_diritto_uomini": 387, "votanti_donne": 379, "votanti_uomini": 327, "schede_bianche": 3, "schede_nulle": 15},
+    "4": {"aventi_diritto_donne": 491, "aventi_diritto_uomini": 425, "votanti_donne": 307, "votanti_uomini": 263, "schede_bianche": 2, "schede_nulle": 8},
+    "5": {"aventi_diritto_donne": 488, "aventi_diritto_uomini": 414, "votanti_donne": 308, "votanti_uomini": 265, "schede_bianche": 9, "schede_nulle": 5},
+    "6": {"aventi_diritto_donne": 433, "aventi_diritto_uomini": 426, "votanti_donne": 251, "votanti_uomini": 235, "schede_bianche": 7, "schede_nulle": 9},
+    "7": {"aventi_diritto_donne": 479, "aventi_diritto_uomini": 439, "votanti_donne": 322, "votanti_uomini": 288, "schede_bianche": 9, "schede_nulle": 7},
+    "8": {"aventi_diritto_donne": 444, "aventi_diritto_uomini": 386, "votanti_donne": 370, "votanti_uomini": 328, "schede_bianche": 7, "schede_nulle": 15},
+    "9": {"aventi_diritto_donne": 421, "aventi_diritto_uomini": 377, "votanti_donne": 341, "votanti_uomini": 331, "schede_bianche": 3, "schede_nulle": 14},
+    "10": {"aventi_diritto_donne": 419, "aventi_diritto_uomini": 379, "votanti_donne": 319, "votanti_uomini": 316, "schede_bianche": 11, "schede_nulle": 17},
+    "11": {"aventi_diritto_donne": 465, "aventi_diritto_uomini": 431, "votanti_donne": 376, "votanti_uomini": 357, "schede_bianche": 12, "schede_nulle": 39},
+    "12": {"aventi_diritto_donne": 502, "aventi_diritto_uomini": 426, "votanti_donne": 405, "votanti_uomini": 360, "schede_bianche": 9, "schede_nulle": 7},
+    "13": {"aventi_diritto_donne": 467, "aventi_diritto_uomini": 421, "votanti_donne": 324, "votanti_uomini": 333, "schede_bianche": 2, "schede_nulle": 18},
+    "14": {"aventi_diritto_donne": 445, "aventi_diritto_uomini": 441, "votanti_donne": 346, "votanti_uomini": 349, "schede_bianche": 8, "schede_nulle": 16},
+    "15": {"aventi_diritto_donne": 511, "aventi_diritto_uomini": 413, "votanti_donne": 409, "votanti_uomini": 351, "schede_bianche": 8, "schede_nulle": 14},
+    "16": {"aventi_diritto_donne": 465, "aventi_diritto_uomini": 380, "votanti_donne": 364, "votanti_uomini": 314, "schede_bianche": 3, "schede_nulle": 36},
+    "17": {"aventi_diritto_donne": 484, "aventi_diritto_uomini": 455, "votanti_donne": 403, "votanti_uomini": 380, "schede_bianche": 14, "schede_nulle": 2},
+    "18": {"aventi_diritto_donne": 517, "aventi_diritto_uomini": 454, "votanti_donne": 386, "votanti_uomini": 380, "schede_bianche": 14, "schede_nulle": 19},
+    "19": {"aventi_diritto_donne": 538, "aventi_diritto_uomini": 501, "votanti_donne": 433, "votanti_uomini": 380, "schede_bianche": 16, "schede_nulle": 16},
+    "20": {"aventi_diritto_donne": 483, "aventi_diritto_uomini": 428, "votanti_donne": 380, "votanti_uomini": 352, "schede_bianche": 8, "schede_nulle": 15},
+    "21": {"aventi_diritto_donne": 412, "aventi_diritto_uomini": 362, "votanti_donne": 333, "votanti_uomini": 310, "schede_bianche": 5, "schede_nulle": 10},
+    "22": {"aventi_diritto_donne": 402, "aventi_diritto_uomini": 374, "votanti_donne": 325, "votanti_uomini": 310, "schede_bianche": 6, "schede_nulle": 17},
+    "23": {"aventi_diritto_donne": 452, "aventi_diritto_uomini": 372, "votanti_donne": 333, "votanti_uomini": 311, "schede_bianche": 8, "schede_nulle": 7},
+    "24": {"aventi_diritto_donne": 400, "aventi_diritto_uomini": 332, "votanti_donne": 326, "votanti_uomini": 286, "schede_bianche": 4, "schede_nulle": 6},
+    "25": {"aventi_diritto_donne": 407, "aventi_diritto_uomini": 356, "votanti_donne": 319, "votanti_uomini": 288, "schede_bianche": 4, "schede_nulle": 4},
+    "26": {"aventi_diritto_donne": 439, "aventi_diritto_uomini": 353, "votanti_donne": 357, "votanti_uomini": 315, "schede_bianche": 10, "schede_nulle": 12},
+    "27": {"aventi_diritto_donne": 509, "aventi_diritto_uomini": 448, "votanti_donne": 372, "votanti_uomini": 375, "schede_bianche": 10, "schede_nulle": 19},
+    "28": {"aventi_diritto_donne": 447, "aventi_diritto_uomini": 414, "votanti_donne": 359, "votanti_uomini": 332, "schede_bianche": 8, "schede_nulle": 9},
+    "29": {"aventi_diritto_donne": 428, "aventi_diritto_uomini": 386, "votanti_donne": 320, "votanti_uomini": 318, "schede_bianche": 1, "schede_nulle": 6},
+    "30": {"aventi_diritto_donne": 435, "aventi_diritto_uomini": 389, "votanti_donne": 334, "votanti_uomini": 309, "schede_bianche": 7, "schede_nulle": 16},
+    "31": {"aventi_diritto_donne": 446, "aventi_diritto_uomini": 457, "votanti_donne": 373, "votanti_uomini": 394, "schede_bianche": 7, "schede_nulle": 23},
+    "32": {"aventi_diritto_donne": 500, "aventi_diritto_uomini": 455, "votanti_donne": 366, "votanti_uomini": 350, "schede_bianche": 8, "schede_nulle": 25},
+    "33": {"aventi_diritto_donne": 514, "aventi_diritto_uomini": 544, "votanti_donne": 425, "votanti_uomini": 470, "schede_bianche": 8, "schede_nulle": 13},
+    "34": {"aventi_diritto_donne": 398, "aventi_diritto_uomini": 379, "votanti_donne": 341, "votanti_uomini": 334, "schede_bianche": 8, "schede_nulle": 7},
+    "35": {"aventi_diritto_donne": 431, "aventi_diritto_uomini": 379, "votanti_donne": 341, "votanti_uomini": 318, "schede_bianche": 10, "schede_nulle": 9},
+    "36": {"aventi_diritto_donne": 450, "aventi_diritto_uomini": 423, "votanti_donne": 383, "votanti_uomini": 368, "schede_bianche": 5, "schede_nulle": 11},
+    "37": {"aventi_diritto_donne": 410, "aventi_diritto_uomini": 417, "votanti_donne": 318, "votanti_uomini": 346, "schede_bianche": 7, "schede_nulle": 21},
+    "38": {"aventi_diritto_donne": 416, "aventi_diritto_uomini": 364, "votanti_donne": 345, "votanti_uomini": 297, "schede_bianche": 7, "schede_nulle": 6},
+    "39": {"aventi_diritto_donne": 457, "aventi_diritto_uomini": 459, "votanti_donne": 390, "votanti_uomini": 398, "schede_bianche": 5, "schede_nulle": 7},
+    "40": {"aventi_diritto_donne": 0, "aventi_diritto_uomini": 1, "votanti_donne": 14, "votanti_uomini": 18, "schede_bianche": 1, "schede_nulle": 2},
+    "41": {"aventi_diritto_donne": 431, "aventi_diritto_uomini": 449, "votanti_donne": 216, "votanti_uomini": 219, "schede_bianche": 8, "schede_nulle": 10},
+    "42": {"aventi_diritto_donne": 476, "aventi_diritto_uomini": 444, "votanti_donne": 378, "votanti_uomini": 362, "schede_bianche": 13, "schede_nulle": 9},
+    "43": {"aventi_diritto_donne": 431, "aventi_diritto_uomini": 432, "votanti_donne": 325, "votanti_uomini": 372, "schede_bianche": 13, "schede_nulle": 11},
+    "44": {"aventi_diritto_donne": 363, "aventi_diritto_uomini": 368, "votanti_donne": 303, "votanti_uomini": 317, "schede_bianche": 10, "schede_nulle": 8},
+    "45": {"aventi_diritto_donne": 428, "aventi_diritto_uomini": 397, "votanti_donne": 314, "votanti_uomini": 319, "schede_bianche": 8, "schede_nulle": 9},
+    "46": {"aventi_diritto_donne": 435, "aventi_diritto_uomini": 461, "votanti_donne": 345, "votanti_uomini": 376, "schede_bianche": 9, "schede_nulle": 11},
+    "47": {"aventi_diritto_donne": 470, "aventi_diritto_uomini": 472, "votanti_donne": 363, "votanti_uomini": 383, "schede_bianche": 8, "schede_nulle": 10},
+    "48": {"aventi_diritto_donne": 407, "aventi_diritto_uomini": 378, "votanti_donne": 349, "votanti_uomini": 332, "schede_bianche": 5, "schede_nulle": 9},
+    "49": {"aventi_diritto_donne": 270, "aventi_diritto_uomini": 259, "votanti_donne": 217, "votanti_uomini": 205, "schede_bianche": 5, "schede_nulle": 10},
+    "50": {"aventi_diritto_donne": 293, "aventi_diritto_uomini": 289, "votanti_donne": 242, "votanti_uomini": 252, "schede_bianche": 10, "schede_nulle": 7},
+    "51": {"aventi_diritto_donne": 431, "aventi_diritto_uomini": 425, "votanti_donne": 349, "votanti_uomini": 356, "schede_bianche": 4, "schede_nulle": 12},
+    "52": {"aventi_diritto_donne": 291, "aventi_diritto_uomini": 268, "votanti_donne": 242, "votanti_uomini": 224, "schede_bianche": 5, "schede_nulle": 6}
+  }
+}
