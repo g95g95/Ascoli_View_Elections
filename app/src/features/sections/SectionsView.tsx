@@ -31,7 +31,7 @@ export function SectionsView({ electionData }: SectionsViewProps) {
   const [selectedParty, setSelectedParty] = useState<string>('');
   const [selectedCandidate, setSelectedCandidate] = useState<string>('');
 
-  const { config, ballottaggio, primoTurno, liste, preferenze, votanti } = electionData;
+  const { config, ballottaggio, primoTurno, liste, preferenze, votanti, nominali } = electionData;
 
   // Get all sections from available data
   const allSections = useMemo(() => {
@@ -50,20 +50,38 @@ export function SectionsView({ electionData }: SectionsViewProps) {
       });
       return [...sections].sort((a, b) => a - b);
     }
+    if (nominali) {
+      const sections = new Set<number>();
+      nominali.candidati.forEach(c => {
+        Object.keys(c.sezioni).forEach(s => sections.add(parseInt(s)));
+      });
+      return [...sections].sort((a, b) => a - b);
+    }
+    if (liste?.liste) {
+      const sections = new Set<number>();
+      liste.liste.forEach(l => {
+        if (l.sezioni) Object.keys(l.sezioni).forEach(s => sections.add(parseInt(s)));
+      });
+      if (sections.size > 0) return [...sections].sort((a, b) => a - b);
+    }
     if (votanti) {
       return votanti.sezioni.map(s => s.numero).sort((a, b) => a - b);
     }
     return [];
-  }, [ballottaggio, liste, preferenze, votanti]);
+  }, [ballottaggio, liste, preferenze, votanti, nominali]);
 
   const hasBallottaggio = !!ballottaggio;
-  const hasListe = !!liste?.sezioni;
+  const hasListe = !!liste?.sezioni || !!liste?.liste;
   const hasPreferenze = !!preferenze;
+  const hasNominali = !!nominali;
 
   const partyList = useMemo(() => {
     if (liste?.sezioni) {
       const firstSection = Object.values(liste.sezioni)[0];
       if (firstSection) return Object.keys(firstSection.voti).sort();
+    }
+    if (liste?.liste) {
+      return liste.liste.map(l => l.nome).sort();
     }
     if (preferenze) {
       return preferenze.liste.map(l => l.nome).sort();
@@ -72,6 +90,11 @@ export function SectionsView({ electionData }: SectionsViewProps) {
   }, [liste, preferenze]);
 
   const candidateList = useMemo(() => {
+    if (nominali) {
+      return nominali.candidati
+        .map(c => ({ name: c.nome, party: 'Uninominale', total: c.totale }))
+        .sort((a, b) => b.total - a.total);
+    }
     if (!preferenze) return [];
     const candidates: { name: string; party: string; total: number }[] = [];
     preferenze.liste.forEach(party => {
@@ -80,7 +103,7 @@ export function SectionsView({ electionData }: SectionsViewProps) {
       });
     });
     return candidates.sort((a, b) => b.total - a.total).slice(0, 50);
-  }, [preferenze]);
+  }, [preferenze, nominali]);
 
   const ballottaggioCandidates = ballottaggio?.candidati.map(c => c.nome) || [];
 
@@ -100,6 +123,12 @@ export function SectionsView({ electionData }: SectionsViewProps) {
             value = sectionData.voti[selectedParty] || 0;
             total = Object.values(sectionData.voti).reduce((s, v) => s + v, 0);
           }
+        } else if (liste?.liste) {
+          const party = liste.liste.find(l => l.nome === selectedParty);
+          if (party?.sezioni) {
+            value = party.sezioni[sectionId.toString()] || 0;
+            total = liste.liste.reduce((s, l) => s + (l.sezioni?.[sectionId.toString()] || 0), 0);
+          }
         } else if (preferenze) {
           const party = preferenze.liste.find(p => p.nome === selectedParty);
           if (party) {
@@ -108,21 +137,29 @@ export function SectionsView({ electionData }: SectionsViewProps) {
               s + p.candidati.reduce((ss, c) => ss + (c.sezioni[sectionId.toString()] || 0), 0), 0);
           }
         }
-      } else if (densityMode === 'candidate' && selectedCandidate && preferenze) {
-        preferenze.liste.forEach(party => {
-          const candidate = party.candidati.find(c => c.nome === selectedCandidate);
+      } else if (densityMode === 'candidate' && selectedCandidate) {
+        if (nominali) {
+          const candidate = nominali.candidati.find(c => c.nome === selectedCandidate);
           if (candidate) {
             value = candidate.sezioni[sectionId.toString()] || 0;
+            total = nominali.candidati.reduce((s, c) => s + (c.sezioni[sectionId.toString()] || 0), 0);
           }
-        });
-        if (liste?.sezioni) {
-          const sectionData = liste.sezioni[sectionId.toString()];
-          if (sectionData) {
-            total = Object.values(sectionData.voti).reduce((s, v) => s + v, 0);
+        } else if (preferenze) {
+          preferenze.liste.forEach(party => {
+            const candidate = party.candidati.find(c => c.nome === selectedCandidate);
+            if (candidate) {
+              value = candidate.sezioni[sectionId.toString()] || 0;
+            }
+          });
+          if (liste?.sezioni) {
+            const sectionData = liste.sezioni[sectionId.toString()];
+            if (sectionData) {
+              total = Object.values(sectionData.voti).reduce((s, v) => s + v, 0);
+            }
+          } else {
+            total = preferenze.liste.reduce((s, p) =>
+              s + p.candidati.reduce((ss, c) => ss + (c.sezioni[sectionId.toString()] || 0), 0), 0);
           }
-        } else {
-          total = preferenze.liste.reduce((s, p) =>
-            s + p.candidati.reduce((ss, c) => ss + (c.sezioni[sectionId.toString()] || 0), 0), 0);
         }
       } else if (densityMode === 'ballottaggio' && selectedCandidate && ballottaggio) {
         const sectionData = ballottaggio.sezioni?.[sectionId.toString()];
@@ -162,7 +199,7 @@ export function SectionsView({ electionData }: SectionsViewProps) {
     }
 
     return result;
-  }, [densityMode, selectedParty, selectedCandidate, allSections, liste, preferenze, ballottaggio]);
+  }, [densityMode, selectedParty, selectedCandidate, allSections, liste, preferenze, ballottaggio, nominali]);
 
   const getDensityColor = () => {
     if (densityMode === 'party' && selectedParty) {
@@ -249,6 +286,38 @@ export function SectionsView({ electionData }: SectionsViewProps) {
     return votanti.sezioni.find(s => s.numero === sectionId) || null;
   };
 
+  const getSectionNominaliData = (sectionId: number) => {
+    if (!nominali) return [];
+    const results: { candidate: string; votes: number }[] = [];
+    nominali.candidati.forEach((candidate) => {
+      if (sectionId === CONSOLIDATED_SECTION_ID) {
+        const totalVotes = CONSOLIDATED_SECTIONS.reduce((sum, id) => sum + (candidate.sezioni[id.toString()] || 0), 0);
+        if (totalVotes > 0) results.push({ candidate: candidate.nome, votes: totalVotes });
+      } else {
+        const votes = candidate.sezioni[sectionId.toString()] || 0;
+        if (votes > 0) results.push({ candidate: candidate.nome, votes });
+      }
+    });
+    return results.sort((a, b) => b.votes - a.votes);
+  };
+
+  const getSectionListeFromArray = (sectionId: number) => {
+    if (!liste?.liste) return null;
+    const results: Record<string, number> = {};
+    if (sectionId === CONSOLIDATED_SECTION_ID) {
+      liste.liste.forEach(l => {
+        const totalVotes = CONSOLIDATED_SECTIONS.reduce((sum, id) => sum + (l.sezioni?.[id.toString()] || 0), 0);
+        if (totalVotes > 0) results[l.nome] = totalVotes;
+      });
+    } else {
+      liste.liste.forEach(l => {
+        const votes = l.sezioni?.[sectionId.toString()] || 0;
+        if (votes > 0) results[l.nome] = votes;
+      });
+    }
+    return Object.keys(results).length > 0 ? results : null;
+  };
+
   const sectionId = selectedSection;
   const ballottaggioData = sectionId === CONSOLIDATED_SECTION_ID
     ? getConsolidatedBallottaggioData()
@@ -258,8 +327,9 @@ export function SectionsView({ electionData }: SectionsViewProps) {
     ? null
     : sectionId && primoTurno ? primoTurno.sezioni?.[sectionId.toString()] : null;
 
-  const listeData = sectionId ? getSectionListeData(sectionId) : null;
+  const listeData = sectionId ? (getSectionListeData(sectionId) || getSectionListeFromArray(sectionId)) : null;
   const preferenzeData = sectionId ? getSectionPreferenzeData(sectionId) : null;
+  const nominaliData = sectionId ? getSectionNominaliData(sectionId) : null;
   const votantiData = sectionId ? getSectionVotantiData(sectionId) : null;
 
   // Determine which section colors to show (based on ballottaggio winner if available)
@@ -298,7 +368,7 @@ export function SectionsView({ electionData }: SectionsViewProps) {
                 Per Lista
               </button>
             )}
-            {hasPreferenze && (
+            {(hasPreferenze || hasNominali) && (
               <button
                 onClick={() => { setDensityMode('candidate'); setSelectedParty(''); }}
                 className={`px-3 py-1.5 text-xs rounded-full transition-colors ${densityMode === 'candidate' ? 'bg-purple-600 text-white' : 'bg-gray-100 hover:bg-gray-200'}`}
@@ -543,6 +613,26 @@ export function SectionsView({ electionData }: SectionsViewProps) {
                             </span>
                           </span>
                           <span className="ml-2 font-medium text-blue-600">{item.votes}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Nominali (Uninominale) */}
+                {nominaliData && nominaliData.length > 0 && (
+                  <div>
+                    <h4 className="font-semibold text-sm text-gray-700 mb-2">Candidati Uninominale</h4>
+                    <div className="space-y-1 max-h-40 overflow-y-auto">
+                      {nominaliData.slice(0, 10).map((item, idx) => (
+                        <div key={item.candidate} className="flex justify-between text-sm">
+                          <span className="truncate flex items-center gap-1">
+                            <span className={`w-4 h-4 flex items-center justify-center rounded-full text-xs ${idx < 3 ? 'bg-amber-500 text-white' : 'bg-gray-200'}`}>
+                              {idx + 1}
+                            </span>
+                            <span className="truncate">{item.candidate}</span>
+                          </span>
+                          <span className="ml-2 font-medium text-purple-600">{item.votes}</span>
                         </div>
                       ))}
                     </div>

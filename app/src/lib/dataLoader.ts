@@ -1,4 +1,4 @@
-import type { MayoralElection, PreferenzeElection, ListeElection, VotantiData, CoalizioniData, ElectionConfig } from '../types/elections';
+import type { MayoralElection, PreferenzeElection, ListeElection, VotantiData, CoalizioniData, ElectionConfig, NominaliElection } from '../types/elections';
 
 const BASE_URL = '/data';
 
@@ -63,6 +63,15 @@ export async function load2014PreferenzeComunali(): Promise<PreferenzeElection> 
   return loadJson('2014_Comunali/preferenze_comunali.json');
 }
 
+// 2019 Europee specific loaders
+export async function load2019ListeEuropee(): Promise<ListeElection> {
+  return loadJson('2019/Europee/liste_europee.json');
+}
+
+export async function load2019PreferenzeEuropee(): Promise<PreferenzeElection> {
+  return loadJson('2019/Europee/preferenze_europee.json');
+}
+
 // 2019 Comunali specific loaders
 export async function load2019Ballottaggio(): Promise<MayoralElection> {
   return loadJson('2019/ballottaggio_sindaco.json');
@@ -93,6 +102,33 @@ export async function loadCoalizioniRegionali(): Promise<CoalizioniData> {
   return loadJson('2010_Regionali/coalizioni_sezioni.json');
 }
 
+// 2020 Regionali specific loaders
+export async function load2020PreferenzeRegionali(): Promise<PreferenzeElection> {
+  return loadJson('2020_Regionali/preferenze_regionali.json');
+}
+
+export async function load2020CoalizioniRegionali(): Promise<CoalizioniData> {
+  return loadJson('2020_Regionali/coalizioni_sezioni.json');
+}
+
+// 2018 Politiche specific loaders
+export async function load2018NominaliCamera(): Promise<NominaliElection> {
+  return loadJson('2018_Politiche/nominali_camera.json');
+}
+
+export async function load2018ListeCamera(): Promise<ListeElection> {
+  return loadJson('2018_Politiche/liste_camera.json');
+}
+
+// 2022 Politiche specific loaders
+export async function load2022NominaliPolitiche(): Promise<NominaliElection> {
+  return loadJson('2022_Politiche/preferenze_politiche.json');
+}
+
+export async function load2022ListePolitiche(): Promise<ListeElection> {
+  return loadJson('2022_Politiche/liste_politiche.json');
+}
+
 // Election-specific data structure
 export interface ElectionData {
   config: ElectionConfig;
@@ -102,6 +138,7 @@ export interface ElectionData {
   primoTurno?: MayoralElection;
   votanti?: VotantiData;
   coalizioni?: CoalizioniData;
+  nominali?: NominaliElection;
 }
 
 // Load data for a specific election configuration
@@ -157,6 +194,15 @@ export async function loadElectionData(config: ElectionConfig): Promise<Election
       data.preferenze = preferenzeComunali;
       break;
 
+    case 'europee-2019':
+      const [listeEuropee2019, preferenzeEuropee2019] = await Promise.all([
+        load2019ListeEuropee(),
+        load2019PreferenzeEuropee(),
+      ]);
+      data.liste = listeEuropee2019;
+      data.preferenze = preferenzeEuropee2019;
+      break;
+
     case 'europee-2009':
       const [listeEuropee, preferenzeEuropee] = await Promise.all([
         loadListeEuropee(),
@@ -164,6 +210,15 @@ export async function loadElectionData(config: ElectionConfig): Promise<Election
       ]);
       data.liste = listeEuropee;
       data.preferenze = preferenzeEuropee;
+      break;
+
+    case 'regionali-2020':
+      const [preferenzeRegionali2020, coalizioniRegionali2020] = await Promise.all([
+        load2020PreferenzeRegionali(),
+        load2020CoalizioniRegionali(),
+      ]);
+      data.preferenze = preferenzeRegionali2020;
+      data.coalizioni = coalizioniRegionali2020;
       break;
 
     case 'regionali-2010':
@@ -175,6 +230,24 @@ export async function loadElectionData(config: ElectionConfig): Promise<Election
       data.preferenze = preferenzeRegionali;
       data.votanti = votantiRegionali;
       data.coalizioni = coalizioniRegionali;
+      break;
+
+    case 'politiche-2022':
+      const [nominali2022, liste2022] = await Promise.all([
+        load2022NominaliPolitiche(),
+        load2022ListePolitiche(),
+      ]);
+      data.nominali = nominali2022;
+      data.liste = liste2022;
+      break;
+
+    case 'politiche-2018':
+      const [nominali2018, liste2018] = await Promise.all([
+        load2018NominaliCamera(),
+        load2018ListeCamera(),
+      ]);
+      data.nominali = nominali2018;
+      data.liste = liste2018;
       break;
   }
 

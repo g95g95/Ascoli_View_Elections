@@ -36,38 +36,87 @@ export function ListeView({ data, title }: ListeViewProps) {
     return sortedListe.map(l => l.nome);
   }, [data, sortedListe]);
 
+  // Check if data uses new format (liste[].sezioni) or old format (sezioni object)
+  const usesNewFormat = !data.sezioni && data.liste.some(l => l.sezioni);
+
   const densityData = useMemo(() => {
-    if (!selectedParty || !data.sezioni) return undefined;
+    if (!selectedParty) return undefined;
 
-    const result = Object.entries(data.sezioni).map(([sectionId, section]) => {
-      const total = Object.values(section.voti).reduce((s, v) => s + v, 0);
-      const value = section.voti[selectedParty] || 0;
-      return {
-        sectionId: parseInt(sectionId),
-        value,
-        percentage: total > 0 ? (value / total) * 100 : 0,
-      };
-    });
+    const result: { sectionId: number; value: number; percentage: number }[] = [];
 
-    // Add section 53 (Centro Storico) with aggregated data from consolidated sections
-    let totalInConsolidated = 0;
-    let partyInConsolidated = 0;
-    CONSOLIDATED_SECTIONS.forEach(secId => {
-      const sec = data.sezioni![secId.toString()];
-      if (sec) {
-        totalInConsolidated += Object.values(sec.voti).reduce((s, v) => s + v, 0);
-        partyInConsolidated += sec.voti[selectedParty] || 0;
+    if (data.sezioni) {
+      // Old format: data.sezioni contains per-section voti
+      Object.entries(data.sezioni).forEach(([sectionId, section]) => {
+        const total = Object.values(section.voti).reduce((s, v) => s + v, 0);
+        const value = section.voti[selectedParty] || 0;
+        result.push({
+          sectionId: parseInt(sectionId),
+          value,
+          percentage: total > 0 ? (value / total) * 100 : 0,
+        });
+      });
+
+      // Add consolidated section 53
+      let totalInConsolidated = 0;
+      let partyInConsolidated = 0;
+      CONSOLIDATED_SECTIONS.forEach(secId => {
+        const sec = data.sezioni![secId.toString()];
+        if (sec) {
+          totalInConsolidated += Object.values(sec.voti).reduce((s, v) => s + v, 0);
+          partyInConsolidated += sec.voti[selectedParty] || 0;
+        }
+      });
+
+      if (totalInConsolidated > 0) {
+        result.push({
+          sectionId: CONSOLIDATED_SECTION_ID,
+          value: partyInConsolidated,
+          percentage: (partyInConsolidated / totalInConsolidated) * 100,
+        });
       }
-    });
+    } else if (usesNewFormat) {
+      // New format: each lista has its own sezioni object
+      const party = data.liste.find(l => l.nome === selectedParty);
+      if (!party?.sezioni) return undefined;
 
-    result.push({
-      sectionId: CONSOLIDATED_SECTION_ID,
-      value: partyInConsolidated,
-      percentage: totalInConsolidated > 0 ? (partyInConsolidated / totalInConsolidated) * 100 : 0,
-    });
+      // Collect all unique section IDs from all parties
+      const allSectionIds = new Set<string>();
+      data.liste.forEach(l => {
+        if (l.sezioni) Object.keys(l.sezioni).forEach(s => allSectionIds.add(s));
+      });
 
-    return result;
-  }, [data.sezioni, selectedParty]);
+      allSectionIds.forEach(sectionId => {
+        const value = party.sezioni![sectionId] || 0;
+        const total = data.liste.reduce((sum, l) => sum + (l.sezioni?.[sectionId] || 0), 0);
+        if (total > 0) {
+          result.push({
+            sectionId: parseInt(sectionId),
+            value,
+            percentage: (value / total) * 100,
+          });
+        }
+      });
+
+      // Add consolidated section 53
+      let totalInConsolidated = 0;
+      let partyInConsolidated = 0;
+      CONSOLIDATED_SECTIONS.forEach(secId => {
+        const secStr = secId.toString();
+        partyInConsolidated += party.sezioni![secStr] || 0;
+        totalInConsolidated += data.liste.reduce((sum, l) => sum + (l.sezioni?.[secStr] || 0), 0);
+      });
+
+      if (totalInConsolidated > 0) {
+        result.push({
+          sectionId: CONSOLIDATED_SECTION_ID,
+          value: partyInConsolidated,
+          percentage: (partyInConsolidated / totalInConsolidated) * 100,
+        });
+      }
+    }
+
+    return result.length > 0 ? result : undefined;
+  }, [data.sezioni, data.liste, selectedParty, usesNewFormat]);
 
   const getDensityColor = () => {
     if (!selectedParty) return PARTY_COLORS.default;
@@ -79,24 +128,57 @@ export function ListeView({ data, title }: ListeViewProps) {
 
   // For consolidated section, sum votes from all included sections
   const sectionData = useMemo(() => {
-    if (!selectedSection || !data.sezioni) return null;
+    if (!selectedSection) return null;
 
-    if (selectedSection === CONSOLIDATED_SECTION_ID) {
-      // Sum votes from all consolidated sections
+    if (data.sezioni) {
+      // Old format: data.sezioni contains per-section voti
+      if (selectedSection === CONSOLIDATED_SECTION_ID) {
+        const combinedVoti: Record<string, number> = {};
+        CONSOLIDATED_SECTIONS.forEach(secId => {
+          const sec = data.sezioni![secId.toString()];
+          if (sec) {
+            Object.entries(sec.voti).forEach(([party, votes]) => {
+              combinedVoti[party] = (combinedVoti[party] || 0) + votes;
+            });
+          }
+        });
+        return { voti: combinedVoti };
+      }
+      return data.sezioni[selectedSection.toString()] || null;
+    } else if (usesNewFormat) {
+      // New format: aggregate from each lista's sezioni
       const combinedVoti: Record<string, number> = {};
-      CONSOLIDATED_SECTIONS.forEach(secId => {
-        const sec = data.sezioni![secId.toString()];
-        if (sec) {
-          Object.entries(sec.voti).forEach(([party, votes]) => {
-            combinedVoti[party] = (combinedVoti[party] || 0) + votes;
-          });
-        }
-      });
-      return { voti: combinedVoti };
+
+      if (selectedSection === CONSOLIDATED_SECTION_ID) {
+        // Aggregate from all consolidated sections
+        data.liste.forEach(lista => {
+          if (lista.sezioni) {
+            let totalForLista = 0;
+            CONSOLIDATED_SECTIONS.forEach(secId => {
+              totalForLista += lista.sezioni![secId.toString()] || 0;
+            });
+            if (totalForLista > 0) {
+              combinedVoti[lista.nome] = totalForLista;
+            }
+          }
+        });
+      } else {
+        // Single section
+        data.liste.forEach(lista => {
+          if (lista.sezioni) {
+            const votes = lista.sezioni[selectedSection.toString()] || 0;
+            if (votes > 0) {
+              combinedVoti[lista.nome] = votes;
+            }
+          }
+        });
+      }
+
+      return Object.keys(combinedVoti).length > 0 ? { voti: combinedVoti } : null;
     }
 
-    return data.sezioni[selectedSection.toString()] || null;
-  }, [selectedSection, data.sezioni]);
+    return null;
+  }, [selectedSection, data.sezioni, data.liste, usesNewFormat]);
 
   const selectedPartyPercentage = useMemo(() => {
     if (!selectedSection || !selectedParty || !sectionData) return null;

@@ -40,6 +40,13 @@ const regionaliMenuItems: MenuItem[] = [
   { id: 'sezioni', label: 'Analisi Sezioni', icon: '🗺️' },
 ];
 
+const politicheMenuItems: MenuItem[] = [
+  { id: 'dashboard', label: 'Dashboard', icon: '📊' },
+  { id: 'nominali', label: 'Uninominale', icon: '👤' },
+  { id: 'liste', label: 'Liste Proporzionale', icon: '📋' },
+  { id: 'sezioni', label: 'Analisi Sezioni', icon: '🗺️' },
+];
+
 export const ELECTION_CONFIGS: ElectionConfig[] = [
   {
     id: 'comunali-2024',
@@ -68,7 +75,7 @@ export const ELECTION_CONFIGS: ElectionConfig[] = [
     label: 'Comunali 2014',
     description: 'Elezioni del Sindaco e Consiglio Comunale',
     icon: '🏛️',
-    dataPath: '2014_Comunali',
+    dataPath: '2014',
     menuItems: comunali2014MenuItems,
   },
   {
@@ -82,6 +89,36 @@ export const ELECTION_CONFIGS: ElectionConfig[] = [
     menuItems: comunaliMenuItems,
   },
   {
+    id: 'politiche-2022',
+    year: 2022,
+    type: 'politiche',
+    label: 'Politiche 2022',
+    description: 'Elezioni della Camera dei Deputati',
+    icon: '🏛️',
+    dataPath: '2022_Politiche',
+    menuItems: politicheMenuItems,
+  },
+  {
+    id: 'politiche-2018',
+    year: 2018,
+    type: 'politiche',
+    label: 'Politiche 2018',
+    description: 'Elezioni della Camera dei Deputati',
+    icon: '🏛️',
+    dataPath: '2018_Politiche',
+    menuItems: politicheMenuItems,
+  },
+  {
+    id: 'europee-2019',
+    year: 2019,
+    type: 'europee',
+    label: 'Europee 2019',
+    description: 'Elezioni del Parlamento Europeo',
+    icon: '🇪🇺',
+    dataPath: '2019/Europee',
+    menuItems: europeeMenuItems,
+  },
+  {
     id: 'europee-2009',
     year: 2009,
     type: 'europee',
@@ -90,6 +127,16 @@ export const ELECTION_CONFIGS: ElectionConfig[] = [
     icon: '🇪🇺',
     dataPath: '2009_Europee',
     menuItems: europeeMenuItems,
+  },
+  {
+    id: 'regionali-2020',
+    year: 2020,
+    type: 'regionali',
+    label: 'Regionali 2020',
+    description: 'Elezioni del Consiglio Regionale delle Marche',
+    icon: '🏔️',
+    dataPath: '2020_Regionali',
+    menuItems: regionaliMenuItems,
   },
   {
     id: 'regionali-2010',
