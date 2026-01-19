@@ -52,6 +52,16 @@ export const ELECTION_CONFIGS: ElectionConfig[] = [
     menuItems: comunali2024MenuItems,
   },
   {
+    id: 'comunali-2019',
+    year: 2019,
+    type: 'comunali',
+    label: 'Comunali 2019',
+    description: 'Elezioni del Sindaco e Consiglio Comunale',
+    icon: '🏛️',
+    dataPath: '2019',
+    menuItems: comunaliMenuItems,
+  },
+  {
     id: 'comunali-2014',
     year: 2014,
     type: 'comunali',

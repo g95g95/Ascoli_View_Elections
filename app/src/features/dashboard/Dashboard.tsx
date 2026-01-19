@@ -18,9 +18,16 @@ export function Dashboard({ electionData }: DashboardProps) {
 
   // For elections with ballottaggio (comunali)
   if (ballottaggio) {
-    const totalVoters = ballottaggio.affluenza.votanti_donne + ballottaggio.affluenza.votanti_uomini;
-    const totalEligible = ballottaggio.affluenza.aventi_diritto_donne + ballottaggio.affluenza.aventi_diritto_uomini;
-    const turnout = ((totalVoters / totalEligible) * 100).toFixed(1);
+    const hasAffluenza = ballottaggio.affluenza &&
+      typeof ballottaggio.affluenza.votanti_donne === 'number' &&
+      typeof ballottaggio.affluenza.votanti_uomini === 'number';
+    const totalVoters = hasAffluenza
+      ? ballottaggio.affluenza.votanti_donne + ballottaggio.affluenza.votanti_uomini
+      : ballottaggio.candidati.reduce((s, c) => s + c.totale, 0);
+    const totalEligible = hasAffluenza
+      ? ballottaggio.affluenza.aventi_diritto_donne + ballottaggio.affluenza.aventi_diritto_uomini
+      : 0;
+    const turnout = totalEligible > 0 ? ((totalVoters / totalEligible) * 100).toFixed(1) : null;
     const winner = ballottaggio.candidati.reduce((a, b) => (a.totale > b.totale ? a : b));
 
     return (
@@ -36,9 +43,9 @@ export function Dashboard({ electionData }: DashboardProps) {
               color="green"
             />
             <StatCard
-              title="Affluenza"
-              value={`${turnout}%`}
-              subtitle={`${totalVoters.toLocaleString('it-IT')} votanti`}
+              title={turnout ? "Affluenza" : "Voti Totali"}
+              value={turnout ? `${turnout}%` : totalVoters.toLocaleString('it-IT')}
+              subtitle={turnout ? `${totalVoters.toLocaleString('it-IT')} votanti` : "voti espressi"}
               icon="📈"
               color="blue"
             />
@@ -85,35 +92,56 @@ export function Dashboard({ electionData }: DashboardProps) {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl border border-gray-200 p-4 md:p-6">
-              <h3 className="text-lg font-semibold mb-4">Affluenza</h3>
-              <div className="grid grid-cols-2 gap-3">
-                <div className="text-center p-3 bg-blue-50 rounded-lg">
-                  <div className="text-xl md:text-2xl font-bold text-blue-700">
-                    {ballottaggio.affluenza.aventi_diritto_uomini.toLocaleString('it-IT')}
+            {hasAffluenza ? (
+              <div className="bg-white rounded-xl border border-gray-200 p-4 md:p-6">
+                <h3 className="text-lg font-semibold mb-4">Affluenza</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="text-center p-3 bg-blue-50 rounded-lg">
+                    <div className="text-xl md:text-2xl font-bold text-blue-700">
+                      {ballottaggio.affluenza.aventi_diritto_uomini.toLocaleString('it-IT')}
+                    </div>
+                    <div className="text-xs md:text-sm text-blue-600">Aventi Diritto U</div>
                   </div>
-                  <div className="text-xs md:text-sm text-blue-600">Aventi Diritto U</div>
-                </div>
-                <div className="text-center p-3 bg-pink-50 rounded-lg">
-                  <div className="text-xl md:text-2xl font-bold text-pink-700">
-                    {ballottaggio.affluenza.aventi_diritto_donne.toLocaleString('it-IT')}
+                  <div className="text-center p-3 bg-pink-50 rounded-lg">
+                    <div className="text-xl md:text-2xl font-bold text-pink-700">
+                      {ballottaggio.affluenza.aventi_diritto_donne.toLocaleString('it-IT')}
+                    </div>
+                    <div className="text-xs md:text-sm text-pink-600">Aventi Diritto D</div>
                   </div>
-                  <div className="text-xs md:text-sm text-pink-600">Aventi Diritto D</div>
-                </div>
-                <div className="text-center p-3 bg-gray-50 rounded-lg">
-                  <div className="text-xl md:text-2xl font-bold text-gray-700">
-                    {ballottaggio.affluenza.schede_bianche.toLocaleString('it-IT')}
+                  <div className="text-center p-3 bg-gray-50 rounded-lg">
+                    <div className="text-xl md:text-2xl font-bold text-gray-700">
+                      {ballottaggio.affluenza.schede_bianche.toLocaleString('it-IT')}
+                    </div>
+                    <div className="text-xs md:text-sm text-gray-600">Schede Bianche</div>
                   </div>
-                  <div className="text-xs md:text-sm text-gray-600">Schede Bianche</div>
-                </div>
-                <div className="text-center p-3 bg-red-50 rounded-lg">
-                  <div className="text-xl md:text-2xl font-bold text-red-700">
-                    {ballottaggio.affluenza.schede_nulle.toLocaleString('it-IT')}
+                  <div className="text-center p-3 bg-red-50 rounded-lg">
+                    <div className="text-xl md:text-2xl font-bold text-red-700">
+                      {ballottaggio.affluenza.schede_nulle.toLocaleString('it-IT')}
+                    </div>
+                    <div className="text-xs md:text-sm text-red-600">Schede Nulle</div>
                   </div>
-                  <div className="text-xs md:text-sm text-red-600">Schede Nulle</div>
                 </div>
               </div>
-            </div>
+            ) : (
+              <div className="bg-white rounded-xl border border-gray-200 p-4 md:p-6">
+                <h3 className="text-lg font-semibold mb-4">Dettagli Voto</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {ballottaggio.candidati.map((c, idx) => (
+                    <div key={c.nome} className={`text-center p-3 rounded-lg ${idx === 0 ? 'bg-blue-50' : 'bg-red-50'}`}>
+                      <div className={`text-xl md:text-2xl font-bold ${idx === 0 ? 'text-blue-700' : 'text-red-700'}`}>
+                        {c.totale.toLocaleString('it-IT')}
+                      </div>
+                      <div className={`text-xs md:text-sm ${idx === 0 ? 'text-blue-600' : 'text-red-600'}`}>
+                        {c.nome.split(' ').slice(-1)[0]}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-3 text-center text-sm text-gray-500">
+                  {(ballottaggio as unknown as { sezioni_scrutinate?: number }).sezioni_scrutinate || Object.keys((ballottaggio.candidati[0] as unknown as { sezioni?: Record<string, number> })?.sezioni || {}).length} sezioni scrutinate
+                </div>
+              </div>
+            )}
           </div>
 
           {liste && (

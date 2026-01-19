@@ -63,6 +63,23 @@ export async function load2014PreferenzeComunali(): Promise<PreferenzeElection> 
   return loadJson('2014_Comunali/preferenze_comunali.json');
 }
 
+// 2019 Comunali specific loaders
+export async function load2019Ballottaggio(): Promise<MayoralElection> {
+  return loadJson('2019/ballottaggio_sindaco.json');
+}
+
+export async function load2019PrimoTurno(): Promise<MayoralElection> {
+  return loadJson('2019/sindaco.json');
+}
+
+export async function load2019ListeComunali(): Promise<ListeElection> {
+  return loadJson('2019/liste_consiglio.json');
+}
+
+export async function load2019PreferenzeComunali(): Promise<PreferenzeElection> {
+  return loadJson('2019/preferenze_comunali.json');
+}
+
 // 2010 Regionali specific loaders
 export async function loadPreferenzeRegionali(): Promise<PreferenzeElection> {
   return loadJson('2010_Regionali/preferenze_regionali.json');
@@ -101,6 +118,19 @@ export async function loadElectionData(config: ElectionConfig): Promise<Election
       data.primoTurno = primoTurno2024;
       data.liste = listeComunali2024;
       data.preferenze = preferenzeComunali2024;
+      break;
+
+    case 'comunali-2019':
+      const [ballottaggio2019, primoTurno2019, listeComunali2019, preferenzeComunali2019] = await Promise.all([
+        load2019Ballottaggio(),
+        load2019PrimoTurno(),
+        load2019ListeComunali(),
+        load2019PreferenzeComunali(),
+      ]);
+      data.ballottaggio = ballottaggio2019;
+      data.primoTurno = primoTurno2019;
+      data.liste = listeComunali2019;
+      data.preferenze = preferenzeComunali2019;
       break;
 
     case 'comunali-2014':
