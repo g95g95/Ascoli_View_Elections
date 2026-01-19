@@ -1,0 +1,544 @@
+{
+  "elezione": "Comunali",
+  "turno": "primo turno",
+  "data": "2024-06-08",
+  "comune": "Ascoli Piceno",
+  "tipo": "risultati_nominali_sindaco",
+  "descrizione": "Risultati dei candidati sindaco per sezione",
+  "candidati": [
+    {
+      "nome": "MARCO FIORAVANTI",
+      "totale": 20087,
+      "votiSoloPersona": 301,
+      "sezioni": {
+        "1": {
+          "voti": 261,
+          "votiSoloPersona": 1,
+          "percentuale": "69.23%"
+        },
+        "2": {
+          "voti": 422,
+          "votiSoloPersona": 7,
+          "percentuale": "64.43%"
+        },
+        "3": {
+          "voti": 458,
+          "votiSoloPersona": 12,
+          "percentuale": "73.75%"
+        },
+        "4": {
+          "voti": 380,
+          "votiSoloPersona": 4,
+          "percentuale": "69.22%"
+        },
+        "5": {
+          "voti": 348,
+          "votiSoloPersona": 10,
+          "percentuale": "62.82%"
+        },
+        "6": {
+          "voti": 247,
+          "votiSoloPersona": 0,
+          "percentuale": "63.33%"
+        },
+        "7": {
+          "voti": 383,
+          "votiSoloPersona": 6,
+          "percentuale": "73.37%"
+        },
+        "8": {
+          "voti": 352,
+          "votiSoloPersona": 11,
+          "percentuale": "66.42%"
+        },
+        "9": {
+          "voti": 332,
+          "votiSoloPersona": 2,
+          "percentuale": "67.48%"
+        },
+        "10": {
+          "voti": 320,
+          "votiSoloPersona": 3,
+          "percentuale": "69.72%"
+        },
+        "11": {
+          "voti": 418,
+          "votiSoloPersona": 8,
+          "percentuale": "73.98%"
+        },
+        "12": {
+          "voti": 443,
+          "votiSoloPersona": 10,
+          "percentuale": "72.98%"
+        },
+        "13": {
+          "voti": 416,
+          "votiSoloPersona": 1,
+          "percentuale": "74.29%"
+        },
+        "14": {
+          "voti": 450,
+          "votiSoloPersona": 1,
+          "percentuale": "78.81%"
+        },
+        "15": {
+          "voti": 369,
+          "votiSoloPersona": 4,
+          "percentuale": "60.79%"
+        },
+        "16": {
+          "voti": 443,
+          "votiSoloPersona": 3,
+          "percentuale": "71.22%"
+        },
+        "17": {
+          "voti": 457,
+          "votiSoloPersona": 6,
+          "percentuale": "71.63%"
+        },
+        "18": {
+          "voti": 458,
+          "votiSoloPersona": 3,
+          "percentuale": "75.83%"
+        },
+        "19": {
+          "voti": 593,
+          "votiSoloPersona": 6,
+          "percentuale": "78.13%"
+        },
+        "20": {
+          "voti": 390,
+          "votiSoloPersona": 0,
+          "percentuale": "69.03%"
+        },
+        "21": {
+          "voti": 413,
+          "votiSoloPersona": 4,
+          "percentuale": "70.6%"
+        },
+        "22": {
+          "voti": 372,
+          "votiSoloPersona": 2,
+          "percentuale": "73.81%"
+        },
+        "23": {
+          "voti": 351,
+          "votiSoloPersona": 5,
+          "percentuale": "70.62%"
+        },
+        "24": {
+          "voti": 309,
+          "votiSoloPersona": 5,
+          "percentuale": "68.21%"
+        },
+        "25": {
+          "voti": 361,
+          "votiSoloPersona": 7,
+          "percentuale": "68.11%"
+        },
+        "26": {
+          "voti": 346,
+          "votiSoloPersona": 7,
+          "percentuale": "69.48%"
+        },
+        "27": {
+          "voti": 570,
+          "votiSoloPersona": 16,
+          "percentuale": "78.3%"
+        },
+        "28": {
+          "voti": 352,
+          "votiSoloPersona": 24,
+          "percentuale": "69.02%"
+        },
+        "29": {
+          "voti": 361,
+          "votiSoloPersona": 9,
+          "percentuale": "73.23%"
+        },
+        "30": {
+          "voti": 318,
+          "votiSoloPersona": 8,
+          "percentuale": "71.46%"
+        },
+        "31": {
+          "voti": 498,
+          "votiSoloPersona": 11,
+          "percentuale": "83%"
+        },
+        "32": {
+          "voti": 354,
+          "votiSoloPersona": 7,
+          "percentuale": "77.63%"
+        },
+        "33": {
+          "voti": 442,
+          "votiSoloPersona": 10,
+          "percentuale": "75.17%"
+        },
+        "34": {
+          "voti": 476,
+          "votiSoloPersona": 6,
+          "percentuale": "76.04%"
+        },
+        "35": {
+          "voti": 350,
+          "votiSoloPersona": 7,
+          "percentuale": "76.25%"
+        },
+        "36": {
+          "voti": 436,
+          "votiSoloPersona": 12,
+          "percentuale": "76.63%"
+        },
+        "37": {
+          "voti": 345,
+          "votiSoloPersona": 11,
+          "percentuale": "77.88%"
+        },
+        "38": {
+          "voti": 329,
+          "votiSoloPersona": 8,
+          "percentuale": "73.93%"
+        },
+        "39": {
+          "voti": 512,
+          "votiSoloPersona": 6,
+          "percentuale": "81.4%"
+        },
+        "40": {
+          "voti": 9,
+          "votiSoloPersona": 0,
+          "percentuale": "75%"
+        },
+        "41": {
+          "voti": 299,
+          "votiSoloPersona": 2,
+          "percentuale": "78.68%"
+        },
+        "42": {
+          "voti": 481,
+          "votiSoloPersona": 9,
+          "percentuale": "77.33%"
+        },
+        "43": {
+          "voti": 424,
+          "votiSoloPersona": 2,
+          "percentuale": "80.15%"
+        },
+        "44": {
+          "voti": 379,
+          "votiSoloPersona": 8,
+          "percentuale": "81.33%"
+        },
+        "45": {
+          "voti": 493,
+          "votiSoloPersona": 1,
+          "percentuale": "87.88%"
+        },
+        "46": {
+          "voti": 341,
+          "votiSoloPersona": 1,
+          "percentuale": "68.2%"
+        },
+        "47": {
+          "voti": 474,
+          "votiSoloPersona": 0,
+          "percentuale": "79.26%"
+        },
+        "48": {
+          "voti": 468,
+          "votiSoloPersona": 1,
+          "percentuale": "82.98%"
+        },
+        "49": {
+          "voti": 260,
+          "votiSoloPersona": 6,
+          "percentuale": "80.25%"
+        },
+        "50": {
+          "voti": 328,
+          "votiSoloPersona": 2,
+          "percentuale": "80%"
+        },
+        "51": {
+          "voti": 480,
+          "votiSoloPersona": 2,
+          "percentuale": "83.19%"
+        },
+        "52": {
+          "voti": 216,
+          "votiSoloPersona": 4,
+          "percentuale": "64.86%"
+        }
+      }
+    },
+    {
+      "nome": "EMIDIO NARDINI",
+      "totale": 7094,
+      "votiSoloPersona": 302,
+      "sezioni": {
+        "1": {
+          "voti": 116,
+          "votiSoloPersona": 1,
+          "percentuale": "30.77%"
+        },
+        "2": {
+          "voti": 233,
+          "votiSoloPersona": 16,
+          "percentuale": "35.57%"
+        },
+        "3": {
+          "voti": 163,
+          "votiSoloPersona": 4,
+          "percentuale": "26.25%"
+        },
+        "4": {
+          "voti": 169,
+          "votiSoloPersona": 4,
+          "percentuale": "30.78%"
+        },
+        "5": {
+          "voti": 206,
+          "votiSoloPersona": 9,
+          "percentuale": "37.18%"
+        },
+        "6": {
+          "voti": 143,
+          "votiSoloPersona": 22,
+          "percentuale": "36.67%"
+        },
+        "7": {
+          "voti": 139,
+          "votiSoloPersona": 5,
+          "percentuale": "26.63%"
+        },
+        "8": {
+          "voti": 178,
+          "votiSoloPersona": 2,
+          "percentuale": "33.58%"
+        },
+        "9": {
+          "voti": 160,
+          "votiSoloPersona": 13,
+          "percentuale": "32.52%"
+        },
+        "10": {
+          "voti": 139,
+          "votiSoloPersona": 6,
+          "percentuale": "30.28%"
+        },
+        "11": {
+          "voti": 147,
+          "votiSoloPersona": 6,
+          "percentuale": "26.02%"
+        },
+        "12": {
+          "voti": 164,
+          "votiSoloPersona": 22,
+          "percentuale": "27.02%"
+        },
+        "13": {
+          "voti": 144,
+          "votiSoloPersona": 3,
+          "percentuale": "25.71%"
+        },
+        "14": {
+          "voti": 121,
+          "votiSoloPersona": 0,
+          "percentuale": "21.19%"
+        },
+        "15": {
+          "voti": 238,
+          "votiSoloPersona": 10,
+          "percentuale": "39.21%"
+        },
+        "16": {
+          "voti": 179,
+          "votiSoloPersona": 39,
+          "percentuale": "28.78%"
+        },
+        "17": {
+          "voti": 181,
+          "votiSoloPersona": 5,
+          "percentuale": "28.37%"
+        },
+        "18": {
+          "voti": 146,
+          "votiSoloPersona": 3,
+          "percentuale": "24.17%"
+        },
+        "19": {
+          "voti": 166,
+          "votiSoloPersona": 2,
+          "percentuale": "21.87%"
+        },
+        "20": {
+          "voti": 175,
+          "votiSoloPersona": 14,
+          "percentuale": "30.97%"
+        },
+        "21": {
+          "voti": 172,
+          "votiSoloPersona": 1,
+          "percentuale": "29.4%"
+        },
+        "22": {
+          "voti": 132,
+          "votiSoloPersona": 1,
+          "percentuale": "26.19%"
+        },
+        "23": {
+          "voti": 146,
+          "votiSoloPersona": 6,
+          "percentuale": "29.38%"
+        },
+        "24": {
+          "voti": 144,
+          "votiSoloPersona": 3,
+          "percentuale": "31.79%"
+        },
+        "25": {
+          "voti": 169,
+          "votiSoloPersona": 7,
+          "percentuale": "31.89%"
+        },
+        "26": {
+          "voti": 152,
+          "votiSoloPersona": 7,
+          "percentuale": "30.52%"
+        },
+        "27": {
+          "voti": 158,
+          "votiSoloPersona": 8,
+          "percentuale": "21.7%"
+        },
+        "28": {
+          "voti": 158,
+          "votiSoloPersona": 1,
+          "percentuale": "30.98%"
+        },
+        "29": {
+          "voti": 132,
+          "votiSoloPersona": 4,
+          "percentuale": "26.77%"
+        },
+        "30": {
+          "voti": 127,
+          "votiSoloPersona": 5,
+          "percentuale": "28.54%"
+        },
+        "31": {
+          "voti": 102,
+          "votiSoloPersona": 6,
+          "percentuale": "17%"
+        },
+        "32": {
+          "voti": 102,
+          "votiSoloPersona": 3,
+          "percentuale": "22.37%"
+        },
+        "33": {
+          "voti": 146,
+          "votiSoloPersona": 7,
+          "percentuale": "24.83%"
+        },
+        "34": {
+          "voti": 150,
+          "votiSoloPersona": 3,
+          "percentuale": "23.96%"
+        },
+        "35": {
+          "voti": 109,
+          "votiSoloPersona": 11,
+          "percentuale": "23.75%"
+        },
+        "36": {
+          "voti": 133,
+          "votiSoloPersona": 10,
+          "percentuale": "23.37%"
+        },
+        "37": {
+          "voti": 98,
+          "votiSoloPersona": 4,
+          "percentuale": "22.12%"
+        },
+        "38": {
+          "voti": 116,
+          "votiSoloPersona": 1,
+          "percentuale": "26.07%"
+        },
+        "39": {
+          "voti": 117,
+          "votiSoloPersona": 3,
+          "percentuale": "18.6%"
+        },
+        "40": {
+          "voti": 3,
+          "votiSoloPersona": 0,
+          "percentuale": "25%"
+        },
+        "41": {
+          "voti": 81,
+          "votiSoloPersona": 5,
+          "percentuale": "21.32%"
+        },
+        "42": {
+          "voti": 141,
+          "votiSoloPersona": 5,
+          "percentuale": "22.67%"
+        },
+        "43": {
+          "voti": 105,
+          "votiSoloPersona": 0,
+          "percentuale": "19.85%"
+        },
+        "44": {
+          "voti": 87,
+          "votiSoloPersona": 2,
+          "percentuale": "18.67%"
+        },
+        "45": {
+          "voti": 68,
+          "votiSoloPersona": 1,
+          "percentuale": "12.12%"
+        },
+        "46": {
+          "voti": 159,
+          "votiSoloPersona": 7,
+          "percentuale": "31.8%"
+        },
+        "47": {
+          "voti": 124,
+          "votiSoloPersona": 0,
+          "percentuale": "20.74%"
+        },
+        "48": {
+          "voti": 96,
+          "votiSoloPersona": 1,
+          "percentuale": "17.02%"
+        },
+        "49": {
+          "voti": 64,
+          "votiSoloPersona": 0,
+          "percentuale": "19.75%"
+        },
+        "50": {
+          "voti": 82,
+          "votiSoloPersona": 0,
+          "percentuale": "20%"
+        },
+        "51": {
+          "voti": 97,
+          "votiSoloPersona": 3,
+          "percentuale": "16.81%"
+        },
+        "52": {
+          "voti": 117,
+          "votiSoloPersona": 1,
+          "percentuale": "35.14%"
+        }
+      }
+    }
+  ]
+}

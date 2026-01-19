@@ -9,6 +9,14 @@ const comunaliMenuItems: MenuItem[] = [
   { id: 'sezioni', label: 'Analisi Sezioni', icon: '🗺️' },
 ];
 
+const comunali2024MenuItems: MenuItem[] = [
+  { id: 'dashboard', label: 'Dashboard', icon: '📊' },
+  { id: 'primo-turno', label: 'Sindaco', icon: '👤' },
+  { id: 'liste', label: 'Liste Consiglio', icon: '📋' },
+  { id: 'preferenze', label: 'Preferenze', icon: '⭐' },
+  { id: 'sezioni', label: 'Analisi Sezioni', icon: '🗺️' },
+];
+
 const europeeMenuItems: MenuItem[] = [
   { id: 'dashboard', label: 'Dashboard', icon: '📊' },
   { id: 'liste', label: 'Liste Europee', icon: '📋' },
@@ -25,6 +33,16 @@ const regionaliMenuItems: MenuItem[] = [
 ];
 
 export const ELECTION_CONFIGS: ElectionConfig[] = [
+  {
+    id: 'comunali-2024',
+    year: 2024,
+    type: 'comunali',
+    label: 'Comunali 2024',
+    description: 'Elezioni del Sindaco e Consiglio Comunale',
+    icon: '🏛️',
+    dataPath: '2024_Comunali',
+    menuItems: comunali2024MenuItems,
+  },
   {
     id: 'comunali-2009',
     year: 2009,

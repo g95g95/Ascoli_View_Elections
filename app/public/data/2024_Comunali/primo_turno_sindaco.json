@@ -1,0 +1,755 @@
+{
+  "elezione": "Comunali 2024",
+  "turno": "Primo Turno",
+  "data": "8-9 Giugno 2024",
+  "comune": "Ascoli Piceno",
+  "tipo": "Sindaco",
+  "candidati": [
+    {
+      "nome": "MARCO FIORAVANTI",
+      "totale": 20087
+    },
+    {
+      "nome": "EMIDIO NARDINI",
+      "totale": 7094
+    }
+  ],
+  "affluenza": {
+    "aventi_diritto_donne": 0,
+    "aventi_diritto_uomini": 0,
+    "votanti_donne": 0,
+    "votanti_uomini": 0,
+    "schede_bianche": 0,
+    "schede_nulle": 0
+  },
+  "sezioni": {
+    "1": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 261,
+        "EMIDIO NARDINI": 116
+      }
+    },
+    "2": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 422,
+        "EMIDIO NARDINI": 233
+      }
+    },
+    "3": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 458,
+        "EMIDIO NARDINI": 163
+      }
+    },
+    "4": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 380,
+        "EMIDIO NARDINI": 169
+      }
+    },
+    "5": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 348,
+        "EMIDIO NARDINI": 206
+      }
+    },
+    "6": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 247,
+        "EMIDIO NARDINI": 143
+      }
+    },
+    "7": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 383,
+        "EMIDIO NARDINI": 139
+      }
+    },
+    "8": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 352,
+        "EMIDIO NARDINI": 178
+      }
+    },
+    "9": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 332,
+        "EMIDIO NARDINI": 160
+      }
+    },
+    "10": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 320,
+        "EMIDIO NARDINI": 139
+      }
+    },
+    "11": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 418,
+        "EMIDIO NARDINI": 147
+      }
+    },
+    "12": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 443,
+        "EMIDIO NARDINI": 164
+      }
+    },
+    "13": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 416,
+        "EMIDIO NARDINI": 144
+      }
+    },
+    "14": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 450,
+        "EMIDIO NARDINI": 121
+      }
+    },
+    "15": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 369,
+        "EMIDIO NARDINI": 238
+      }
+    },
+    "16": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 443,
+        "EMIDIO NARDINI": 179
+      }
+    },
+    "17": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 457,
+        "EMIDIO NARDINI": 181
+      }
+    },
+    "18": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 458,
+        "EMIDIO NARDINI": 146
+      }
+    },
+    "19": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 593,
+        "EMIDIO NARDINI": 166
+      }
+    },
+    "20": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 390,
+        "EMIDIO NARDINI": 175
+      }
+    },
+    "21": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 413,
+        "EMIDIO NARDINI": 172
+      }
+    },
+    "22": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 372,
+        "EMIDIO NARDINI": 132
+      }
+    },
+    "23": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 351,
+        "EMIDIO NARDINI": 146
+      }
+    },
+    "24": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 309,
+        "EMIDIO NARDINI": 144
+      }
+    },
+    "25": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 361,
+        "EMIDIO NARDINI": 169
+      }
+    },
+    "26": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 346,
+        "EMIDIO NARDINI": 152
+      }
+    },
+    "27": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 570,
+        "EMIDIO NARDINI": 158
+      }
+    },
+    "28": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 352,
+        "EMIDIO NARDINI": 158
+      }
+    },
+    "29": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 361,
+        "EMIDIO NARDINI": 132
+      }
+    },
+    "30": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 318,
+        "EMIDIO NARDINI": 127
+      }
+    },
+    "31": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 498,
+        "EMIDIO NARDINI": 102
+      }
+    },
+    "32": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 354,
+        "EMIDIO NARDINI": 102
+      }
+    },
+    "33": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 442,
+        "EMIDIO NARDINI": 146
+      }
+    },
+    "34": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 476,
+        "EMIDIO NARDINI": 150
+      }
+    },
+    "35": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 350,
+        "EMIDIO NARDINI": 109
+      }
+    },
+    "36": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 436,
+        "EMIDIO NARDINI": 133
+      }
+    },
+    "37": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 345,
+        "EMIDIO NARDINI": 98
+      }
+    },
+    "38": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 329,
+        "EMIDIO NARDINI": 116
+      }
+    },
+    "39": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 512,
+        "EMIDIO NARDINI": 117
+      }
+    },
+    "40": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 9,
+        "EMIDIO NARDINI": 3
+      }
+    },
+    "41": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 299,
+        "EMIDIO NARDINI": 81
+      }
+    },
+    "42": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 481,
+        "EMIDIO NARDINI": 141
+      }
+    },
+    "43": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 424,
+        "EMIDIO NARDINI": 105
+      }
+    },
+    "44": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 379,
+        "EMIDIO NARDINI": 87
+      }
+    },
+    "45": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 493,
+        "EMIDIO NARDINI": 68
+      }
+    },
+    "46": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 341,
+        "EMIDIO NARDINI": 159
+      }
+    },
+    "47": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 474,
+        "EMIDIO NARDINI": 124
+      }
+    },
+    "48": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 468,
+        "EMIDIO NARDINI": 96
+      }
+    },
+    "49": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 260,
+        "EMIDIO NARDINI": 64
+      }
+    },
+    "50": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 328,
+        "EMIDIO NARDINI": 82
+      }
+    },
+    "51": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 480,
+        "EMIDIO NARDINI": 97
+      }
+    },
+    "52": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 0
+      },
+      "voti": {
+        "MARCO FIORAVANTI": 216,
+        "EMIDIO NARDINI": 117
+      }
+    }
+  }
+}
