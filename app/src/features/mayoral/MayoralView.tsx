@@ -15,21 +15,53 @@ export function MayoralView({ data, title }: MayoralViewProps) {
   const totalVotes = data.candidati.reduce((sum, c) => sum + c.totale, 0);
   const winner = data.candidati.reduce((a, b) => (a.totale > b.totale ? a : b));
 
-  const sectionData = selectedSection ? data.sezioni[selectedSection.toString()] : null;
+  const hasLegacySezioni = !!data.sezioni;
+  const hasAffluenza = !!data.affluenza;
+  const hasCandidateSezioni = !!data.candidati[0]?.sezioni;
+
+  const sectionData = selectedSection && hasLegacySezioni ? data.sezioni![selectedSection.toString()] : null;
+
+  const allSectionIds = useMemo(() => {
+    if (hasLegacySezioni) {
+      return Object.keys(data.sezioni!).map(Number).sort((a, b) => a - b);
+    }
+    if (hasCandidateSezioni) {
+      return Object.keys(data.candidati[0].sezioni!).map(Number).sort((a, b) => a - b);
+    }
+    return [];
+  }, [data, hasLegacySezioni, hasCandidateSezioni]);
 
   const densityData = useMemo(() => {
     if (!selectedCandidate) return undefined;
 
-    return Object.entries(data.sezioni).map(([sectionId, section]) => {
-      const total = Object.values(section.voti).reduce((s, v) => s + v, 0);
-      const value = section.voti[selectedCandidate] || 0;
-      return {
-        sectionId: parseInt(sectionId),
-        value,
-        percentage: total > 0 ? (value / total) * 100 : 0,
-      };
-    });
-  }, [data.sezioni, selectedCandidate]);
+    if (hasLegacySezioni) {
+      return Object.entries(data.sezioni!).map(([sectionId, section]) => {
+        const total = Object.values(section.voti).reduce((s, v) => s + v, 0);
+        const value = section.voti[selectedCandidate] || 0;
+        return {
+          sectionId: parseInt(sectionId),
+          value,
+          percentage: total > 0 ? (value / total) * 100 : 0,
+        };
+      });
+    }
+
+    if (hasCandidateSezioni) {
+      const candidate = data.candidati.find(c => c.nome === selectedCandidate);
+      if (!candidate?.sezioni) return undefined;
+      return allSectionIds.map(sectionId => {
+        const value = candidate.sezioni![sectionId.toString()] || 0;
+        const total = data.candidati.reduce((s, c) => s + (c.sezioni?.[sectionId.toString()] || 0), 0);
+        return {
+          sectionId,
+          value,
+          percentage: total > 0 ? (value / total) * 100 : 0,
+        };
+      });
+    }
+
+    return undefined;
+  }, [data, selectedCandidate, hasLegacySezioni, hasCandidateSezioni, allSectionIds]);
 
   const getDensityColor = () => {
     if (!selectedCandidate) return '#3b82f6';
@@ -69,24 +101,36 @@ export function MayoralView({ data, title }: MayoralViewProps) {
               </div>
             );
           })}
-          <div className="p-4 md:p-6 rounded-xl border border-gray-200 bg-white">
-            <div className="text-base md:text-lg font-medium text-gray-600">Affluenza</div>
-            <div className="mt-2 text-2xl md:text-3xl font-bold">
-              {(
-                ((data.affluenza.votanti_donne + data.affluenza.votanti_uomini) /
-                  (data.affluenza.aventi_diritto_donne + data.affluenza.aventi_diritto_uomini)) *
-                100
-              ).toFixed(1)}
-              %
+          {hasAffluenza ? (
+            <div className="p-4 md:p-6 rounded-xl border border-gray-200 bg-white">
+              <div className="text-base md:text-lg font-medium text-gray-600">Affluenza</div>
+              <div className="mt-2 text-2xl md:text-3xl font-bold">
+                {(
+                  ((data.affluenza!.votanti_donne + data.affluenza!.votanti_uomini) /
+                    (data.affluenza!.aventi_diritto_donne + data.affluenza!.aventi_diritto_uomini)) *
+                  100
+                ).toFixed(1)}
+                %
+              </div>
+              <div className="mt-1 text-xs md:text-sm text-gray-500">
+                {(data.affluenza!.votanti_donne + data.affluenza!.votanti_uomini).toLocaleString('it-IT')}{' '}
+                votanti su{' '}
+                {(
+                  data.affluenza!.aventi_diritto_donne + data.affluenza!.aventi_diritto_uomini
+                ).toLocaleString('it-IT')}
+              </div>
             </div>
-            <div className="mt-1 text-xs md:text-sm text-gray-500">
-              {(data.affluenza.votanti_donne + data.affluenza.votanti_uomini).toLocaleString('it-IT')}{' '}
-              votanti su{' '}
-              {(
-                data.affluenza.aventi_diritto_donne + data.affluenza.aventi_diritto_uomini
-              ).toLocaleString('it-IT')}
+          ) : (
+            <div className="p-4 md:p-6 rounded-xl border border-gray-200 bg-white">
+              <div className="text-base md:text-lg font-medium text-gray-600">Sezioni</div>
+              <div className="mt-2 text-2xl md:text-3xl font-bold">
+                {allSectionIds.length}
+              </div>
+              <div className="mt-1 text-xs md:text-sm text-gray-500">
+                sezioni scrutinate
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         {/* Density selector */}
@@ -129,7 +173,7 @@ export function MayoralView({ data, title }: MayoralViewProps) {
             <h3 className="text-lg font-semibold mb-4">
               {selectedSection ? `Dettaglio Sezione ${selectedSection}` : 'Risultati per Sezione'}
             </h3>
-            {sectionData ? (
+            {sectionData && sectionData.affluenza ? (
               <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="p-3 bg-gray-50 rounded-lg text-center">
@@ -173,6 +217,36 @@ export function MayoralView({ data, title }: MayoralViewProps) {
                   );
                 })}
               </div>
+            ) : selectedSection && hasCandidateSezioni ? (
+              <div className="space-y-4">
+                <div className="p-3 bg-gray-50 rounded-lg text-center mb-4">
+                  <div className="text-sm text-gray-600">Voti Totali Sezione</div>
+                  <div className="text-xl font-bold">
+                    {data.candidati.reduce((s, c) => s + (c.sezioni?.[selectedSection.toString()] || 0), 0)}
+                  </div>
+                </div>
+                {data.candidati.map((candidate, idx) => {
+                  const votes = candidate.sezioni?.[selectedSection.toString()] || 0;
+                  const sectionTotal = data.candidati.reduce((s, c) => s + (c.sezioni?.[selectedSection.toString()] || 0), 0);
+                  const pct = sectionTotal > 0 ? ((votes / sectionTotal) * 100).toFixed(1) : '0';
+                  return (
+                    <div key={candidate.nome}>
+                      <div className="flex justify-between mb-1 text-sm">
+                        <span className="font-medium">{candidate.nome}</span>
+                        <span>
+                          {votes} ({pct}%)
+                        </span>
+                      </div>
+                      <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
+                        <div
+                          className={`h-full ${idx === 0 ? 'bg-blue-500' : 'bg-red-500'}`}
+                          style={{ width: `${pct}%` }}
+                        />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             ) : (
               <div className="h-64 overflow-y-auto">
                 <table className="w-full text-sm">
@@ -187,32 +261,71 @@ export function MayoralView({ data, title }: MayoralViewProps) {
                     </tr>
                   </thead>
                   <tbody>
-                    {Object.entries(data.sezioni)
-                      .sort(([a], [b]) => parseInt(a) - parseInt(b))
-                      .map(([sectionId, section]) => (
-                        <tr
-                          key={sectionId}
-                          className="border-b hover:bg-gray-50 cursor-pointer"
-                          onClick={() => setSelectedSection(parseInt(sectionId))}
-                        >
-                          <td className="py-2 font-medium">{sectionId}</td>
-                          {data.candidati.map((c, idx) => (
-                            <td
-                              key={c.nome}
-                              className={`text-right py-2 ${
-                                section.voti[c.nome] ===
-                                Math.max(...Object.values(section.voti))
-                                  ? idx === 0
-                                    ? 'text-blue-600 font-bold'
-                                    : 'text-red-600 font-bold'
-                                  : ''
-                              }`}
-                            >
-                              {section.voti[c.nome] || 0}
-                            </td>
-                          ))}
-                        </tr>
-                      ))}
+                    {hasLegacySezioni ? (
+                      Object.entries(data.sezioni!)
+                        .sort(([a], [b]) => parseInt(a) - parseInt(b))
+                        .map(([sectionId, section]) => (
+                          <tr
+                            key={sectionId}
+                            className="border-b hover:bg-gray-50 cursor-pointer"
+                            onClick={() => setSelectedSection(parseInt(sectionId))}
+                          >
+                            <td className="py-2 font-medium">{sectionId}</td>
+                            {data.candidati.map((c, idx) => (
+                              <td
+                                key={c.nome}
+                                className={`text-right py-2 ${
+                                  section.voti[c.nome] ===
+                                  Math.max(...Object.values(section.voti))
+                                    ? idx === 0
+                                      ? 'text-blue-600 font-bold'
+                                      : 'text-red-600 font-bold'
+                                    : ''
+                                }`}
+                              >
+                                {section.voti[c.nome] || 0}
+                              </td>
+                            ))}
+                          </tr>
+                        ))
+                    ) : hasCandidateSezioni ? (
+                      allSectionIds.map((sectionId) => {
+                        const votes = data.candidati.map(c => c.sezioni?.[sectionId.toString()] || 0);
+                        const maxVotes = Math.max(...votes);
+                        return (
+                          <tr
+                            key={sectionId}
+                            className="border-b hover:bg-gray-50 cursor-pointer"
+                            onClick={() => setSelectedSection(sectionId)}
+                          >
+                            <td className="py-2 font-medium">{sectionId}</td>
+                            {data.candidati.map((c, idx) => {
+                              const v = c.sezioni?.[sectionId.toString()] || 0;
+                              return (
+                                <td
+                                  key={c.nome}
+                                  className={`text-right py-2 ${
+                                    v === maxVotes && v > 0
+                                      ? idx === 0
+                                        ? 'text-blue-600 font-bold'
+                                        : 'text-red-600 font-bold'
+                                      : ''
+                                  }`}
+                                >
+                                  {v}
+                                </td>
+                              );
+                            })}
+                          </tr>
+                        );
+                      })
+                    ) : (
+                      <tr>
+                        <td colSpan={data.candidati.length + 1} className="py-4 text-center text-gray-500">
+                          Dati sezioni non disponibili
+                        </td>
+                      </tr>
+                    )}
                   </tbody>
                 </table>
               </div>

@@ -10,10 +10,12 @@ export interface Affluenza {
 export interface MayoralCandidate {
   nome: string;
   totale: number;
+  percentuale?: number;
+  sezioni?: Record<string, number>;
 }
 
 export interface SectionMayoralData {
-  affluenza: Affluenza;
+  affluenza?: Affluenza;
   voti: Record<string, number>;
 }
 
@@ -23,9 +25,11 @@ export interface MayoralElection {
   data: string;
   comune: string;
   tipo: string;
+  descrizione?: string;
+  sezioni_scrutinate?: number;
   candidati: MayoralCandidate[];
-  affluenza: Affluenza;
-  sezioni: Record<string, SectionMayoralData>;
+  affluenza?: Affluenza;
+  sezioni?: Record<string, SectionMayoralData>;
 }
 
 export interface Candidate {

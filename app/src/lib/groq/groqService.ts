@@ -88,7 +88,7 @@ function extractDataForQuery(query: string, electionData: ElectionData): string 
     const sectionMatch = query.match(/sezione\s*(\d+)/i);
     if (sectionMatch && electionData.ballottaggio) {
       const sectionId = sectionMatch[1];
-      const sectionData = electionData.ballottaggio.sezioni[sectionId];
+      const sectionData = electionData.ballottaggio?.sezioni?.[sectionId];
       if (sectionData) {
         contextData += `\nDati Sezione ${sectionId}:\n${JSON.stringify(sectionData, null, 2)}`;
       }

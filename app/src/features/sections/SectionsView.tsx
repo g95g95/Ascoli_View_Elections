@@ -125,7 +125,7 @@ export function SectionsView({ electionData }: SectionsViewProps) {
             s + p.candidati.reduce((ss, c) => ss + (c.sezioni[sectionId.toString()] || 0), 0), 0);
         }
       } else if (densityMode === 'ballottaggio' && selectedCandidate && ballottaggio) {
-        const sectionData = ballottaggio.sezioni[sectionId.toString()];
+        const sectionData = ballottaggio.sezioni?.[sectionId.toString()];
         if (sectionData) {
           value = sectionData.voti[selectedCandidate] || 0;
           total = Object.values(sectionData.voti).reduce((s, v) => s + v, 0);
@@ -182,14 +182,14 @@ export function SectionsView({ electionData }: SectionsViewProps) {
       voti: {} as Record<string, number>,
     };
     CONSOLIDATED_SECTIONS.forEach((sectionId) => {
-      const section = ballottaggio.sezioni[sectionId.toString()];
+      const section = ballottaggio.sezioni?.[sectionId.toString()];
       if (section) {
-        consolidated.affluenza.aventi_diritto_donne += section.affluenza.aventi_diritto_donne;
-        consolidated.affluenza.aventi_diritto_uomini += section.affluenza.aventi_diritto_uomini;
-        consolidated.affluenza.votanti_donne += section.affluenza.votanti_donne;
-        consolidated.affluenza.votanti_uomini += section.affluenza.votanti_uomini;
-        consolidated.affluenza.schede_bianche += section.affluenza.schede_bianche;
-        consolidated.affluenza.schede_nulle += section.affluenza.schede_nulle;
+        consolidated.affluenza.aventi_diritto_donne += section.affluenza?.aventi_diritto_donne || 0;
+        consolidated.affluenza.aventi_diritto_uomini += section.affluenza?.aventi_diritto_uomini || 0;
+        consolidated.affluenza.votanti_donne += section.affluenza?.votanti_donne || 0;
+        consolidated.affluenza.votanti_uomini += section.affluenza?.votanti_uomini || 0;
+        consolidated.affluenza.schede_bianche += section.affluenza?.schede_bianche || 0;
+        consolidated.affluenza.schede_nulle += section.affluenza?.schede_nulle || 0;
         Object.entries(section.voti).forEach(([name, votes]) => {
           consolidated.voti[name] = (consolidated.voti[name] || 0) + votes;
         });
@@ -252,11 +252,11 @@ export function SectionsView({ electionData }: SectionsViewProps) {
   const sectionId = selectedSection;
   const ballottaggioData = sectionId === CONSOLIDATED_SECTION_ID
     ? getConsolidatedBallottaggioData()
-    : sectionId && ballottaggio ? ballottaggio.sezioni[sectionId.toString()] : null;
+    : sectionId && ballottaggio ? ballottaggio.sezioni?.[sectionId.toString()] : null;
 
   const primoTurnoData = sectionId === CONSOLIDATED_SECTION_ID
     ? null
-    : sectionId && primoTurno ? primoTurno.sezioni[sectionId.toString()] : null;
+    : sectionId && primoTurno ? primoTurno.sezioni?.[sectionId.toString()] : null;
 
   const listeData = sectionId ? getSectionListeData(sectionId) : null;
   const preferenzeData = sectionId ? getSectionPreferenzeData(sectionId) : null;
@@ -264,8 +264,8 @@ export function SectionsView({ electionData }: SectionsViewProps) {
 
   // Determine which section colors to show (based on ballottaggio winner if available)
   const getSectionColor = (secId: number) => {
-    if (ballottaggio?.sezioni[secId.toString()]) {
-      const section = ballottaggio.sezioni[secId.toString()];
+    if (ballottaggio?.sezioni?.[secId.toString()]) {
+      const section = ballottaggio.sezioni?.[secId.toString()];
       const winner = Object.entries(section.voti).reduce((a, b) => a[1] > b[1] ? a : b)[0];
       const isFirst = winner === ballottaggio.candidati[0].nome;
       return isFirst ? 'bg-blue-100 text-blue-800' : 'bg-red-100 text-red-800';
@@ -421,13 +421,13 @@ export function SectionsView({ electionData }: SectionsViewProps) {
                     <div className="grid grid-cols-2 gap-2 text-sm">
                       <div className="p-2 bg-blue-50 rounded text-center">
                         <div className="font-bold text-blue-700">
-                          {(ballottaggioData.affluenza.aventi_diritto_donne + ballottaggioData.affluenza.aventi_diritto_uomini).toLocaleString('it-IT')}
+                          {((ballottaggioData.affluenza?.aventi_diritto_donne || 0) + (ballottaggioData.affluenza?.aventi_diritto_uomini || 0)).toLocaleString('it-IT')}
                         </div>
                         <div className="text-xs text-blue-600">Aventi Diritto</div>
                       </div>
                       <div className="p-2 bg-green-50 rounded text-center">
                         <div className="font-bold text-green-700">
-                          {(ballottaggioData.affluenza.votanti_donne + ballottaggioData.affluenza.votanti_uomini).toLocaleString('it-IT')}
+                          {((ballottaggioData.affluenza?.votanti_donne || 0) + (ballottaggioData.affluenza?.votanti_uomini || 0)).toLocaleString('it-IT')}
                         </div>
                         <div className="text-xs text-green-600">Votanti</div>
                       </div>
