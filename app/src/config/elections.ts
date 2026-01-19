@@ -17,6 +17,14 @@ const comunali2024MenuItems: MenuItem[] = [
   { id: 'sezioni', label: 'Analisi Sezioni', icon: '🗺️' },
 ];
 
+const comunali2014MenuItems: MenuItem[] = [
+  { id: 'dashboard', label: 'Dashboard', icon: '📊' },
+  { id: 'primo-turno', label: 'Sindaco', icon: '👤' },
+  { id: 'liste', label: 'Liste Consiglio', icon: '📋' },
+  { id: 'preferenze', label: 'Preferenze', icon: '⭐' },
+  { id: 'sezioni', label: 'Analisi Sezioni', icon: '🗺️' },
+];
+
 const europeeMenuItems: MenuItem[] = [
   { id: 'dashboard', label: 'Dashboard', icon: '📊' },
   { id: 'liste', label: 'Liste Europee', icon: '📋' },
@@ -42,6 +50,16 @@ export const ELECTION_CONFIGS: ElectionConfig[] = [
     icon: '🏛️',
     dataPath: '2024_Comunali',
     menuItems: comunali2024MenuItems,
+  },
+  {
+    id: 'comunali-2014',
+    year: 2014,
+    type: 'comunali',
+    label: 'Comunali 2014',
+    description: 'Elezioni del Sindaco e Consiglio Comunale',
+    icon: '🏛️',
+    dataPath: '2014_Comunali',
+    menuItems: comunali2014MenuItems,
   },
   {
     id: 'comunali-2009',

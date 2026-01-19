@@ -1,0 +1,1091 @@
+{
+  "elezione": "Comunali 2014",
+  "turno": "Primo Turno",
+  "data": "25 Maggio 2014",
+  "comune": "Ascoli Piceno",
+  "tipo": "Sindaco",
+  "candidati": [
+    {
+      "nome": "CASTELLI GUIDO",
+      "totale": 18441
+    },
+    {
+      "nome": "ALLEVI PASQUALE",
+      "totale": 776
+    },
+    {
+      "nome": "CAMELA VALERIANO",
+      "totale": 1046
+    },
+    {
+      "nome": "TAMBURRI MASSIMO",
+      "totale": 2393
+    },
+    {
+      "nome": "MASCETTI ILARIA",
+      "totale": 404
+    },
+    {
+      "nome": "LUCIANI CASTIGLIA GIANCARLO",
+      "totale": 5062
+    },
+    {
+      "nome": "GIRARDI MICAELA",
+      "totale": 990
+    },
+    {
+      "nome": "ALIBERTI DAVIDE MASSIMO",
+      "totale": 2203
+    }
+  ],
+  "affluenza": {
+    "aventi_diritto_donne": 0,
+    "aventi_diritto_uomini": 0,
+    "votanti_donne": 0,
+    "votanti_uomini": 0,
+    "schede_bianche": 288,
+    "schede_nulle": 863
+  },
+  "sezioni": {
+    "1": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 5,
+        "schede_nulle": 11
+      },
+      "voti": {
+        "CASTELLI GUIDO": 245,
+        "ALLEVI PASQUALE": 14,
+        "CAMELA VALERIANO": 7,
+        "TAMBURRI MASSIMO": 42,
+        "MASCETTI ILARIA": 10,
+        "LUCIANI CASTIGLIA GIANCARLO": 72,
+        "GIRARDI MICAELA": 12,
+        "ALIBERTI DAVIDE MASSIMO": 38
+      }
+    },
+    "2": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 7,
+        "schede_nulle": 2
+      },
+      "voti": {
+        "CASTELLI GUIDO": 367,
+        "ALLEVI PASQUALE": 15,
+        "CAMELA VALERIANO": 22,
+        "TAMBURRI MASSIMO": 64,
+        "MASCETTI ILARIA": 18,
+        "LUCIANI CASTIGLIA GIANCARLO": 110,
+        "GIRARDI MICAELA": 31,
+        "ALIBERTI DAVIDE MASSIMO": 59
+      }
+    },
+    "3": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 6,
+        "schede_nulle": 14
+      },
+      "voti": {
+        "CASTELLI GUIDO": 429,
+        "ALLEVI PASQUALE": 18,
+        "CAMELA VALERIANO": 13,
+        "TAMBURRI MASSIMO": 58,
+        "MASCETTI ILARIA": 8,
+        "LUCIANI CASTIGLIA GIANCARLO": 92,
+        "GIRARDI MICAELA": 23,
+        "ALIBERTI DAVIDE MASSIMO": 37
+      }
+    },
+    "4": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 4,
+        "schede_nulle": 42
+      },
+      "voti": {
+        "CASTELLI GUIDO": 332,
+        "ALLEVI PASQUALE": 9,
+        "CAMELA VALERIANO": 7,
+        "TAMBURRI MASSIMO": 47,
+        "MASCETTI ILARIA": 5,
+        "LUCIANI CASTIGLIA GIANCARLO": 84,
+        "GIRARDI MICAELA": 19,
+        "ALIBERTI DAVIDE MASSIMO": 48
+      }
+    },
+    "5": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 2,
+        "schede_nulle": 15
+      },
+      "voti": {
+        "CASTELLI GUIDO": 320,
+        "ALLEVI PASQUALE": 16,
+        "CAMELA VALERIANO": 3,
+        "TAMBURRI MASSIMO": 47,
+        "MASCETTI ILARIA": 7,
+        "LUCIANI CASTIGLIA GIANCARLO": 103,
+        "GIRARDI MICAELA": 44,
+        "ALIBERTI DAVIDE MASSIMO": 45
+      }
+    },
+    "6": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 30
+      },
+      "voti": {
+        "CASTELLI GUIDO": 235,
+        "ALLEVI PASQUALE": 11,
+        "CAMELA VALERIANO": 14,
+        "TAMBURRI MASSIMO": 54,
+        "MASCETTI ILARIA": 10,
+        "LUCIANI CASTIGLIA GIANCARLO": 66,
+        "GIRARDI MICAELA": 19,
+        "ALIBERTI DAVIDE MASSIMO": 41
+      }
+    },
+    "7": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 5,
+        "schede_nulle": 14
+      },
+      "voti": {
+        "CASTELLI GUIDO": 322,
+        "ALLEVI PASQUALE": 12,
+        "CAMELA VALERIANO": 12,
+        "TAMBURRI MASSIMO": 53,
+        "MASCETTI ILARIA": 6,
+        "LUCIANI CASTIGLIA GIANCARLO": 80,
+        "GIRARDI MICAELA": 44,
+        "ALIBERTI DAVIDE MASSIMO": 42
+      }
+    },
+    "8": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 2,
+        "schede_nulle": 25
+      },
+      "voti": {
+        "CASTELLI GUIDO": 353,
+        "ALLEVI PASQUALE": 12,
+        "CAMELA VALERIANO": 40,
+        "TAMBURRI MASSIMO": 42,
+        "MASCETTI ILARIA": 6,
+        "LUCIANI CASTIGLIA GIANCARLO": 107,
+        "GIRARDI MICAELA": 50,
+        "ALIBERTI DAVIDE MASSIMO": 35
+      }
+    },
+    "9": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 7,
+        "schede_nulle": 21
+      },
+      "voti": {
+        "CASTELLI GUIDO": 321,
+        "ALLEVI PASQUALE": 5,
+        "CAMELA VALERIANO": 17,
+        "TAMBURRI MASSIMO": 47,
+        "MASCETTI ILARIA": 7,
+        "LUCIANI CASTIGLIA GIANCARLO": 106,
+        "GIRARDI MICAELA": 9,
+        "ALIBERTI DAVIDE MASSIMO": 52
+      }
+    },
+    "10": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 1,
+        "schede_nulle": 19
+      },
+      "voti": {
+        "CASTELLI GUIDO": 316,
+        "ALLEVI PASQUALE": 7,
+        "CAMELA VALERIANO": 17,
+        "TAMBURRI MASSIMO": 46,
+        "MASCETTI ILARIA": 6,
+        "LUCIANI CASTIGLIA GIANCARLO": 103,
+        "GIRARDI MICAELA": 23,
+        "ALIBERTI DAVIDE MASSIMO": 42
+      }
+    },
+    "11": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 7,
+        "schede_nulle": 22
+      },
+      "voti": {
+        "CASTELLI GUIDO": 426,
+        "ALLEVI PASQUALE": 15,
+        "CAMELA VALERIANO": 7,
+        "TAMBURRI MASSIMO": 50,
+        "MASCETTI ILARIA": 7,
+        "LUCIANI CASTIGLIA GIANCARLO": 117,
+        "GIRARDI MICAELA": 7,
+        "ALIBERTI DAVIDE MASSIMO": 28
+      }
+    },
+    "12": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 1,
+        "schede_nulle": 13
+      },
+      "voti": {
+        "CASTELLI GUIDO": 444,
+        "ALLEVI PASQUALE": 17,
+        "CAMELA VALERIANO": 11,
+        "TAMBURRI MASSIMO": 47,
+        "MASCETTI ILARIA": 13,
+        "LUCIANI CASTIGLIA GIANCARLO": 120,
+        "GIRARDI MICAELA": 18,
+        "ALIBERTI DAVIDE MASSIMO": 65
+      }
+    },
+    "13": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 7,
+        "schede_nulle": 23
+      },
+      "voti": {
+        "CASTELLI GUIDO": 369,
+        "ALLEVI PASQUALE": 10,
+        "CAMELA VALERIANO": 13,
+        "TAMBURRI MASSIMO": 55,
+        "MASCETTI ILARIA": 9,
+        "LUCIANI CASTIGLIA GIANCARLO": 98,
+        "GIRARDI MICAELA": 15,
+        "ALIBERTI DAVIDE MASSIMO": 49
+      }
+    },
+    "14": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 2,
+        "schede_nulle": 21
+      },
+      "voti": {
+        "CASTELLI GUIDO": 396,
+        "ALLEVI PASQUALE": 15,
+        "CAMELA VALERIANO": 24,
+        "TAMBURRI MASSIMO": 52,
+        "MASCETTI ILARIA": 5,
+        "LUCIANI CASTIGLIA GIANCARLO": 80,
+        "GIRARDI MICAELA": 18,
+        "ALIBERTI DAVIDE MASSIMO": 46
+      }
+    },
+    "15": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 5,
+        "schede_nulle": 20
+      },
+      "voti": {
+        "CASTELLI GUIDO": 356,
+        "ALLEVI PASQUALE": 12,
+        "CAMELA VALERIANO": 19,
+        "TAMBURRI MASSIMO": 46,
+        "MASCETTI ILARIA": 9,
+        "LUCIANI CASTIGLIA GIANCARLO": 144,
+        "GIRARDI MICAELA": 28,
+        "ALIBERTI DAVIDE MASSIMO": 45
+      }
+    },
+    "16": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 8,
+        "schede_nulle": 15
+      },
+      "voti": {
+        "CASTELLI GUIDO": 378,
+        "ALLEVI PASQUALE": 10,
+        "CAMELA VALERIANO": 12,
+        "TAMBURRI MASSIMO": 44,
+        "MASCETTI ILARIA": 3,
+        "LUCIANI CASTIGLIA GIANCARLO": 127,
+        "GIRARDI MICAELA": 28,
+        "ALIBERTI DAVIDE MASSIMO": 34
+      }
+    },
+    "17": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 6,
+        "schede_nulle": 21
+      },
+      "voti": {
+        "CASTELLI GUIDO": 419,
+        "ALLEVI PASQUALE": 16,
+        "CAMELA VALERIANO": 15,
+        "TAMBURRI MASSIMO": 54,
+        "MASCETTI ILARIA": 12,
+        "LUCIANI CASTIGLIA GIANCARLO": 131,
+        "GIRARDI MICAELA": 32,
+        "ALIBERTI DAVIDE MASSIMO": 47
+      }
+    },
+    "18": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 13,
+        "schede_nulle": 25
+      },
+      "voti": {
+        "CASTELLI GUIDO": 397,
+        "ALLEVI PASQUALE": 17,
+        "CAMELA VALERIANO": 14,
+        "TAMBURRI MASSIMO": 47,
+        "MASCETTI ILARIA": 8,
+        "LUCIANI CASTIGLIA GIANCARLO": 150,
+        "GIRARDI MICAELA": 26,
+        "ALIBERTI DAVIDE MASSIMO": 30
+      }
+    },
+    "19": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 12,
+        "schede_nulle": 13
+      },
+      "voti": {
+        "CASTELLI GUIDO": 520,
+        "ALLEVI PASQUALE": 15,
+        "CAMELA VALERIANO": 34,
+        "TAMBURRI MASSIMO": 48,
+        "MASCETTI ILARIA": 3,
+        "LUCIANI CASTIGLIA GIANCARLO": 120,
+        "GIRARDI MICAELA": 18,
+        "ALIBERTI DAVIDE MASSIMO": 66
+      }
+    },
+    "20": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 5,
+        "schede_nulle": 33
+      },
+      "voti": {
+        "CASTELLI GUIDO": 410,
+        "ALLEVI PASQUALE": 18,
+        "CAMELA VALERIANO": 28,
+        "TAMBURRI MASSIMO": 44,
+        "MASCETTI ILARIA": 5,
+        "LUCIANI CASTIGLIA GIANCARLO": 129,
+        "GIRARDI MICAELA": 24,
+        "ALIBERTI DAVIDE MASSIMO": 41
+      }
+    },
+    "21": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 4,
+        "schede_nulle": 11
+      },
+      "voti": {
+        "CASTELLI GUIDO": 376,
+        "ALLEVI PASQUALE": 15,
+        "CAMELA VALERIANO": 20,
+        "TAMBURRI MASSIMO": 48,
+        "MASCETTI ILARIA": 9,
+        "LUCIANI CASTIGLIA GIANCARLO": 105,
+        "GIRARDI MICAELA": 33,
+        "ALIBERTI DAVIDE MASSIMO": 44
+      }
+    },
+    "22": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 5,
+        "schede_nulle": 18
+      },
+      "voti": {
+        "CASTELLI GUIDO": 326,
+        "ALLEVI PASQUALE": 22,
+        "CAMELA VALERIANO": 25,
+        "TAMBURRI MASSIMO": 54,
+        "MASCETTI ILARIA": 10,
+        "LUCIANI CASTIGLIA GIANCARLO": 96,
+        "GIRARDI MICAELA": 18,
+        "ALIBERTI DAVIDE MASSIMO": 47
+      }
+    },
+    "23": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 6,
+        "schede_nulle": 15
+      },
+      "voti": {
+        "CASTELLI GUIDO": 299,
+        "ALLEVI PASQUALE": 17,
+        "CAMELA VALERIANO": 16,
+        "TAMBURRI MASSIMO": 50,
+        "MASCETTI ILARIA": 11,
+        "LUCIANI CASTIGLIA GIANCARLO": 114,
+        "GIRARDI MICAELA": 25,
+        "ALIBERTI DAVIDE MASSIMO": 50
+      }
+    },
+    "24": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 2,
+        "schede_nulle": 12
+      },
+      "voti": {
+        "CASTELLI GUIDO": 292,
+        "ALLEVI PASQUALE": 10,
+        "CAMELA VALERIANO": 15,
+        "TAMBURRI MASSIMO": 27,
+        "MASCETTI ILARIA": 6,
+        "LUCIANI CASTIGLIA GIANCARLO": 88,
+        "GIRARDI MICAELA": 23,
+        "ALIBERTI DAVIDE MASSIMO": 48
+      }
+    },
+    "25": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 8,
+        "schede_nulle": 14
+      },
+      "voti": {
+        "CASTELLI GUIDO": 333,
+        "ALLEVI PASQUALE": 11,
+        "CAMELA VALERIANO": 18,
+        "TAMBURRI MASSIMO": 30,
+        "MASCETTI ILARIA": 4,
+        "LUCIANI CASTIGLIA GIANCARLO": 86,
+        "GIRARDI MICAELA": 16,
+        "ALIBERTI DAVIDE MASSIMO": 50
+      }
+    },
+    "26": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 7,
+        "schede_nulle": 15
+      },
+      "voti": {
+        "CASTELLI GUIDO": 296,
+        "ALLEVI PASQUALE": 15,
+        "CAMELA VALERIANO": 18,
+        "TAMBURRI MASSIMO": 50,
+        "MASCETTI ILARIA": 12,
+        "LUCIANI CASTIGLIA GIANCARLO": 124,
+        "GIRARDI MICAELA": 20,
+        "ALIBERTI DAVIDE MASSIMO": 45
+      }
+    },
+    "27": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 10,
+        "schede_nulle": 29
+      },
+      "voti": {
+        "CASTELLI GUIDO": 380,
+        "ALLEVI PASQUALE": 20,
+        "CAMELA VALERIANO": 32,
+        "TAMBURRI MASSIMO": 53,
+        "MASCETTI ILARIA": 11,
+        "LUCIANI CASTIGLIA GIANCARLO": 105,
+        "GIRARDI MICAELA": 15,
+        "ALIBERTI DAVIDE MASSIMO": 93
+      }
+    },
+    "28": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 10,
+        "schede_nulle": 19
+      },
+      "voti": {
+        "CASTELLI GUIDO": 341,
+        "ALLEVI PASQUALE": 16,
+        "CAMELA VALERIANO": 10,
+        "TAMBURRI MASSIMO": 45,
+        "MASCETTI ILARIA": 12,
+        "LUCIANI CASTIGLIA GIANCARLO": 117,
+        "GIRARDI MICAELA": 17,
+        "ALIBERTI DAVIDE MASSIMO": 52
+      }
+    },
+    "29": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 9,
+        "schede_nulle": 6
+      },
+      "voti": {
+        "CASTELLI GUIDO": 295,
+        "ALLEVI PASQUALE": 16,
+        "CAMELA VALERIANO": 9,
+        "TAMBURRI MASSIMO": 38,
+        "MASCETTI ILARIA": 10,
+        "LUCIANI CASTIGLIA GIANCARLO": 127,
+        "GIRARDI MICAELA": 14,
+        "ALIBERTI DAVIDE MASSIMO": 40
+      }
+    },
+    "30": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 6,
+        "schede_nulle": 16
+      },
+      "voti": {
+        "CASTELLI GUIDO": 310,
+        "ALLEVI PASQUALE": 21,
+        "CAMELA VALERIANO": 20,
+        "TAMBURRI MASSIMO": 58,
+        "MASCETTI ILARIA": 7,
+        "LUCIANI CASTIGLIA GIANCARLO": 95,
+        "GIRARDI MICAELA": 30,
+        "ALIBERTI DAVIDE MASSIMO": 35
+      }
+    },
+    "31": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 6,
+        "schede_nulle": 19
+      },
+      "voti": {
+        "CASTELLI GUIDO": 395,
+        "ALLEVI PASQUALE": 34,
+        "CAMELA VALERIANO": 50,
+        "TAMBURRI MASSIMO": 51,
+        "MASCETTI ILARIA": 2,
+        "LUCIANI CASTIGLIA GIANCARLO": 101,
+        "GIRARDI MICAELA": 27,
+        "ALIBERTI DAVIDE MASSIMO": 42
+      }
+    },
+    "32": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 9,
+        "schede_nulle": 18
+      },
+      "voti": {
+        "CASTELLI GUIDO": 394,
+        "ALLEVI PASQUALE": 9,
+        "CAMELA VALERIANO": 20,
+        "TAMBURRI MASSIMO": 51,
+        "MASCETTI ILARIA": 13,
+        "LUCIANI CASTIGLIA GIANCARLO": 109,
+        "GIRARDI MICAELA": 15,
+        "ALIBERTI DAVIDE MASSIMO": 31
+      }
+    },
+    "33": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 5,
+        "schede_nulle": 20
+      },
+      "voti": {
+        "CASTELLI GUIDO": 396,
+        "ALLEVI PASQUALE": 23,
+        "CAMELA VALERIANO": 27,
+        "TAMBURRI MASSIMO": 41,
+        "MASCETTI ILARIA": 11,
+        "LUCIANI CASTIGLIA GIANCARLO": 121,
+        "GIRARDI MICAELA": 6,
+        "ALIBERTI DAVIDE MASSIMO": 50
+      }
+    },
+    "34": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 5,
+        "schede_nulle": 18
+      },
+      "voti": {
+        "CASTELLI GUIDO": 392,
+        "ALLEVI PASQUALE": 17,
+        "CAMELA VALERIANO": 18,
+        "TAMBURRI MASSIMO": 78,
+        "MASCETTI ILARIA": 7,
+        "LUCIANI CASTIGLIA GIANCARLO": 130,
+        "GIRARDI MICAELA": 20,
+        "ALIBERTI DAVIDE MASSIMO": 64
+      }
+    },
+    "35": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 3,
+        "schede_nulle": 4
+      },
+      "voti": {
+        "CASTELLI GUIDO": 379,
+        "ALLEVI PASQUALE": 14,
+        "CAMELA VALERIANO": 19,
+        "TAMBURRI MASSIMO": 49,
+        "MASCETTI ILARIA": 16,
+        "LUCIANI CASTIGLIA GIANCARLO": 77,
+        "GIRARDI MICAELA": 15,
+        "ALIBERTI DAVIDE MASSIMO": 35
+      }
+    },
+    "36": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 4,
+        "schede_nulle": 11
+      },
+      "voti": {
+        "CASTELLI GUIDO": 388,
+        "ALLEVI PASQUALE": 10,
+        "CAMELA VALERIANO": 27,
+        "TAMBURRI MASSIMO": 63,
+        "MASCETTI ILARIA": 6,
+        "LUCIANI CASTIGLIA GIANCARLO": 103,
+        "GIRARDI MICAELA": 14,
+        "ALIBERTI DAVIDE MASSIMO": 60
+      }
+    },
+    "37": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 12,
+        "schede_nulle": 21
+      },
+      "voti": {
+        "CASTELLI GUIDO": 341,
+        "ALLEVI PASQUALE": 17,
+        "CAMELA VALERIANO": 19,
+        "TAMBURRI MASSIMO": 31,
+        "MASCETTI ILARIA": 5,
+        "LUCIANI CASTIGLIA GIANCARLO": 81,
+        "GIRARDI MICAELA": 16,
+        "ALIBERTI DAVIDE MASSIMO": 46
+      }
+    },
+    "38": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 5,
+        "schede_nulle": 5
+      },
+      "voti": {
+        "CASTELLI GUIDO": 307,
+        "ALLEVI PASQUALE": 16,
+        "CAMELA VALERIANO": 15,
+        "TAMBURRI MASSIMO": 32,
+        "MASCETTI ILARIA": 6,
+        "LUCIANI CASTIGLIA GIANCARLO": 137,
+        "GIRARDI MICAELA": 24,
+        "ALIBERTI DAVIDE MASSIMO": 35
+      }
+    },
+    "39": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 2,
+        "schede_nulle": 18
+      },
+      "voti": {
+        "CASTELLI GUIDO": 427,
+        "ALLEVI PASQUALE": 16,
+        "CAMELA VALERIANO": 47,
+        "TAMBURRI MASSIMO": 66,
+        "MASCETTI ILARIA": 3,
+        "LUCIANI CASTIGLIA GIANCARLO": 91,
+        "GIRARDI MICAELA": 38,
+        "ALIBERTI DAVIDE MASSIMO": 36
+      }
+    },
+    "40": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 0,
+        "schede_nulle": 4
+      },
+      "voti": {
+        "CASTELLI GUIDO": 14,
+        "ALLEVI PASQUALE": 1,
+        "CAMELA VALERIANO": 3,
+        "TAMBURRI MASSIMO": 0,
+        "MASCETTI ILARIA": 0,
+        "LUCIANI CASTIGLIA GIANCARLO": 9,
+        "GIRARDI MICAELA": 0,
+        "ALIBERTI DAVIDE MASSIMO": 2
+      }
+    },
+    "41": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 7,
+        "schede_nulle": 9
+      },
+      "voti": {
+        "CASTELLI GUIDO": 263,
+        "ALLEVI PASQUALE": 17,
+        "CAMELA VALERIANO": 16,
+        "TAMBURRI MASSIMO": 20,
+        "MASCETTI ILARIA": 2,
+        "LUCIANI CASTIGLIA GIANCARLO": 47,
+        "GIRARDI MICAELA": 4,
+        "ALIBERTI DAVIDE MASSIMO": 29
+      }
+    },
+    "42": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 11,
+        "schede_nulle": 17
+      },
+      "voti": {
+        "CASTELLI GUIDO": 507,
+        "ALLEVI PASQUALE": 22,
+        "CAMELA VALERIANO": 25,
+        "TAMBURRI MASSIMO": 34,
+        "MASCETTI ILARIA": 7,
+        "LUCIANI CASTIGLIA GIANCARLO": 94,
+        "GIRARDI MICAELA": 18,
+        "ALIBERTI DAVIDE MASSIMO": 31
+      }
+    },
+    "43": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 6,
+        "schede_nulle": 12
+      },
+      "voti": {
+        "CASTELLI GUIDO": 403,
+        "ALLEVI PASQUALE": 30,
+        "CAMELA VALERIANO": 20,
+        "TAMBURRI MASSIMO": 38,
+        "MASCETTI ILARIA": 2,
+        "LUCIANI CASTIGLIA GIANCARLO": 114,
+        "GIRARDI MICAELA": 3,
+        "ALIBERTI DAVIDE MASSIMO": 45
+      }
+    },
+    "44": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 4,
+        "schede_nulle": 13
+      },
+      "voti": {
+        "CASTELLI GUIDO": 385,
+        "ALLEVI PASQUALE": 15,
+        "CAMELA VALERIANO": 21,
+        "TAMBURRI MASSIMO": 40,
+        "MASCETTI ILARIA": 4,
+        "LUCIANI CASTIGLIA GIANCARLO": 72,
+        "GIRARDI MICAELA": 3,
+        "ALIBERTI DAVIDE MASSIMO": 18
+      }
+    },
+    "45": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 5,
+        "schede_nulle": 14
+      },
+      "voti": {
+        "CASTELLI GUIDO": 429,
+        "ALLEVI PASQUALE": 9,
+        "CAMELA VALERIANO": 38,
+        "TAMBURRI MASSIMO": 40,
+        "MASCETTI ILARIA": 1,
+        "LUCIANI CASTIGLIA GIANCARLO": 55,
+        "GIRARDI MICAELA": 7,
+        "ALIBERTI DAVIDE MASSIMO": 36
+      }
+    },
+    "46": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 8,
+        "schede_nulle": 10
+      },
+      "voti": {
+        "CASTELLI GUIDO": 323,
+        "ALLEVI PASQUALE": 9,
+        "CAMELA VALERIANO": 46,
+        "TAMBURRI MASSIMO": 76,
+        "MASCETTI ILARIA": 6,
+        "LUCIANI CASTIGLIA GIANCARLO": 83,
+        "GIRARDI MICAELA": 19,
+        "ALIBERTI DAVIDE MASSIMO": 41
+      }
+    },
+    "47": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 4,
+        "schede_nulle": 17
+      },
+      "voti": {
+        "CASTELLI GUIDO": 455,
+        "ALLEVI PASQUALE": 21,
+        "CAMELA VALERIANO": 22,
+        "TAMBURRI MASSIMO": 68,
+        "MASCETTI ILARIA": 15,
+        "LUCIANI CASTIGLIA GIANCARLO": 63,
+        "GIRARDI MICAELA": 15,
+        "ALIBERTI DAVIDE MASSIMO": 46
+      }
+    },
+    "48": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 2,
+        "schede_nulle": 23
+      },
+      "voti": {
+        "CASTELLI GUIDO": 395,
+        "ALLEVI PASQUALE": 17,
+        "CAMELA VALERIANO": 16,
+        "TAMBURRI MASSIMO": 39,
+        "MASCETTI ILARIA": 10,
+        "LUCIANI CASTIGLIA GIANCARLO": 97,
+        "GIRARDI MICAELA": 16,
+        "ALIBERTI DAVIDE MASSIMO": 42
+      }
+    },
+    "49": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 4,
+        "schede_nulle": 13
+      },
+      "voti": {
+        "CASTELLI GUIDO": 231,
+        "ALLEVI PASQUALE": 11,
+        "CAMELA VALERIANO": 15,
+        "TAMBURRI MASSIMO": 18,
+        "MASCETTI ILARIA": 13,
+        "LUCIANI CASTIGLIA GIANCARLO": 66,
+        "GIRARDI MICAELA": 14,
+        "ALIBERTI DAVIDE MASSIMO": 40
+      }
+    },
+    "50": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 5,
+        "schede_nulle": 11
+      },
+      "voti": {
+        "CASTELLI GUIDO": 307,
+        "ALLEVI PASQUALE": 15,
+        "CAMELA VALERIANO": 13,
+        "TAMBURRI MASSIMO": 37,
+        "MASCETTI ILARIA": 5,
+        "LUCIANI CASTIGLIA GIANCARLO": 69,
+        "GIRARDI MICAELA": 6,
+        "ALIBERTI DAVIDE MASSIMO": 25
+      }
+    },
+    "51": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 8,
+        "schede_nulle": 15
+      },
+      "voti": {
+        "CASTELLI GUIDO": 440,
+        "ALLEVI PASQUALE": 19,
+        "CAMELA VALERIANO": 39,
+        "TAMBURRI MASSIMO": 41,
+        "MASCETTI ILARIA": 10,
+        "LUCIANI CASTIGLIA GIANCARLO": 69,
+        "GIRARDI MICAELA": 8,
+        "ALIBERTI DAVIDE MASSIMO": 39
+      }
+    },
+    "52": {
+      "affluenza": {
+        "aventi_diritto_donne": 0,
+        "aventi_diritto_uomini": 0,
+        "votanti_donne": 0,
+        "votanti_uomini": 0,
+        "schede_bianche": 1,
+        "schede_nulle": 17
+      },
+      "voti": {
+        "CASTELLI GUIDO": 267,
+        "ALLEVI PASQUALE": 7,
+        "CAMELA VALERIANO": 18,
+        "TAMBURRI MASSIMO": 40,
+        "MASCETTI ILARIA": 11,
+        "LUCIANI CASTIGLIA GIANCARLO": 78,
+        "GIRARDI MICAELA": 3,
+        "ALIBERTI DAVIDE MASSIMO": 16
+      }
+    }
+  }
+}
