@@ -212,11 +212,14 @@ function extractArchiveDataForQuery(query: string, archive: ElectionArchive): st
       contextData += `\nRISULTATI RICERCA CANDIDATO "${candidateName.toUpperCase()}":\n`;
       contextData += `Trovate ${results.length} occorrenze:\n`;
       for (const r of results) {
-        contextData += `- ${r.electionLabel}: ${r.votes.toLocaleString('it-IT')} voti (${r.party})\n`;
+        const votes = r.votes ?? 0;
+        const label = r.electionLabel || 'Elezione';
+        const party = r.party || 'N/A';
+        contextData += `- ${label}: ${votes.toLocaleString('it-IT')} voti (${party})\n`;
       }
       contextData += `\nDettaglio completo:\n${JSON.stringify(results, null, 2)}\n`;
     } else {
-      contextData += `\nRICERCA CANDIDATO "${candidateName.toUpperCase()}": Nessun risultato trovato nell'archivio.\n`;
+      contextData += `\nRICERCA CANDIDATO "${candidateName.toUpperCase()}": Nessun risultato trovato nell'archivio. Il cognome potrebbe non essere presente nei dati elettorali disponibili.\n`;
     }
   }
 

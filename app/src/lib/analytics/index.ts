@@ -192,69 +192,77 @@ export function searchCandidate(archive: ElectionArchive, searchName: string): A
   }> = [];
 
   const searchTerms = searchName.toLowerCase().split(/\s+/).filter(t => t.length > 2);
+  if (searchTerms.length === 0) return results;
 
   for (const election of Object.values(archive.elections)) {
-    if (!election.preferenze) continue;
+    if (!election?.config) continue;
 
-    for (const party of election.preferenze.liste) {
-      for (const candidate of party.candidati) {
-        const candidateName = candidate.nome.toLowerCase();
-        const matchScore = searchTerms.filter(term => candidateName.includes(term)).length;
+    if (election.preferenze?.liste) {
+      for (const party of election.preferenze.liste) {
+        if (!party?.candidati) continue;
+        for (const candidate of party.candidati) {
+          if (!candidate?.nome) continue;
+          const candidateName = candidate.nome.toLowerCase();
+          const matchScore = searchTerms.filter(term => candidateName.includes(term)).length;
 
-        if (matchScore >= Math.min(2, searchTerms.length)) {
-          results.push({
-            name: candidate.nome,
-            party: party.nome,
-            votes: candidate.totale,
-            year: election.config.year,
-            type: election.config.type,
-            electionLabel: election.config.label,
-            sections: candidate.sezioni,
-          });
+          if (matchScore >= Math.min(2, searchTerms.length)) {
+            results.push({
+              name: candidate.nome,
+              party: party.nome || 'N/A',
+              votes: candidate.totale ?? 0,
+              year: election.config.year,
+              type: election.config.type,
+              electionLabel: election.config.label || `${election.config.type} ${election.config.year}`,
+              sections: candidate.sezioni,
+            });
+          }
         }
       }
     }
 
     // Also search in mayoral candidates
-    if (election.primoTurno) {
+    if (election.primoTurno?.candidati) {
       for (const candidate of election.primoTurno.candidati) {
+        if (!candidate?.nome) continue;
         const candidateName = candidate.nome.toLowerCase();
         const matchScore = searchTerms.filter(term => candidateName.includes(term)).length;
 
         if (matchScore >= Math.min(2, searchTerms.length)) {
           results.push({
             name: candidate.nome,
-            party: 'Candidato Sindaco',
-            votes: candidate.totale,
+            party: 'Candidato Sindaco/Presidente',
+            votes: candidate.totale ?? 0,
             year: election.config.year,
             type: election.config.type,
-            electionLabel: `${election.config.label} - Primo Turno`,
+            electionLabel: `${election.config.label || election.config.type} - Primo Turno`,
           });
         }
       }
     }
 
-    if (election.ballottaggio) {
+    if (election.ballottaggio?.candidati) {
       for (const candidate of election.ballottaggio.candidati) {
+        if (!candidate?.nome) continue;
         const candidateName = candidate.nome.toLowerCase();
         const matchScore = searchTerms.filter(term => candidateName.includes(term)).length;
 
         if (matchScore >= Math.min(2, searchTerms.length)) {
           results.push({
             name: candidate.nome,
-            party: 'Candidato Sindaco',
-            votes: candidate.totale,
+            party: 'Candidato Sindaco/Presidente',
+            votes: candidate.totale ?? 0,
             year: election.config.year,
             type: election.config.type,
-            electionLabel: `${election.config.label} - Ballottaggio`,
+            electionLabel: `${election.config.label || election.config.type} - Ballottaggio`,
           });
         }
       }
     }
 
     // Search in nominali (politiche)
-    if (election.nominali) {
+    if (election.nominali?.candidati) {
       for (const candidate of election.nominali.candidati) {
+        if (!candidate?.nome) continue;
         const candidateName = candidate.nome.toLowerCase();
         const matchScore = searchTerms.filter(term => candidateName.includes(term)).length;
 
@@ -262,10 +270,10 @@ export function searchCandidate(archive: ElectionArchive, searchName: string): A
           results.push({
             name: candidate.nome,
             party: 'Uninominale',
-            votes: candidate.totale,
+            votes: candidate.totale ?? 0,
             year: election.config.year,
             type: election.config.type,
-            electionLabel: election.config.label,
+            electionLabel: election.config.label || `${election.config.type} ${election.config.year}`,
           });
         }
       }
