@@ -8,8 +8,17 @@ interface DynamicChartProps {
 const COLORS = ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899', '#06b6d4', '#84cc16'];
 
 export function DynamicChart({ data }: DynamicChartProps) {
-  const maxValue = Math.max(...data.data.map(d => d.value), 1);
-  const totalValue = data.data.reduce((sum, d) => sum + d.value, 0);
+  // Safety check: ensure data.data exists and has valid values
+  if (!data?.data || data.data.length === 0) {
+    return (
+      <div className="bg-white/90 backdrop-blur rounded-lg p-4 mt-3">
+        <p className="text-sm text-gray-500">Nessun dato disponibile per il grafico</p>
+      </div>
+    );
+  }
+
+  const maxValue = Math.max(...data.data.map(d => d?.value ?? 0), 1);
+  const totalValue = data.data.reduce((sum, d) => sum + (d?.value ?? 0), 0);
 
   if (data.type === 'grouped-bar' && data.groupedData && data.groups) {
     const allValues = data.groupedData.flatMap(d => d.values);
@@ -132,7 +141,7 @@ export function DynamicChart({ data }: DynamicChartProps) {
             <g key={idx}>
               <circle cx={p.x} cy={p.y} r="4" fill="#3b82f6" />
               <text x={p.x} y={height - 10} textAnchor="middle" className="text-[8px] fill-gray-500">
-                {data.data[idx].name.substring(0, 5)}
+                {(data.data[idx]?.name || '').substring(0, 5)}
               </text>
             </g>
           ))}
