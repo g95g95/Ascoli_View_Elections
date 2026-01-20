@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Sidebar } from './components/layout/Sidebar';
 import { LandingPage } from './features/landing/LandingPage';
 import { Dashboard } from './features/dashboard/Dashboard';
@@ -8,16 +8,25 @@ import { ListeView } from './features/preferences/ListeView';
 import { SectionsView } from './features/sections/SectionsView';
 import { PresidenteView } from './features/regionali/PresidenteView';
 import { ListeRegionaliView } from './features/regionali/ListeRegionaliView';
+import { NominaliView } from './features/politiche/NominaliView';
 import { ElectionChatbot } from './components/chat';
-import { loadElectionData, type ElectionData } from './lib/dataLoader';
+import { loadElectionData, loadElectionArchive, type ElectionData, type ElectionArchive } from './lib/dataLoader';
 import type { ViewType, ElectionConfig } from './types/elections';
 
 function App() {
   const [currentView, setCurrentView] = useState<ViewType>('landing');
   const [electionConfig, setElectionConfig] = useState<ElectionConfig | null>(null);
   const [electionData, setElectionData] = useState<ElectionData | null>(null);
+  const [archive, setArchive] = useState<ElectionArchive | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // Load archive in background on mount
+  useEffect(() => {
+    loadElectionArchive()
+      .then(setArchive)
+      .catch(err => console.warn('Failed to load archive:', err));
+  }, []);
 
   const handleSelectElection = async (config: ElectionConfig) => {
     setLoading(true);
@@ -70,7 +79,12 @@ function App() {
   }
 
   if (currentView === 'landing' || !electionConfig || !electionData) {
-    return <LandingPage onSelectElection={handleSelectElection} />;
+    return (
+      <>
+        <LandingPage onSelectElection={handleSelectElection} />
+        {archive && <ElectionChatbot archive={archive} />}
+      </>
+    );
   }
 
   const renderView = () => {
@@ -105,6 +119,11 @@ function App() {
           return <PreferencesView data={electionData.preferenze} title={`Preferenze ${electionConfig.label}`} />;
         }
         return <Dashboard electionData={electionData} />;
+      case 'nominali':
+        if (electionData.nominali) {
+          return <NominaliView data={electionData.nominali} title={`Uninominale ${electionConfig.label}`} />;
+        }
+        return <Dashboard electionData={electionData} />;
       case 'sezioni':
         return <SectionsView electionData={electionData} />;
       default:
@@ -123,7 +142,11 @@ function App() {
       <main className="flex-1 lg:ml-0 overflow-auto">
         {renderView()}
       </main>
-      {electionData && <ElectionChatbot electionData={electionData} />}
+      {archive ? (
+        <ElectionChatbot archive={archive} />
+      ) : electionData ? (
+        <ElectionChatbot electionData={electionData} />
+      ) : null}
     </div>
   );
 }

@@ -8,8 +8,54 @@ interface DynamicChartProps {
 const COLORS = ['#3b82f6', '#ef4444', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899', '#06b6d4', '#84cc16'];
 
 export function DynamicChart({ data }: DynamicChartProps) {
-  const maxValue = Math.max(...data.data.map(d => d.value));
+  const maxValue = Math.max(...data.data.map(d => d.value), 1);
   const totalValue = data.data.reduce((sum, d) => sum + d.value, 0);
+
+  if (data.type === 'grouped-bar' && data.groupedData && data.groups) {
+    const allValues = data.groupedData.flatMap(d => d.values);
+    const groupedMax = Math.max(...allValues, 1);
+
+    return (
+      <div className="bg-white/90 backdrop-blur rounded-lg p-4 mt-3">
+        <h4 className="text-sm font-semibold mb-3 text-gray-800">{data.title}</h4>
+        <div className="flex gap-2 mb-3">
+          {data.groups.map((group, idx) => (
+            <div key={group} className="flex items-center gap-1 text-xs">
+              <div className="w-3 h-3 rounded" style={{ backgroundColor: COLORS[idx % COLORS.length] }} />
+              <span>{group}</span>
+            </div>
+          ))}
+        </div>
+        <div className="space-y-3">
+          {data.groupedData.map((item) => (
+            <div key={item.name}>
+              <div className="text-xs mb-1 truncate" title={item.name}>{item.name}</div>
+              <div className="flex gap-1">
+                {item.values.map((value, idx) => {
+                  const percentage = (value / groupedMax) * 100;
+                  const color = item.colors?.[idx] || COLORS[idx % COLORS.length];
+                  return (
+                    <div key={idx} className="flex-1">
+                      <div className="h-5 bg-gray-200 rounded overflow-hidden">
+                        <div
+                          className="h-full rounded transition-all duration-500 flex items-center justify-end pr-1"
+                          style={{ width: `${percentage}%`, backgroundColor: color }}
+                        >
+                          <span className="text-[9px] text-white font-medium">
+                            {value > 0 ? value.toLocaleString('it-IT') : ''}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   if (data.type === 'pie') {
     return (
@@ -17,7 +63,7 @@ export function DynamicChart({ data }: DynamicChartProps) {
         <h4 className="text-sm font-semibold mb-3 text-gray-800">{data.title}</h4>
         <div className="space-y-2">
           {data.data.map((item, idx) => {
-            const percentage = ((item.value / totalValue) * 100).toFixed(1);
+            const percentage = totalValue > 0 ? ((item.value / totalValue) * 100).toFixed(1) : '0';
             const color = item.color || COLORS[idx % COLORS.length];
             return (
               <div key={item.name} className="flex items-center gap-2">
@@ -32,7 +78,7 @@ export function DynamicChart({ data }: DynamicChartProps) {
           <div className="relative w-32 h-32">
             <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
               {data.data.reduce((acc, item, idx) => {
-                const percentage = (item.value / totalValue) * 100;
+                const percentage = totalValue > 0 ? (item.value / totalValue) * 100 : 0;
                 const color = item.color || COLORS[idx % COLORS.length];
                 const prevOffset = acc.offset;
                 const circumference = 2 * Math.PI * 40;

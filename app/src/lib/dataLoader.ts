@@ -277,3 +277,66 @@ export async function loadAllData() {
 }
 
 export type AllElectionData = Awaited<ReturnType<typeof loadAllData>>;
+
+// Election Archive - all elections across all years
+export interface ElectionArchive {
+  elections: Record<string, ElectionData>;
+  summary: {
+    totalElections: number;
+    years: number[];
+    types: string[];
+    lastUpdated: string;
+  };
+}
+
+const ALL_ELECTION_CONFIGS: Array<{ id: string; year: number; type: string }> = [
+  { id: 'comunali-2024', year: 2024, type: 'comunali' },
+  { id: 'comunali-2019', year: 2019, type: 'comunali' },
+  { id: 'comunali-2014', year: 2014, type: 'comunali' },
+  { id: 'comunali-2009', year: 2009, type: 'comunali' },
+  { id: 'europee-2019', year: 2019, type: 'europee' },
+  { id: 'europee-2009', year: 2009, type: 'europee' },
+  { id: 'regionali-2020', year: 2020, type: 'regionali' },
+  { id: 'regionali-2010', year: 2010, type: 'regionali' },
+  { id: 'politiche-2022', year: 2022, type: 'politiche' },
+  { id: 'politiche-2018', year: 2018, type: 'politiche' },
+];
+
+export async function loadElectionArchive(): Promise<ElectionArchive> {
+  const elections: Record<string, ElectionData> = {};
+  const loadPromises: Array<Promise<void>> = [];
+
+  for (const cfg of ALL_ELECTION_CONFIGS) {
+    const config: ElectionConfig = {
+      id: cfg.id,
+      year: cfg.year,
+      type: cfg.type as ElectionConfig['type'],
+      label: `${cfg.type} ${cfg.year}`,
+      description: '',
+      icon: '',
+      dataPath: '',
+      menuItems: [],
+    };
+
+    loadPromises.push(
+      loadElectionData(config)
+        .then(data => { elections[cfg.id] = data; })
+        .catch(err => console.warn(`Failed to load ${cfg.id}:`, err))
+    );
+  }
+
+  await Promise.all(loadPromises);
+
+  const years = [...new Set(ALL_ELECTION_CONFIGS.map(c => c.year))].sort();
+  const types = [...new Set(ALL_ELECTION_CONFIGS.map(c => c.type))];
+
+  return {
+    elections,
+    summary: {
+      totalElections: Object.keys(elections).length,
+      years,
+      types,
+      lastUpdated: new Date().toISOString(),
+    },
+  };
+}

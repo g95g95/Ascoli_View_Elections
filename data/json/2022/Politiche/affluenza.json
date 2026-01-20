@@ -1,0 +1,334 @@
+{
+  "elezione": "Politiche",
+  "tipo": "Camera dei Deputati",
+  "data": "2022-09-25",
+  "comune": "Ascoli Piceno",
+  "rilevazione": "ore 23:00",
+  "ultimo_aggiornamento": "2022-09-26 08:43:13",
+  "affluenza": {
+    "elettori_maschi": 18241,
+    "elettori_femmine": 19754,
+    "elettori_totale": 37995,
+    "votanti_maschi": 13304,
+    "votanti_femmine": 13234,
+    "votanti_totale": 26538,
+    "percentuale_maschi": 72.93,
+    "percentuale_femmine": 66.99,
+    "percentuale_totale": 69.85
+  },
+  "sezioni": {
+    "1": {
+      "seggio": "SC. EL.S. AGOSTINO Via delle Torri, 59",
+      "elettori": {"maschi": 247, "femmine": 286, "totale": 533},
+      "votanti": {"maschi": 178, "femmine": 192, "totale": 370},
+      "percentuale": {"maschi": 72.06, "femmine": 67.13, "totale": 69.42}
+    },
+    "2": {
+      "seggio": "SC. ELEM. MALASPINA Via dei Malaspina, 2",
+      "elettori": {"maschi": 412, "femmine": 450, "totale": 862},
+      "votanti": {"maschi": 291, "femmine": 309, "totale": 600},
+      "percentuale": {"maschi": 70.63, "femmine": 68.67, "totale": 69.61}
+    },
+    "3": {
+      "seggio": "SC. ELEM. MALASPINA Via dei Malaspina, 2",
+      "elettori": {"maschi": 383, "femmine": 437, "totale": 820},
+      "votanti": {"maschi": 279, "femmine": 321, "totale": 600},
+      "percentuale": {"maschi": 72.85, "femmine": 73.46, "totale": 73.17}
+    },
+    "4": {
+      "seggio": "SC. ELEM. MALASPINA Via dei Malaspina, 2",
+      "elettori": {"maschi": 364, "femmine": 385, "totale": 749},
+      "votanti": {"maschi": 267, "femmine": 272, "totale": 539},
+      "percentuale": {"maschi": 73.35, "femmine": 70.65, "totale": 71.96}
+    },
+    "5": {
+      "seggio": "SC. ELEM. MALASPINA Via dei Malaspina, 2",
+      "elettori": {"maschi": 351, "femmine": 368, "totale": 719},
+      "votanti": {"maschi": 258, "femmine": 281, "totale": 539},
+      "percentuale": {"maschi": 73.50, "femmine": 76.36, "totale": 74.97}
+    },
+    "6": {
+      "seggio": "SC. ELEM. MALASPINA Via dei Malaspina, 2",
+      "elettori": {"maschi": 270, "femmine": 301, "totale": 571},
+      "votanti": {"maschi": 199, "femmine": 214, "totale": 413},
+      "percentuale": {"maschi": 73.70, "femmine": 71.10, "totale": 72.33}
+    },
+    "7": {
+      "seggio": "SC. MEDIA M. D'AZEGLIO Via M. D'Azeglio, 2",
+      "elettori": {"maschi": 331, "femmine": 350, "totale": 681},
+      "votanti": {"maschi": 233, "femmine": 243, "totale": 476},
+      "percentuale": {"maschi": 70.39, "femmine": 69.43, "totale": 69.90}
+    },
+    "8": {
+      "seggio": "SC. MEDIA M. D'AZEGLIO Via M. D'Azeglio, 2",
+      "elettori": {"maschi": 343, "femmine": 376, "totale": 719},
+      "votanti": {"maschi": 260, "femmine": 263, "totale": 523},
+      "percentuale": {"maschi": 75.80, "femmine": 69.95, "totale": 72.74}
+    },
+    "9": {
+      "seggio": "SC. ELEM G. RODARI Via S. Serafino da M., 1/B",
+      "elettori": {"maschi": 336, "femmine": 341, "totale": 677},
+      "votanti": {"maschi": 252, "femmine": 236, "totale": 488},
+      "percentuale": {"maschi": 75.00, "femmine": 69.21, "totale": 72.08}
+    },
+    "10": {
+      "seggio": "SC. ELEM. G. RODARI Via S. Serafino da M., 2",
+      "elettori": {"maschi": 323, "femmine": 371, "totale": 694},
+      "votanti": {"maschi": 238, "femmine": 224, "totale": 462},
+      "percentuale": {"maschi": 73.68, "femmine": 60.38, "totale": 66.57}
+    },
+    "11": {
+      "seggio": "SC. ELEM. G. RODARI Via S. Serafino da M., 2",
+      "elettori": {"maschi": 383, "femmine": 413, "totale": 796},
+      "votanti": {"maschi": 268, "femmine": 259, "totale": 527},
+      "percentuale": {"maschi": 69.97, "femmine": 62.71, "totale": 66.21}
+    },
+    "12": {
+      "seggio": "SC. MEDIA A. CECI Via S. Serafino da M., 1",
+      "elettori": {"maschi": 403, "femmine": 466, "totale": 869},
+      "votanti": {"maschi": 297, "femmine": 317, "totale": 614},
+      "percentuale": {"maschi": 73.70, "femmine": 68.03, "totale": 70.66}
+    },
+    "13": {
+      "seggio": "SC. MEDIA A. CECI Via S. Serafino da M., 1",
+      "elettori": {"maschi": 402, "femmine": 443, "totale": 845},
+      "votanti": {"maschi": 276, "femmine": 277, "totale": 553},
+      "percentuale": {"maschi": 68.66, "femmine": 62.53, "totale": 65.44}
+    },
+    "14": {
+      "seggio": "SC. MEDIA A. CECI Via S. Serafino da M., 1",
+      "elettori": {"maschi": 389, "femmine": 400, "totale": 789},
+      "votanti": {"maschi": 279, "femmine": 270, "totale": 549},
+      "percentuale": {"maschi": 71.72, "femmine": 67.50, "totale": 69.58}
+    },
+    "15": {
+      "seggio": "SC. MEDIA G. CANTALAMESSA Via Montenero, 4",
+      "elettori": {"maschi": 381, "femmine": 455, "totale": 836},
+      "votanti": {"maschi": 281, "femmine": 312, "totale": 593},
+      "percentuale": {"maschi": 73.75, "femmine": 68.57, "totale": 70.93}
+    },
+    "16": {
+      "seggio": "SC. MEDIA G. CANTALAMESSA Via Montenero, 4",
+      "elettori": {"maschi": 376, "femmine": 446, "totale": 822},
+      "votanti": {"maschi": 276, "femmine": 300, "totale": 576},
+      "percentuale": {"maschi": 73.40, "femmine": 67.26, "totale": 70.07}
+    },
+    "17": {
+      "seggio": "SC. MEDIA G. CANTALAMESSA Via Montenero, 4",
+      "elettori": {"maschi": 423, "femmine": 440, "totale": 863},
+      "votanti": {"maschi": 306, "femmine": 294, "totale": 600},
+      "percentuale": {"maschi": 72.34, "femmine": 66.82, "totale": 69.52}
+    },
+    "18": {
+      "seggio": "SC. MEDIA G. CANTALAMESSA Via N. Sauro, 20/A",
+      "elettori": {"maschi": 391, "femmine": 454, "totale": 845},
+      "votanti": {"maschi": 278, "femmine": 284, "totale": 562},
+      "percentuale": {"maschi": 71.10, "femmine": 62.56, "totale": 66.51}
+    },
+    "19": {
+      "seggio": "SC. MEDIA G. CANTALAMESSA Via N. Sauro, 20/A",
+      "elettori": {"maschi": 526, "femmine": 517, "totale": 1043},
+      "votanti": {"maschi": 370, "femmine": 359, "totale": 729},
+      "percentuale": {"maschi": 70.34, "femmine": 69.44, "totale": 69.89}
+    },
+    "20": {
+      "seggio": "SC. MEDIA L. LUCIANI Via 3 Ottobre, 8/C",
+      "elettori": {"maschi": 389, "femmine": 437, "totale": 826},
+      "votanti": {"maschi": 298, "femmine": 289, "totale": 587},
+      "percentuale": {"maschi": 76.61, "femmine": 66.13, "totale": 71.07}
+    },
+    "21": {
+      "seggio": "SC. MEDIA L. LUCIANI Via 3 Ottobre, 8/C",
+      "elettori": {"maschi": 395, "femmine": 422, "totale": 817},
+      "votanti": {"maschi": 305, "femmine": 271, "totale": 576},
+      "percentuale": {"maschi": 77.22, "femmine": 64.22, "totale": 70.50}
+    },
+    "22": {
+      "seggio": "SC. ELEM. G. SPERANZA Via G. Speranza, 9",
+      "elettori": {"maschi": 336, "femmine": 350, "totale": 686},
+      "votanti": {"maschi": 235, "femmine": 242, "totale": 477},
+      "percentuale": {"maschi": 69.94, "femmine": 69.14, "totale": 69.53}
+    },
+    "23": {
+      "seggio": "SC. MEDIA L. LUCIANI Via Napoli, 39",
+      "elettori": {"maschi": 315, "femmine": 384, "totale": 699},
+      "votanti": {"maschi": 215, "femmine": 256, "totale": 471},
+      "percentuale": {"maschi": 68.25, "femmine": 66.67, "totale": 67.38}
+    },
+    "24": {
+      "seggio": "SC. ELEM. G. SPERANZA Via G. Speranza, 9",
+      "elettori": {"maschi": 287, "femmine": 328, "totale": 615},
+      "votanti": {"maschi": 217, "femmine": 235, "totale": 452},
+      "percentuale": {"maschi": 75.61, "femmine": 71.65, "totale": 73.50}
+    },
+    "25": {
+      "seggio": "SC. MEDIA L. LUCIANI Via Napoli, 39",
+      "elettori": {"maschi": 331, "femmine": 414, "totale": 745},
+      "votanti": {"maschi": 242, "femmine": 284, "totale": 526},
+      "percentuale": {"maschi": 73.11, "femmine": 68.60, "totale": 70.60}
+    },
+    "26": {
+      "seggio": "SC. MEDIA L. LUCIANI Via 3 Ottobre, 8/C",
+      "elettori": {"maschi": 312, "femmine": 374, "totale": 686},
+      "votanti": {"maschi": 232, "femmine": 253, "totale": 485},
+      "percentuale": {"maschi": 74.36, "femmine": 67.65, "totale": 70.70}
+    },
+    "27": {
+      "seggio": "SC. ELE. SS. FILIPPO e G. Via Sardegna, 8/B",
+      "elettori": {"maschi": 504, "femmine": 550, "totale": 1054},
+      "votanti": {"maschi": 417, "femmine": 393, "totale": 810},
+      "percentuale": {"maschi": 82.74, "femmine": 71.45, "totale": 76.85}
+    },
+    "28": {
+      "seggio": "SC. ELE. SS. FILIPPO e G. Via Sardegna, 8/B",
+      "elettori": {"maschi": 337, "femmine": 372, "totale": 709},
+      "votanti": {"maschi": 287, "femmine": 310, "totale": 597},
+      "percentuale": {"maschi": 85.16, "femmine": 83.33, "totale": 84.20}
+    },
+    "29": {
+      "seggio": "SC. ELE. SS. FILIPPO e G. Via Sardegna, 10",
+      "elettori": {"maschi": 345, "femmine": 366, "totale": 711},
+      "votanti": {"maschi": 276, "femmine": 263, "totale": 539},
+      "percentuale": {"maschi": 80.00, "femmine": 71.86, "totale": 75.81}
+    },
+    "30": {
+      "seggio": "SC. ELE. SS. FILIPPO e G. Via Sardegna, 10",
+      "elettori": {"maschi": 333, "femmine": 348, "totale": 681},
+      "votanti": {"maschi": 267, "femmine": 257, "totale": 524},
+      "percentuale": {"maschi": 80.18, "femmine": 73.85, "totale": 76.95}
+    },
+    "31": {
+      "seggio": "Sc. Elem. Statale",
+      "elettori": {"maschi": 390, "femmine": 433, "totale": 823},
+      "votanti": {"maschi": 292, "femmine": 298, "totale": 590},
+      "percentuale": {"maschi": 74.87, "femmine": 68.82, "totale": 71.69}
+    },
+    "32": {
+      "seggio": "Sc. Elem. Statale",
+      "elettori": {"maschi": 336, "femmine": 376, "totale": 712},
+      "votanti": {"maschi": 208, "femmine": 207, "totale": 415},
+      "percentuale": {"maschi": 61.90, "femmine": 55.05, "totale": 58.29}
+    },
+    "33": {
+      "seggio": "Sc. Elem. Statale",
+      "elettori": {"maschi": 394, "femmine": 400, "totale": 794},
+      "votanti": {"maschi": 266, "femmine": 274, "totale": 540},
+      "percentuale": {"maschi": 67.51, "femmine": 68.50, "totale": 68.01}
+    },
+    "34": {
+      "seggio": "Sc. Elem. Statale",
+      "elettori": {"maschi": 413, "femmine": 452, "totale": 865},
+      "votanti": {"maschi": 302, "femmine": 307, "totale": 609},
+      "percentuale": {"maschi": 73.12, "femmine": 67.92, "totale": 70.40}
+    },
+    "35": {
+      "seggio": "Sc. Elem. Statale",
+      "elettori": {"maschi": 324, "femmine": 366, "totale": 690},
+      "votanti": {"maschi": 210, "femmine": 219, "totale": 429},
+      "percentuale": {"maschi": 64.81, "femmine": 59.84, "totale": 62.17}
+    },
+    "36": {
+      "seggio": "SC. ELEM. MONTICELLI Via dei Gelsomini, 14",
+      "elettori": {"maschi": 397, "femmine": 404, "totale": 801},
+      "votanti": {"maschi": 286, "femmine": 294, "totale": 580},
+      "percentuale": {"maschi": 72.04, "femmine": 72.77, "totale": 72.41}
+    },
+    "37": {
+      "seggio": "SC. ELEM. MONTICELLI Viale della Liberta, 3",
+      "elettori": {"maschi": 329, "femmine": 346, "totale": 675},
+      "votanti": {"maschi": 201, "femmine": 202, "totale": 403},
+      "percentuale": {"maschi": 61.09, "femmine": 58.38, "totale": 59.70}
+    },
+    "38": {
+      "seggio": "SC. ELEM. MONTICELLI Viale della Liberta, 3",
+      "elettori": {"maschi": 303, "femmine": 354, "totale": 657},
+      "votanti": {"maschi": 206, "femmine": 203, "totale": 409},
+      "percentuale": {"maschi": 67.99, "femmine": 57.34, "totale": 62.25}
+    },
+    "39": {
+      "seggio": "SC. ELEM. MONTICELLI Viale della Liberta, 3",
+      "elettori": {"maschi": 388, "femmine": 424, "totale": 812},
+      "votanti": {"maschi": 326, "femmine": 318, "totale": 644},
+      "percentuale": {"maschi": 84.02, "femmine": 75.00, "totale": 79.31}
+    },
+    "40": {
+      "seggio": "OSP. GEN.LE C. e G. MAZZONI Via degli Iris, 6",
+      "elettori": {"maschi": 20, "femmine": 15, "totale": 35},
+      "votanti": {"maschi": null, "femmine": null, "totale": null},
+      "percentuale": {"maschi": null, "femmine": null, "totale": null},
+      "note": "Sezione ospedaliera - dati votanti non disponibili"
+    },
+    "41": {
+      "seggio": "SC. EL.S. AGOSTINO Via delle Torri, 59",
+      "elettori": {"maschi": 241, "femmine": 229, "totale": 470},
+      "votanti": {"maschi": 189, "femmine": 170, "totale": 359},
+      "percentuale": {"maschi": 78.42, "femmine": 74.24, "totale": 76.38}
+    },
+    "42": {
+      "seggio": "SC. EL.S. AGOSTINO Via delle Torri, 59",
+      "elettori": {"maschi": 390, "femmine": 422, "totale": 812},
+      "votanti": {"maschi": 279, "femmine": 286, "totale": 565},
+      "percentuale": {"maschi": 71.54, "femmine": 67.77, "totale": 69.58}
+    },
+    "43": {
+      "seggio": "SC. ELEM. COMUNALE",
+      "elettori": {"maschi": 372, "femmine": 347, "totale": 719},
+      "votanti": {"maschi": 253, "femmine": 215, "totale": 468},
+      "percentuale": {"maschi": 68.01, "femmine": 61.96, "totale": 65.09}
+    },
+    "44": {
+      "seggio": "SC. ELEM. COMUNALE",
+      "elettori": {"maschi": 318, "femmine": 324, "totale": 642},
+      "votanti": {"maschi": 224, "femmine": 199, "totale": 423},
+      "percentuale": {"maschi": 70.44, "femmine": 61.42, "totale": 65.89}
+    },
+    "45": {
+      "seggio": "SC. ELEM. di VENAGRANDE",
+      "elettori": {"maschi": 370, "femmine": 372, "totale": 742},
+      "votanti": {"maschi": 247, "femmine": 245, "totale": 492},
+      "percentuale": {"maschi": 66.76, "femmine": 65.86, "totale": 66.31}
+    },
+    "46": {
+      "seggio": "Sc. Media M. D'Azeglio L.ngo C. Sisto V, 48",
+      "elettori": {"maschi": 364, "femmine": 352, "totale": 716},
+      "votanti": {"maschi": 270, "femmine": 240, "totale": 510},
+      "percentuale": {"maschi": 74.18, "femmine": 68.18, "totale": 71.23}
+    },
+    "47": {
+      "seggio": "Sc. Media M. D'Azeglio L.ngo C. Sisto V, 4",
+      "elettori": {"maschi": 432, "femmine": 454, "totale": 886},
+      "votanti": {"maschi": 294, "femmine": 296, "totale": 590},
+      "percentuale": {"maschi": 68.06, "femmine": 65.20, "totale": 66.59}
+    },
+    "48": {
+      "seggio": "SC. ELEM. MARINO del Tr.",
+      "elettori": {"maschi": 387, "femmine": 399, "totale": 786},
+      "votanti": {"maschi": 281, "femmine": 272, "totale": 553},
+      "percentuale": {"maschi": 72.61, "femmine": 68.17, "totale": 70.36}
+    },
+    "49": {
+      "seggio": "SC. ELEM. MONTICELLI Via dei Narcisi, 2",
+      "elettori": {"maschi": 250, "femmine": 261, "totale": 511},
+      "votanti": {"maschi": 168, "femmine": 168, "totale": 336},
+      "percentuale": {"maschi": 67.20, "femmine": 64.37, "totale": 65.75}
+    },
+    "50": {
+      "seggio": "SC. ELEM. POGGIO di BRETTA",
+      "elettori": {"maschi": 281, "femmine": 274, "totale": 555},
+      "votanti": {"maschi": 218, "femmine": 199, "totale": 417},
+      "percentuale": {"maschi": 77.58, "femmine": 72.63, "totale": 75.14}
+    },
+    "51": {
+      "seggio": "SC. ELEM. POGGIO di BRETTA",
+      "elettori": {"maschi": 397, "femmine": 402, "totale": 799},
+      "votanti": {"maschi": 276, "femmine": 267, "totale": 543},
+      "percentuale": {"maschi": 69.52, "femmine": 66.42, "totale": 67.96}
+    },
+    "52": {
+      "seggio": "Sc. Mat. Villa Sant'Antonio Via Monte Catria, 16",
+      "elettori": {"maschi": 266, "femmine": 277, "totale": 543},
+      "votanti": {"maschi": 179, "femmine": 177, "totale": 356},
+      "percentuale": {"maschi": 67.29, "femmine": 63.90, "totale": 65.56}
+    }
+  }
+}

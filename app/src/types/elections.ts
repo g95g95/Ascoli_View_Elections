@@ -108,7 +108,22 @@ export interface CoalizioniData {
   liste: CoalizioneItem[];
 }
 
-export type ElectionType = 'comunali' | 'europee' | 'regionali';
+export interface NominaliCandidate {
+  nome: string;
+  totale: number;
+  sezioni: Record<string, number>;
+}
+
+export interface NominaliElection {
+  elezione: string;
+  tipo: string;
+  data: string;
+  comune: string;
+  collegio?: string;
+  candidati: NominaliCandidate[];
+}
+
+export type ElectionType = 'comunali' | 'europee' | 'regionali' | 'politiche';
 
 export type ViewType =
   | 'landing'
@@ -118,7 +133,8 @@ export type ViewType =
   | 'liste'
   | 'preferenze'
   | 'sezioni'
-  | 'presidente';
+  | 'presidente'
+  | 'nominali';
 
 export interface MenuItem {
   id: ViewType;
@@ -148,4 +164,36 @@ export function isConsolidatedSection(sectionId: number): boolean {
 
 export function getDisplaySectionId(sectionId: number): number {
   return isConsolidatedSection(sectionId) ? CONSOLIDATED_SECTION_ID : sectionId;
+}
+
+// Archive types for cross-election analysis
+export interface ElectionSummary {
+  id: string;
+  year: number;
+  type: ElectionType;
+  label: string;
+  date: string;
+  totalVotes?: number;
+  turnoutPercent?: number;
+  winner?: string;
+  winnerVotes?: number;
+}
+
+export interface PartyTrend {
+  partyName: string;
+  elections: Array<{
+    year: number;
+    type: ElectionType;
+    votes: number;
+    percentage: number;
+  }>;
+}
+
+export interface ArchiveStats {
+  totalElections: number;
+  yearsSpan: string;
+  electionTypes: ElectionType[];
+  totalVotesCast: number;
+  partyTrends: PartyTrend[];
+  turnoutTrend: Array<{ year: number; type: ElectionType; turnout: number }>;
 }

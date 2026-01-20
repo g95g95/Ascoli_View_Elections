@@ -58,6 +58,18 @@ export function PreferencesView({ data, title }: PreferencesViewProps) {
     return all.sort((a, b) => b.totale - a.totale).slice(0, 50);
   }, [data]);
 
+  const dropdownCandidates = useMemo(() => {
+    if (!selectedCandidate) return topCandidates;
+    const isInTop = topCandidates.some(c => c.nome === selectedCandidate);
+    if (isInTop) return topCandidates;
+
+    const selected = filteredCandidates.find(c => c.nome === selectedCandidate);
+    if (selected) {
+      return [selected, ...topCandidates];
+    }
+    return topCandidates;
+  }, [topCandidates, selectedCandidate, filteredCandidates]);
+
   const totalCandidates = data.liste.reduce((sum, party) => sum + party.candidati.length, 0);
   const totalVotes = data.liste.reduce(
     (sum, party) => sum + party.candidati.reduce((s, c) => s + c.totale, 0),
@@ -168,7 +180,7 @@ export function PreferencesView({ data, title }: PreferencesViewProps) {
               className="px-3 py-1.5 text-sm border rounded-lg flex-1 md:flex-none md:min-w-80"
             >
               <option value="">Seleziona Candidato...</option>
-              {topCandidates.map(c => (
+              {dropdownCandidates.map(c => (
                 <option key={`${c.partyName}-${c.nome}`} value={c.nome}>
                   {c.nome} ({c.partyName.substring(0, 20)}) - {c.totale} voti
                 </option>

@@ -1,19 +1,22 @@
 import { useState, useRef, useEffect } from 'react';
 import type { ChatMessage } from '../../types/chat';
-import type { ElectionData } from '../../lib/dataLoader';
-import { sendChatMessage } from '../../lib/groq/groqService';
+import type { ElectionData, ElectionArchive } from '../../lib/dataLoader';
+import { sendChatMessage, sendArchiveChatMessage } from '../../lib/groq/groqService';
 import { DynamicChart } from './DynamicChart';
 
 interface ElectionChatbotProps {
-  electionData: ElectionData;
+  electionData?: ElectionData;
+  archive?: ElectionArchive;
 }
 
-export function ElectionChatbot({ electionData }: ElectionChatbotProps) {
+export function ElectionChatbot({ electionData, archive }: ElectionChatbotProps) {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const isArchiveMode = !!archive;
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -35,7 +38,15 @@ export function ElectionChatbot({ electionData }: ElectionChatbotProps) {
 
     try {
       const conversationHistory = messages.map(m => ({ role: m.role, content: m.content }));
-      const response = await sendChatMessage(userMessage.content, electionData, conversationHistory);
+
+      let response;
+      if (archive) {
+        response = await sendArchiveChatMessage(userMessage.content, archive, conversationHistory);
+      } else if (electionData) {
+        response = await sendChatMessage(userMessage.content, electionData, conversationHistory);
+      } else {
+        throw new Error('Nessun dato elettorale disponibile');
+      }
 
       const assistantMessage: ChatMessage = {
         id: (Date.now() + 1).toString(),
@@ -66,19 +77,26 @@ export function ElectionChatbot({ electionData }: ElectionChatbotProps) {
     }
   };
 
-  const suggestedQuestions = [
-    'Chi ha vinto le elezioni?',
-    'Qual è stata l\'affluenza?',
-    'Confronta i candidati',
-    'Mostra le liste più votate'
-  ];
+  const suggestedQuestions = isArchiveMode
+    ? [
+        'Come è cambiata l\'affluenza dal 2009?',
+        'Quali partiti hanno vinto di più?',
+        'Chi sono i candidati più votati di sempre?',
+        'Confronta comunali 2009 e 2024'
+      ]
+    : [
+        'Chi ha vinto le elezioni?',
+        'Qual è stata l\'affluenza?',
+        'Confronta i candidati',
+        'Mostra le liste più votate'
+      ];
 
   if (!isExpanded) {
     return (
       <button
         onClick={() => setIsExpanded(true)}
         className="fixed bottom-6 right-6 w-16 h-16 rounded-full shadow-2xl overflow-hidden border-4 border-white hover:scale-110 transition-transform z-50"
-        title="Apri assistente AI"
+        title="Apri Rozzi-bot"
       >
         <img
           src="/assets/rozzi-background.webp"
@@ -111,8 +129,10 @@ export function ElectionChatbot({ electionData }: ElectionChatbotProps) {
               />
             </div>
             <div>
-              <h3 className="font-bold text-white">Assistente Elettorale</h3>
-              <p className="text-xs text-white/70">Powered by AI</p>
+              <h3 className="font-bold text-white">Rozzi-bot</h3>
+              <p className="text-xs text-white/70">
+                {isArchiveMode ? `Archivio ${archive.summary.years[0]}-${archive.summary.years[archive.summary.years.length - 1]}` : 'Il tuo analista elettorale'}
+              </p>
             </div>
           </div>
           <button
@@ -127,8 +147,9 @@ export function ElectionChatbot({ electionData }: ElectionChatbotProps) {
           {messages.length === 0 && (
             <div className="text-center py-8">
               <p className="text-white/90 mb-4">
-                Ciao! Sono l'assistente AI per i dati elettorali di Ascoli Piceno.
-                Chiedimi qualsiasi cosa!
+                {isArchiveMode
+                  ? `Ciao! Sono Rozzi-bot, il tuo analista elettorale. Ho accesso a ${archive.summary.totalElections} elezioni dal ${archive.summary.years[0]} al ${archive.summary.years[archive.summary.years.length - 1]}. Posso analizzare trend, confrontare anni e trovare pattern interessanti!`
+                  : 'Ciao! Sono Rozzi-bot, il tuo analista per i dati elettorali di Ascoli Piceno. Chiedimi qualsiasi cosa!'}
               </p>
               <div className="flex flex-wrap gap-2 justify-center">
                 {suggestedQuestions.map((q, idx) => (

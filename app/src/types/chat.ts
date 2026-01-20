@@ -6,19 +6,27 @@ export interface ChatMessage {
   chartData?: ChartData;
 }
 
-export interface ChartData {
-  type: 'bar' | 'pie' | 'line';
-  title: string;
-  data: ChartDataPoint[];
-  xAxisLabel?: string;
-  yAxisLabel?: string;
-}
-
 export interface ChartDataPoint {
   name: string;
   value: number;
   percentage?: number;
   color?: string;
+}
+
+export interface GroupedChartDataPoint {
+  name: string;
+  values: number[];
+  colors?: string[];
+}
+
+export interface ChartData {
+  type: 'bar' | 'pie' | 'line' | 'grouped-bar';
+  title: string;
+  data: ChartDataPoint[];
+  groups?: string[];
+  groupedData?: GroupedChartDataPoint[];
+  xAxisLabel?: string;
+  yAxisLabel?: string;
 }
 
 export interface GroqResponse {
