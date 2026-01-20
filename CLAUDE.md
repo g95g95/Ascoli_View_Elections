@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-A web-based interactive visualization app for exploring the 2009 Ascoli Piceno elections data. The app displays results from both Municipal (Comunali) and European (Europee) elections with drill-down capabilities by polling section.
+A web-based interactive visualization app for exploring Ascoli Piceno elections data across multiple years (2009-2025). The app displays results from Municipal (Comunali), European (Europee), Regional (Regionali), and Political (Politiche) elections with drill-down capabilities by polling section and density map visualizations.
 
 ---
 
@@ -10,25 +10,46 @@ A web-based interactive visualization app for exploring the 2009 Ascoli Piceno e
 
 ### Location: `data/json/`
 
-| File | Description | Key Data |
-|------|-------------|----------|
-| `2009_Comunali/ballottaggio_sindaco.json` | Mayoral runoff | 2 candidates, 52 sections, affluenza |
-| `2009_Comunali/primo_turno_sindaco.json` | First round mayoral | Multiple candidates, 52 sections |
-| `2009_Comunali/liste_consiglio.json` | Council list results | Party votes per section |
-| `2009_Comunali/preferenze_comunali.json` | Candidate preferences | 28 parties, 760 candidates, votes by section |
-| `2009_Europee/preferenze_europee.json` | European preferences | 13 parties, ~180 candidates |
-| `2009_Comunali/europee_2009_liste.json` | European list results | Party totals |
+Elections are organized by year and type:
+- `2009_Comunali/` - Municipal elections 2009
+- `2009_Europee/` - European elections 2009
+- `2010_Regionali/` - Regional elections 2010
+- `2014_Comunali/` - Municipal elections 2014
+- `2018_Politiche/` - Political elections 2018
+- `2019/` - Municipal elections 2019
+- `2019/Europee/` - European elections 2019
+- `2020_Regionali/` - Regional elections 2020
+- `2022_Politiche/` - Political elections 2022
+- `2024_Comunali/` - Municipal elections 2024
+- `2025/Regionali/` - Regional elections 2025
 
-### Data Structure Patterns
+---
 
-**Mayoral Results (ballottaggio/primo_turno):**
+## JSON Data Structures (Required for Scraping)
+
+**IMPORTANT**: When scraping new election data, the JSON files MUST follow these exact structures for the app to work correctly. The density map feature requires per-section vote data.
+
+### 1. MayoralElection (Sindaco/Presidente)
+
+Used for: `primo_turno_sindaco.json`, `ballottaggio_sindaco.json`, `presidente.json`
+
 ```json
 {
-  "elezione": "Comunali 2009",
-  "turno": "Ballottaggio",
-  "data": "21-22 Giugno 2009",
+  "elezione": "Comunali 2024",
+  "turno": "Primo Turno",
+  "data": "8-9 Giugno 2024",
   "comune": "Ascoli Piceno",
-  "candidati": [{"nome": "Name", "totale": 14700}],
+  "tipo": "Comunali",
+  "descrizione": "Elezione del Sindaco",
+  "sezioni_scrutinate": 52,
+  "candidati": [
+    {
+      "nome": "CANDIDATE NAME",
+      "totale": 14700,
+      "percentuale": 45.5,
+      "sezioni": { "1": 189, "2": 220, "52": 180 }
+    }
+  ],
   "affluenza": {
     "aventi_diritto_donne": 22502,
     "aventi_diritto_uomini": 20700,
@@ -39,28 +60,35 @@ A web-based interactive visualization app for exploring the 2009 Ascoli Piceno e
   },
   "sezioni": {
     "1": {
-      "affluenza": {...},
-      "voti": {"Candidate A": 189, "Candidate B": 180}
+      "affluenza": { ... },
+      "voti": { "CANDIDATE A": 189, "CANDIDATE B": 180 }
     }
   }
 }
 ```
 
-**Candidate Preferences:**
+### 2. PreferenzeElection (Candidate Preferences)
+
+Used for: `preferenze_comunali.json`, `preferenze_europee.json`, `preferenze_regionali.json`
+
+**CRITICAL**: Each candidate MUST have a `sezioni` object with votes per section for the density map to work.
+
 ```json
 {
-  "elezione": "Comunali",
+  "elezione": "Regionali",
   "turno": "primo turno",
-  "data": "2009-06-07",
+  "data": "28-29 Settembre 2025",
   "comune": "Ascoli Piceno",
+  "tipo": "Regionali",
+  "descrizione": "Elezioni del Consiglio Regionale - Preferenze",
   "liste": [
     {
-      "nome": "Party Name",
+      "nome": "PARTY NAME",
       "candidati": [
         {
-          "nome": "SURNAME NAME",
-          "totale": 123,
-          "sezioni": {"1": 5, "2": 3, ... "52": 2}
+          "nome": "CANDIDATE NAME",
+          "totale": 4654,
+          "sezioni": { "1": 67, "2": 143, "3": 174, "52": 76 }
         }
       ]
     }
@@ -68,134 +96,127 @@ A web-based interactive visualization app for exploring the 2009 Ascoli Piceno e
 }
 ```
 
----
+### 3. ListeElection (Party List Results)
 
-## App Requirements
+Used for: `liste_consiglio.json`, `liste_europee.json`, `liste_camera.json`
 
-### Tech Stack
-- **Frontend**: React 18 + TypeScript + Vite
-- **Styling**: Tailwind CSS
-- **Charts**: Recharts or Chart.js
-- **Maps**: Leaflet (optional, for geographic visualization)
-- **State**: React Context or Zustand
-- **No Backend**: Static JSON files served directly
+**CRITICAL**: Each party MUST have a `sezioni` object with votes per section for the density map to work.
 
-### Core Features
-
-#### 1. Dashboard Home
-- Overview cards showing key election stats
-- Quick navigation to different election types
-- Total voters, turnout percentage, winning candidates
-
-#### 2. Mayoral Elections View
-- **Primo Turno**: Bar chart of all candidates
-- **Ballottaggio**: Head-to-head comparison
-- Turnout visualization (voters vs eligible)
-- Section-by-section breakdown table
-- Interactive map (if geo data available)
-
-#### 3. Council Lists View
-- Party vote totals as bar/pie chart
-- Comparison between Comunali and Europee
-- Section heatmap showing party strength
-
-#### 4. Candidate Preferences View
-- Searchable/filterable candidate list
-- Party selector dropdown
-- Top candidates ranking per party
-- Section-level drill-down for any candidate
-- Sort by: total votes, name, section performance
-
-#### 5. Section Analysis
-- Select any of the 52 sections
-- View all results for that section
-- Compare sections side-by-side
-- Identify strongholds per party/candidate
-
-#### 6. Comparative Analysis
-- Comunali vs Europee turnout
-- Party performance across election types
-- Section-level correlation analysis
-
-### UI/UX Requirements
-
-- **Responsive**: Works on mobile and desktop
-- **Dark/Light mode**: Toggle theme
-- **Italian language**: All labels in Italian
-- **Print-friendly**: Export charts as PNG/PDF
-- **Accessible**: ARIA labels, keyboard navigation
-
-### Data Visualization Types
-
-1. **Bar Charts**: Candidate/party comparisons
-2. **Pie Charts**: Vote share distribution
-3. **Line Charts**: Section-by-section trends
-4. **Heatmaps**: Section performance grids
-5. **Tables**: Detailed sortable data views
-6. **Cards**: Summary statistics
-
----
-
-## Project Structure (Proposed)
-
-```
-src/
-├── components/
-│   ├── charts/           # Reusable chart components
-│   ├── layout/           # Header, Sidebar, Footer
-│   └── ui/               # Buttons, Cards, Tables
-├── features/
-│   ├── dashboard/        # Home dashboard
-│   ├── mayoral/          # Sindaco views
-│   ├── council/          # Liste consiglio views
-│   ├── preferences/      # Candidate preferences
-│   └── sections/         # Section analysis
-├── data/                 # JSON data files (copied from data/json)
-├── hooks/                # Custom React hooks
-├── lib/                  # Utilities, data loaders
-├── types/                # TypeScript interfaces
-└── App.tsx
+```json
+{
+  "elezione": "Comunali",
+  "turno": "primo turno",
+  "data": "8-9 Giugno 2024",
+  "comune": "Ascoli Piceno",
+  "tipo": "Comunali",
+  "liste": [
+    {
+      "nome": "PARTY NAME",
+      "totale": 7498,
+      "sezioni": { "1": 99, "2": 143, "3": 174, "52": 76 }
+    }
+  ],
+  "affluenza": { ... }
+}
 ```
 
+### 4. CoalizioniData (Coalition Results for Regionali)
+
+Used for: `coalizioni_sezioni.json`
+
+**CRITICAL**: This structure requires BOTH `coalizioni` AND `liste` arrays. The `liste` array is used by ListeRegionaliView for the density map.
+
+```json
+{
+  "elezione": "Regionali",
+  "turno": "primo turno",
+  "data": "28-29 Settembre 2025",
+  "comune": "Ascoli Piceno",
+  "tipo": "Regionali",
+  "descrizione": "Elezioni del Consiglio Regionale delle Marche",
+  "coalizioni": [
+    {
+      "nome": "Centrodestra - Acquaroli",
+      "candidato": "FRANCESCO ACQUAROLI",
+      "liste": ["FRATELLI D'ITALIA", "LEGA", "FORZA ITALIA"],
+      "totale": 12102,
+      "sezioni": { "1": 153, "2": 251, "52": 130 }
+    }
+  ],
+  "liste": [
+    {
+      "nome": "FRATELLI D'ITALIA",
+      "totale": 7498,
+      "sezioni": { "1": 99, "2": 143, "52": 76 }
+    }
+  ]
+}
+```
+
+### 5. NominaliElection (Uninominal Candidates for Politiche)
+
+Used for: `nominali_camera.json`, `preferenze_politiche.json`
+
+```json
+{
+  "elezione": "Politiche",
+  "tipo": "Camera",
+  "data": "25 Settembre 2022",
+  "comune": "Ascoli Piceno",
+  "collegio": "Marche - U04",
+  "candidati": [
+    {
+      "nome": "CANDIDATE NAME",
+      "totale": 5000,
+      "sezioni": { "1": 100, "2": 120, "52": 80 }
+    }
+  ]
+}
+```
+
+### 6. VotantiData (Voter Turnout)
+
+Used for: `votanti.json`
+
+```json
+{
+  "elezione": "Regionali",
+  "data": "28-29 Marzo 2010",
+  "comune": "Ascoli Piceno",
+  "tipo": "Regionali",
+  "descrizione": "Affluenza alle urne",
+  "sezioni": [
+    { "numero": 1, "uomini": 290, "donne": 300, "totale": 590 }
+  ],
+  "totale_comune": { "uomini": 14696, "donne": 14963, "totale": 29659 }
+}
+```
+
 ---
 
-## Development Phases
+## Key Rules for Scraping
 
-### Phase 1: Setup & Data Loading
-- [ ] Initialize Vite + React + TypeScript project
-- [ ] Configure Tailwind CSS
-- [ ] Create data loading utilities
-- [ ] Define TypeScript interfaces for all JSON structures
-- [ ] Create basic layout components
+1. **Section IDs are strings**: Always use "1", "2", etc. as keys, not integers
+2. **52 sections total**: Ascoli Piceno has sections 1-52
+3. **Per-section data is REQUIRED**: The density map feature requires sezioni objects with vote counts per section
+4. **Empty sezioni = broken density map**: If you scrape only totals without per-section data, the density map will not work
+5. **Candidate names in UPPERCASE**: Follow the convention of uppercase names
+6. **Italian date format**: Use "8-9 Giugno 2024" format for dates
 
-### Phase 2: Dashboard & Navigation
-- [ ] Build main dashboard with stats cards
-- [ ] Create navigation sidebar
-- [ ] Implement routing (React Router)
-- [ ] Add theme toggle
+---
 
-### Phase 3: Mayoral Views
-- [ ] Primo turno results page
-- [ ] Ballottaggio results page
-- [ ] Turnout visualization
-- [ ] Section breakdown tables
+## Scraping Workflow
 
-### Phase 4: Lists & Preferences
-- [ ] Council lists comparison
-- [ ] Party selector component
-- [ ] Candidate search/filter
-- [ ] Top candidates ranking
+When scraping a new election:
 
-### Phase 5: Section Analysis
-- [ ] Section selector
-- [ ] Section detail view
-- [ ] Multi-section comparison
-
-### Phase 6: Polish & Export
-- [ ] Chart export functionality
-- [ ] Print styles
-- [ ] Accessibility audit
-- [ ] Performance optimization
+1. **Identify data sources**: Usually eligo.comune.ap.it or similar
+2. **Scrape ALL 52 sections**: Do not just get totals - get per-section data
+3. **Structure according to types above**: Match the exact JSON structure
+4. **Store in data/json/YEAR_TYPE/**: Follow naming convention
+5. **Copy to app/public/data/YEAR_TYPE/**: For the web app
+6. **Add loaders in dataLoader.ts**: Create load functions
+7. **Add config in elections.ts**: Register the election
+8. **Test locally before deploying**: Run npm run dev and verify
 
 ---
 
@@ -205,29 +226,28 @@ src/
 |---------|---------|---------|
 | Elezioni Comunali | Municipal Elections | Local government |
 | Elezioni Europee | European Elections | EU Parliament |
+| Elezioni Regionali | Regional Elections | Regional council |
+| Elezioni Politiche | Political Elections | National parliament |
 | Sindaco | Mayor | Head of municipality |
+| Presidente | President | Regional president |
 | Ballottaggio | Runoff | Second round voting |
 | Primo Turno | First Round | Initial voting |
-| Consiglio Comunale | City Council | Legislative body |
 | Preferenze | Preferences | Candidate preference votes |
 | Sezione | Polling Section | Voting location (52 total) |
 | Affluenza | Turnout | Voter participation |
-| Aventi Diritto | Eligible Voters | Registered voters |
-| Votanti | Voters | Actual voters |
-| Schede Bianche | Blank Ballots | Empty votes |
-| Schede Nulle | Invalid Ballots | Void votes |
 | Lista | List/Party | Political party list |
+| Coalizione | Coalition | Group of allied parties |
 
 ---
 
 ## Commands
 
 ```bash
-npm create vite@latest . -- --template react-ts  # Initialize
-npm install                                       # Install deps
-npm run dev                                       # Dev server
-npm run build                                     # Production build
-npm run preview                                   # Preview build
+cd app
+npm install                   # Install deps
+npm run dev                   # Dev server (http://localhost:5173)
+npm run build                 # Production build
+npx vercel --prod             # Deploy to Vercel
 ```
 
 ---
@@ -235,7 +255,8 @@ npm run preview                                   # Preview build
 ## Notes
 
 - 52 polling sections in Ascoli Piceno
-- Data is from June 2009 elections
-- Candidate names are in UPPERCASE with optional nicknames ("detto NICKNAME")
+- Elections span from 2009 to 2025
+- Candidate names are in UPPERCASE
 - All vote counts are integers
 - Section numbers are strings ("1" to "52")
+- Density map requires per-section data in sezioni objects
