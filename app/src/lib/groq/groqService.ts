@@ -7,6 +7,7 @@ import {
   getTopCandidates,
   compareElections,
   generateArchiveSummary,
+  searchCandidate,
 } from '../analytics';
 
 const GROQ_API_KEY = import.meta.env.VITE_GROQ_API_KEY || '';
@@ -14,22 +15,27 @@ const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
 
 // Tool definitions for the AI
 const TOOL_DESCRIPTIONS = `
-STRUMENTI DISPONIBILI (usa questi per analisi avanzate):
+STRUMENTI DISPONIBILI (automatici - i dati vengono estratti automaticamente):
 
-1. ANALISI_PARTITO(nome_partito): Analizza l'andamento di un partito nel tempo
+1. CERCA_CANDIDATO(nome): Cerca un candidato specifico in tutto l'archivio
+   Esempio: "Come è andata Donatella Ferretti?" "Quanti voti ha preso Marco Rossi?"
+
+2. ANALISI_PARTITO(nome_partito): Analizza l'andamento di un partito nel tempo
    Esempio: "Come è andato il PD nel tempo?"
 
-2. ANALISI_AFFLUENZA(): Mostra il trend dell'affluenza alle urne
+3. ANALISI_AFFLUENZA(): Mostra il trend dell'affluenza alle urne
    Esempio: "Come è cambiata l'affluenza?"
 
-3. TOP_PARTITI(limite): Classifica dei partiti più votati di sempre
+4. TOP_PARTITI(limite): Classifica dei partiti più votati di sempre
    Esempio: "Quali sono i partiti più votati?"
 
-4. TOP_CANDIDATI(limite): Classifica dei candidati più votati
+5. TOP_CANDIDATI(limite): Classifica dei candidati più votati
    Esempio: "Chi sono i candidati più votati di sempre?"
 
-5. CONFRONTA_ELEZIONI(id1, id2): Confronta due elezioni
+6. CONFRONTA_ELEZIONI(id1, id2): Confronta due elezioni
    Esempio: "Confronta comunali 2009 con 2024"
+
+IMPORTANTE: Quando ricevi dati su un candidato specifico, usa TUTTI i dati forniti per rispondere in modo completo.
 `;
 
 function buildArchiveSystemPrompt(archive: ElectionArchive): string {
@@ -43,11 +49,13 @@ ${summary}
 ${TOOL_DESCRIPTIONS}
 
 REGOLE IMPORTANTI:
-1. Quando l'utente chiede trend o confronti, usa i dati dell'archivio completo
-2. Fornisci sempre numeri precisi e percentuali
-3. Per ogni analisi, suggerisci il grafico più appropriato
-4. Rispondi come un analista senior: osservazioni, pattern, anomalie
-5. Se noti qualcosa di interessante nei dati, segnalalo proattivamente
+1. Quando ricevi DATI ANALISI nella richiesta, USALI SEMPRE per rispondere - contengono i risultati della ricerca
+2. Quando l'utente chiede di un candidato specifico, i dati estratti contengono TUTTE le loro occorrenze nell'archivio
+3. Fornisci sempre numeri precisi e percentuali
+4. Per ogni analisi, suggerisci il grafico più appropriato
+5. Rispondi come un analista senior: osservazioni, pattern, anomalie
+6. Se noti qualcosa di interessante nei dati, segnalalo proattivamente
+7. NON dire mai "non ho informazioni" se i dati sono forniti nel messaggio
 
 Per generare un grafico, includi alla fine un blocco JSON:
 \`\`\`chart
@@ -137,6 +145,80 @@ function describeElectionData(electionData: ElectionData): string {
 function extractArchiveDataForQuery(query: string, archive: ElectionArchive): string {
   const lowerQuery = query.toLowerCase();
   let contextData = '';
+
+  // Candidate/person search - detect names in query
+  // Extract potential person names using multiple strategies
+  let candidateName: string | null = null;
+
+  // Strategy 1: Look for patterns like "come è andata/andato [NAME]"
+  const namePatterns = [
+    /(?:come\s+(?:è\s+)?(?:andat[oa]|andamento)|quanti\s+voti\s+(?:ha\s+)?(?:preso|ottenuto)|cerca|informazioni\s+su|dati\s+(?:su|di)|chi\s+è)\s+(?:di\s+)?([A-Za-zàèéìòùÀÈÉÌÒÙ]+(?:\s+[A-Za-zàèéìòùÀÈÉÌÒÙ]+)+?)(?:\s+(?:nel|nelle|nel\s+corso|negli|durante|alle|ha\s+preso|ha\s+ottenuto|\?|$))/i,
+    /([A-Za-zàèéìòùÀÈÉÌÒÙ]+(?:\s+[A-Za-zàèéìòùÀÈÉÌÒÙ]+)+?)\s+(?:quanti\s+voti|nel\s+tempo|nelle\s+elezioni|ha\s+preso|ha\s+ottenuto)/i,
+    /(?:candidat[oa]|consigliere|sindaco)\s+([A-Za-zàèéìòùÀÈÉÌÒÙ]+(?:\s+[A-Za-zàèéìòùÀÈÉÌÒÙ]+)+)/i,
+  ];
+
+  for (const pattern of namePatterns) {
+    const match = query.match(pattern);
+    if (match && match[1]) {
+      const extracted = match[1].trim();
+      // Filter out common non-name words
+      const excludeWords = ['come', 'nel', 'tempo', 'elezioni', 'ascoli', 'piceno', 'comunali', 'europee', 'regionali', 'partito', 'lista', 'corso', 'del', 'della', 'alle', 'negli', 'anni'];
+      const words = extracted.split(/\s+/).filter(w => !excludeWords.includes(w.toLowerCase()) && w.length > 2);
+      if (words.length >= 2) {
+        candidateName = words.join(' ');
+        break;
+      }
+    }
+  }
+
+  // Strategy 2: Find sequences of capitalized words that look like names
+  if (!candidateName) {
+    const words = query.split(/\s+/);
+    const capitalizedSequence: string[] = [];
+    const excludeWords = ['Come', 'Nel', 'Tempo', 'Elezioni', 'Ascoli', 'Piceno', 'Comunali', 'Europee', 'Regionali', 'Partito', 'Lista', 'Corso', 'Del', 'Della', 'Alle', 'Negli', 'Anni', 'Voti', 'Quanti'];
+
+    for (const word of words) {
+      const cleanWord = word.replace(/[?,!.]/g, '');
+      if (/^[A-Z][a-zàèéìòù]+$/.test(cleanWord) && cleanWord.length > 2 && !excludeWords.includes(cleanWord)) {
+        capitalizedSequence.push(cleanWord);
+      } else if (capitalizedSequence.length >= 2) {
+        break;
+      } else {
+        capitalizedSequence.length = 0;
+      }
+    }
+
+    if (capitalizedSequence.length >= 2) {
+      candidateName = capitalizedSequence.join(' ');
+    }
+  }
+
+  // Strategy 3: If query seems to be asking about a person but we haven't found a name, try looser matching
+  if (!candidateName && (lowerQuery.includes('andat') || lowerQuery.includes('voti') || lowerQuery.includes('preferenze'))) {
+    // Look for any two consecutive words that could be a name (first letter uppercase)
+    const match = query.match(/\b([A-Z][a-zàèéìòù]+)\s+([A-Z][a-zàèéìòù]+)\b/);
+    if (match) {
+      const potentialName = `${match[1]} ${match[2]}`;
+      const excludeWords = ['Come', 'Nel', 'Tempo', 'Elezioni', 'Ascoli', 'Piceno'];
+      if (!excludeWords.includes(match[1]) && !excludeWords.includes(match[2])) {
+        candidateName = potentialName;
+      }
+    }
+  }
+
+  if (candidateName) {
+    const results = searchCandidate(archive, candidateName);
+    if (results.length > 0) {
+      contextData += `\nRISULTATI RICERCA CANDIDATO "${candidateName.toUpperCase()}":\n`;
+      contextData += `Trovate ${results.length} occorrenze:\n`;
+      for (const r of results) {
+        contextData += `- ${r.electionLabel}: ${r.votes.toLocaleString('it-IT')} voti (${r.party})\n`;
+      }
+      contextData += `\nDettaglio completo:\n${JSON.stringify(results, null, 2)}\n`;
+    } else {
+      contextData += `\nRICERCA CANDIDATO "${candidateName.toUpperCase()}": Nessun risultato trovato nell'archivio.\n`;
+    }
+  }
 
   // Party trend analysis
   const partyPatterns = [

@@ -171,6 +171,110 @@ export function getTopCandidates(archive: ElectionArchive, limit: number = 20): 
   return candidates.sort((a, b) => b.votes - a.votes).slice(0, limit);
 }
 
+// Search for a specific candidate by name across all elections
+export function searchCandidate(archive: ElectionArchive, searchName: string): Array<{
+  name: string;
+  party: string;
+  votes: number;
+  year: number;
+  type: string;
+  electionLabel: string;
+  sections?: Record<string, number>;
+}> {
+  const results: Array<{
+    name: string;
+    party: string;
+    votes: number;
+    year: number;
+    type: string;
+    electionLabel: string;
+    sections?: Record<string, number>;
+  }> = [];
+
+  const searchTerms = searchName.toLowerCase().split(/\s+/).filter(t => t.length > 2);
+
+  for (const election of Object.values(archive.elections)) {
+    if (!election.preferenze) continue;
+
+    for (const party of election.preferenze.liste) {
+      for (const candidate of party.candidati) {
+        const candidateName = candidate.nome.toLowerCase();
+        const matchScore = searchTerms.filter(term => candidateName.includes(term)).length;
+
+        if (matchScore >= Math.min(2, searchTerms.length)) {
+          results.push({
+            name: candidate.nome,
+            party: party.nome,
+            votes: candidate.totale,
+            year: election.config.year,
+            type: election.config.type,
+            electionLabel: election.config.label,
+            sections: candidate.sezioni,
+          });
+        }
+      }
+    }
+
+    // Also search in mayoral candidates
+    if (election.primoTurno) {
+      for (const candidate of election.primoTurno.candidati) {
+        const candidateName = candidate.nome.toLowerCase();
+        const matchScore = searchTerms.filter(term => candidateName.includes(term)).length;
+
+        if (matchScore >= Math.min(2, searchTerms.length)) {
+          results.push({
+            name: candidate.nome,
+            party: 'Candidato Sindaco',
+            votes: candidate.totale,
+            year: election.config.year,
+            type: election.config.type,
+            electionLabel: `${election.config.label} - Primo Turno`,
+          });
+        }
+      }
+    }
+
+    if (election.ballottaggio) {
+      for (const candidate of election.ballottaggio.candidati) {
+        const candidateName = candidate.nome.toLowerCase();
+        const matchScore = searchTerms.filter(term => candidateName.includes(term)).length;
+
+        if (matchScore >= Math.min(2, searchTerms.length)) {
+          results.push({
+            name: candidate.nome,
+            party: 'Candidato Sindaco',
+            votes: candidate.totale,
+            year: election.config.year,
+            type: election.config.type,
+            electionLabel: `${election.config.label} - Ballottaggio`,
+          });
+        }
+      }
+    }
+
+    // Search in nominali (politiche)
+    if (election.nominali) {
+      for (const candidate of election.nominali.candidati) {
+        const candidateName = candidate.nome.toLowerCase();
+        const matchScore = searchTerms.filter(term => candidateName.includes(term)).length;
+
+        if (matchScore >= Math.min(2, searchTerms.length)) {
+          results.push({
+            name: candidate.nome,
+            party: 'Uninominale',
+            votes: candidate.totale,
+            year: election.config.year,
+            type: election.config.type,
+            electionLabel: election.config.label,
+          });
+        }
+      }
+    }
+  }
+
+  return results.sort((a, b) => b.year - a.year || b.votes - a.votes);
+}
+
 // Find elections by type
 export function getElectionsByType(archive: ElectionArchive, type: ElectionType): string[] {
   return Object.entries(archive.elections)
