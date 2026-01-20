@@ -1,0 +1,114 @@
+{
+  "elezione": "Regionali",
+  "anno": 2025,
+  "data": "28-29 Settembre 2025",
+  "comune": "Ascoli Piceno",
+  "coalizioni": [
+    {
+      "nome": "Centrodestra - Acquaroli",
+      "candidato": "FRANCESCO ACQUAROLI",
+      "liste": [
+        "GIORGIA MELONI PER ACQUAROLI FRATELLI D'ITALIA",
+        "LEGA SALVINI MARCHE",
+        "FORZA ITALIA BERLUSCONI",
+        "NOI MODERATI CON ACQUAROLI",
+        "I MARCHIGIANI PER ACQUAROLI",
+        "LISTE CIVICHE LIBERTAS UNIONE DI CENTRO",
+        "CIVICI MARCHE PER ACQUAROLI PRESIDENTE"
+      ],
+      "totale": 12102
+    },
+    {
+      "nome": "Centrosinistra - Ricci",
+      "candidato": "MATTEO RICCI",
+      "liste": [
+        "PD- PARTITO DEMOCRATICO",
+        "MOVIMENTO 5 STELLE 2050",
+        "LISTA CIVICA MATTEO RICCI PRESIDENTE",
+        "ALLEANZA VERDI SINISTRA",
+        "PROGETTO MARCHE VIVE",
+        "PROGETTO CIVICO AVANTI CON RICCI",
+        "PACE SALUTE LAVORO"
+      ],
+      "totale": 8309
+    },
+    {
+      "nome": "Bolletta",
+      "candidato": "CLAUDIO BOLLETTA",
+      "liste": [
+        "DSP CON MARCO RIZZO - DEMOCRAZIA SOVRANA POPOLARE"
+      ],
+      "totale": 180
+    },
+    {
+      "nome": "Gerardi",
+      "candidato": "FRANCESCO GERARDI",
+      "liste": [
+        "FORZA DEL POPOLO CON AMORE E LIBERTA' GERARDI PRESIDENTE MARCHE"
+      ],
+      "totale": 99
+    },
+    {
+      "nome": "Marinelli",
+      "candidato": "BEATRICE MARINELLI",
+      "liste": [
+        "EVOLUZIONE DELLA RIVOLUZIONE"
+      ],
+      "totale": 83
+    }
+  ],
+  "sezioni": {
+    "1": {"Centrodestra - Acquaroli": 153, "Centrosinistra - Ricci": 126, "Bolletta": 6, "Gerardi": 5, "Marinelli": 0},
+    "2": {"Centrodestra - Acquaroli": 251, "Centrosinistra - Ricci": 222, "Bolletta": 9, "Gerardi": 1, "Marinelli": 2},
+    "3": {"Centrodestra - Acquaroli": 306, "Centrosinistra - Ricci": 174, "Bolletta": 2, "Gerardi": 0, "Marinelli": 7},
+    "4": {"Centrodestra - Acquaroli": 257, "Centrosinistra - Ricci": 172, "Bolletta": 3, "Gerardi": 2, "Marinelli": 1},
+    "5": {"Centrodestra - Acquaroli": 236, "Centrosinistra - Ricci": 204, "Bolletta": 2, "Gerardi": 0, "Marinelli": 1},
+    "6": {"Centrodestra - Acquaroli": 145, "Centrosinistra - Ricci": 160, "Bolletta": 5, "Gerardi": 0, "Marinelli": 0},
+    "7": {"Centrodestra - Acquaroli": 236, "Centrosinistra - Ricci": 152, "Bolletta": 2, "Gerardi": 2, "Marinelli": 2},
+    "8": {"Centrodestra - Acquaroli": 215, "Centrosinistra - Ricci": 194, "Bolletta": 4, "Gerardi": 0, "Marinelli": 0},
+    "9": {"Centrodestra - Acquaroli": 0, "Centrosinistra - Ricci": 0, "Bolletta": 0, "Gerardi": 0, "Marinelli": 0},
+    "10": {"Centrodestra - Acquaroli": 178, "Centrosinistra - Ricci": 149, "Bolletta": 0, "Gerardi": 1, "Marinelli": 1},
+    "11": {"Centrodestra - Acquaroli": 248, "Centrosinistra - Ricci": 184, "Bolletta": 1, "Gerardi": 0, "Marinelli": 0},
+    "12": {"Centrodestra - Acquaroli": 288, "Centrosinistra - Ricci": 194, "Bolletta": 2, "Gerardi": 1, "Marinelli": 2},
+    "13": {"Centrodestra - Acquaroli": 256, "Centrosinistra - Ricci": 148, "Bolletta": 6, "Gerardi": 0, "Marinelli": 2},
+    "14": {"Centrodestra - Acquaroli": 253, "Centrosinistra - Ricci": 141, "Bolletta": 5, "Gerardi": 6, "Marinelli": 1},
+    "15": {"Centrodestra - Acquaroli": 269, "Centrosinistra - Ricci": 237, "Bolletta": 5, "Gerardi": 4, "Marinelli": 2},
+    "16": {"Centrodestra - Acquaroli": 296, "Centrosinistra - Ricci": 181, "Bolletta": 6, "Gerardi": 6, "Marinelli": 4},
+    "17": {"Centrodestra - Acquaroli": 252, "Centrosinistra - Ricci": 225, "Bolletta": 4, "Gerardi": 1, "Marinelli": 1},
+    "18": {"Centrodestra - Acquaroli": 272, "Centrosinistra - Ricci": 175, "Bolletta": 6, "Gerardi": 0, "Marinelli": 0},
+    "19": {"Centrodestra - Acquaroli": 363, "Centrosinistra - Ricci": 211, "Bolletta": 9, "Gerardi": 1, "Marinelli": 3},
+    "20": {"Centrodestra - Acquaroli": 243, "Centrosinistra - Ricci": 195, "Bolletta": 7, "Gerardi": 2, "Marinelli": 2},
+    "21": {"Centrodestra - Acquaroli": 286, "Centrosinistra - Ricci": 198, "Bolletta": 1, "Gerardi": 2, "Marinelli": 2},
+    "22": {"Centrodestra - Acquaroli": 235, "Centrosinistra - Ricci": 131, "Bolletta": 5, "Gerardi": 1, "Marinelli": 2},
+    "23": {"Centrodestra - Acquaroli": 221, "Centrosinistra - Ricci": 170, "Bolletta": 2, "Gerardi": 3, "Marinelli": 2},
+    "24": {"Centrodestra - Acquaroli": 197, "Centrosinistra - Ricci": 173, "Bolletta": 4, "Gerardi": 1, "Marinelli": 1},
+    "25": {"Centrodestra - Acquaroli": 236, "Centrosinistra - Ricci": 192, "Bolletta": 2, "Gerardi": 0, "Marinelli": 1},
+    "26": {"Centrodestra - Acquaroli": 200, "Centrosinistra - Ricci": 157, "Bolletta": 6, "Gerardi": 1, "Marinelli": 0},
+    "27": {"Centrodestra - Acquaroli": 340, "Centrosinistra - Ricci": 192, "Bolletta": 1, "Gerardi": 2, "Marinelli": 6},
+    "28": {"Centrodestra - Acquaroli": 222, "Centrosinistra - Ricci": 192, "Bolletta": 1, "Gerardi": 1, "Marinelli": 3},
+    "29": {"Centrodestra - Acquaroli": 218, "Centrosinistra - Ricci": 166, "Bolletta": 3, "Gerardi": 0, "Marinelli": 1},
+    "30": {"Centrodestra - Acquaroli": 198, "Centrosinistra - Ricci": 144, "Bolletta": 2, "Gerardi": 2, "Marinelli": 2},
+    "31": {"Centrodestra - Acquaroli": 284, "Centrosinistra - Ricci": 177, "Bolletta": 1, "Gerardi": 3, "Marinelli": 2},
+    "32": {"Centrodestra - Acquaroli": 0, "Centrosinistra - Ricci": 0, "Bolletta": 0, "Gerardi": 0, "Marinelli": 0},
+    "33": {"Centrodestra - Acquaroli": 250, "Centrosinistra - Ricci": 165, "Bolletta": 4, "Gerardi": 5, "Marinelli": 0},
+    "34": {"Centrodestra - Acquaroli": 288, "Centrosinistra - Ricci": 196, "Bolletta": 5, "Gerardi": 7, "Marinelli": 1},
+    "35": {"Centrodestra - Acquaroli": 198, "Centrosinistra - Ricci": 142, "Bolletta": 6, "Gerardi": 3, "Marinelli": 1},
+    "36": {"Centrodestra - Acquaroli": 257, "Centrosinistra - Ricci": 152, "Bolletta": 5, "Gerardi": 8, "Marinelli": 5},
+    "37": {"Centrodestra - Acquaroli": 198, "Centrosinistra - Ricci": 109, "Bolletta": 0, "Gerardi": 1, "Marinelli": 0},
+    "38": {"Centrodestra - Acquaroli": 171, "Centrosinistra - Ricci": 131, "Bolletta": 0, "Gerardi": 2, "Marinelli": 1},
+    "39": {"Centrodestra - Acquaroli": 333, "Centrosinistra - Ricci": 176, "Bolletta": 6, "Gerardi": 3, "Marinelli": 0},
+    "40": {"Centrodestra - Acquaroli": 14, "Centrosinistra - Ricci": 10, "Bolletta": 1, "Gerardi": 0, "Marinelli": 0},
+    "41": {"Centrodestra - Acquaroli": 193, "Centrosinistra - Ricci": 98, "Bolletta": 3, "Gerardi": 2, "Marinelli": 0},
+    "42": {"Centrodestra - Acquaroli": 282, "Centrosinistra - Ricci": 174, "Bolletta": 2, "Gerardi": 0, "Marinelli": 5},
+    "43": {"Centrodestra - Acquaroli": 198, "Centrosinistra - Ricci": 149, "Bolletta": 6, "Gerardi": 1, "Marinelli": 3},
+    "44": {"Centrodestra - Acquaroli": 0, "Centrosinistra - Ricci": 0, "Bolletta": 0, "Gerardi": 0, "Marinelli": 0},
+    "45": {"Centrodestra - Acquaroli": 287, "Centrosinistra - Ricci": 107, "Bolletta": 3, "Gerardi": 1, "Marinelli": 1},
+    "46": {"Centrodestra - Acquaroli": 221, "Centrosinistra - Ricci": 155, "Bolletta": 8, "Gerardi": 2, "Marinelli": 3},
+    "47": {"Centrodestra - Acquaroli": 282, "Centrosinistra - Ricci": 153, "Bolletta": 5, "Gerardi": 4, "Marinelli": 2},
+    "48": {"Centrodestra - Acquaroli": 269, "Centrosinistra - Ricci": 143, "Bolletta": 1, "Gerardi": 1, "Marinelli": 0},
+    "49": {"Centrodestra - Acquaroli": 125, "Centrosinistra - Ricci": 96, "Bolletta": 4, "Gerardi": 1, "Marinelli": 0},
+    "50": {"Centrodestra - Acquaroli": 195, "Centrosinistra - Ricci": 109, "Bolletta": 1, "Gerardi": 2, "Marinelli": 0},
+    "51": {"Centrodestra - Acquaroli": 275, "Centrosinistra - Ricci": 132, "Bolletta": 1, "Gerardi": 1, "Marinelli": 4},
+    "52": {"Centrodestra - Acquaroli": 130, "Centrosinistra - Ricci": 153, "Bolletta": 1, "Gerardi": 2, "Marinelli": 0}
+  }
+}

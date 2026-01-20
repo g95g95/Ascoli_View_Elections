@@ -49,6 +49,16 @@ const politicheMenuItems: MenuItem[] = [
 
 export const ELECTION_CONFIGS: ElectionConfig[] = [
   {
+    id: 'regionali-2025',
+    year: 2025,
+    type: 'regionali',
+    label: 'Regionali 2025',
+    description: 'Elezioni del Consiglio Regionale delle Marche',
+    icon: '🏔️',
+    dataPath: '2025_Regionali',
+    menuItems: regionaliMenuItems,
+  },
+  {
     id: 'comunali-2024',
     year: 2024,
     type: 'comunali',

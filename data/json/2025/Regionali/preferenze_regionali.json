@@ -1,0 +1,161 @@
+{
+  "elezione": "Regionali",
+  "anno": 2025,
+  "data": "28-29 Settembre 2025",
+  "comune": "Ascoli Piceno",
+  "liste": [
+    {
+      "nome": "LISTA CIVICA MATTEO RICCI PRESIDENTE",
+      "candidati": [
+        {"nome": "ANGELO FLAIANI", "totale": 673, "sezioni": {}},
+        {"nome": "CINZIA PERONI", "totale": 97, "sezioni": {}},
+        {"nome": "FRANCESCA PULCINI", "totale": 64, "sezioni": {}},
+        {"nome": "GIOVANNI BORRACCINI", "totale": 6, "sezioni": {}}
+      ]
+    },
+    {
+      "nome": "PROGETTO CIVICO AVANTI CON RICCI",
+      "candidati": [
+        {"nome": "SERENA MARZI", "totale": 28, "sezioni": {}},
+        {"nome": "ROBERTO GALANTI", "totale": 23, "sezioni": {}},
+        {"nome": "MARINO LATTANZI", "totale": 8, "sezioni": {}},
+        {"nome": "MARIA GISELLA LETTERA", "totale": 3, "sezioni": {}}
+      ]
+    },
+    {
+      "nome": "PROGETTO MARCHE VIVE",
+      "candidati": [
+        {"nome": "MARIO MARESCA", "totale": 75, "sezioni": {}},
+        {"nome": "LUCIANA BARLOCCI", "totale": 19, "sezioni": {}},
+        {"nome": "IDA ROMANI", "totale": 10, "sezioni": {}},
+        {"nome": "FLAVIO OTTALEVI", "totale": 9, "sezioni": {}}
+      ]
+    },
+    {
+      "nome": "MOVIMENTO 5 STELLE 2050",
+      "candidati": [
+        {"nome": "MASSIMO TAMBURRI", "totale": 328, "sezioni": {}},
+        {"nome": "DORA CRUCIANI", "totale": 289, "sezioni": {}},
+        {"nome": "MARIA UVA", "totale": 68, "sezioni": {}},
+        {"nome": "ANTONIO RICCIO", "totale": 50, "sezioni": {}}
+      ]
+    },
+    {
+      "nome": "ALLEANZA VERDI SINISTRA",
+      "candidati": [
+        {"nome": "PAULA BEATRIZ AMADIO", "totale": 341, "sezioni": {}},
+        {"nome": "GIOVANNI GASPARI", "totale": 97, "sezioni": {}},
+        {"nome": "SANDRO TANUCCI", "totale": 35, "sezioni": {}},
+        {"nome": "ROBERTA ROSSI", "totale": 34, "sezioni": {}}
+      ]
+    },
+    {
+      "nome": "PD- PARTITO DEMOCRATICO",
+      "candidati": [
+        {"nome": "FRANCESCO AMELI", "totale": 2563, "sezioni": {}},
+        {"nome": "FABIOLA DIOMEDE", "totale": 1607, "sezioni": {}},
+        {"nome": "ENRICO PIERGALLINI", "totale": 332, "sezioni": {}},
+        {"nome": "MARGHERITA SORGE", "totale": 298, "sezioni": {}}
+      ]
+    },
+    {
+      "nome": "PACE SALUTE LAVORO",
+      "candidati": [
+        {"nome": "FABRIZIO LEONE", "totale": 54, "sezioni": {}},
+        {"nome": "PAOLA MARIA PETRUCCI", "totale": 49, "sezioni": {}},
+        {"nome": "ANNAMARIA CEROLINI", "totale": 3, "sezioni": {}},
+        {"nome": "GUIDO MASTROSANI", "totale": 3, "sezioni": {}}
+      ]
+    },
+    {
+      "nome": "EVOLUZIONE DELLA RIVOLUZIONE",
+      "candidati": [
+        {"nome": "MASSIMO MATTONI", "totale": 12, "sezioni": {}},
+        {"nome": "PATRIZIA ALESSI", "totale": 12, "sezioni": {}},
+        {"nome": "TERESA CHIAPPINI", "totale": 7, "sezioni": {}},
+        {"nome": "ELIO PAGLIARETTA", "totale": 3, "sezioni": {}}
+      ]
+    },
+    {
+      "nome": "FORZA DEL POPOLO CON AMORE E LIBERTA' GERARDI PRESIDENTE MARCHE",
+      "candidati": [
+        {"nome": "ROBERTA MINOLLINI", "totale": 30, "sezioni": {}},
+        {"nome": "MARISA BASILE", "totale": 11, "sezioni": {}},
+        {"nome": "PIETRO PIGNATI", "totale": 4, "sezioni": {}},
+        {"nome": "PATRIZIO QUATTRINI", "totale": 0, "sezioni": {}}
+      ]
+    },
+    {
+      "nome": "GIORGIA MELONI PER ACQUAROLI FRATELLI D'ITALIA",
+      "candidati": [
+        {"nome": "FRANCESCA PANTALONI", "totale": 4654, "sezioni": {}},
+        {"nome": "ANDREA CARDILLI", "totale": 1504, "sezioni": {}},
+        {"nome": "ANDREA ASSENTI", "totale": 723, "sezioni": {}},
+        {"nome": "MARIAGRAZIA CONCETTI", "totale": 40, "sezioni": {}}
+      ]
+    },
+    {
+      "nome": "LISTE CIVICHE LIBERTAS UNIONE DI CENTRO",
+      "candidati": [
+        {"nome": "VINCENZO BALLATORI", "totale": 112, "sezioni": {}},
+        {"nome": "IRMA PANO", "totale": 24, "sezioni": {}},
+        {"nome": "MELISSA D'OTTAVI", "totale": 21, "sezioni": {}},
+        {"nome": "ARMANDO BRUNI", "totale": 11, "sezioni": {}}
+      ]
+    },
+    {
+      "nome": "NOI MODERATI CON ACQUAROLI",
+      "candidati": [
+        {"nome": "GIUSEPPE PACI", "totale": 181, "sezioni": {}},
+        {"nome": "ANDREA QUAGLIETTI", "totale": 123, "sezioni": {}},
+        {"nome": "PAOLA D'ANTONIO", "totale": 42, "sezioni": {}},
+        {"nome": "MARIA TERESA POMILI", "totale": 7, "sezioni": {}}
+      ]
+    },
+    {
+      "nome": "LEGA SALVINI MARCHE",
+      "candidati": [
+        {"nome": "ANDREA MARIA ANTONINI", "totale": 1326, "sezioni": {}},
+        {"nome": "TIZIANA PRINCIPI", "totale": 122, "sezioni": {}},
+        {"nome": "ALESSIA RIVOSECCHI", "totale": 41, "sezioni": {}},
+        {"nome": "PASQUALINO PIUNTI", "totale": 34, "sezioni": {}}
+      ]
+    },
+    {
+      "nome": "I MARCHIGIANI PER ACQUAROLI",
+      "candidati": [
+        {"nome": "CRISTIANA BIANCUCCI", "totale": 82, "sezioni": {}},
+        {"nome": "MARIA STELLA ORIGLIA", "totale": 75, "sezioni": {}},
+        {"nome": "ROBERTO PAOLETTI", "totale": 50, "sezioni": {}},
+        {"nome": "GIANLUCA POMPEI", "totale": 11, "sezioni": {}}
+      ]
+    },
+    {
+      "nome": "FORZA ITALIA BERLUSCONI",
+      "candidati": [
+        {"nome": "MONICA ACCIARRI", "totale": 621, "sezioni": {}},
+        {"nome": "VALERIANO CAMELA", "totale": 495, "sezioni": {}},
+        {"nome": "LEO BOLLETTINI", "totale": 54, "sezioni": {}},
+        {"nome": "PATRIZIA FERRARA", "totale": 54, "sezioni": {}}
+      ]
+    },
+    {
+      "nome": "CIVICI MARCHE PER ACQUAROLI PRESIDENTE",
+      "candidati": [
+        {"nome": "MARINO MECOZZI", "totale": 5, "sezioni": {}},
+        {"nome": "ANGELO MUCCI", "totale": 0, "sezioni": {}},
+        {"nome": "GIOVANNA FANINI", "totale": 0, "sezioni": {}},
+        {"nome": "GAIA TASCHINI", "totale": 0, "sezioni": {}}
+      ]
+    },
+    {
+      "nome": "DSP CON MARCO RIZZO - DEMOCRAZIA SOVRANA POPOLARE",
+      "candidati": [
+        {"nome": "CARLO TRAVAGLINI", "totale": 47, "sezioni": {}},
+        {"nome": "LUCIANO BRUNI", "totale": 17, "sezioni": {}},
+        {"nome": "SABRINA RUSSO", "totale": 5, "sezioni": {}},
+        {"nome": "GIUSEPPA PEZZULLO", "totale": 2, "sezioni": {}}
+      ]
+    }
+  ]
+}

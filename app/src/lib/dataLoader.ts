@@ -111,6 +111,23 @@ export async function load2020CoalizioniRegionali(): Promise<CoalizioniData> {
   return loadJson('2020_Regionali/coalizioni_sezioni.json');
 }
 
+// 2025 Regionali specific loaders
+export async function load2025PreferenzeRegionali(): Promise<PreferenzeElection> {
+  return loadJson('2025_Regionali/preferenze_regionali.json');
+}
+
+export async function load2025CoalizioniRegionali(): Promise<CoalizioniData> {
+  return loadJson('2025_Regionali/coalizioni_sezioni.json');
+}
+
+export async function load2025ListeRegionali(): Promise<ListeElection> {
+  return loadJson('2025_Regionali/liste.json');
+}
+
+export async function load2025PresidenteRegionali(): Promise<MayoralElection> {
+  return loadJson('2025_Regionali/presidente.json');
+}
+
 // 2018 Politiche specific loaders
 export async function load2018NominaliCamera(): Promise<NominaliElection> {
   return loadJson('2018_Politiche/nominali_camera.json');
@@ -212,6 +229,19 @@ export async function loadElectionData(config: ElectionConfig): Promise<Election
       data.preferenze = preferenzeEuropee;
       break;
 
+    case 'regionali-2025':
+      const [preferenzeRegionali2025, coalizioniRegionali2025, listeRegionali2025, presidenteRegionali2025] = await Promise.all([
+        load2025PreferenzeRegionali(),
+        load2025CoalizioniRegionali(),
+        load2025ListeRegionali(),
+        load2025PresidenteRegionali(),
+      ]);
+      data.preferenze = preferenzeRegionali2025;
+      data.coalizioni = coalizioniRegionali2025;
+      data.liste = listeRegionali2025;
+      data.primoTurno = presidenteRegionali2025;
+      break;
+
     case 'regionali-2020':
       const [preferenzeRegionali2020, coalizioniRegionali2020] = await Promise.all([
         load2020PreferenzeRegionali(),
@@ -290,6 +320,7 @@ export interface ElectionArchive {
 }
 
 const ALL_ELECTION_CONFIGS: Array<{ id: string; year: number; type: string }> = [
+  { id: 'regionali-2025', year: 2025, type: 'regionali' },
   { id: 'comunali-2024', year: 2024, type: 'comunali' },
   { id: 'comunali-2019', year: 2019, type: 'comunali' },
   { id: 'comunali-2014', year: 2014, type: 'comunali' },
