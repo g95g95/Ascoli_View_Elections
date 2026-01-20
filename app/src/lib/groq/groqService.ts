@@ -8,6 +8,8 @@ import {
   compareElections,
   generateArchiveSummary,
   searchCandidate,
+  getSectionInfo,
+  getSectionsSummary,
 } from '../analytics';
 
 const GROQ_API_KEY = import.meta.env.VITE_GROQ_API_KEY || '';
@@ -34,6 +36,9 @@ STRUMENTI DISPONIBILI (automatici - i dati vengono estratti automaticamente):
 
 6. CONFRONTA_ELEZIONI(id1, id2): Confronta due elezioni
    Esempio: "Confronta comunali 2009 con 2024"
+
+7. INFO_SEZIONE(numero): Informazioni su una sezione elettorale (dove si trova il seggio)
+   Esempio: "Che cos'è la sezione 12?" "Dove si vota nella sezione 25?"
 
 IMPORTANTE: Quando ricevi dati su un candidato specifico, usa TUTTI i dati forniti per rispondere in modo completo.
 `;
@@ -145,6 +150,35 @@ function describeElectionData(electionData: ElectionData): string {
 function extractArchiveDataForQuery(query: string, archive: ElectionArchive): string {
   const lowerQuery = query.toLowerCase();
   let contextData = '';
+
+  // Section info query - detect questions about polling sections
+  // Check for section numbers in query
+  const allSectionMatches = query.match(/\bsezione\s*(\d+)/gi) || [];
+  const sectionNumbers = allSectionMatches.map(m => {
+    const numMatch = m.match(/(\d+)/);
+    return numMatch ? numMatch[1] : null;
+  }).filter(Boolean) as string[];
+
+  if (sectionNumbers.length > 0 && (lowerQuery.includes('sezione') || lowerQuery.includes('seggio') || lowerQuery.includes('dove'))) {
+    contextData += '\nINFORMAZIONI SEZIONI ELETTORALI:\n';
+    for (const sectionNum of sectionNumbers) {
+      const info = getSectionInfo(sectionNum);
+      if (info) {
+        contextData += `\nSEZIONE ${sectionNum}:\n`;
+        contextData += `- Seggio: ${info.location}\n`;
+        contextData += `- Zona: ${info.area}\n`;
+      } else {
+        contextData += `\nSEZIONE ${sectionNum}: Non trovata (le sezioni vanno da 1 a 52)\n`;
+      }
+    }
+    contextData += '\n';
+  }
+
+  // If asking about all sections or general section info
+  if (lowerQuery.includes('tutte le sezioni') || lowerQuery.includes('elenco sezioni') ||
+      (lowerQuery.includes('sezioni') && (lowerQuery.includes('quante') || lowerQuery.includes('lista')))) {
+    contextData += '\n' + getSectionsSummary() + '\n';
+  }
 
   // Candidate/person search - detect names in query
   // Extract potential person names using multiple strategies

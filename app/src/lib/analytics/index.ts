@@ -1,6 +1,128 @@
 import type { ElectionArchive } from '../dataLoader';
 import type { ElectionType } from '../../types/elections';
 
+// Mapping delle sezioni elettorali di Ascoli Piceno (52 sezioni)
+// Fonte: dati affluenza Politiche 2022
+export const SECTION_MAPPING: Record<string, string> = {
+  '1': 'SC. EL.S. AGOSTINO Via delle Torri, 59',
+  '2': 'SC. ELEM. MALASPINA Via dei Malaspina, 2',
+  '3': 'SC. ELEM. MALASPINA Via dei Malaspina, 2',
+  '4': 'SC. ELEM. MALASPINA Via dei Malaspina, 2',
+  '5': 'SC. ELEM. MALASPINA Via dei Malaspina, 2',
+  '6': 'SC. ELEM. MALASPINA Via dei Malaspina, 2',
+  '7': 'SC. MEDIA M. D\'AZEGLIO Via M. D\'Azeglio, 2',
+  '8': 'SC. MEDIA M. D\'AZEGLIO Via M. D\'Azeglio, 2',
+  '9': 'SC. ELEM G. RODARI Via S. Serafino da M., 1/B',
+  '10': 'SC. ELEM. G. RODARI Via S. Serafino da M., 2',
+  '11': 'SC. ELEM. G. RODARI Via S. Serafino da M., 2',
+  '12': 'SC. MEDIA A. CECI Via S. Serafino da M., 1',
+  '13': 'SC. MEDIA A. CECI Via S. Serafino da M., 1',
+  '14': 'SC. MEDIA A. CECI Via S. Serafino da M., 1',
+  '15': 'SC. MEDIA G. CANTALAMESSA Via Montenero, 4',
+  '16': 'SC. MEDIA G. CANTALAMESSA Via Montenero, 4',
+  '17': 'SC. MEDIA G. CANTALAMESSA Via Montenero, 4',
+  '18': 'SC. MEDIA G. CANTALAMESSA Via N. Sauro, 20/A',
+  '19': 'SC. MEDIA G. CANTALAMESSA Via N. Sauro, 20/A',
+  '20': 'SC. MEDIA L. LUCIANI Via 3 Ottobre, 8/C',
+  '21': 'SC. MEDIA L. LUCIANI Via 3 Ottobre, 8/C',
+  '22': 'SC. ELEM. G. SPERANZA Via G. Speranza, 9',
+  '23': 'SC. MEDIA L. LUCIANI Via Napoli, 39',
+  '24': 'SC. ELEM. G. SPERANZA Via G. Speranza, 9',
+  '25': 'SC. MEDIA L. LUCIANI Via Napoli, 39',
+  '26': 'SC. MEDIA L. LUCIANI Via 3 Ottobre, 8/C',
+  '27': 'SC. ELE. SS. FILIPPO e G. Via Sardegna, 8/B',
+  '28': 'SC. ELE. SS. FILIPPO e G. Via Sardegna, 8/B',
+  '29': 'SC. ELE. SS. FILIPPO e G. Via Sardegna, 10',
+  '30': 'SC. ELE. SS. FILIPPO e G. Via Sardegna, 10',
+  '31': 'Sc. Elem. Statale (Campo Parignano)',
+  '32': 'Sc. Elem. Statale (Campo Parignano)',
+  '33': 'Sc. Elem. Statale (Campo Parignano)',
+  '34': 'Sc. Elem. Statale (Campo Parignano)',
+  '35': 'Sc. Elem. Statale (Campo Parignano)',
+  '36': 'SC. ELEM. MONTICELLI Via dei Gelsomini, 14',
+  '37': 'SC. ELEM. MONTICELLI Viale della Liberta, 3',
+  '38': 'SC. ELEM. MONTICELLI Viale della Liberta, 3',
+  '39': 'SC. ELEM. MONTICELLI Viale della Liberta, 3',
+  '40': 'OSP. GEN.LE C. e G. MAZZONI Via degli Iris, 6 (sezione ospedaliera)',
+  '41': 'SC. EL.S. AGOSTINO Via delle Torri, 59',
+  '42': 'SC. EL.S. AGOSTINO Via delle Torri, 59',
+  '43': 'SC. ELEM. COMUNALE (Frazione)',
+  '44': 'SC. ELEM. COMUNALE (Frazione)',
+  '45': 'SC. ELEM. di VENAGRANDE',
+  '46': 'Sc. Media M. D\'Azeglio L.ngo C. Sisto V, 48',
+  '47': 'Sc. Media M. D\'Azeglio L.ngo C. Sisto V, 4',
+  '48': 'SC. ELEM. MARINO del Tr.',
+  '49': 'SC. ELEM. MONTICELLI Via dei Narcisi, 2',
+  '50': 'SC. ELEM. POGGIO di BRETTA',
+  '51': 'SC. ELEM. POGGIO di BRETTA',
+  '52': 'Sc. Mat. Villa Sant\'Antonio Via Monte Catria, 16',
+};
+
+export interface SectionInfo {
+  sectionId: string;
+  location: string;
+  area?: string;
+}
+
+// Get info about a polling section
+export function getSectionInfo(sectionId: string | number): SectionInfo | null {
+  const id = String(sectionId);
+  const location = SECTION_MAPPING[id];
+  if (!location) return null;
+
+  // Extract area name from location
+  let area = 'Centro';
+  if (location.includes('MONTICELLI')) area = 'Monticelli';
+  else if (location.includes('VENAGRANDE')) area = 'Venagrande';
+  else if (location.includes('POGGIO di BRETTA')) area = 'Poggio di Bretta';
+  else if (location.includes('MARINO del Tr')) area = 'Marino del Tronto';
+  else if (location.includes('Villa Sant\'Antonio')) area = 'Villa Sant\'Antonio';
+  else if (location.includes('Campo Parignano') || location.includes('Statale (Campo')) area = 'Campo Parignano';
+  else if (location.includes('MAZZONI') || location.includes('OSP')) area = 'Ospedale Mazzoni';
+  else if (location.includes('FILIPPO e G')) area = 'Centro-Ovest';
+  else if (location.includes('RODARI') || location.includes('CECI')) area = 'Zona Rodari/Ceci';
+  else if (location.includes('CANTALAMESSA')) area = 'Zona Cantalamessa';
+  else if (location.includes('LUCIANI')) area = 'Zona Luciani';
+  else if (location.includes('SPERANZA')) area = 'Zona Speranza';
+  else if (location.includes('MALASPINA')) area = 'Centro Storico';
+  else if (location.includes('AGOSTINO')) area = 'Centro Storico';
+  else if (location.includes('D\'AZEGLIO')) area = 'Centro';
+
+  return { sectionId: id, location, area };
+}
+
+// Get all sections in a specific area
+export function getSectionsByArea(area: string): SectionInfo[] {
+  const results: SectionInfo[] = [];
+  for (const [id, _] of Object.entries(SECTION_MAPPING)) {
+    const info = getSectionInfo(id);
+    if (info && info.area?.toLowerCase().includes(area.toLowerCase())) {
+      results.push(info);
+    }
+  }
+  return results;
+}
+
+// Get a summary of all polling sections grouped by area
+export function getSectionsSummary(): string {
+  const byArea: Record<string, string[]> = {};
+
+  for (const [id, _] of Object.entries(SECTION_MAPPING)) {
+    const info = getSectionInfo(id);
+    if (info && info.area) {
+      if (!byArea[info.area]) byArea[info.area] = [];
+      byArea[info.area].push(id);
+    }
+  }
+
+  let summary = 'SEZIONI ELETTORALI ASCOLI PICENO (52 sezioni):\n\n';
+  for (const [area, sections] of Object.entries(byArea).sort()) {
+    summary += `${area}: sezioni ${sections.sort((a, b) => Number(a) - Number(b)).join(', ')}\n`;
+  }
+
+  return summary;
+}
+
 export interface TrendPoint {
   year: number;
   type: ElectionType;
