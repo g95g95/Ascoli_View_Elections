@@ -191,8 +191,19 @@ export function searchCandidate(archive: ElectionArchive, searchName: string): A
     sections?: Record<string, number>;
   }> = [];
 
+  // Allow shorter terms for surname-only searches
   const searchTerms = searchName.toLowerCase().split(/\s+/).filter(t => t.length > 2);
+  // Also allow single terms with length > 3 (surnames like "Rossi", "Bonelli")
+  if (searchTerms.length === 0) {
+    const shortTerms = searchName.toLowerCase().split(/\s+/).filter(t => t.length > 3);
+    if (shortTerms.length > 0) {
+      searchTerms.push(...shortTerms);
+    }
+  }
   if (searchTerms.length === 0) return results;
+
+  // For single-term searches (just surname), require only 1 match
+  const minMatches = searchTerms.length === 1 ? 1 : Math.min(2, searchTerms.length);
 
   for (const election of Object.values(archive.elections)) {
     if (!election?.config) continue;
@@ -205,7 +216,7 @@ export function searchCandidate(archive: ElectionArchive, searchName: string): A
           const candidateName = candidate.nome.toLowerCase();
           const matchScore = searchTerms.filter(term => candidateName.includes(term)).length;
 
-          if (matchScore >= Math.min(2, searchTerms.length)) {
+          if (matchScore >= minMatches) {
             results.push({
               name: candidate.nome,
               party: party.nome || 'N/A',
@@ -227,7 +238,7 @@ export function searchCandidate(archive: ElectionArchive, searchName: string): A
         const candidateName = candidate.nome.toLowerCase();
         const matchScore = searchTerms.filter(term => candidateName.includes(term)).length;
 
-        if (matchScore >= Math.min(2, searchTerms.length)) {
+        if (matchScore >= minMatches) {
           results.push({
             name: candidate.nome,
             party: 'Candidato Sindaco/Presidente',
@@ -246,7 +257,7 @@ export function searchCandidate(archive: ElectionArchive, searchName: string): A
         const candidateName = candidate.nome.toLowerCase();
         const matchScore = searchTerms.filter(term => candidateName.includes(term)).length;
 
-        if (matchScore >= Math.min(2, searchTerms.length)) {
+        if (matchScore >= minMatches) {
           results.push({
             name: candidate.nome,
             party: 'Candidato Sindaco/Presidente',
@@ -266,7 +277,7 @@ export function searchCandidate(archive: ElectionArchive, searchName: string): A
         const candidateName = candidate.nome.toLowerCase();
         const matchScore = searchTerms.filter(term => candidateName.includes(term)).length;
 
-        if (matchScore >= Math.min(2, searchTerms.length)) {
+        if (matchScore >= minMatches) {
           results.push({
             name: candidate.nome,
             party: 'Uninominale',

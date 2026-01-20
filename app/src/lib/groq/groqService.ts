@@ -206,6 +206,41 @@ function extractArchiveDataForQuery(query: string, archive: ElectionArchive): st
     }
   }
 
+  // Strategy 4: Single-word surname search (e.g., "cognome Bonelli", "risultati Bonelli", "Bonelli ha preso")
+  if (!candidateName) {
+    const singleNamePatterns = [
+      /(?:cognome|surname|candidato|candidata|risultati|voti|preferenze)\s+([A-Z][a-zàèéìòù]+)/i,
+      /([A-Z][a-zàèéìòù]+)\s+(?:ha\s+preso|ha\s+ottenuto|quanti\s+voti|nelle\s+elezioni|nel\s+tempo)/i,
+      /(?:come\s+(?:è\s+)?(?:andat[oa])|cerca|informazioni\s+su)\s+([A-Z][a-zàèéìòù]+)(?:\s|$|\?)/i,
+    ];
+
+    for (const pattern of singleNamePatterns) {
+      const match = query.match(pattern);
+      if (match && match[1]) {
+        const potentialName = match[1].trim();
+        const excludeWords = ['Come', 'Nel', 'Tempo', 'Elezioni', 'Ascoli', 'Piceno', 'Comunali', 'Europee', 'Regionali', 'Partito', 'Lista'];
+        if (!excludeWords.includes(potentialName) && potentialName.length > 3) {
+          candidateName = potentialName;
+          break;
+        }
+      }
+    }
+  }
+
+  // Strategy 5: Last resort - find any capitalized word that looks like a surname (not common words)
+  if (!candidateName && (lowerQuery.includes('andat') || lowerQuery.includes('candidat') || lowerQuery.includes('voti') || lowerQuery.includes('cognome'))) {
+    const excludeWords = ['come', 'nel', 'tempo', 'elezioni', 'ascoli', 'piceno', 'comunali', 'europee', 'regionali', 'partito', 'lista', 'corso', 'del', 'della', 'alle', 'negli', 'anni', 'voti', 'quanti', 'stato', 'mai', 'qualcuno', 'qualche', 'risultati', 'cerca'];
+    const words = query.split(/\s+/);
+
+    for (const word of words) {
+      const cleanWord = word.replace(/[?,!.]/g, '');
+      if (/^[A-Z][a-zàèéìòù]+$/.test(cleanWord) && cleanWord.length > 4 && !excludeWords.includes(cleanWord.toLowerCase())) {
+        candidateName = cleanWord;
+        break;
+      }
+    }
+  }
+
   if (candidateName) {
     const results = searchCandidate(archive, candidateName);
     if (results.length > 0) {
