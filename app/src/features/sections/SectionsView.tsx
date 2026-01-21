@@ -1,11 +1,17 @@
 import { useState, useMemo } from 'react';
 import { Header } from '../../components/layout/Header';
 import { SectionMap } from '../../components/charts/SectionMap';
-import type { ElectionData } from '../../lib/dataLoader';
+import { TimeSeriesModal } from '../../components/charts/TimeSeriesModal';
+import type { ElectionData, ElectionArchive } from '../../lib/dataLoader';
 import { CONSOLIDATED_SECTIONS, CONSOLIDATED_SECTION_ID } from '../../types/elections';
+import type { ElectionConfig } from '../../types/elections';
+
+const GLOBAL_SECTION_ID = 0;
 
 interface SectionsViewProps {
   electionData: ElectionData;
+  archive?: ElectionArchive;
+  electionConfig?: ElectionConfig;
 }
 
 type DensityMode = 'none' | 'party' | 'candidate' | 'ballottaggio';
@@ -25,13 +31,32 @@ const CANDIDATE_COLORS: Record<string, string> = {
   'default': '#8b5cf6',
 };
 
-export function SectionsView({ electionData }: SectionsViewProps) {
+export function SectionsView({ electionData, archive, electionConfig }: SectionsViewProps) {
   const [selectedSection, setSelectedSection] = useState<number | undefined>();
   const [densityMode, setDensityMode] = useState<DensityMode>('none');
   const [selectedParty, setSelectedParty] = useState<string>('');
   const [selectedCandidate, setSelectedCandidate] = useState<string>('');
+  const [timeSeriesOpen, setTimeSeriesOpen] = useState(false);
+  const [timeSeriesItem, setTimeSeriesItem] = useState<{
+    type: 'party' | 'candidate';
+    name: string;
+    party?: string;
+  } | null>(null);
+  const [sectionSearch, setSectionSearch] = useState<string>('');
 
   const { config, ballottaggio, primoTurno, liste, preferenze, votanti, nominali } = electionData;
+
+  const handlePartyClick = (partyName: string) => {
+    if (!archive || !electionConfig) return;
+    setTimeSeriesItem({ type: 'party', name: partyName });
+    setTimeSeriesOpen(true);
+  };
+
+  const handleCandidateClick = (candidateName: string, partyName?: string) => {
+    if (!archive || !electionConfig) return;
+    setTimeSeriesItem({ type: 'candidate', name: candidateName, party: partyName });
+    setTimeSeriesOpen(true);
+  };
 
   // Get all sections from available data
   const allSections = useMemo(() => {
@@ -235,8 +260,71 @@ export function SectionsView({ electionData }: SectionsViewProps) {
     return consolidated;
   };
 
+  const getGlobalBallottaggioData = () => {
+    if (!ballottaggio) return null;
+    const global = {
+      affluenza: {
+        aventi_diritto_donne: ballottaggio.affluenza?.aventi_diritto_donne || 0,
+        aventi_diritto_uomini: ballottaggio.affluenza?.aventi_diritto_uomini || 0,
+        votanti_donne: ballottaggio.affluenza?.votanti_donne || 0,
+        votanti_uomini: ballottaggio.affluenza?.votanti_uomini || 0,
+        schede_bianche: ballottaggio.affluenza?.schede_bianche || 0,
+        schede_nulle: ballottaggio.affluenza?.schede_nulle || 0,
+      },
+      voti: {} as Record<string, number>,
+    };
+    ballottaggio.candidati.forEach(c => {
+      global.voti[c.nome] = c.totale;
+    });
+    return global;
+  };
+
+  const getGlobalListeData = () => {
+    if (liste?.liste) {
+      const result: Record<string, number> = {};
+      liste.liste.forEach(l => {
+        result[l.nome] = l.totale;
+      });
+      return result;
+    }
+    if (liste?.sezioni) {
+      const result: Record<string, number> = {};
+      Object.values(liste.sezioni).forEach(sec => {
+        Object.entries(sec.voti).forEach(([name, votes]) => {
+          result[name] = (result[name] || 0) + votes;
+        });
+      });
+      return result;
+    }
+    return null;
+  };
+
+  const getGlobalPreferenzeData = () => {
+    if (!preferenze) return [];
+    const results: { party: string; candidate: string; votes: number }[] = [];
+    preferenze.liste.forEach(party => {
+      party.candidati.forEach(candidate => {
+        results.push({ party: party.nome, candidate: candidate.nome, votes: candidate.totale });
+      });
+    });
+    return results.sort((a, b) => b.votes - a.votes);
+  };
+
+  const getGlobalNominaliData = () => {
+    if (!nominali) return [];
+    return nominali.candidati
+      .map(c => ({ candidate: c.nome, votes: c.totale }))
+      .sort((a, b) => b.votes - a.votes);
+  };
+
+  const getGlobalVotantiData = () => {
+    if (!votanti) return null;
+    return votanti.totale_comune;
+  };
+
   const getSectionListeData = (sectionId: number) => {
     if (!liste?.sezioni) return null;
+    if (sectionId === GLOBAL_SECTION_ID) return getGlobalListeData();
     if (sectionId === CONSOLIDATED_SECTION_ID) {
       const consolidated: Record<string, number> = {};
       CONSOLIDATED_SECTIONS.forEach((id) => {
@@ -254,6 +342,7 @@ export function SectionsView({ electionData }: SectionsViewProps) {
 
   const getSectionPreferenzeData = (sectionId: number) => {
     if (!preferenze) return [];
+    if (sectionId === GLOBAL_SECTION_ID) return getGlobalPreferenzeData();
     const results: { party: string; candidate: string; votes: number }[] = [];
     preferenze.liste.forEach((party) => {
       party.candidati.forEach((candidate) => {
@@ -271,6 +360,7 @@ export function SectionsView({ electionData }: SectionsViewProps) {
 
   const getSectionVotantiData = (sectionId: number) => {
     if (!votanti) return null;
+    if (sectionId === GLOBAL_SECTION_ID) return getGlobalVotantiData();
     if (sectionId === CONSOLIDATED_SECTION_ID) {
       const consolidated = { uomini: 0, donne: 0, totale: 0 };
       CONSOLIDATED_SECTIONS.forEach(id => {
@@ -288,6 +378,7 @@ export function SectionsView({ electionData }: SectionsViewProps) {
 
   const getSectionNominaliData = (sectionId: number) => {
     if (!nominali) return [];
+    if (sectionId === GLOBAL_SECTION_ID) return getGlobalNominaliData();
     const results: { candidate: string; votes: number }[] = [];
     nominali.candidati.forEach((candidate) => {
       if (sectionId === CONSOLIDATED_SECTION_ID) {
@@ -303,6 +394,7 @@ export function SectionsView({ electionData }: SectionsViewProps) {
 
   const getSectionListeFromArray = (sectionId: number) => {
     if (!liste?.liste) return null;
+    if (sectionId === GLOBAL_SECTION_ID) return getGlobalListeData();
     const results: Record<string, number> = {};
     if (sectionId === CONSOLIDATED_SECTION_ID) {
       liste.liste.forEach(l => {
@@ -319,18 +411,20 @@ export function SectionsView({ electionData }: SectionsViewProps) {
   };
 
   const sectionId = selectedSection;
-  const ballottaggioData = sectionId === CONSOLIDATED_SECTION_ID
-    ? getConsolidatedBallottaggioData()
-    : sectionId && ballottaggio ? ballottaggio.sezioni?.[sectionId.toString()] : null;
+  const ballottaggioData = sectionId === GLOBAL_SECTION_ID
+    ? getGlobalBallottaggioData()
+    : sectionId === CONSOLIDATED_SECTION_ID
+      ? getConsolidatedBallottaggioData()
+      : sectionId && ballottaggio ? ballottaggio.sezioni?.[sectionId.toString()] : null;
 
-  const primoTurnoData = sectionId === CONSOLIDATED_SECTION_ID
+  const primoTurnoData = sectionId === GLOBAL_SECTION_ID || sectionId === CONSOLIDATED_SECTION_ID
     ? null
     : sectionId && primoTurno ? primoTurno.sezioni?.[sectionId.toString()] : null;
 
-  const listeData = sectionId ? (getSectionListeData(sectionId) || getSectionListeFromArray(sectionId)) : null;
-  const preferenzeData = sectionId ? getSectionPreferenzeData(sectionId) : null;
-  const nominaliData = sectionId ? getSectionNominaliData(sectionId) : null;
-  const votantiData = sectionId ? getSectionVotantiData(sectionId) : null;
+  const listeData = sectionId !== undefined ? (getSectionListeData(sectionId) || getSectionListeFromArray(sectionId)) : null;
+  const preferenzeData = sectionId !== undefined ? getSectionPreferenzeData(sectionId) : null;
+  const nominaliData = sectionId !== undefined ? getSectionNominaliData(sectionId) : null;
+  const votantiData = sectionId !== undefined ? getSectionVotantiData(sectionId) : null;
 
   // Determine which section colors to show (based on ballottaggio winner if available)
   const getSectionColor = (secId: number) => {
@@ -432,10 +526,18 @@ export function SectionsView({ electionData }: SectionsViewProps) {
         <div className="bg-white rounded-xl border border-gray-200 p-4 mb-4">
           <h3 className="text-sm font-semibold mb-3 text-gray-700">Seleziona Sezione</h3>
           <div className="grid grid-cols-6 sm:grid-cols-8 md:grid-cols-10 lg:grid-cols-13 gap-1.5">
+            <button
+              onClick={() => { setSelectedSection(GLOBAL_SECTION_ID); setSectionSearch(''); }}
+              className={`p-1.5 md:p-2 rounded-lg text-center text-xs md:text-sm font-medium bg-green-100 text-green-800 transition-colors ${
+                selectedSection === GLOBAL_SECTION_ID ? 'ring-2 ring-offset-1 ring-green-500' : ''
+              }`}
+            >
+              Tutti
+            </button>
             {allSections.map((secId) => (
               <button
                 key={secId}
-                onClick={() => setSelectedSection(secId)}
+                onClick={() => { setSelectedSection(secId); setSectionSearch(''); }}
                 className={`p-1.5 md:p-2 rounded-lg text-center text-xs md:text-sm font-medium transition-colors ${
                   selectedSection === secId ? 'ring-2 ring-offset-1 ring-blue-500' : ''
                 } ${getSectionColor(secId)}`}
@@ -444,7 +546,7 @@ export function SectionsView({ electionData }: SectionsViewProps) {
               </button>
             ))}
             <button
-              onClick={() => setSelectedSection(CONSOLIDATED_SECTION_ID)}
+              onClick={() => { setSelectedSection(CONSOLIDATED_SECTION_ID); setSectionSearch(''); }}
               className={`p-1.5 md:p-2 rounded-lg text-center text-xs md:text-sm font-medium bg-amber-100 text-amber-800 transition-colors ${
                 selectedSection === CONSOLIDATED_SECTION_ID ? 'ring-2 ring-offset-1 ring-amber-500' : ''
               }`}
@@ -461,7 +563,7 @@ export function SectionsView({ electionData }: SectionsViewProps) {
           {/* Map */}
           <SectionMap
             selectedSection={selectedSection}
-            onSectionClick={setSelectedSection}
+            onSectionClick={(secId) => { setSelectedSection(secId); setSectionSearch(''); }}
             highlightedSections={selectedSection === CONSOLIDATED_SECTION_ID ? [...CONSOLIDATED_SECTIONS] : []}
             densityData={densityData}
             densityColor={getDensityColor()}
@@ -471,16 +573,49 @@ export function SectionsView({ electionData }: SectionsViewProps) {
 
           {/* Section Details */}
           <div className="bg-white rounded-xl border border-gray-200 p-4 overflow-auto max-h-[600px]">
-            {sectionId ? (
+            {sectionId !== undefined ? (
               <div className="space-y-4">
                 <div>
                   <h3 className="text-lg font-semibold">
-                    {sectionId === CONSOLIDATED_SECTION_ID ? `Sezione ${CONSOLIDATED_SECTION_ID} (Centro)` : `Sezione ${sectionId}`}
+                    {sectionId === GLOBAL_SECTION_ID
+                      ? 'Risultato Globale'
+                      : sectionId === CONSOLIDATED_SECTION_ID
+                        ? `Sezione ${CONSOLIDATED_SECTION_ID} (Centro)`
+                        : `Sezione ${sectionId}`}
                   </h3>
+                  {sectionId === GLOBAL_SECTION_ID && (
+                    <div className="mt-1 p-2 bg-green-50 rounded text-xs text-green-800">
+                      Somma di tutte le sezioni
+                    </div>
+                  )}
                   {sectionId === CONSOLIDATED_SECTION_ID && (
                     <div className="mt-1 p-2 bg-amber-50 rounded text-xs text-amber-800">
                       Consolida: {CONSOLIDATED_SECTIONS.join(', ')}
                     </div>
+                  )}
+                </div>
+
+                {/* Search input */}
+                <div className="relative">
+                  <input
+                    type="text"
+                    value={sectionSearch}
+                    onChange={(e) => setSectionSearch(e.target.value)}
+                    placeholder="Cerca candidato o lista..."
+                    className="w-full px-3 py-2 pl-9 text-sm border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                  <svg className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                  {sectionSearch && (
+                    <button
+                      onClick={() => setSectionSearch('')}
+                      className="absolute right-3 top-2.5 text-gray-400 hover:text-gray-600"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
                   )}
                 </div>
 
@@ -529,7 +664,12 @@ export function SectionsView({ electionData }: SectionsViewProps) {
                 {/* Ballottaggio */}
                 {ballottaggioData && (
                   <div>
-                    <h4 className="font-semibold text-sm text-gray-700 mb-2">Ballottaggio Sindaco</h4>
+                    <h4 className="font-semibold text-sm text-gray-700 mb-2">
+                      Ballottaggio Sindaco
+                      {archive && electionConfig && (
+                        <span className="ml-2 text-xs font-normal text-blue-500">(clicca per trend)</span>
+                      )}
+                    </h4>
                     <div className="space-y-2">
                       {Object.entries(ballottaggioData.voti)
                         .sort(([, a], [, b]) => b - a)
@@ -537,7 +677,11 @@ export function SectionsView({ electionData }: SectionsViewProps) {
                           const total = Object.values(ballottaggioData.voti).reduce((a, b) => a + b, 0);
                           const pct = ((votes / total) * 100).toFixed(1);
                           return (
-                            <div key={name}>
+                            <div
+                              key={name}
+                              className={archive && electionConfig ? 'cursor-pointer hover:bg-blue-50 rounded p-1 -m-1 transition-colors' : ''}
+                              onClick={() => handleCandidateClick(name)}
+                            >
                               <div className="flex justify-between text-sm mb-1">
                                 <span className="font-medium truncate">{name}</span>
                                 <span className="ml-2">{votes.toLocaleString('it-IT')} ({pct}%)</span>
@@ -555,7 +699,12 @@ export function SectionsView({ electionData }: SectionsViewProps) {
                 {/* Primo Turno */}
                 {primoTurnoData && (
                   <div>
-                    <h4 className="font-semibold text-sm text-gray-700 mb-2">Primo Turno Sindaco</h4>
+                    <h4 className="font-semibold text-sm text-gray-700 mb-2">
+                      Primo Turno Sindaco
+                      {archive && electionConfig && (
+                        <span className="ml-2 text-xs font-normal text-blue-500">(clicca per trend)</span>
+                      )}
+                    </h4>
                     <div className="space-y-1">
                       {Object.entries(primoTurnoData.voti)
                         .sort(([, a], [, b]) => b - a)
@@ -564,7 +713,11 @@ export function SectionsView({ electionData }: SectionsViewProps) {
                           const total = Object.values(primoTurnoData.voti).reduce((a, b) => a + b, 0);
                           const pct = ((votes / total) * 100).toFixed(1);
                           return (
-                            <div key={name} className="flex justify-between text-sm">
+                            <div
+                              key={name}
+                              className={`flex justify-between text-sm ${archive && electionConfig ? 'cursor-pointer hover:bg-blue-50 rounded px-1 -mx-1 transition-colors' : ''}`}
+                              onClick={() => handleCandidateClick(name)}
+                            >
                               <span className="truncate">{name}</span>
                               <span className="ml-2 text-gray-600">{votes} ({pct}%)</span>
                             </div>
@@ -577,22 +730,38 @@ export function SectionsView({ electionData }: SectionsViewProps) {
                 {/* Liste */}
                 {listeData && (
                   <div>
-                    <h4 className="font-semibold text-sm text-gray-700 mb-2">Liste</h4>
+                    <h4 className="font-semibold text-sm text-gray-700 mb-2">
+                      Liste
+                      {archive && electionConfig && (
+                        <span className="ml-2 text-xs font-normal text-blue-500">(clicca per trend)</span>
+                      )}
+                    </h4>
                     <div className="space-y-1 max-h-40 overflow-y-auto">
-                      {Object.entries(listeData)
-                        .sort(([, a], [, b]) => b - a)
-                        .slice(0, 10)
-                        .map(([name, votes], idx) => (
-                          <div key={name} className="flex justify-between text-sm">
-                            <span className="truncate flex items-center gap-1">
-                              <span className={`w-4 h-4 flex items-center justify-center rounded-full text-xs ${idx < 3 ? 'bg-amber-500 text-white' : 'bg-gray-200'}`}>
-                                {idx + 1}
+                      {(() => {
+                        const searchLower = sectionSearch.toLowerCase();
+                        const sortedEntries = Object.entries(listeData).sort(([, a], [, b]) => b - a);
+                        const filteredEntries = sectionSearch
+                          ? sortedEntries.filter(([name]) => name.toLowerCase().includes(searchLower))
+                          : sortedEntries.slice(0, 10);
+                        return filteredEntries.map(([name, votes]) => {
+                          const originalIdx = sortedEntries.findIndex(([n]) => n === name);
+                          return (
+                            <div
+                              key={name}
+                              className={`flex justify-between text-sm ${archive && electionConfig ? 'cursor-pointer hover:bg-blue-50 rounded px-1 -mx-1 transition-colors' : ''}`}
+                              onClick={() => handlePartyClick(name)}
+                            >
+                              <span className="truncate flex items-center gap-1">
+                                <span className={`w-4 h-4 flex items-center justify-center rounded-full text-xs ${originalIdx < 3 ? 'bg-amber-500 text-white' : 'bg-gray-200'}`}>
+                                  {originalIdx + 1}
+                                </span>
+                                <span className="truncate">{name}</span>
                               </span>
-                              <span className="truncate">{name}</span>
-                            </span>
-                            <span className="ml-2 font-medium text-gray-700">{votes}</span>
-                          </div>
-                        ))}
+                              <span className="ml-2 font-medium text-gray-700">{votes}</span>
+                            </div>
+                          );
+                        });
+                      })()}
                     </div>
                   </div>
                 )}
@@ -600,21 +769,45 @@ export function SectionsView({ electionData }: SectionsViewProps) {
                 {/* Preferenze */}
                 {preferenzeData && preferenzeData.length > 0 && (
                   <div>
-                    <h4 className="font-semibold text-sm text-gray-700 mb-2">Top Preferenze</h4>
+                    <h4 className="font-semibold text-sm text-gray-700 mb-2">
+                      {sectionSearch ? 'Preferenze' : 'Top Preferenze'}
+                      {archive && electionConfig && (
+                        <span className="ml-2 text-xs font-normal text-blue-500">(clicca per trend)</span>
+                      )}
+                    </h4>
                     <div className="space-y-1 max-h-40 overflow-y-auto">
-                      {preferenzeData.slice(0, 10).map((item, idx) => (
-                        <div key={`${item.party}-${item.candidate}`} className="flex justify-between text-sm">
-                          <span className="truncate flex items-center gap-1">
-                            <span className={`w-4 h-4 flex items-center justify-center rounded-full text-xs ${idx < 3 ? 'bg-amber-500 text-white' : 'bg-gray-200'}`}>
-                              {idx + 1}
-                            </span>
-                            <span className="truncate" title={`${item.candidate} (${item.party})`}>
-                              {item.candidate}
-                            </span>
-                          </span>
-                          <span className="ml-2 font-medium text-blue-600">{item.votes}</span>
-                        </div>
-                      ))}
+                      {(() => {
+                        const searchLower = sectionSearch.toLowerCase();
+                        const filteredData = sectionSearch
+                          ? preferenzeData.filter(item =>
+                              item.candidate.toLowerCase().includes(searchLower) ||
+                              item.party.toLowerCase().includes(searchLower)
+                            )
+                          : preferenzeData.slice(0, 10);
+                        return filteredData.map((item) => {
+                          const originalIdx = preferenzeData.findIndex(
+                            p => p.candidate === item.candidate && p.party === item.party
+                          );
+                          return (
+                            <div
+                              key={`${item.party}-${item.candidate}`}
+                              className={`flex justify-between text-sm ${archive && electionConfig ? 'cursor-pointer hover:bg-blue-50 rounded px-1 -mx-1 transition-colors' : ''}`}
+                              onClick={() => handleCandidateClick(item.candidate, item.party)}
+                            >
+                              <span className="truncate flex items-center gap-1">
+                                <span className={`w-4 h-4 flex items-center justify-center rounded-full text-xs ${originalIdx < 3 ? 'bg-amber-500 text-white' : 'bg-gray-200'}`}>
+                                  {originalIdx + 1}
+                                </span>
+                                <span className="truncate" title={`${item.candidate} (${item.party})`}>
+                                  {item.candidate}
+                                  {sectionSearch && <span className="text-gray-400 text-xs ml-1">({item.party})</span>}
+                                </span>
+                              </span>
+                              <span className="ml-2 font-medium text-blue-600">{item.votes}</span>
+                            </div>
+                          );
+                        });
+                      })()}
                     </div>
                   </div>
                 )}
@@ -622,19 +815,37 @@ export function SectionsView({ electionData }: SectionsViewProps) {
                 {/* Nominali (Uninominale) */}
                 {nominaliData && nominaliData.length > 0 && (
                   <div>
-                    <h4 className="font-semibold text-sm text-gray-700 mb-2">Candidati Uninominale</h4>
+                    <h4 className="font-semibold text-sm text-gray-700 mb-2">
+                      Candidati Uninominale
+                      {archive && electionConfig && (
+                        <span className="ml-2 text-xs font-normal text-blue-500">(clicca per trend)</span>
+                      )}
+                    </h4>
                     <div className="space-y-1 max-h-40 overflow-y-auto">
-                      {nominaliData.slice(0, 10).map((item, idx) => (
-                        <div key={item.candidate} className="flex justify-between text-sm">
-                          <span className="truncate flex items-center gap-1">
-                            <span className={`w-4 h-4 flex items-center justify-center rounded-full text-xs ${idx < 3 ? 'bg-amber-500 text-white' : 'bg-gray-200'}`}>
-                              {idx + 1}
-                            </span>
-                            <span className="truncate">{item.candidate}</span>
-                          </span>
-                          <span className="ml-2 font-medium text-purple-600">{item.votes}</span>
-                        </div>
-                      ))}
+                      {(() => {
+                        const searchLower = sectionSearch.toLowerCase();
+                        const filteredData = sectionSearch
+                          ? nominaliData.filter(item => item.candidate.toLowerCase().includes(searchLower))
+                          : nominaliData.slice(0, 10);
+                        return filteredData.map((item) => {
+                          const originalIdx = nominaliData.findIndex(n => n.candidate === item.candidate);
+                          return (
+                            <div
+                              key={item.candidate}
+                              className={`flex justify-between text-sm ${archive && electionConfig ? 'cursor-pointer hover:bg-blue-50 rounded px-1 -mx-1 transition-colors' : ''}`}
+                              onClick={() => handleCandidateClick(item.candidate)}
+                            >
+                              <span className="truncate flex items-center gap-1">
+                                <span className={`w-4 h-4 flex items-center justify-center rounded-full text-xs ${originalIdx < 3 ? 'bg-amber-500 text-white' : 'bg-gray-200'}`}>
+                                  {originalIdx + 1}
+                                </span>
+                                <span className="truncate">{item.candidate}</span>
+                              </span>
+                              <span className="ml-2 font-medium text-purple-600">{item.votes}</span>
+                            </div>
+                          );
+                        });
+                      })()}
                     </div>
                   </div>
                 )}
@@ -647,6 +858,20 @@ export function SectionsView({ electionData }: SectionsViewProps) {
           </div>
         </div>
       </div>
+
+      {/* Time Series Modal */}
+      {archive && electionConfig && (
+        <TimeSeriesModal
+          isOpen={timeSeriesOpen}
+          onClose={() => setTimeSeriesOpen(false)}
+          archive={archive}
+          currentElectionType={electionConfig.type}
+          selectedItem={timeSeriesItem}
+          sectionId={selectedSection === GLOBAL_SECTION_ID ? undefined : selectedSection}
+          availableSections={[GLOBAL_SECTION_ID, ...allSections, CONSOLIDATED_SECTION_ID]}
+          onSectionChange={(newSection) => setSelectedSection(newSection)}
+        />
+      )}
     </div>
   );
 }
