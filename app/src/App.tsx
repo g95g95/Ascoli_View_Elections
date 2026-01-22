@@ -125,7 +125,7 @@ function App() {
         }
         return <Dashboard electionData={electionData} />;
       case 'sezioni':
-        return <SectionsView electionData={electionData} />;
+        return <SectionsView electionData={electionData} archive={archive ?? undefined} electionConfig={electionConfig} />;
       default:
         return <Dashboard electionData={electionData} />;
     }
