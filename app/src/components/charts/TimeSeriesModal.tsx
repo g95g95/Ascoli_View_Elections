@@ -1,6 +1,13 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import type { ElectionArchive } from '../../lib/dataLoader';
 import type { ElectionType } from '../../types/elections';
+
+interface SectionMapping {
+  id: number;
+  sede: string;
+  indirizzo: string;
+  consolidata?: boolean;
+}
 
 interface TimeSeriesModalProps {
   isOpen: boolean;
@@ -189,6 +196,14 @@ export function TimeSeriesModal({
   onSectionChange,
 }: TimeSeriesModalProps) {
   const [activeTab, setActiveTab] = useState<TabType>('confronto');
+  const [sectionMapping, setSectionMapping] = useState<SectionMapping[]>([]);
+
+  useEffect(() => {
+    fetch('/data/section_mapping.json')
+      .then((res) => res.json())
+      .then((data) => setSectionMapping(data.sezioni))
+      .catch(console.error);
+  }, []);
 
   const currentSectionIndex = availableSections?.findIndex(s =>
     (sectionId === undefined && s === 0) || s === sectionId
@@ -209,9 +224,14 @@ export function TimeSeriesModal({
     }
   };
 
-  const getSectionLabel = (secId: number | undefined) => {
-    if (secId === undefined || secId === 0) return 'Globale';
-    if (secId === 53) return 'Sez. 53 (Centro)';
+  const getSectionLabel = (secId: number | undefined, short = false) => {
+    if (secId === undefined || secId === 0) return 'Globale (tutte le sezioni)';
+    const mapping = sectionMapping.find(s => s.id === secId);
+    if (mapping) {
+      if (short) return `Sez. ${secId}`;
+      return `Sezione ${secId} - ${mapping.sede}`;
+    }
+    if (secId === 53) return 'Sez. 53 (Centro Storico)';
     return `Sezione ${secId}`;
   };
 
@@ -484,49 +504,68 @@ export function TimeSeriesModal({
         <div className="p-6 overflow-y-auto max-h-[calc(90vh-100px)]">
           {/* Info badge with section navigation */}
           <div className="mb-4 p-3 bg-blue-50 rounded-lg text-sm text-blue-800">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <span className="text-lg">ℹ️</span>
-                <span>
-                  Confronto tra elezioni <strong>{getElectionTypeLabel(currentElectionType)}</strong>
-                  <span className="ml-1">
-                    - <strong>{getSectionLabel(sectionId)}</strong>
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <span className="text-lg">ℹ️</span>
+                  <span>
+                    Confronto tra elezioni <strong>{getElectionTypeLabel(currentElectionType)}</strong>
                   </span>
-                </span>
+                </div>
+                {availableSections && onSectionChange && (
+                  <div className="flex items-center gap-1">
+                    <button
+                      onClick={handlePrevSection}
+                      disabled={!canGoPrev}
+                      className={`p-1.5 rounded-lg transition-colors ${
+                        canGoPrev
+                          ? 'bg-blue-100 hover:bg-blue-200 text-blue-700'
+                          : 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                      }`}
+                      title="Sezione precedente"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                      </svg>
+                    </button>
+                    <span className="px-2 text-xs font-medium text-blue-600 min-w-[60px] text-center">
+                      {currentSectionIndex + 1}/{availableSections.length}
+                    </span>
+                    <button
+                      onClick={handleNextSection}
+                      disabled={!canGoNext}
+                      className={`p-1.5 rounded-lg transition-colors ${
+                        canGoNext
+                          ? 'bg-blue-100 hover:bg-blue-200 text-blue-700'
+                          : 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                      }`}
+                      title="Sezione successiva"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                  </div>
+                )}
               </div>
+              {/* Section selector combobox */}
               {availableSections && onSectionChange && (
-                <div className="flex items-center gap-1">
-                  <button
-                    onClick={handlePrevSection}
-                    disabled={!canGoPrev}
-                    className={`p-1.5 rounded-lg transition-colors ${
-                      canGoPrev
-                        ? 'bg-blue-100 hover:bg-blue-200 text-blue-700'
-                        : 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                    }`}
-                    title="Sezione precedente"
+                <div className="flex items-center gap-2">
+                  <label htmlFor="section-select" className="text-xs font-medium text-blue-700">
+                    Sezione:
+                  </label>
+                  <select
+                    id="section-select"
+                    value={sectionId ?? 0}
+                    onChange={(e) => onSectionChange(parseInt(e.target.value))}
+                    className="flex-1 text-sm px-2 py-1.5 rounded-lg border border-blue-200 bg-white text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
                   >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                  </button>
-                  <span className="px-2 text-xs font-medium text-blue-600 min-w-[60px] text-center">
-                    {currentSectionIndex + 1}/{availableSections.length}
-                  </span>
-                  <button
-                    onClick={handleNextSection}
-                    disabled={!canGoNext}
-                    className={`p-1.5 rounded-lg transition-colors ${
-                      canGoNext
-                        ? 'bg-blue-100 hover:bg-blue-200 text-blue-700'
-                        : 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                    }`}
-                    title="Sezione successiva"
-                  >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </button>
+                    {availableSections.map((secId) => (
+                      <option key={secId} value={secId}>
+                        {getSectionLabel(secId)}
+                      </option>
+                    ))}
+                  </select>
                 </div>
               )}
             </div>
