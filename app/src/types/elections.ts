@@ -123,7 +123,7 @@ export interface NominaliElection {
   candidati: NominaliCandidate[];
 }
 
-export type ElectionType = 'comunali' | 'europee' | 'regionali' | 'politiche';
+export type ElectionType = 'comunali' | 'europee' | 'regionali' | 'politiche' | 'referendum';
 
 export type ViewType =
   | 'landing'
@@ -134,7 +134,8 @@ export type ViewType =
   | 'preferenze'
   | 'sezioni'
   | 'presidente'
-  | 'nominali';
+  | 'nominali'
+  | 'referendum';
 
 export interface MenuItem {
   id: ViewType;

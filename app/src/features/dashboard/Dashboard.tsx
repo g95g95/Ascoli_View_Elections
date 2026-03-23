@@ -7,7 +7,84 @@ interface DashboardProps {
 }
 
 export function Dashboard({ electionData }: DashboardProps) {
-  const { config, ballottaggio, liste, preferenze, votanti } = electionData;
+  const { config, ballottaggio, primoTurno, liste, preferenze, votanti } = electionData;
+
+  // Referendum dashboard
+  if (config.type === 'referendum' && primoTurno) {
+    const totalVotes = primoTurno.candidati.reduce((s, c) => s + c.totale, 0);
+    const winner = primoTurno.candidati.reduce((a, b) => (a.totale > b.totale ? a : b));
+    const bianche = primoTurno.affluenza?.schede_bianche ?? 0;
+    const nulle = primoTurno.affluenza?.schede_nulle ?? 0;
+    const totalVoters = totalVotes + bianche + nulle;
+    const totalEligible = primoTurno.affluenza
+      ? primoTurno.affluenza.aventi_diritto_donne + primoTurno.affluenza.aventi_diritto_uomini
+      : 0;
+    const turnout = totalEligible > 0 ? ((totalVoters / totalEligible) * 100).toFixed(1) : null;
+
+    return (
+      <div className="flex-1 bg-gray-50 overflow-auto">
+        <Header title={config.label} subtitle={`Ascoli Piceno - ${primoTurno.data}`} />
+        <div className="p-4 md:p-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-6">
+            <StatCard
+              title="Risultato"
+              value={winner.nome}
+              subtitle={`${winner.totale.toLocaleString('it-IT')} voti`}
+              icon="🗳️"
+              color="green"
+            />
+            <StatCard
+              title={turnout ? "Affluenza" : "Voti Totali"}
+              value={turnout ? `${turnout}%` : totalVoters.toLocaleString('it-IT')}
+              subtitle={turnout ? `${totalVoters.toLocaleString('it-IT')} votanti` : "voti espressi"}
+              icon="📈"
+              color="blue"
+            />
+            <StatCard
+              title="Schede Bianche"
+              value={primoTurno.affluenza?.schede_bianche?.toLocaleString('it-IT') ?? '-'}
+              subtitle="non espresse"
+              icon="📄"
+              color="amber"
+            />
+            <StatCard
+              title="Schede Nulle"
+              value={primoTurno.affluenza?.schede_nulle?.toLocaleString('it-IT') ?? '-'}
+              subtitle="non valide"
+              icon="❌"
+              color="purple"
+            />
+          </div>
+
+          <div className="bg-white rounded-xl border border-gray-200 p-4 md:p-6">
+            <h3 className="text-lg font-semibold mb-4">Risultati Referendum</h3>
+            <div className="space-y-4">
+              {primoTurno.candidati.map((candidate) => {
+                const percentage = totalVotes > 0 ? ((candidate.totale / totalVotes) * 100).toFixed(1) : '0';
+                const isWinner = candidate.nome === winner.nome;
+                return (
+                  <div key={candidate.nome}>
+                    <div className="flex justify-between mb-1 text-sm md:text-base">
+                      <span className="font-medium">{candidate.nome}</span>
+                      <span className="text-gray-600">
+                        {candidate.totale.toLocaleString('it-IT')} ({percentage}%)
+                      </span>
+                    </div>
+                    <div className="h-4 bg-gray-200 rounded-full overflow-hidden">
+                      <div
+                        className={`h-full ${isWinner ? 'bg-green-500' : 'bg-red-500'}`}
+                        style={{ width: `${percentage}%` }}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   // Calculate stats based on available data
   const totalCandidates = preferenze

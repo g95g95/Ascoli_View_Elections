@@ -2,10 +2,30 @@ import { useState, useMemo } from 'react';
 import { Header } from '../../components/layout/Header';
 import { SectionMap } from '../../components/charts/SectionMap';
 import type { MayoralElection } from '../../types/elections';
+import { CONSOLIDATED_SECTIONS, CONSOLIDATED_SECTION_ID } from '../../types/elections';
 
 interface MayoralViewProps {
   data: MayoralElection;
   title: string;
+}
+
+function AffluenzaCard({ data, totalVotes }: { data: MayoralElection; totalVotes: number }) {
+  const votanti = data.affluenza!.votanti_donne + data.affluenza!.votanti_uomini;
+  const aventiDiritto = data.affluenza!.aventi_diritto_donne + data.affluenza!.aventi_diritto_uomini;
+  const effectiveVotanti = votanti > 0 ? votanti : totalVotes + (data.affluenza!.schede_bianche || 0) + (data.affluenza!.schede_nulle || 0);
+  const turnout = aventiDiritto > 0 ? ((effectiveVotanti / aventiDiritto) * 100).toFixed(1) : null;
+  return (
+    <div className="p-4 md:p-6 rounded-xl border border-gray-200 bg-white">
+      <div className="text-base md:text-lg font-medium text-gray-600">Affluenza</div>
+      <div className="mt-2 text-2xl md:text-3xl font-bold">
+        {turnout ? `${turnout}%` : effectiveVotanti.toLocaleString('it-IT')}
+      </div>
+      <div className="mt-1 text-xs md:text-sm text-gray-500">
+        {effectiveVotanti.toLocaleString('it-IT')} votanti su{' '}
+        {aventiDiritto.toLocaleString('it-IT')}
+      </div>
+    </div>
+  );
 }
 
 export function MayoralView({ data, title }: MayoralViewProps) {
@@ -19,7 +39,33 @@ export function MayoralView({ data, title }: MayoralViewProps) {
   const hasAffluenza = !!data.affluenza;
   const hasCandidateSezioni = !!data.candidati[0]?.sezioni;
 
-  const sectionData = selectedSection && hasLegacySezioni ? data.sezioni![selectedSection.toString()] : null;
+  const sectionData = useMemo(() => {
+    if (!selectedSection || !hasLegacySezioni) return null;
+    if (selectedSection === CONSOLIDATED_SECTION_ID) {
+      const consolidated = {
+        affluenza: { aventi_diritto_donne: 0, aventi_diritto_uomini: 0, votanti_donne: 0, votanti_uomini: 0, schede_bianche: 0, schede_nulle: 0 },
+        voti: {} as Record<string, number>,
+      };
+      CONSOLIDATED_SECTIONS.forEach((id) => {
+        const section = data.sezioni![id.toString()];
+        if (section) {
+          if (section.affluenza) {
+            consolidated.affluenza.aventi_diritto_donne += section.affluenza.aventi_diritto_donne || 0;
+            consolidated.affluenza.aventi_diritto_uomini += section.affluenza.aventi_diritto_uomini || 0;
+            consolidated.affluenza.votanti_donne += section.affluenza.votanti_donne || 0;
+            consolidated.affluenza.votanti_uomini += section.affluenza.votanti_uomini || 0;
+            consolidated.affluenza.schede_bianche += section.affluenza.schede_bianche || 0;
+            consolidated.affluenza.schede_nulle += section.affluenza.schede_nulle || 0;
+          }
+          Object.entries(section.voti).forEach(([name, votes]) => {
+            consolidated.voti[name] = (consolidated.voti[name] || 0) + votes;
+          });
+        }
+      });
+      return consolidated;
+    }
+    return data.sezioni![selectedSection.toString()] || null;
+  }, [selectedSection, hasLegacySezioni, data.sezioni]);
 
   const allSectionIds = useMemo(() => {
     if (hasLegacySezioni) {
@@ -34,33 +80,51 @@ export function MayoralView({ data, title }: MayoralViewProps) {
   const densityData = useMemo(() => {
     if (!selectedCandidate) return undefined;
 
+    const result: { sectionId: number; value: number; percentage: number }[] = [];
+
     if (hasLegacySezioni) {
-      return Object.entries(data.sezioni!).map(([sectionId, section]) => {
+      Object.entries(data.sezioni!).forEach(([sectionId, section]) => {
         const total = Object.values(section.voti).reduce((s, v) => s + v, 0);
         const value = section.voti[selectedCandidate] || 0;
-        return {
+        result.push({
           sectionId: parseInt(sectionId),
           value,
           percentage: total > 0 ? (value / total) * 100 : 0,
-        };
+        });
       });
-    }
-
-    if (hasCandidateSezioni) {
+    } else if (hasCandidateSezioni) {
       const candidate = data.candidati.find(c => c.nome === selectedCandidate);
       if (!candidate?.sezioni) return undefined;
-      return allSectionIds.map(sectionId => {
+      allSectionIds.forEach(sectionId => {
         const value = candidate.sezioni![sectionId.toString()] || 0;
         const total = data.candidati.reduce((s, c) => s + (c.sezioni?.[sectionId.toString()] || 0), 0);
-        return {
+        result.push({
           sectionId,
           value,
           percentage: total > 0 ? (value / total) * 100 : 0,
-        };
+        });
       });
     }
 
-    return undefined;
+    // Add consolidated section 53
+    let consolidatedValue = 0;
+    let consolidatedTotal = 0;
+    CONSOLIDATED_SECTIONS.forEach(secId => {
+      const existing = result.find(r => r.sectionId === secId);
+      if (existing) {
+        consolidatedValue += existing.value;
+        consolidatedTotal += existing.value / (existing.percentage / 100 || 1);
+      }
+    });
+    if (consolidatedTotal > 0) {
+      result.push({
+        sectionId: CONSOLIDATED_SECTION_ID,
+        value: consolidatedValue,
+        percentage: (consolidatedValue / consolidatedTotal) * 100,
+      });
+    }
+
+    return result.length > 0 ? result : undefined;
   }, [data, selectedCandidate, hasLegacySezioni, hasCandidateSezioni, allSectionIds]);
 
   const getDensityColor = () => {
@@ -102,24 +166,7 @@ export function MayoralView({ data, title }: MayoralViewProps) {
             );
           })}
           {hasAffluenza ? (
-            <div className="p-4 md:p-6 rounded-xl border border-gray-200 bg-white">
-              <div className="text-base md:text-lg font-medium text-gray-600">Affluenza</div>
-              <div className="mt-2 text-2xl md:text-3xl font-bold">
-                {(
-                  ((data.affluenza!.votanti_donne + data.affluenza!.votanti_uomini) /
-                    (data.affluenza!.aventi_diritto_donne + data.affluenza!.aventi_diritto_uomini)) *
-                  100
-                ).toFixed(1)}
-                %
-              </div>
-              <div className="mt-1 text-xs md:text-sm text-gray-500">
-                {(data.affluenza!.votanti_donne + data.affluenza!.votanti_uomini).toLocaleString('it-IT')}{' '}
-                votanti su{' '}
-                {(
-                  data.affluenza!.aventi_diritto_donne + data.affluenza!.aventi_diritto_uomini
-                ).toLocaleString('it-IT')}
-              </div>
-            </div>
+            <AffluenzaCard data={data} totalVotes={totalVotes} />
           ) : (
             <div className="p-4 md:p-6 rounded-xl border border-gray-200 bg-white">
               <div className="text-base md:text-lg font-medium text-gray-600">Sezioni</div>
@@ -171,27 +218,36 @@ export function MayoralView({ data, title }: MayoralViewProps) {
 
           <div className="bg-white rounded-xl border border-gray-200 p-4 md:p-6">
             <h3 className="text-lg font-semibold mb-4">
-              {selectedSection ? `Dettaglio Sezione ${selectedSection}` : 'Risultati per Sezione'}
+              {selectedSection
+                ? selectedSection === CONSOLIDATED_SECTION_ID
+                  ? 'Sezione 53* (Centro)'
+                  : `Dettaglio Sezione ${selectedSection}`
+                : 'Risultati per Sezione'}
             </h3>
-            {sectionData && sectionData.affluenza ? (
+            {sectionData && sectionData.affluenza ? (() => {
+              const secVotantiGender = sectionData.affluenza.votanti_donne + sectionData.affluenza.votanti_uomini;
+              const secVotiTotale = Object.values(sectionData.voti).reduce((a, b) => a + b, 0);
+              const secVotanti = secVotantiGender > 0 ? secVotantiGender : secVotiTotale + (sectionData.affluenza.schede_bianche || 0) + (sectionData.affluenza.schede_nulle || 0);
+              const secAventiDiritto = sectionData.affluenza.aventi_diritto_donne + sectionData.affluenza.aventi_diritto_uomini;
+              const secTurnout = secAventiDiritto > 0 ? ((secVotanti / secAventiDiritto) * 100).toFixed(1) : null;
+              return (
               <div className="space-y-4">
+                {selectedSection === CONSOLIDATED_SECTION_ID && (
+                  <div className="p-2 bg-amber-50 rounded text-xs text-amber-800">
+                    Consolida sezioni: {CONSOLIDATED_SECTIONS.join(', ')}
+                  </div>
+                )}
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div className="p-3 bg-gray-50 rounded-lg text-center">
                     <div className="text-sm text-gray-600">Votanti</div>
                     <div className="text-xl font-bold">
-                      {sectionData.affluenza.votanti_donne + sectionData.affluenza.votanti_uomini}
+                      {secVotanti.toLocaleString('it-IT')}
                     </div>
                   </div>
                   <div className="p-3 bg-gray-50 rounded-lg text-center">
-                    <div className="text-sm text-gray-600">Affluenza</div>
+                    <div className="text-sm text-gray-600">{secTurnout ? 'Affluenza' : 'Schede Bianche/Nulle'}</div>
                     <div className="text-xl font-bold">
-                      {(
-                        ((sectionData.affluenza.votanti_donne + sectionData.affluenza.votanti_uomini) /
-                          (sectionData.affluenza.aventi_diritto_donne +
-                            sectionData.affluenza.aventi_diritto_uomini)) *
-                        100
-                      ).toFixed(1)}
-                      %
+                      {secTurnout ? `${secTurnout}%` : `${sectionData.affluenza.schede_bianche || 0} / ${sectionData.affluenza.schede_nulle || 0}`}
                     </div>
                   </div>
                 </div>
@@ -217,7 +273,8 @@ export function MayoralView({ data, title }: MayoralViewProps) {
                   );
                 })}
               </div>
-            ) : selectedSection && hasCandidateSezioni ? (
+              );
+            })() : selectedSection && hasCandidateSezioni ? (
               <div className="space-y-4">
                 <div className="p-3 bg-gray-50 rounded-lg text-center mb-4">
                   <div className="text-sm text-gray-600">Voti Totali Sezione</div>
@@ -262,32 +319,63 @@ export function MayoralView({ data, title }: MayoralViewProps) {
                   </thead>
                   <tbody>
                     {hasLegacySezioni ? (
-                      Object.entries(data.sezioni!)
-                        .sort(([a], [b]) => parseInt(a) - parseInt(b))
-                        .map(([sectionId, section]) => (
-                          <tr
-                            key={sectionId}
-                            className="border-b hover:bg-gray-50 cursor-pointer"
-                            onClick={() => setSelectedSection(parseInt(sectionId))}
-                          >
-                            <td className="py-2 font-medium">{sectionId}</td>
-                            {data.candidati.map((c, idx) => (
-                              <td
-                                key={c.nome}
-                                className={`text-right py-2 ${
-                                  section.voti[c.nome] ===
-                                  Math.max(...Object.values(section.voti))
-                                    ? idx === 0
-                                      ? 'text-blue-600 font-bold'
-                                      : 'text-red-600 font-bold'
-                                    : ''
-                                }`}
-                              >
-                                {section.voti[c.nome] || 0}
-                              </td>
-                            ))}
-                          </tr>
-                        ))
+                      <>
+                        {Object.entries(data.sezioni!)
+                          .sort(([a], [b]) => parseInt(a) - parseInt(b))
+                          .map(([sectionId, section]) => (
+                            <tr
+                              key={sectionId}
+                              className="border-b hover:bg-gray-50 cursor-pointer"
+                              onClick={() => setSelectedSection(parseInt(sectionId))}
+                            >
+                              <td className="py-2 font-medium">{sectionId}</td>
+                              {data.candidati.map((c, idx) => (
+                                <td
+                                  key={c.nome}
+                                  className={`text-right py-2 ${
+                                    section.voti[c.nome] ===
+                                    Math.max(...Object.values(section.voti))
+                                      ? idx === 0
+                                        ? 'text-blue-600 font-bold'
+                                        : 'text-red-600 font-bold'
+                                      : ''
+                                  }`}
+                                >
+                                  {section.voti[c.nome] || 0}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        {/* Consolidated section 53 */}
+                        {(() => {
+                          const consVoti: Record<string, number> = {};
+                          CONSOLIDATED_SECTIONS.forEach(id => {
+                            const sec = data.sezioni![id.toString()];
+                            if (sec) Object.entries(sec.voti).forEach(([name, votes]) => { consVoti[name] = (consVoti[name] || 0) + votes; });
+                          });
+                          const maxV = Math.max(...Object.values(consVoti));
+                          return (
+                            <tr
+                              className="border-b hover:bg-amber-50 cursor-pointer bg-amber-50/50"
+                              onClick={() => setSelectedSection(CONSOLIDATED_SECTION_ID)}
+                            >
+                              <td className="py-2 font-medium text-amber-700">53*</td>
+                              {data.candidati.map((c, idx) => (
+                                <td
+                                  key={c.nome}
+                                  className={`text-right py-2 ${
+                                    (consVoti[c.nome] || 0) === maxV
+                                      ? idx === 0 ? 'text-blue-600 font-bold' : 'text-red-600 font-bold'
+                                      : ''
+                                  }`}
+                                >
+                                  {(consVoti[c.nome] || 0).toLocaleString('it-IT')}
+                                </td>
+                              ))}
+                            </tr>
+                          );
+                        })()}
+                      </>
                     ) : hasCandidateSezioni ? (
                       allSectionIds.map((sectionId) => {
                         const votes = data.candidati.map(c => c.sezioni?.[sectionId.toString()] || 0);

@@ -47,7 +47,23 @@ const politicheMenuItems: MenuItem[] = [
   { id: 'sezioni', label: 'Analisi Sezioni', icon: '🗺️' },
 ];
 
+const referendumMenuItems: MenuItem[] = [
+  { id: 'dashboard', label: 'Dashboard', icon: '📊' },
+  { id: 'referendum', label: 'Risultati', icon: '🗳️' },
+  { id: 'sezioni', label: 'Analisi Sezioni', icon: '🗺️' },
+];
+
 export const ELECTION_CONFIGS: ElectionConfig[] = [
+  {
+    id: 'referendum-2026',
+    year: 2026,
+    type: 'referendum',
+    label: 'Referendum 2026',
+    description: 'Referendum Confermativo - Ordinamento giurisdizionale',
+    icon: '⚖️',
+    dataPath: '2026_Referendum',
+    menuItems: referendumMenuItems,
+  },
   {
     id: 'regionali-2025',
     year: 2025,

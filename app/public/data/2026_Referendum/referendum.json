@@ -1,0 +1,255 @@
+{
+  "elezione": "Referendum Costituzionale 2026",
+  "turno": "Turno Unico",
+  "data": "22-23 Marzo 2026",
+  "comune": "Ascoli Piceno",
+  "tipo": "Referendum",
+  "descrizione": "Referendum Popolare Confermativo - Ordinamento giurisdizionale e istituzione della Corte disciplinare",
+  "sezioni_scrutinate": 52,
+  "candidati": [
+    {
+      "nome": "SI",
+      "totale": 12177,
+      "percentuale": 49.55,
+      "sezioni": {
+        "1": 147, "2": 264, "3": 289, "4": 281, "5": 228, "6": 172, "7": 238, "8": 231, "9": 186, "10": 178,
+        "11": 248, "12": 282, "13": 258, "14": 257, "15": 233, "16": 284, "17": 226, "18": 257, "19": 335, "20": 246,
+        "21": 282, "22": 241, "23": 208, "24": 195, "25": 238, "26": 202, "27": 386, "28": 247, "29": 240, "30": 221,
+        "31": 315, "32": 168, "33": 269, "34": 283, "35": 196, "36": 254, "37": 179, "38": 188, "39": 333, "40": 24,
+        "41": 179, "42": 277, "43": 226, "44": 208, "45": 255, "46": 228, "47": 313, "48": 284, "49": 136, "50": 154,
+        "51": 262, "52": 146
+      }
+    },
+    {
+      "nome": "NO",
+      "totale": 12396,
+      "percentuale": 50.45,
+      "sezioni": {
+        "1": 181, "2": 321, "3": 267, "4": 221, "5": 276, "6": 200, "7": 230, "8": 277, "9": 259, "10": 217,
+        "11": 245, "12": 279, "13": 247, "14": 229, "15": 328, "16": 281, "17": 307, "18": 255, "19": 320, "20": 288,
+        "21": 277, "22": 216, "23": 246, "24": 232, "25": 270, "26": 257, "27": 303, "28": 293, "29": 253, "30": 245,
+        "31": 210, "32": 191, "33": 264, "34": 280, "35": 217, "36": 241, "37": 184, "38": 210, "39": 267, "40": 20,
+        "41": 144, "42": 259, "43": 213, "44": 191, "45": 185, "46": 250, "47": 236, "48": 225, "49": 177, "50": 189,
+        "51": 242, "52": 181
+      }
+    }
+  ],
+  "affluenza": {
+    "aventi_diritto_donne": 19162,
+    "aventi_diritto_uomini": 17842,
+    "votanti_donne": 0,
+    "votanti_uomini": 0,
+    "schede_bianche": 42,
+    "schede_nulle": 78
+  },
+  "sezioni": {
+    "1": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 1 },
+      "voti": { "SI": 147, "NO": 181 }
+    },
+    "2": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 1, "schede_nulle": 0 },
+      "voti": { "SI": 264, "NO": 321 }
+    },
+    "3": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 2 },
+      "voti": { "SI": 289, "NO": 267 }
+    },
+    "4": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 2, "schede_nulle": 1 },
+      "voti": { "SI": 281, "NO": 221 }
+    },
+    "5": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 3 },
+      "voti": { "SI": 228, "NO": 276 }
+    },
+    "6": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 3 },
+      "voti": { "SI": 172, "NO": 200 }
+    },
+    "7": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 2, "schede_nulle": 0 },
+      "voti": { "SI": 238, "NO": 230 }
+    },
+    "8": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 1 },
+      "voti": { "SI": 231, "NO": 277 }
+    },
+    "9": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 1, "schede_nulle": 2 },
+      "voti": { "SI": 186, "NO": 259 }
+    },
+    "10": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 2 },
+      "voti": { "SI": 178, "NO": 217 }
+    },
+    "11": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 3, "schede_nulle": 1 },
+      "voti": { "SI": 248, "NO": 245 }
+    },
+    "12": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 1 },
+      "voti": { "SI": 282, "NO": 279 }
+    },
+    "13": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 2, "schede_nulle": 0 },
+      "voti": { "SI": 258, "NO": 247 }
+    },
+    "14": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 2, "schede_nulle": 2 },
+      "voti": { "SI": 257, "NO": 229 }
+    },
+    "15": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 1, "schede_nulle": 1 },
+      "voti": { "SI": 233, "NO": 328 }
+    },
+    "16": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 1, "schede_nulle": 0 },
+      "voti": { "SI": 284, "NO": 281 }
+    },
+    "17": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 2, "schede_nulle": 3 },
+      "voti": { "SI": 226, "NO": 307 }
+    },
+    "18": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 2, "schede_nulle": 1 },
+      "voti": { "SI": 257, "NO": 255 }
+    },
+    "19": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 2, "schede_nulle": 2 },
+      "voti": { "SI": 335, "NO": 320 }
+    },
+    "20": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 2, "schede_nulle": 4 },
+      "voti": { "SI": 246, "NO": 288 }
+    },
+    "21": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 1, "schede_nulle": 3 },
+      "voti": { "SI": 282, "NO": 277 }
+    },
+    "22": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 0 },
+      "voti": { "SI": 241, "NO": 216 }
+    },
+    "23": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 1, "schede_nulle": 2 },
+      "voti": { "SI": 208, "NO": 246 }
+    },
+    "24": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 0 },
+      "voti": { "SI": 195, "NO": 232 }
+    },
+    "25": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 2 },
+      "voti": { "SI": 238, "NO": 270 }
+    },
+    "26": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 2, "schede_nulle": 1 },
+      "voti": { "SI": 202, "NO": 257 }
+    },
+    "27": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 2, "schede_nulle": 3 },
+      "voti": { "SI": 386, "NO": 303 }
+    },
+    "28": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 2, "schede_nulle": 6 },
+      "voti": { "SI": 247, "NO": 293 }
+    },
+    "29": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 1, "schede_nulle": 2 },
+      "voti": { "SI": 240, "NO": 253 }
+    },
+    "30": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 0 },
+      "voti": { "SI": 221, "NO": 245 }
+    },
+    "31": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 1, "schede_nulle": 1 },
+      "voti": { "SI": 315, "NO": 210 }
+    },
+    "32": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 1, "schede_nulle": 0 },
+      "voti": { "SI": 168, "NO": 191 }
+    },
+    "33": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 2 },
+      "voti": { "SI": 269, "NO": 264 }
+    },
+    "34": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 2 },
+      "voti": { "SI": 283, "NO": 280 }
+    },
+    "35": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 1 },
+      "voti": { "SI": 196, "NO": 217 }
+    },
+    "36": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 1, "schede_nulle": 2 },
+      "voti": { "SI": 254, "NO": 241 }
+    },
+    "37": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 1 },
+      "voti": { "SI": 179, "NO": 184 }
+    },
+    "38": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 1, "schede_nulle": 1 },
+      "voti": { "SI": 188, "NO": 210 }
+    },
+    "39": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 0 },
+      "voti": { "SI": 333, "NO": 267 }
+    },
+    "40": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 0 },
+      "voti": { "SI": 24, "NO": 20 }
+    },
+    "41": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 2, "schede_nulle": 0 },
+      "voti": { "SI": 179, "NO": 144 }
+    },
+    "42": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 3 },
+      "voti": { "SI": 277, "NO": 259 }
+    },
+    "43": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 1, "schede_nulle": 4 },
+      "voti": { "SI": 226, "NO": 213 }
+    },
+    "44": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 1 },
+      "voti": { "SI": 208, "NO": 191 }
+    },
+    "45": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 0 },
+      "voti": { "SI": 255, "NO": 185 }
+    },
+    "46": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 0 },
+      "voti": { "SI": 228, "NO": 250 }
+    },
+    "47": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 1 },
+      "voti": { "SI": 313, "NO": 236 }
+    },
+    "48": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 2, "schede_nulle": 3 },
+      "voti": { "SI": 284, "NO": 225 }
+    },
+    "49": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 0 },
+      "voti": { "SI": 136, "NO": 177 }
+    },
+    "50": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 3 },
+      "voti": { "SI": 154, "NO": 189 }
+    },
+    "51": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 1, "schede_nulle": 1 },
+      "voti": { "SI": 262, "NO": 242 }
+    },
+    "52": {
+      "affluenza": { "aventi_diritto_donne": 0, "aventi_diritto_uomini": 0, "votanti_donne": 0, "votanti_uomini": 0, "schede_bianche": 0, "schede_nulle": 3 },
+      "voti": { "SI": 146, "NO": 181 }
+    }
+  }
+}

@@ -124,6 +124,11 @@ function App() {
           return <NominaliView data={electionData.nominali} title={`Uninominale ${electionConfig.label}`} />;
         }
         return <Dashboard electionData={electionData} />;
+      case 'referendum':
+        if (electionData.primoTurno) {
+          return <MayoralView data={electionData.primoTurno} title="Referendum Costituzionale 2026" />;
+        }
+        return <Dashboard electionData={electionData} />;
       case 'sezioni':
         return <SectionsView electionData={electionData} archive={archive ?? undefined} electionConfig={electionConfig} />;
       default:

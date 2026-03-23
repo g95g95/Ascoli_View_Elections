@@ -46,6 +46,9 @@ export function SectionsView({ electionData, archive, electionConfig }: Sections
 
   const { config, ballottaggio, primoTurno, liste, preferenze, votanti, nominali } = electionData;
 
+  // For referendum (or elections without ballottaggio), use primoTurno as the "main candidate view"
+  const mainCandidateData = ballottaggio || (primoTurno?.sezioni ? primoTurno : null);
+
   const handlePartyClick = (partyName: string) => {
     if (!archive || !electionConfig) return;
     setTimeSeriesItem({ type: 'party', name: partyName });
@@ -60,8 +63,8 @@ export function SectionsView({ electionData, archive, electionConfig }: Sections
 
   // Get all sections from available data
   const allSections = useMemo(() => {
-    if (ballottaggio?.sezioni) {
-      return Object.keys(ballottaggio.sezioni).map(Number).sort((a, b) => a - b);
+    if (mainCandidateData?.sezioni) {
+      return Object.keys(mainCandidateData.sezioni).map(Number).sort((a, b) => a - b);
     }
     if (liste?.sezioni) {
       return Object.keys(liste.sezioni).map(Number).sort((a, b) => a - b);
@@ -93,9 +96,9 @@ export function SectionsView({ electionData, archive, electionConfig }: Sections
       return votanti.sezioni.map(s => s.numero).sort((a, b) => a - b);
     }
     return [];
-  }, [ballottaggio, liste, preferenze, votanti, nominali]);
+  }, [mainCandidateData, liste, preferenze, votanti, nominali]);
 
-  const hasBallottaggio = !!ballottaggio;
+  const hasBallottaggio = !!mainCandidateData;
   const hasListe = !!liste?.sezioni || !!liste?.liste;
   const hasPreferenze = !!preferenze;
   const hasNominali = !!nominali;
@@ -130,7 +133,7 @@ export function SectionsView({ electionData, archive, electionConfig }: Sections
     return candidates.sort((a, b) => b.total - a.total).slice(0, 50);
   }, [preferenze, nominali]);
 
-  const ballottaggioCandidates = ballottaggio?.candidati.map(c => c.nome) || [];
+  const ballottaggioCandidates = mainCandidateData?.candidati.map(c => c.nome) || [];
 
   const densityData = useMemo(() => {
     if (densityMode === 'none') return undefined;
@@ -186,8 +189,8 @@ export function SectionsView({ electionData, archive, electionConfig }: Sections
               s + p.candidati.reduce((ss, c) => ss + (c.sezioni[sectionId.toString()] || 0), 0), 0);
           }
         }
-      } else if (densityMode === 'ballottaggio' && selectedCandidate && ballottaggio) {
-        const sectionData = ballottaggio.sezioni?.[sectionId.toString()];
+      } else if (densityMode === 'ballottaggio' && selectedCandidate && mainCandidateData) {
+        const sectionData = mainCandidateData.sezioni?.[sectionId.toString()];
         if (sectionData) {
           value = sectionData.voti[selectedCandidate] || 0;
           total = Object.values(sectionData.voti).reduce((s, v) => s + v, 0);
@@ -224,7 +227,7 @@ export function SectionsView({ electionData, archive, electionConfig }: Sections
     }
 
     return result;
-  }, [densityMode, selectedParty, selectedCandidate, allSections, liste, preferenze, ballottaggio, nominali]);
+  }, [densityMode, selectedParty, selectedCandidate, allSections, liste, preferenze, mainCandidateData, nominali]);
 
   const getDensityColor = () => {
     if (densityMode === 'party' && selectedParty) {
@@ -238,13 +241,13 @@ export function SectionsView({ electionData, archive, electionConfig }: Sections
   };
 
   const getConsolidatedBallottaggioData = () => {
-    if (!ballottaggio) return null;
+    if (!mainCandidateData) return null;
     const consolidated = {
       affluenza: { aventi_diritto_donne: 0, aventi_diritto_uomini: 0, votanti_donne: 0, votanti_uomini: 0, schede_bianche: 0, schede_nulle: 0 },
       voti: {} as Record<string, number>,
     };
     CONSOLIDATED_SECTIONS.forEach((sectionId) => {
-      const section = ballottaggio.sezioni?.[sectionId.toString()];
+      const section = mainCandidateData.sezioni?.[sectionId.toString()];
       if (section) {
         consolidated.affluenza.aventi_diritto_donne += section.affluenza?.aventi_diritto_donne || 0;
         consolidated.affluenza.aventi_diritto_uomini += section.affluenza?.aventi_diritto_uomini || 0;
@@ -261,19 +264,19 @@ export function SectionsView({ electionData, archive, electionConfig }: Sections
   };
 
   const getGlobalBallottaggioData = () => {
-    if (!ballottaggio) return null;
+    if (!mainCandidateData) return null;
     const global = {
       affluenza: {
-        aventi_diritto_donne: ballottaggio.affluenza?.aventi_diritto_donne || 0,
-        aventi_diritto_uomini: ballottaggio.affluenza?.aventi_diritto_uomini || 0,
-        votanti_donne: ballottaggio.affluenza?.votanti_donne || 0,
-        votanti_uomini: ballottaggio.affluenza?.votanti_uomini || 0,
-        schede_bianche: ballottaggio.affluenza?.schede_bianche || 0,
-        schede_nulle: ballottaggio.affluenza?.schede_nulle || 0,
+        aventi_diritto_donne: mainCandidateData.affluenza?.aventi_diritto_donne || 0,
+        aventi_diritto_uomini: mainCandidateData.affluenza?.aventi_diritto_uomini || 0,
+        votanti_donne: mainCandidateData.affluenza?.votanti_donne || 0,
+        votanti_uomini: mainCandidateData.affluenza?.votanti_uomini || 0,
+        schede_bianche: mainCandidateData.affluenza?.schede_bianche || 0,
+        schede_nulle: mainCandidateData.affluenza?.schede_nulle || 0,
       },
       voti: {} as Record<string, number>,
     };
-    ballottaggio.candidati.forEach(c => {
+    mainCandidateData.candidati.forEach(c => {
       global.voti[c.nome] = c.totale;
     });
     return global;
@@ -415,11 +418,13 @@ export function SectionsView({ electionData, archive, electionConfig }: Sections
     ? getGlobalBallottaggioData()
     : sectionId === CONSOLIDATED_SECTION_ID
       ? getConsolidatedBallottaggioData()
-      : sectionId && ballottaggio ? ballottaggio.sezioni?.[sectionId.toString()] : null;
+      : sectionId && mainCandidateData ? mainCandidateData.sezioni?.[sectionId.toString()] : null;
 
-  const primoTurnoData = sectionId === GLOBAL_SECTION_ID || sectionId === CONSOLIDATED_SECTION_ID
+  const primoTurnoData = mainCandidateData
     ? null
-    : sectionId && primoTurno ? primoTurno.sezioni?.[sectionId.toString()] : null;
+    : sectionId === GLOBAL_SECTION_ID || sectionId === CONSOLIDATED_SECTION_ID
+      ? null
+      : sectionId && primoTurno ? primoTurno.sezioni?.[sectionId.toString()] : null;
 
   const listeData = sectionId !== undefined ? (getSectionListeData(sectionId) || getSectionListeFromArray(sectionId)) : null;
   const preferenzeData = sectionId !== undefined ? getSectionPreferenzeData(sectionId) : null;
@@ -428,10 +433,10 @@ export function SectionsView({ electionData, archive, electionConfig }: Sections
 
   // Determine which section colors to show (based on ballottaggio winner if available)
   const getSectionColor = (secId: number) => {
-    if (ballottaggio?.sezioni?.[secId.toString()]) {
-      const section = ballottaggio.sezioni?.[secId.toString()];
+    if (mainCandidateData?.sezioni?.[secId.toString()]) {
+      const section = mainCandidateData.sezioni[secId.toString()];
       const winner = Object.entries(section.voti).reduce((a, b) => a[1] > b[1] ? a : b)[0];
-      const isFirst = winner === ballottaggio.candidati[0].nome;
+      const isFirst = winner === mainCandidateData.candidati[0].nome;
       return isFirst ? 'bg-blue-100 text-blue-800' : 'bg-red-100 text-red-800';
     }
     return 'bg-gray-100 text-gray-800';
@@ -475,7 +480,7 @@ export function SectionsView({ electionData, archive, electionConfig }: Sections
                 onClick={() => { setDensityMode('ballottaggio'); setSelectedParty(''); }}
                 className={`px-3 py-1.5 text-xs rounded-full transition-colors ${densityMode === 'ballottaggio' ? 'bg-red-600 text-white' : 'bg-gray-100 hover:bg-gray-200'}`}
               >
-                Ballottaggio
+                {config.type === 'referendum' ? 'SI / NO' : 'Ballottaggio'}
               </button>
             )}
           </div>
@@ -514,7 +519,7 @@ export function SectionsView({ electionData, archive, electionConfig }: Sections
               onChange={(e) => setSelectedCandidate(e.target.value)}
               className="w-full md:w-auto px-3 py-2 text-sm border rounded-lg"
             >
-              <option value="">Seleziona Candidato Sindaco...</option>
+              <option value="">{config.type === 'referendum' ? 'Seleziona SI / NO...' : 'Seleziona Candidato Sindaco...'}</option>
               {ballottaggioCandidates.map(name => (
                 <option key={name} value={name}>{name}</option>
               ))}
@@ -665,7 +670,7 @@ export function SectionsView({ electionData, archive, electionConfig }: Sections
                 {ballottaggioData && (
                   <div>
                     <h4 className="font-semibold text-sm text-gray-700 mb-2">
-                      Ballottaggio Sindaco
+                      {config.type === 'referendum' ? 'Risultati Referendum' : 'Ballottaggio Sindaco'}
                       {archive && electionConfig && (
                         <span className="ml-2 text-xs font-normal text-blue-500">(clicca per trend)</span>
                       )}

@@ -128,6 +128,11 @@ export async function load2025PresidenteRegionali(): Promise<MayoralElection> {
   return loadJson('2025_Regionali/presidente.json');
 }
 
+// 2026 Referendum loader
+export async function load2026Referendum(): Promise<MayoralElection> {
+  return loadJson('2026_Referendum/referendum.json');
+}
+
 // 2018 Politiche specific loaders
 export async function load2018NominaliCamera(): Promise<NominaliElection> {
   return loadJson('2018_Politiche/nominali_camera.json');
@@ -279,6 +284,13 @@ export async function loadElectionData(config: ElectionConfig): Promise<Election
       data.nominali = nominali2018;
       data.liste = liste2018;
       break;
+
+    case 'referendum-2026':
+      const [referendum2026] = await Promise.all([
+        load2026Referendum(),
+      ]);
+      data.primoTurno = referendum2026;
+      break;
   }
 
   return data;
@@ -320,6 +332,7 @@ export interface ElectionArchive {
 }
 
 const ALL_ELECTION_CONFIGS: Array<{ id: string; year: number; type: string }> = [
+  { id: 'referendum-2026', year: 2026, type: 'referendum' },
   { id: 'regionali-2025', year: 2025, type: 'regionali' },
   { id: 'comunali-2024', year: 2024, type: 'comunali' },
   { id: 'comunali-2019', year: 2019, type: 'comunali' },
